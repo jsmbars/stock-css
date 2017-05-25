@@ -1,0 +1,143 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Select
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-select"
+
+#{$block}
+  position: relative
+  display: block
+  width: 100%
+
+  // $Select control
+  &__control
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    height: 50px
+    padding: 10px 25px
+    background-color: #FFF
+
+    // $Select control CONTEXT: $Select MOD: role site
+    #{$block}_role_site &
+      background-color: #37547c
+      border-radius: 30px
+
+  // $Select value
+  &__value
+    display: block
+    width: 100%
+    font-size: 16px
+    line-height: 1
+    color: #4c4c4c
+    white-space: nowrap
+    font-weight: 600
+    text-transform: uppercase
+    cursor: default
+
+    // $Select value CONTEXT: $Select MOD: role site
+    #{$block}_role_site &
+      color: #FFF
+
+  // $Select actions area
+  &__actions
+
+
+  // $Select arrow action
+  &__arrow
+    display: block
+    width: 15px
+    height: 15px
+    background-image: url(../icons/icon-arrow-down-dark-gray.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center center
+    outline: none
+    opacity: 1
+    transform-origin: center center
+    transition: all .5s
+
+    // $Select arrow action CONTEXT: $Select MOD: role site
+    #{$block}_role_site &
+      background-image: url(../icons/icon-arrow-down-white.svg)
+
+    // $Select arrow action CONTEXT: $Select MOD: state opened
+    #{$block}_state_opened &
+      transform: rotate(180deg)
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: none
+
+
+  // $Select options
+  &__options
+    z-index: 100
+    position: absolute
+    top: 60px
+    left: 0
+    right: 0
+    display: none
+    width: 100%
+    padding: 15px 0 10px
+    background-color: #FFF
+
+    // $Select options CONTEXT: $Select MOD: role site
+    #{$block}_role_site &
+      border-radius: 10px
+
+    // $Select options CONTEXT: $Select MOD: state opened
+    #{$block}_state_opened &
+      display: block
+
+    &:before
+      content: ""
+      position: absolute
+      bottom: 100%
+      left: 50%
+      margin-left: -20px
+      border-bottom: 10px solid #fff
+      border-right: 10px solid transparent
+      border-left: 10px solid transparent
+
+
+  // $Select option
+  &__option
+    position: relative
+    display: block
+    width: 100%
+    padding: 20px 25px
+    font-size: 16px
+    line-height: 1
+    color: #4c4c4c
+    font-weight: 600
+    text-transform: uppercase
+    transition: all .5s
+    cursor: pointer
+    outline: none
+
+    // $Select option CONTEXT: $Select MOD: role site
+    #{$block}_role_site &
+      color: #243C5C
+
+    &:hover,
+    &_state_selected
+      background-color: #f3f3f3
+      box-shadow: 10px 0 5px -5px rgba(0,0,0,.3)
+
+    &:focus
+      outline: none

@@ -15,3 +15,169 @@
 $block: ".stock-page-nav"
 
 #{$block}
+  display: block
+  width: 100%
+  padding: 15px 0 30px
+
+
+  // $Page navigation list
+  &__list
+    display: block
+    width: 100%
+
+
+  // $Page navigation item
+  &__item
+    position: relative
+    display: block
+    width: 100%
+
+
+  // $Page navigation link
+  &__link
+    position: relative
+    display: block
+    width: 100%
+    padding: 20px 30px 20px 70px
+    color: #FFF
+    font-size: 14px
+    text-decoration: none
+    outline: none
+    background-color: transparent
+    border-left: 3px solid transparent
+    transition: all .5s
+
+    &:before
+      content: ""
+      position: absolute
+      left: 30px
+      top: 50%
+      display: block
+      width: 20px
+      height: 20px
+      margin-top: -10px
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center center
+
+    &:hover,
+    &_state_active
+      background-color: #4284de
+      border-left-color: #FFF
+
+    // $Page navigation link MOD: role project management
+    &_role_pm
+      &:before
+        background-image: url(../icons/icon-box-white.svg)
+
+    // $Page navigation link MOD: role order processing
+    &_role_op
+      &:before
+        background-image: url(../icons/icon-shopping-cart-white.svg)
+
+    // $Page navigation link MOD: role stock management
+    &_role_sm
+      &:before
+        background-image: url(../icons/icon-box-docs-white.svg)
+
+    // $Page navigation link MOD: role order management
+    &_role_om
+      &:before
+        background-image: url(../icons/icon-left-right-arrows-white.png)
+
+    // $Page navigation link MOD: role user
+    &_role_user
+      &:before
+        background-image: url(../icons/icon-user-white.svg)
+        background-size: 16px 16px
+
+    // $Page navigation link MOD: role submenu
+    &_role_sub
+      &:after
+        content: ""
+        position: absolute
+        right: 30px
+        top: 20px
+        z-index: 10
+        display: block
+        width: 15px
+        height: 15px
+        background-image: url(../icons/icon-arrow-down-white.svg)
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center center
+        transform-origin: center center
+        transition: all .5s
+
+    // $Page navigation link MOD: role submenu state opened
+    &_role_sub#{&}_state_opened
+      &:after
+        transform: rotate(180deg)
+
+
+  // $Page navigation submenu list
+  &__sub-list
+    position: relative
+    display: none
+    margin: 5px 10px 0
+    padding: 10px 0
+    background-color: #FFF
+    border-radius: 10px
+
+    &:before
+      content: ""
+      position: absolute
+      bottom: 100%
+      right: 13px
+      border-bottom: 10px solid #fff
+      border-right: 10px solid transparent
+      border-left: 10px solid transparent
+
+    // $Page navigation submenu MOD: state opened
+    &_state_opened
+      display: block
+
+
+  // $Page navigation submenu item
+  &__sub-item
+    display: block
+    width: 100%
+
+
+  // $Page navigation submenu link
+  &__sub-link
+    position: relative
+    display: block
+    width: 100%
+    padding: 15px 20px 15px 60px
+    color: #4c4c4c
+    font-size: 14px
+    text-decoration: none
+    outline: none
+    background-color: transparent
+    transition: all .5s
+
+    &:before
+      content: ""
+      position: absolute
+      left: 25px
+      top: 50%
+      display: block
+      width: 16px
+      height: 16px
+      margin-top: -8px
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center center
+
+    &:hover,
+    &_state_active
+      background-color: #f3f3f3
+      border-left-color: #FFF
+
+    // $Page navigation submenu link MOD: role logout
+    &_role_logout
+      &:before
+        background-image: url(../icons/icon-power-dark-gray.svg)
+
+
