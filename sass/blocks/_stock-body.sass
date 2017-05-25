@@ -16,7 +16,14 @@ $block: ".stock-body"
 
 #{$block}
   position: relative
+  display: block
+  width: 100%
+  padding-left: 270px
   overflow-x: hidden
+  background-color: #FFF
+
+  @media screen and (max-width: 960px)
+    padding-left: 0
 
   &_state_inactive
     &:after
