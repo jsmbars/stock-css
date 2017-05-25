@@ -7,8 +7,15 @@
 // VENDOR...............................
 //
 // HELPERS..............................Variables, mixins, elements
+//  $Fonts..............................Offline and online fonts
+//  $Settings...........................Site settings
+//  $Mixins.............................Site mixins
+//  $Base...............................Some general styles
 //
 // BLOCKS...............................Page components
+//  $Body...............................
+//  $Page header........................
+//  $Page navigation....................
 
 
 ////////////////////////////////////////
@@ -20,7 +27,31 @@
 /// $HELPERS
 ////////////////////////////////////////
 
+// $Fonts
+@import './helpers/fonts'
+
+// $Settings
+@import './helpers/settings'
+
+// $Mixins
+@import './helpers/mixins'
+
+// $Reset
+@import './helpers/reset'
+
+// $Base
+@import './helpers/base'
+
 
 ////////////////////////////////////////
 /// $BLOCKS
 ////////////////////////////////////////
+
+// $Body
+@import './blocks/stock-body'
+
+// $Page header
+@import './blocks/stock-page-header'
+
+// $Page navigation
+@import './blocks/stock-page-nav'

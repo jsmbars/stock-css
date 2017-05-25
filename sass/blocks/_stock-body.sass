@@ -1,0 +1,34 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Body
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-body"
+
+#{$block}
+  position: relative
+  overflow-x: hidden
+
+  &_state_inactive
+    &:after
+      content: ""
+      position: fixed
+      display: none
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 9999
+      background-color: rgba(0,0,0,.5)
+
+      @media screen and (max-width: 960px)
+        display: block
