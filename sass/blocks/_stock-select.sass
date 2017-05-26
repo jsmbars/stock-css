@@ -128,6 +128,10 @@ $block: ".stock-select"
     max-height: 200px
     overflow: auto
 
+    // $Select options scroll container CONTEXT: $Select MOD: role site
+    #{$block}_role_site &
+      border-radius: 10px
+
     @media screen and (max-height: 480px)
       #{$block}_role_site &
         max-height: 170px
