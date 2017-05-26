@@ -18,6 +18,7 @@ $block: ".stock-select"
   position: relative
   display: block
   width: 100%
+  height: 100%
 
   // $Select control
   &__control
@@ -92,13 +93,6 @@ $block: ".stock-select"
     left: 0
     right: 0
     display: none
-    width: 100%
-    padding: 15px 0 10px
-    background-color: #FFF
-
-    // $Select options CONTEXT: $Select MOD: role site
-    #{$block}_role_site &
-      border-radius: 10px
 
     // $Select options CONTEXT: $Select MOD: state opened
     #{$block}_state_opened &
@@ -109,10 +103,34 @@ $block: ".stock-select"
       position: absolute
       bottom: 100%
       left: 50%
-      margin-left: -20px
+      margin-left: -10px
       border-bottom: 10px solid #fff
       border-right: 10px solid transparent
       border-left: 10px solid transparent
+
+
+  // $Select options inner container
+  &__options-inner
+    display: block
+    width: 100%
+    overflow: hidden
+    background-color: #FFF
+
+    // $Select options inner container CONTEXT: $Select MOD: role site
+    #{$block}_role_site &
+      border-radius: 10px
+
+
+  // $Select options scroll container
+  &__options-scroll
+    display: block
+    padding: 15px 0 10px
+    max-height: 200px
+    overflow: auto
+
+    @media screen and (max-height: 480px)
+      #{$block}_role_site &
+        max-height: 170px
 
 
   // $Select option
@@ -133,6 +151,11 @@ $block: ".stock-select"
     // $Select option CONTEXT: $Select MOD: role site
     #{$block}_role_site &
       color: #243C5C
+
+    @media screen and (max-height: 480px)
+      #{$block}_role_site &
+        padding-top: 15px
+        padding-bottom: 15px
 
     &:hover,
     &_state_selected
