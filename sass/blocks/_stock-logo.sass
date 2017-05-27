@@ -1,0 +1,36 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Logo
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-logo"
+
+#{$block}
+  display: inline-block
+  outline: none
+  opacity: 1
+  transition: all .5s
+
+  &:hover
+    opacity: .8
+
+
+  // $Logo text
+  &__text
+    display: none
+
+
+  // $Logo image
+  &__image
+    display: block
+    max-width: 100%
+
