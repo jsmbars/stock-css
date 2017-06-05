@@ -24,17 +24,25 @@ $block: ".stock-page-main"
     background-color: #FFF
     box-shadow: 0 2px 8px 0 rgba(0,0,0,.2)
 
-
-  &__dashboard-inner
-    display: block
-    width: 100%
-    padding: 45px 40px 0
+    @media screen and (max-width: 960px)
+      height: auto
 
 
   &__inner
     display: block
     width: 100%
-    padding: 22px 24px
+    padding: 30px 25px
+
+    @media screen and (max-width: 960px)
+      padding-left: 25px
+      padding-right: 25px
+
+    &_adjust_dashboard
+      padding: 45px 40px 0
+
+      @media screen and (max-width: 960px)
+        padding-left: 25px
+        padding-right: 25px
 
 
   &__tabs
@@ -53,7 +61,7 @@ $block: ".stock-page-main"
 
 
   &__group
-    padding: 20px
+    padding: 15px
 
     &_role_board
       background-color: #FFF
