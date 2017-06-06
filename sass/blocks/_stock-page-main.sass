@@ -28,10 +28,13 @@ $block: ".stock-page-main"
       height: auto
 
 
+  &__content
+
+
   &__inner
     display: block
     width: 100%
-    padding: 30px 25px
+    padding: 20px 25px
 
     @media screen and (max-width: 960px)
       padding-left: 25px
@@ -40,9 +43,9 @@ $block: ".stock-page-main"
     &_adjust_dashboard
       padding: 45px 40px 0
 
-      @media screen and (max-width: 960px)
-        padding-left: 25px
-        padding-right: 25px
+    @media screen and (max-width: 960px)
+      padding-left: 25px
+      padding-right: 25px
 
 
   &__tabs
@@ -60,12 +63,84 @@ $block: ".stock-page-main"
       display: none
 
 
-  &__group
-    padding: 15px
+  &__data
 
-    &_role_board
+    &_type_board
+      margin-bottom: 20px
       background-color: #FFF
       box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+
+  &__manager
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 15px
+    margin-bottom: 5px
+
+    &_type_board
+      margin-bottom: 20px
+      background-color: #FFF
+      box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+
+  &__filter
+    padding: 15px
+
+    &_type_board
+      margin-bottom: 20px
+      background-color: #FFF
+      box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+
+  &__info
+
+    &_type_board
+      margin-bottom: 20px
+      background-color: #FFF
+      box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+
+  &__table
+
+
+  &__pagination
+    padding: 45px 15px 40px
+
+
+  &__meta
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    padding: 15px 20px 25px 15px
+
+
+  &__title
+    display: block
+    max-width: 100%
+    font-size: 24px
+    line-height: 1
+    font-family: $f-sans
+    font-weight: 400
+    color: #1c2841
+    margin-bottom: 35px
+
+    @media screen and (max-width: 960px)
+      text-align: center
+
+
+  &__sub-title
+    display: block
+    max-width: 100%
+    font-size: 20px
+    line-height: 1
+    font-family: $f-sans
+    font-weight: 400
+    color: #1c2841
+
+    @media screen and (max-width: 960px)
+      text-align: center
 
 
 

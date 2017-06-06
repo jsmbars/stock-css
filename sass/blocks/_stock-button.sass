@@ -1,0 +1,139 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Common button
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+=button-common($background-color: #64a5fd )
+  background-color: $background-color
+
+
+=button-common-hover-behavior($background-color, $amount: 3%)
+
+  &:hover,
+  &:focus
+    background-color: lighten($background-color, $amount)
+
+
+=button-with-icon-left($icon-url: '', $background-size: 13px)
+
+  &:before
+    content: ""
+    display: inline-block
+    width: $background-size
+    height: $background-size
+    margin-right: 10px
+    line-height: 100%
+    vertical-align: middle
+    background-image: url($icon-url)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
+
+
+=button-with-icon-right($icon-url: '', $background-size: 13px)
+
+  &:after
+    content: ""
+    display: inline-block
+    width: $background-size
+    height: $background-size
+    margin-left: 10px
+    line-height: 100%
+    vertical-align: middle
+    background-image: url($icon-url)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: auto $background-size
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-button"
+
+#{$block}
+  $background-color: #64a5fd
+
+  +button-common($background-color: $background-color)
+  +button-common-hover-behavior($background-color: $background-color)
+
+  display: inline-block
+  padding: 13px 20px
+  border-radius: 20px
+  font-family: $f-sans
+  font-size: 12px
+  line-height: 1
+  color: #fff
+  font-weight: 600
+  text-decoration: none
+  text-transform: uppercase
+  white-space: nowrap
+  vertical-align: middle
+  outline: none
+  transition: all .4s
+
+  &:hover,
+  &:focus
+    cursor: pointer
+    color: #FFF
+
+  &:focus
+    outline: none
+
+  // $Common button MOD: state disabled
+  &_state_disabled[disabled],
+  &_state_disabled,
+  &[disabled],
+    background-color: #ccc
+    cursor: not-allowed
+
+    &:hover,
+    &:focus
+      background-color:#ccc
+
+  // $Common button MOD: state visible
+  &_state_visible
+    display: inline-block
+
+  // $Common button MOD: state hidden
+  &_state_hidden
+    display: none
+
+
+  // $Common button text
+  &__text
+    vertical-align: middle
+
+
+  // $Common button variations:
+
+  // Color modifiers
+  // $Common button MOD: role primary
+  &_role_primary
+    $background-color: #64a5fd
+    +button-common($background-color: $background-color)
+    +button-common-hover-behavior($background-color: $background-color)
+
+  &_role_accent
+    $background-color: #fd649a
+    +button-common($background-color: $background-color)
+    +button-common-hover-behavior($background-color: $background-color)
+
+
+  // Icon modifiers
+  // $Common button MOD: icon plus
+  &_icon_plus
+    +button-with-icon-left($icon-url: '../icons/icon-plus-white.svg')
+
+  // $Common button MOD: icon plus reversed
+  &_icon_plus-reversed
+    +button-with-icon-right($icon-url: '../icons/icon-plus-white.svg')
+
+  // $Common button MOD: icon close
+  &_icon_close
+    +button-with-icon-left($icon-url: '../icons/icon-close-white.svg', $background-size: 11px)
