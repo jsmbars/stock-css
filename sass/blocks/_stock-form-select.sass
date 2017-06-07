@@ -32,6 +32,8 @@ $block: ".stock-form-select"
     justify-content: flex-end
     align-items: center
 
+  &_role_search
+
   &_no-label
     padding-top: 20px
 
@@ -91,6 +93,26 @@ $block: ".stock-form-select"
     #{$block}_size_s &
       min-width: 155px
 
+    #{$block}_role_search &
+      &:before
+        content: ""
+        position: absolute
+        top: 50%
+        margin-top: -7px
+        left: 15px
+        display: block
+        width: 14px
+        height: 14px
+        background-image: url('../icons/icon-lens-light-gray.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+
+    #{$block}_adjust_manager &
+      border-top: none
+      border-bottom: none
+      border-left: none
+
     &:after
       content: ''
       position: absolute
@@ -128,6 +150,13 @@ $block: ".stock-form-select"
 
     #{$block}_size_s &
       padding: 8px 40px 8px 10px
+
+    #{$block}_role_search &
+      padding-left: 40px
+
+    #{$block}_adjust_manager &
+      padding-top: 24px
+      padding-bottom: 24px
 
     &::-ms-expand
       display: none

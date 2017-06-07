@@ -28,12 +28,24 @@ $block: ".stock-page-main"
       height: auto
 
 
+  &__dashboard-navbar
+    position: absolute
+    bottom: 0
+    left: 40px
+
+    @media screen and (max-width: 960px)
+      position: relative
+      background:
+      left: auto
+
+
   &__content
 
 
   &__inner
     display: block
     width: 100%
+    height: 100%
     padding: 20px 25px
 
     @media screen and (max-width: 960px)
@@ -41,6 +53,7 @@ $block: ".stock-page-main"
       padding-right: 25px
 
     &_adjust_dashboard
+      position: relative
       padding: 45px 40px 0
 
     @media screen and (max-width: 960px)
@@ -90,6 +103,7 @@ $block: ".stock-page-main"
 
     &_role_board
       margin-bottom: 20px
+      padding: 0
       background-color: #FFF
       box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
 
