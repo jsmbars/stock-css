@@ -16,9 +16,37 @@
 
 =button-common-hover-behavior($background-color, $amount: 3%)
 
-  &:hover,
-  &:focus
+  &:hover
     background-color: lighten($background-color, $amount)
+
+
+=button-bordered($color: '#d3d3d3', $border-color: '#d3d3d3', $bg-color: '#fff')
+  border: 1px solid $border-color
+  border-radius: 0
+  background-color: $bg-color
+  color: $color
+
+
+=button-bordered-hover-behavior($color: '#d3d3d3', $border-color: '#d3d3d3', $bg-color: '#fff', $icon-hover-url: '')
+
+  &:hover
+    color: $color
+    background-color: $bg-color
+
+    &:after,
+    &:before
+      background-image: url($icon-hover-url)
+
+
+=button-bordered-active-behavior($color: '#d3d3d3', $border-color: '#d3d3d3', $bg-color: '#fff', $icon-active-url: '')
+
+  &#{$block}_state_active
+    color: $color
+    background-color: $bg-color
+
+    &:after,
+    &:before
+      background-image: url($icon-active-url)
 
 
 =button-with-icon-left($icon-url: '', $background-size: 13px)
@@ -75,17 +103,16 @@ $block: ".stock-button"
   white-space: nowrap
   vertical-align: middle
   outline: none
+  cursor: pointer
   transition: all .4s
 
-  &:hover,
-  &:focus
-    cursor: pointer
+  &:hover
     color: #FFF
 
   &:focus
     outline: none
 
-  &_type_small
+  &_size_s
     padding: 9px 23px
 
   // $Common button MOD: state disabled
@@ -140,3 +167,23 @@ $block: ".stock-button"
   // $Common button MOD: icon close
   &_icon_close
     +button-with-icon-left($icon-url: '../icons/icon-close-white.svg', $background-size: 11px)
+
+
+  // Specific buttons
+
+  &_role_filter-label
+    text-transform: none
+    padding: 8px 10px
+    cursor: default
+    font-size: 14px
+    +button-bordered($color: #757a85, $bg-color: #fff, $border-color: #fff)
+    +button-with-icon-left($icon-url: '../icons/icon-options-dark-gray.svg', $background-size: 17px)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff, $icon-hover-url: '../icons/icon-options-dark-gray.svg')
+
+  &_role_filter
+    text-transform: none
+    padding: 15px 20px
+    +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-color: #d3d3d3)
+    +button-with-icon-right($icon-url: '../icons/icon-options-light-gray.svg', $background-size: 15px)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-hover-url: '../icons/icon-options-primary.svg')
+    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-options-primary.svg')

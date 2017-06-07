@@ -100,11 +100,11 @@ $block: ".stock-navbar"
     text-transform: uppercase
     text-decoration: none
     color: #9c9c9c
+    outline: none
     transition: all .4s
 
     #{$block}_size_min &
       flex-grow: 0
-
 
     @media screen and (max-width: 960px)
       padding-left: 30px
@@ -131,6 +131,9 @@ $block: ".stock-navbar"
 
       &:after
         background-color: #64a5fd
+
+    &:focus
+      outline: none
 
     // $Navigation bar link MOD: state active
     &_state_active
