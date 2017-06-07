@@ -1,0 +1,50 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Common form error message
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-form-error"
+
+#{$block}
+  display: block
+  position: relative
+  margin: 10px 0
+  padding: 10px 20px
+  background-color: #ed7f7e
+
+  &:before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 20px
+    display: block
+    width: 18px
+    height: 18px
+    margin-top: -9px
+    background-image: url(../icons/icon-danger-white.svg)
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: contain
+
+  // $Common form error message text
+  &__text
+    position: relative
+    display: block
+    padding-left: 30px
+    font-family: $f-sans
+    font-size: 14px
+    font-weight: 400
+    color: #FFF
+
+  // $Common form error message text line
+  &__line
+    display: block

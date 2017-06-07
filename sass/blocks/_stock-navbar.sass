@@ -1,0 +1,149 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Navigation bar
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-navbar"
+
+#{$block}
+  position: relative
+  display: block
+  width: 100%
+
+  @media screen and (max-width: 960px)
+    padding: 0 20px
+
+  &__control
+    position: absolute
+    top: 0
+    display: none
+    width: 16px
+    height: 16px
+    font-size: 0
+    line-height: 0
+    color: transparent
+    background-image: url(../icons/icon-arrow-left-light-gray.svg)
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center center
+    transform-origin: center center
+    transition: all .5s
+
+    @media screen and (max-width: 960px)
+      display: block
+
+    &:hover
+      background-image: url(../icons/icon-arrow-left-dark-gray.svg)
+
+
+    &_role_prev
+      left: 0
+
+    &_role_next
+      right: 0
+      transform: rotate(180deg)
+
+  &__scroll
+    position: relative
+    overflow: hidden
+
+    &:before,
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      bottom: 0
+      z-index: 10
+      display: none
+      width: 40px
+
+      @media screen and (max-width: 960px)
+        display: block
+
+    &:before
+      left: 0
+      box-shadow: inset 30px 0 10px -10px #fff
+
+    &:after
+      right: 0
+      box-shadow: inset -30px 0 10px -10px #fff
+
+
+  &__links
+    display: inline-block
+    white-space: nowrap
+    vertical-align: bottom
+
+
+  // $Navigation bar link
+  &__link
+    position: relative
+    display: inline-block
+    margin-right: 65px
+    padding-bottom: 18px
+    white-space: nowrap
+    text-align: center
+    cursor: pointer
+    font-size: 14px
+    line-height: 1
+    font-family: $f-sans
+    font-weight: 600
+    text-transform: uppercase
+    text-decoration: none
+    color: #9c9c9c
+    outline: none
+    transition: all .4s
+
+    #{$block}_size_min &
+      flex-grow: 0
+
+    @media screen and (max-width: 960px)
+      padding-left: 30px
+      padding-right: 30px
+      margin-right: 0
+
+    &:after
+      content: ""
+      position: absolute
+      bottom: 0
+      right: 10px
+      left: 10px
+      height: 4px
+      background-color: transparent
+      transition: all .4s
+
+      @media screen and (max-width: 960px)
+        right: 30px
+        left: 30px
+
+    &:hover,
+    &_state_active
+      color: #243c5c
+
+      &:after
+        background-color: #64a5fd
+
+    &:focus
+      outline: none
+
+    // $Navigation bar link MOD: state active
+    &_state_active
+      cursor: default
+
+
+  // $Navigation bar link text
+  &__link-text
+    position: relative
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 100%

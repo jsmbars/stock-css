@@ -1,0 +1,88 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Filter
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-filter"
+
+#{$block}
+
+  &__dropdown
+    display: block
+    padding: 30px 0 10px
+
+    &_state_opened
+      display: block
+
+    &_state_closed
+      display: none
+
+
+  &__row
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    margin-bottom: 20px
+
+    &_position_last
+      margin-bottom: 0
+
+
+  &__field
+    display: block
+    width: 100%
+    margin-bottom: 20px
+
+    // $Filter field MOD: size half
+    // $Filter field MOD: size third
+    // $Filter field MOD: size max
+    // $Filter field MOD: size min
+    &_size_half,
+    &_size_third,
+    &_size_fourth,
+    &_size_max,
+    &_size_min
+      flex-grow: 0
+      flex-shrink: 1
+      margin-right: 20px
+      margin-bottom: 0
+
+    &_size_half
+      width: 50%
+
+    &_size_third
+      width: 33%
+
+    &_size_fourth
+      width: calc(25% - 15px)
+
+    &_size_max
+      flex-grow: 1
+      flex-shrink: 1
+      width: auto
+
+    &_size_min
+      flex-grow: 0
+      flex-shrink: 1
+      width: auto
+
+    &_size_fluid
+      flex-grow: 0
+      flex-shrink: 0
+      width: auto
+
+    &_position_last
+      margin-right: 0
+      margin-bottom: 0
+

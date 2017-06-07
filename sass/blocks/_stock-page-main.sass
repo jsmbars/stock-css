@@ -17,4 +17,166 @@ $block: ".stock-page-main"
 #{$block}
   display: block
   width: 100%
-  padding: 50px
+
+  &__dashboard
+    width: 100%
+    height: 140px
+    background-color: #FFF
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,.2)
+
+    @media screen and (max-width: 960px)
+      height: auto
+
+
+  &__dashboard-navbar
+    position: absolute
+    bottom: 0
+    left: 40px
+
+    @media screen and (max-width: 960px)
+      position: relative
+      background:
+      left: auto
+
+
+  &__content
+
+
+  &__inner
+    display: block
+    width: 100%
+    height: 100%
+    padding: 20px 25px
+
+    @media screen and (max-width: 960px)
+      padding-left: 25px
+      padding-right: 25px
+
+    &_adjust_dashboard
+      position: relative
+      padding: 45px 40px 0
+
+    @media screen and (max-width: 960px)
+      padding-left: 25px
+      padding-right: 25px
+
+
+  &__tabs
+    display: block
+    width: 100%
+
+
+  &__tab
+    display: none
+
+    &_state_visible
+      display: block
+
+    &_state_hidden
+      display: none
+
+
+  &__data
+    width: 100%
+
+    &_role_board
+      margin-bottom: 20px
+      background-color: #FFF
+      box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+    &_role_view
+
+    &_state_visible
+      display: block
+
+    &_state_hidden
+      display: none
+
+
+  &__manager
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 15px
+    margin-bottom: 5px
+
+    &_role_board
+      margin-bottom: 20px
+      padding: 0
+      background-color: #FFF
+      box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+
+  &__filter
+    padding: 15px
+
+    &_role_board
+      margin-bottom: 20px
+      background-color: #FFF
+      box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+
+  &__info
+
+    &_role_board
+      margin-bottom: 20px
+      background-color: #FFF
+      box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+
+  &__table
+
+
+  &__meta
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
+    padding: 20px 15px 25px
+
+    &_space_extra
+      padding: 45px 15px 40px
+
+
+  &__title
+    display: block
+    max-width: 100%
+    font-size: 24px
+    line-height: 1
+    font-family: $f-sans
+    font-weight: 400
+    color: #1c2841
+    margin-bottom: 35px
+
+    @media screen and (max-width: 960px)
+      text-align: center
+
+
+  &__sub-title
+    display: block
+    max-width: 100%
+    font-size: 20px
+    line-height: 1
+    font-family: $f-sans
+    font-weight: 400
+    color: #1c2841
+
+    @media screen and (max-width: 960px)
+      text-align: center
+
+
+  &__text
+    font-family: $f-sans
+    font-size: 12px
+    line-height: 1
+    font-weight: 600
+    color: #787878
+
+    &_size_max
+      flex-grow: 1
+      flex-shrink: 1
+
+
+
+
