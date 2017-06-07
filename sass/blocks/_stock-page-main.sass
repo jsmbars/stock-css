@@ -114,15 +114,15 @@ $block: ".stock-page-main"
   &__table
 
 
-  &__pagination
-    padding: 45px 15px 40px
-
-
   &__meta
     display: flex
     flex-direction: row
     justify-content: flex-end
-    padding: 15px 20px 25px 15px
+    align-items: center
+    padding: 20px 15px 25px
+
+    &_space_extra
+      padding: 45px 15px 40px
 
 
   &__title
@@ -150,6 +150,18 @@ $block: ".stock-page-main"
 
     @media screen and (max-width: 960px)
       text-align: center
+
+
+  &__text
+    font-family: $f-sans
+    font-size: 12px
+    line-height: 1
+    font-weight: 600
+    color: #787878
+
+    &_size_max
+      flex-grow: 1
+      flex-shrink: 1
 
 
 

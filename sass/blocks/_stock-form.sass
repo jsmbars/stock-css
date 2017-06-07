@@ -12,12 +12,168 @@
 
 
 //////////////////////////////////////// Block styles
-$block: ".boss-form"
+$block: ".stock-form"
 
 #{$block}
   display: block
   width: 100%
 
+
+  // $Common form group
+  &__group
+    position: relative
+    display: block
+    width: 100%
+    margin-bottom: 20px
+
+    // $Common form group MOD: size half
+    // $Common form group MOD: size third
+    &_size_half,
+    &_size_third,
+    &_size_fourth,
+    &_size_max,
+    &_size_min
+      flex-grow: 0
+      flex-shrink: 1
+      margin-right: 20px
+      margin-bottom: 0
+
+    &_size_half
+      width: 50%
+
+    &_size_third
+      width: 33%
+
+    &_size_fourth
+      width: calc(25% - 15px)
+
+    &_size_max
+      flex-grow: 1
+      flex-shrink: 1
+      width: auto
+
+    &_size_min
+      flex-grow: 0
+      flex-shrink: 1
+      width: auto
+
+    &_size_fluid
+      flex-grow: 0
+      flex-shrink: 0
+      width: auto
+
+    &_position_last
+      margin-right: 0
+      margin-bottom: 0
+
+
+  // $Common form row
+  &__row
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    margin-bottom: 20px
+
+    &_justify_end
+      justify-content: flex-end
+
+    &_size_half,
+    &_size_third,
+    &_size_fourth,
+    &_size_max,
+    &_size_min
+      flex-grow: 0
+      flex-shrink: 1
+      margin-right: 20px
+      margin-bottom: 0
+
+    &_size_half
+      width: 50%
+
+    &_size_third
+      width: 33%
+
+    &_size_fourth
+      width: calc(25% - 15px)
+
+    &_size_max
+      flex-grow: 1
+      flex-shrink: 1
+      width: auto
+
+    &_size_min
+      flex-grow: 0
+      flex-shrink: 1
+      width: auto
+
+    &_size_fluid
+      flex-grow: 0
+      flex-shrink: 0
+      width: auto
+
+    &_position_last
+      margin-right: 0
+      margin-bottom: 0
+
+
+  // $Common form field
+  &__field
+    position: relative
+    display: block
+    width: 100%
+    margin-bottom: 20px
+
+    // $Common form field MOD: size half
+    // $Common form field MOD: size third
+    // $Common form field MOD: size max
+    // $Common form field MOD: size min
+    &_size_half,
+    &_size_third,
+    &_size_fourth,
+    &_size_max,
+    &_size_min
+      flex-grow: 0
+      flex-shrink: 1
+      margin-right: 20px
+      margin-bottom: 0
+
+    &_size_half
+      width: 50%
+
+    &_size_third
+      width: 33%
+
+    &_size_fourth
+      width: calc(25% - 15px)
+
+    &_size_max
+      flex-grow: 1
+      flex-shrink: 1
+      width: auto
+
+    &_size_min
+      flex-grow: 0
+      flex-shrink: 1
+      width: auto
+
+    &_size_fluid
+      flex-grow: 0
+      flex-shrink: 0
+      width: auto
+
+    &_position_last
+      margin-right: 0
+      margin-bottom: 0
+
+
+  &__text
+    font-family: $f-sans
+    font-size: 13px
+    line-height: 1
+    font-weight: 600
+    color: #1c2841
 
 
 

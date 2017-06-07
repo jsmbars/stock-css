@@ -26,6 +26,12 @@ $block: ".stock-form-select"
     justify-content: flex-start
     align-items: center
 
+  &_role_control-reverse
+    display: flex
+    flex-direction: row-reverse
+    justify-content: flex-end
+    align-items: center
+
   &_no-label
     padding-top: 20px
 
@@ -44,14 +50,20 @@ $block: ".stock-form-select"
     line-height: 1
 
     // $Common form select label text CONTEXT: $Common form select MOD: role control
-    #{$block}_role_control &
+    #{$block}_role_control &,
+    #{$block}_role_control-reverse &
       flex-grow: 0
       flex-shrink: 0
       width: auto
       margin-bottom: 0
-      margin-right: 10px
       font-weight: 400
       white-space: nowrap
+
+    #{$block}_role_control &
+      margin-right: 10px
+
+    #{$block}_role_control-reverse &
+      margin-left: 10px
 
     // $Common form select label-text CONTEXT: $Common form select MOD: type required field
     #{$block}_type_required &
