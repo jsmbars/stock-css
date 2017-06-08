@@ -1,0 +1,75 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Meta information
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-meta-info"
+
+#{$block}
+  position: relative
+  display: inline-block
+
+  // $Meta information MOD: icon
+  &_icon
+    position: relative
+    padding-left: 32px
+
+    &:before
+      content: ""
+      position: absolute
+      left: 0
+      top: 10px
+      display: block
+      width: 18px
+      height: 18px
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: contain
+      transform: translateY(-50%)
+
+  // $Meta information MOD: icon user
+  &_icon_user
+    padding-left: 28px
+
+    &:before
+      width: 15px
+      height: 15px
+      background-image: url('../icons/icon-user-medium-gray.svg')
+
+  // $Meta information MOD: icon date
+  &_icon_date
+    &:before
+      background-image: url('../icons/icon-calendar-medium-gray.svg')
+
+  // $Meta information MOD: icon note
+  &_icon_note
+    &:before
+      background-image: url('../icons/icon-text-paper-medium-gray.svg')
+
+
+  // $Meta information text
+  &__text
+    font-family: $f-sans
+    font-size: 14px
+    font-weight: 400
+    line-height: 1.5
+    color: #757a85
+
+
+  // $Meta information label
+  &__label
+    font-weight: 600
+
+
+  // $Meta information value
+  &__value
+

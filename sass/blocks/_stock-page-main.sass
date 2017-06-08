@@ -76,13 +76,17 @@ $block: ".stock-page-main"
       display: none
 
 
+  &__board
+    margin-bottom: 20px
+    background-color: #FFF
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+    &_position_last
+      margin-bottom: 0
+
+
   &__data
     width: 100%
-
-    &_role_board
-      margin-bottom: 20px
-      background-color: #FFF
-      box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
 
     &_role_view
 
@@ -101,28 +105,12 @@ $block: ".stock-page-main"
     padding: 15px
     margin-bottom: 5px
 
-    &_role_board
-      margin-bottom: 20px
+    &_nospace
       padding: 0
-      background-color: #FFF
-      box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
 
 
   &__filter
     padding: 15px
-
-    &_role_board
-      margin-bottom: 20px
-      background-color: #FFF
-      box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
-
-
-  &__info
-
-    &_role_board
-      margin-bottom: 20px
-      background-color: #FFF
-      box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
 
 
   &__table
@@ -133,10 +121,39 @@ $block: ".stock-page-main"
     flex-direction: row
     justify-content: flex-end
     align-items: center
-    padding: 20px 15px 25px
+    padding: 15px
 
-    &_space_extra
+    &_adjust_bottom
+      padding: 20px 15px 25px
+
+    &_adjust_list-view
       padding: 45px 15px 40px
+
+    &_adjust_details-view-top
+      display: block
+      padding: 0
+
+    &_adjust_details-view-bottom
+      padding: 25px 15px 40px
+
+
+  &__meta-row
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: stretch
+    border-bottom: 1px solid #d3d3d3
+
+    &_position_last
+      border-bottom: none
+
+
+  &__meta-col
+    padding: 20px 25px
+    border-right: 1px solid #d3d3d3
+
+    &_position_last
+      border-right: none
 
 
   &__title
@@ -172,6 +189,11 @@ $block: ".stock-page-main"
     line-height: 1
     font-weight: 600
     color: #787878
+
+    &_extra
+      font-size: 13px
+      color: #1c2841
+      text-transform: uppercase
 
     &_size_max
       flex-grow: 1
