@@ -19,9 +19,12 @@ $block: ".stock-navbar"
   display: block
   width: 100%
 
-  @media screen and (max-width: 960px)
+  @media screen and (max-width: 1360px)
     padding: 0 20px
+    text-align: center
 
+
+  // $Navigation bar control
   &__control
     position: absolute
     top: 0
@@ -44,14 +47,17 @@ $block: ".stock-navbar"
     &:hover
       background-image: url(../icons/icon-arrow-left-dark-gray.svg)
 
-
+    // $Navigation bar control MOD: role previous
     &_role_prev
       left: 0
 
+    // $Navigation bar control MOD: role next
     &_role_next
       right: 0
       transform: rotate(180deg)
 
+
+  // $Navigation bar scroll area
   &__scroll
     position: relative
     overflow: hidden
@@ -66,7 +72,7 @@ $block: ".stock-navbar"
       display: none
       width: 40px
 
-      @media screen and (max-width: 960px)
+      @media screen and (max-width: 1360px)
         display: block
 
     &:before
@@ -78,6 +84,7 @@ $block: ".stock-navbar"
       box-shadow: inset -30px 0 10px -10px #fff
 
 
+  // $Navigation bar links
   &__links
     display: inline-block
     white-space: nowrap
@@ -103,10 +110,7 @@ $block: ".stock-navbar"
     outline: none
     transition: all .4s
 
-    #{$block}_size_min &
-      flex-grow: 0
-
-    @media screen and (max-width: 960px)
+    @media screen and (max-width: 1360px)
       padding-left: 30px
       padding-right: 30px
       margin-right: 0
@@ -121,7 +125,7 @@ $block: ".stock-navbar"
       background-color: transparent
       transition: all .4s
 
-      @media screen and (max-width: 960px)
+      @media screen and (max-width: 1360px)
         right: 30px
         left: 30px
 

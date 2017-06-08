@@ -2,7 +2,7 @@
 @import '../helpers/mixins'
 
 ////////////////////////////////////////
-// $Page main content
+// $Page main container
 ////////////////////////////////////////
 
 //////////////////////////////////////// Block variables
@@ -18,85 +18,117 @@ $block: ".stock-page-main"
   display: block
   width: 100%
 
+
+  // $Page main container dashboard
   &__dashboard
     width: 100%
     height: 140px
     background-color: #FFF
     box-shadow: 0 2px 8px 0 rgba(0,0,0,.2)
 
-    @media screen and (max-width: 960px)
+    @media screen and (max-width: 1360px)
       height: auto
 
 
+  // $Page main container dashboard navigation bar
   &__dashboard-navbar
     position: absolute
     bottom: 0
     left: 40px
 
-    @media screen and (max-width: 960px)
+    @media screen and (max-width: 1360px)
       position: relative
       background:
       left: auto
 
 
+  // $Page main container content
   &__content
 
 
+  // $Page main container inner area
   &__inner
     display: block
     width: 100%
     height: 100%
     padding: 20px 25px
 
-    @media screen and (max-width: 960px)
+    @media screen and (max-width: 1360px)
       padding-left: 25px
       padding-right: 25px
 
+    @media screen and (max-width: 1280px)
+      padding-left: 20px
+      padding-right: 20px
+
+    @media screen and (max-width: 1120px)
+      padding-left: 10px
+      padding-right: 10px
+
+    // $Page main container inner area MOD: adjust for dashboard
     &_adjust_dashboard
       position: relative
       padding: 45px 40px 0
 
-    @media screen and (max-width: 960px)
-      padding-left: 25px
-      padding-right: 25px
+      @media screen and (max-width: 1360px)
+        padding-left: 25px
+        padding-right: 25px
+
+      @media screen and (max-width: 1280px)
+        padding-left: 20px
+        padding-right: 20px
+
+      @media screen and (max-width: 1120px)
+        padding-left: 10px
+        padding-right: 10px
 
 
+  // $Page main container tabs
   &__tabs
     display: block
     width: 100%
 
 
+  // $Page main container tab
   &__tab
     display: none
 
+    // $Page main container tab MOD: state visible
     &_state_visible
       display: block
 
+    // $Page main container tab MOD: state hidden
     &_state_hidden
       display: none
 
 
+  // $Page main container board
   &__board
     margin-bottom: 20px
     background-color: #FFF
     box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
 
+    // $Page main container board MOD: position last
     &_position_last
       margin-bottom: 0
 
 
+  // $Page main container data area
   &__data
     width: 100%
 
+    // $Page main container data area MOD: role view
     &_role_view
 
+    // $Page main container data area MOD: state visible
     &_state_visible
       display: block
 
+    // $Page main container data area MOD: state hidden
     &_state_hidden
       display: none
 
-
+  // $Page main container manager area
   &__manager
     display: flex
     flex-direction: row
@@ -105,57 +137,115 @@ $block: ".stock-page-main"
     padding: 15px
     margin-bottom: 5px
 
+    @media screen and (max-width: 1120px)
+      padding: 10px
+
+    // $Page main container manager area MOD: nospace
     &_nospace
       padding: 0
 
 
+  // $Page main container area
   &__filter
     padding: 15px
 
+    @media screen and (max-width: 1120px)
+      padding: 10px
 
+  // $Page main container table area
   &__table
 
-
+  // $Page main container meta area
   &__meta
-    display: flex
-    flex-direction: row
-    justify-content: flex-end
-    align-items: center
     padding: 15px
 
+    @media screen and (max-width: 1120px)
+      padding: 10px
+
+    // $Page main container meta area MOD: adjust for bottom area
     &_adjust_bottom
       padding: 20px 15px 25px
 
+      @media screen and (max-width: 1120px)
+        padding: 20px 10px 15px
+
+    // $Page main container meta area MOD: adjust for list view are
     &_adjust_list-view
       padding: 45px 15px 40px
 
+      @media screen and (max-width: 1120px)
+        padding: 45px 10px 40px
+
+    // $Page main container meta area MOD: adjust for details view top area
     &_adjust_details-view-top
-      display: block
       padding: 0
 
+    // $Page main container meta area MOD: adkust for details view top area
     &_adjust_details-view-bottom
       padding: 25px 15px 40px
 
+      @media screen and (max-width: 1120px)
+        padding: 25px 10px 40px
 
-  &__meta-row
+
+  // $Page main container meta area group
+  &__meta-group
     display: flex
     flex-direction: row
-    justify-content: flex-start
-    align-items: stretch
-    border-bottom: 1px solid #d3d3d3
+    justify-content: space-between
+    align-items: center
 
+    #{$block}__meta_adjust_bottom &
+      justify-content: flex-end
+
+    #{$block}__meta_adjust_list-view &
+      justify-content: center
+
+    #{$block}__meta_adjust_details-view-top &
+      justify-content: flex-start
+      align-items: stretch
+      border-bottom: 1px solid #d3d3d3
+
+    #{$block}__meta_adjust_details-view-bottom &
+      justify-content: flex-end
+
+    @media screen and (max-width: 960px)
+      flex-direction: column
+
+      #{$block}__meta_adjust_details-view-top &
+        border-bottom: none
+
+    // $Page main container meta area group MOD: position last
     &_position_last
-      border-bottom: none
+      #{$block}__meta_adjust_details-view-top &
+        border-bottom: none
 
 
-  &__meta-col
+  // $Page main container meta area cell
+  &__meta-cell
+    flex-grow: 0
+    flex-shrink: 1
     padding: 20px 25px
-    border-right: 1px solid #d3d3d3
 
+    @media screen and (max-width: 1120px)
+      padding-left: 20px
+      padding-right: 20px
+
+    #{$block}__meta_adjust_details-view-top &
+      border-right: 1px solid #d3d3d3
+
+    @media screen and (max-width: 960px)
+      #{$block}__meta_adjust_details-view-top &
+        border-right: none
+        border-bottom: 1px solid #d3d3d3
+
+    // $Page main container meta area cell MOD: position last
     &_position_last
-      border-right: none
+      #{$block}__meta_adjust_details-view-top &
+        border-right: none
 
 
+  // $Page main container title
   &__title
     display: block
     max-width: 100%
@@ -166,10 +256,11 @@ $block: ".stock-page-main"
     color: #1c2841
     margin-bottom: 35px
 
-    @media screen and (max-width: 960px)
+    @media screen and (max-width: 1360px)
       text-align: center
 
 
+  // $Page main container sub title
   &__sub-title
     display: block
     max-width: 100%
@@ -179,10 +270,8 @@ $block: ".stock-page-main"
     font-weight: 400
     color: #1c2841
 
-    @media screen and (max-width: 960px)
-      text-align: center
 
-
+  // $Page main container text
   &__text
     font-family: $f-sans
     font-size: 12px
@@ -190,15 +279,20 @@ $block: ".stock-page-main"
     font-weight: 600
     color: #787878
 
+    // $Page main container text MOD: extra text
     &_extra
       font-size: 13px
       color: #1c2841
       text-transform: uppercase
 
+    // $Page main container MOD: size max width
     &_size_max
       flex-grow: 1
       flex-shrink: 1
 
+    &_desktop_hidden
+      display: none
 
-
+      @media screen and (max-width: 960px)
+        display: inline-block
 

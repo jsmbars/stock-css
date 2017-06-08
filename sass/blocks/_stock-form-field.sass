@@ -80,7 +80,7 @@ $block: ".stock-form-field"
     font-size: 14px
     color: #757a85
     font-weight: 600
-    line-height: 1
+    line-height: 1.2
 
     // $Common form field label text CONTEXT: $Common form MOD: role control
     #{$block}_role_control &,
@@ -99,7 +99,9 @@ $block: ".stock-form-field"
       margin-left: 10px
 
     #{$block}_context_table &
+      flex-shrink: 1
       font-size: 12px
+      white-space: normal
 
     // $Common form field label-text CONTEXT: $Common form field MOD: type required field
     #{$block}_type_required &
