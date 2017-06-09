@@ -74,7 +74,7 @@ $block: ".stock-filter"
 
   // $Filter group dropdown-content
   &__dropdown-content
-    padding: 20px 15px 20px
+    padding: 10px 15px 20px
     border-bottom: 1px solid #f0f0f0
 
     @media screen and (max-width: 960px)
@@ -84,6 +84,11 @@ $block: ".stock-filter"
   // $Filter group dropdown meta
   &__dropdown-meta
     padding: 20px
+
+    // $Filter group dropdown meta MOD: visible on mobile
+    &_state_visible-mobile
+      @media screen and (min-width: 960px)
+        display: none
 
 
   // $Filter row
