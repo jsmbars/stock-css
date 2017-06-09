@@ -81,6 +81,13 @@ $block: ".stock-form-field"
         content: '*'
         margin-left: 2px
 
+    @media screen and (max-width: 960px)
+      #{$block}_role_control &,
+      #{$block}_role_control-reverse &
+        width: 90px
+        margin-right: 0
+        margin-left: 0
+
 
   // $Common form field label text
   &__label-text
@@ -90,9 +97,13 @@ $block: ".stock-form-field"
   &__input
     position: relative
 
+    #{$block}_role_control &,
+    #{$block}_role_control-reverse &
+      flex-grow: 1
+      flex-shrink: 1
 
-    #{$block}_role_date &
-      &:after
+    &:after
+      #{$block}_role_date &
         content: ""
         position: absolute
         top: 50%
@@ -106,8 +117,8 @@ $block: ".stock-form-field"
         background-position: center center
         background-size: contain
 
-    #{$block}_role_search &
-      &:before
+    &:before
+      #{$block}_role_search &
         content: ""
         position: absolute
         top: 50%
@@ -142,11 +153,14 @@ $block: ".stock-form-field"
         width: 155px
         padding: 8px 10px
 
-
       #{$block}_context_table &
         width: 55px
         padding: 8px 10px
         font-size: 12px
+
+      @media screen and (max-width: 960px)
+        #{$block}_size_s &
+          width: 100%
 
       &:focus
         outline: none

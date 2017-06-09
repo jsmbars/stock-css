@@ -73,6 +73,13 @@ $block: ".stock-form-select"
         content: '*'
         margin-left: 2px
 
+    @media screen and (max-width: 960px)
+      #{$block}_role_control &,
+      #{$block}_role_control-reverse &
+        width: 90px
+        margin-right: 0
+        margin-left: 0
+
 
   // $Common form select label text
   &__label-text
@@ -81,20 +88,14 @@ $block: ".stock-form-select"
   // $Common form select input
   &__input
     position: relative
-    display: block
-    width: 100%
-    border: 1px solid #d3d3d3
 
-    // $Common form input CONTEXT: $Common form select MOD: state error
-    #{$block}_state_error &
-      border-color: #ed7f7e
-      color: #ed7f7e
+    #{$block}_role_control &,
+    #{$block}_role_control-reverse &
+      flex-grow: 1
+      flex-shrink: 1
 
-    #{$block}_size_s &
-      min-width: 155px
-
-    #{$block}_role_search &
-      &:before
+    &:before
+      #{$block}_role_search &
         content: ""
         position: absolute
         top: 50%
@@ -108,10 +109,9 @@ $block: ".stock-form-select"
         background-position: center center
         background-size: contain
 
-    #{$block}_adjust_manager &
-      border-top: none
-      border-bottom: none
-      border-left: none
+      @media screen and (max-width: 960px)
+        #{$block}_role_search &
+          left: 25px
 
     &:after
       content: ''
@@ -136,7 +136,7 @@ $block: ".stock-form-select"
       font-weight: 400
       line-height: 1.5
       outline: none
-      border: none
+      border: 1px solid #d3d3d3
       background: none
       appearance: none
       -moz-appearance: none
@@ -145,9 +145,11 @@ $block: ".stock-form-select"
 
       // $Common form select control CONTEXT: $Common form select MOD: state error
       #{$block}_state_error &
+        border-color: #ed7f7e
         color: #ed7f7e
 
       #{$block}_size_s &
+        min-width: 155px
         padding: 8px 40px 8px 10px
 
       #{$block}_role_search &
@@ -156,6 +158,18 @@ $block: ".stock-form-select"
       #{$block}_adjust_manager &
         padding-top: 24px
         padding-bottom: 24px
+        border-top: none
+        border-bottom: none
+        border-left: none
+
+      @media screen and (max-width: 960px)
+        #{$block}_role_search &
+          padding-left: 55px
+
+        #{$block}_adjust_manager &
+          padding-top: 20px
+          padding-bottom: 20px
+          border-right: none
 
       &::-ms-expand
         display: none
