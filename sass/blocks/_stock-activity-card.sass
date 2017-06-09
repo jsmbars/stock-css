@@ -16,7 +16,107 @@ $block: ".stock-activity-card"
 
 #{$block}
 
+  // $Activity card MOD: role board
+  &_role_board
+    margin-bottom: 20px
+    background-color: #FFF
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
   // $Activity card MOD: visible on mobiles
   &_state_visible-mobile
     @media screen and (min-width: 960px)
       display: none
+
+
+  // $Activity card header
+  &__header
+    padding: 20px 10px 10px
+    text-align: center
+    background-color: #FFF
+    border-bottom: 1px solid #ebebeb
+
+
+  // $Activity card content
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    padding: 30px 10px 0
+    text-align: center
+    background-color: #FFF
+
+
+  // $Activity card footer
+  &__footer
+    padding: 35px 10px 15px
+    text-align: center
+    background-color: #f8f8f8
+
+
+  // $Activity card text
+  &__text
+    font-family: $f-sans
+    font-size: 16px
+    line-height: 1
+    color: #1c2841
+
+    // $Activity card text MOD: size small
+    &_size_small
+      font-size: 14px
+
+    // $Activity card text MOD: role user
+    &_role_user
+      position: relative
+      margin-bottom: 10px
+      padding-left: 105px
+      font-weight: 600
+      text-align: left
+
+      &:before
+        content: ""
+        position: absolute
+        top: 50%
+        left: 0
+        display: block
+        width: 77px
+        height: 51px
+        margin-top: -25px
+        background-image: url('../icons/icon-user-illustration.png')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+
+    // $Activity card text MOD: role date
+    &_role_date
+      font-weight: 600
+      margin-bottom: 5px
+
+
+  // $Activity card text label
+  &__text-label
+    font-weight: 600
+
+
+  // $Activity card text line
+  &__text-line
+    display: block
+    margin-bottom: 2px
+
+
+  // $Activity card label
+  &__label
+    font-family: $f-sans
+    font-size: 12px
+    line-height: 1
+    font-weight: 300
+    color: #9F9F9F
+
+
+  // $Activity card button
+  &__button
+    position: relative
+    z-index: 1
+    width: 195px
+    transform: translateY(50%)
+
