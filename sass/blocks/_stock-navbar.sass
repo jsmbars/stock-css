@@ -23,6 +23,9 @@ $block: ".stock-navbar"
     padding: 0 20px
     text-align: center
 
+  @media screen and (max-width: 1120px)
+    padding: 0 10px
+
 
   // $Navigation bar control
   &__control
@@ -111,9 +114,8 @@ $block: ".stock-navbar"
     transition: all .4s
 
     @media screen and (max-width: 1360px)
-      padding-left: 30px
-      padding-right: 30px
-      margin-right: 0
+      margin-left: 30px
+      margin-right: 30px
 
     &:after
       content: ""
@@ -124,10 +126,6 @@ $block: ".stock-navbar"
       height: 4px
       background-color: transparent
       transition: all .4s
-
-      @media screen and (max-width: 1360px)
-        right: 30px
-        left: 30px
 
     &:hover,
     &_state_active

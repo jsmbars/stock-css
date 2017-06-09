@@ -16,17 +16,62 @@ $block: ".stock-filter"
 
 #{$block}
 
+
+  // $Filter header
+  &__header
+    display: block
+    padding: 15px
+
+    @media screen and (max-width: 1120px)
+      padding: 10px
+
+    @media screen and (max-width: 960px)
+      border-bottom: 1px solid #ebebeb
+
+    &_role_control-mobile
+      position: relative
+
+      &:after
+        @media screen and (max-width: 960px)
+          content: ''
+          position: absolute
+          top: 50%
+          right: 20px
+          z-index: 10
+          display: block
+          width: 14px
+          height: 14px
+          background: url(../icons/icon-arrow-down-light-gray.svg) no-repeat 0 0
+          transform: translateY(-50%)
+          transition: all .4s
+
+          #{$block}_state_opened &
+            transform: translateY(-50%) rotate(180deg)
+
+
+  // $Filter dropdown
   &__dropdown
     display: block
-    padding: 30px 0 10px
+    padding: 30px 15px 10px
 
+    @media screen and (max-width: 960px)
+      padding: 20px
+
+    // $Filter dropdown MOD: state opened
     &_state_opened
       display: block
 
+    // $Filter dropdown MOD: state closed
     &_state_closed
       display: none
 
+    // $Filter dropdown MOD: visible on mobiles
+    &_state_visible-mobile
+      @media screen and (min-width: 960px)
+        display: none !important
 
+
+  // $Filter row
   &__row
     display: flex
     flex-direction: row
@@ -35,10 +80,16 @@ $block: ".stock-filter"
     width: 100%
     margin-bottom: 20px
 
+    @media screen and (max-width: 960px)
+      #{$block}__dropdown &
+        flex-direction: column
+
+    // $Filter row MOD: position last
     &_position_last
       margin-bottom: 0
 
 
+  // $Filter field
   &__field
     display: block
     width: 100%
@@ -58,8 +109,17 @@ $block: ".stock-filter"
       margin-right: 20px
       margin-bottom: 0
 
+      @media screen and (max-width: 960px)
+        margin-right: 10px
+
+        #{$block}__dropdown &
+          flex-grow: 1
+          width: 100%
+          margin-right: 0
+          margin-bottom: 20px
+
     &_size_half
-      width: 50%
+      width: calc(50% - 15px)
 
     &_size_third
       width: 33%
@@ -82,7 +142,24 @@ $block: ".stock-filter"
       flex-shrink: 0
       width: auto
 
+    // $Filter field MOD: position last
     &_position_last
       margin-right: 0
       margin-bottom: 0
+
+      @media screen and (max-width: 960px)
+        margin-right: 0
+
+        #{$block}__dropdown &
+          margin-bottom: 0
+
+    // $Filter field MOD: visible on mobiles
+    &_state_visible-mobile
+      @media screen and (min-width: 960px)
+        display: none
+
+    // $Filter field MOD: hidden on mobiles
+    &_state_hidden-mobile
+      @media screen and (max-width: 960px)
+        display: none
 

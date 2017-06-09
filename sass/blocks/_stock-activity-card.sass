@@ -1,0 +1,22 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Activity card
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-activity-card"
+
+#{$block}
+
+  // $Activity card MOD: visible on mobiles
+  &_state_visible-mobile
+    @media screen and (min-width: 960px)
+      display: none

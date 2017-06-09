@@ -18,6 +18,11 @@ $block: ".stock-table"
   display: block
   width: 100%
 
+  // $Common table MOD: hidden on mobiles
+  &_state_hidden-mobile
+    @media screen and (max-width: 960px)
+      display: none
+
 
   // $Common table row
   &__row

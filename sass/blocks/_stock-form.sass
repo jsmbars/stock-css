@@ -38,14 +38,28 @@ $block: ".stock-form"
       margin-right: 20px
       margin-bottom: 0
 
+      @media screen and (max-width: 960px)
+        flex-grow: 1
+        width: 100%
+        margin-right: 10px
+
     &_size_half
       width: 50%
+
+      @media screen and (max-width: 960px)
+        width: 100%
 
     &_size_third
       width: 33%
 
+      @media screen and (max-width: 960px)
+        width: 100%
+
     &_size_fourth
       width: calc(25% - 15px)
+
+      @media screen and (max-width: 960px)
+        width: 100%
 
     &_size_max
       flex-grow: 1
@@ -57,20 +71,38 @@ $block: ".stock-form"
       flex-shrink: 1
       width: auto
 
+      @media screen and (max-width: 960px)
+        flex-grow: 1
+        width: 100%
+
     &_size_fluid
       flex-grow: 0
       flex-shrink: 0
       width: auto
 
+      @media screen and (max-width: 960px)
+        flex-grow: 1
+        flex-shrink: 1
+        width: 100%
+
     &_position_last
       margin-right: 0
       margin-bottom: 0
+
+      @media screen and (max-width: 960px)
+        margin-right: 0
 
     &_adjust_manager
       padding: 15px
 
       @media screen and (max-width: 1120px)
         padding: 10px
+
+    &_adjust_table
+      padding: 0 20px
+
+      @media screen and (max-width: 1120px)
+        padding: 0 10px
 
 
   // $Common form row
@@ -82,49 +114,18 @@ $block: ".stock-form"
     width: 100%
     margin-bottom: 20px
 
+    @media screen and (max-width: 960px)
+      flex-direction: column
+
     &_justify_end
       justify-content: flex-end
-
-    &_size_half,
-    &_size_third,
-    &_size_fourth,
-    &_size_max,
-    &_size_min
-      flex-grow: 0
-      flex-shrink: 1
-      margin-right: 20px
-      margin-bottom: 0
-
-    &_size_half
-      width: 50%
-
-    &_size_third
-      width: 33%
-
-    &_size_fourth
-      width: calc(25% - 15px)
-
-    &_size_max
-      flex-grow: 1
-      flex-shrink: 1
-      width: auto
-
-    &_size_min
-      flex-grow: 0
-      flex-shrink: 1
-      width: auto
-
-    &_size_fluid
-      flex-grow: 0
-      flex-shrink: 0
-      width: auto
 
     &_position_last
       margin-right: 0
       margin-bottom: 0
 
-    #{$block}_adjust_manager &
-      align-items: stretch
+      @media screen and (max-width: 960px)
+        margin-right: 0
 
 
   // $Common form field
@@ -148,14 +149,29 @@ $block: ".stock-form"
       margin-right: 20px
       margin-bottom: 0
 
+      @media screen and (max-width: 960px)
+        flex-grow: 1
+        width: 100%
+        margin-right: 0
+        margin-bottom: 20px
+
     &_size_half
       width: 50%
+
+      @media screen and (max-width: 960px)
+        width: 100%
 
     &_size_third
       width: 33%
 
+      @media screen and (max-width: 960px)
+        width: 100%
+
     &_size_fourth
       width: calc(25% - 15px)
+
+      @media screen and (max-width: 960px)
+        width: 100%
 
     &_size_max
       flex-grow: 1
@@ -167,14 +183,27 @@ $block: ".stock-form"
       flex-shrink: 1
       width: auto
 
+      @media screen and (max-width: 960px)
+        flex-grow: 1
+        width: 100%
+
     &_size_fluid
       flex-grow: 0
       flex-shrink: 0
       width: auto
 
+      @media screen and (max-width: 960px)
+        flex-grow: 1
+        flex-shrink: 1
+        width: 100%
+
     &_position_last
       margin-right: 0
       margin-bottom: 0
+
+      @media screen and (max-width: 960px)
+        margin-right: 0
+        margin-bottom: 0
 
 
   &__text

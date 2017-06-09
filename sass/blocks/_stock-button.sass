@@ -102,6 +102,7 @@ $block: ".stock-button"
   text-transform: uppercase
   white-space: nowrap
   vertical-align: middle
+  text-align: center
   outline: none
   cursor: pointer
   border: none
@@ -113,8 +114,13 @@ $block: ".stock-button"
   &:focus
     outline: none
 
+  &_size_full-mobile
+    display: block
+    width: 100%
+
   &_size_s
     padding: 9px 23px
+
 
   // $Common button MOD: state disabled
   &_state_disabled[disabled],
@@ -187,4 +193,23 @@ $block: ".stock-button"
     +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-color: #d3d3d3)
     +button-with-icon-right($icon-url: '../icons/icon-options-light-gray.svg', $background-size: 15px)
     +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-hover-url: '../icons/icon-options-primary.svg')
+    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-options-primary.svg')
+
+    & span
+      @media screen and (max-width: 960px)
+        display: none
+
+    &:after,
+    &:before
+      @media screen and (max-width: 960px)
+        margin-right: 0
+        margin-left: 0
+
+  &_role_filter-light
+    text-transform: none
+    padding: 8px 10px
+    font-size: 14px
+    +button-bordered($color: #757a85, $bg-color: #fff, $border-color: #fff)
+    +button-with-icon-left($icon-url: '../icons/icon-options-dark-gray.svg', $background-size: 17px)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff, $icon-hover-url: '../icons/icon-options-dark-gray.svg')
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-options-primary.svg')

@@ -79,8 +79,7 @@ $block: ".stock-page-main"
         padding-right: 20px
 
       @media screen and (max-width: 1120px)
-        padding-left: 10px
-        padding-right: 10px
+        padding: 30px 10px 0
 
 
   // $Page main container tabs
@@ -112,6 +111,12 @@ $block: ".stock-page-main"
     &_position_last
       margin-bottom: 0
 
+    // $Page main container board MOD: transparent on mobiles
+    &_state_transparent-mobile
+      @media screen and (max-width: 960px)
+        background-color: transparent
+        box-shadow: none
+
 
   // $Page main container data area
   &__data
@@ -140,20 +145,39 @@ $block: ".stock-page-main"
     @media screen and (max-width: 1120px)
       padding: 10px
 
+    @media screen and (max-width: 960px)
+      flex-direction: column
+      padding-left: 0
+      padding-right: 0
+
     // $Page main container manager area MOD: nospace
     &_nospace
       padding: 0
 
 
-  // $Page main container area
-  &__filter
-    padding: 15px
+  // $Page main container actions
+  &__actions
+    flex-shrink: 1
+    flex-grow: 0
+    width: auto
 
-    @media screen and (max-width: 1120px)
-      padding: 10px
+    @media screen and (max-width: 960px)
+      flex-grow: 1
+      width: 100%
+
+
+  // $Page main container filter area
+  &__filter
+
 
   // $Page main container table area
   &__table
+
+
+  // $Page main container form area
+  &__form
+    padding-bottom: 25px
+
 
   // $Page main container meta area
   &__meta
@@ -175,6 +199,11 @@ $block: ".stock-page-main"
 
       @media screen and (max-width: 1120px)
         padding: 45px 10px 40px
+
+      @media screen and (max-width: 960px)
+        padding: 20px 10px 15px
+        background-color: #FFF
+        box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
 
     // $Page main container meta area MOD: adjust for details view top area
     &_adjust_details-view-top
@@ -259,6 +288,9 @@ $block: ".stock-page-main"
     @media screen and (max-width: 1360px)
       text-align: center
 
+    @media screen and (max-width: 960px)
+      margin-bottom: 30px
+
 
   // $Page main container sub title
   &__sub-title
@@ -270,6 +302,9 @@ $block: ".stock-page-main"
     font-weight: 400
     color: #1c2841
 
+    @media screen and (max-width: 960px)
+      margin-bottom: 15px
+
 
   // $Page main container text
   &__text
@@ -279,20 +314,23 @@ $block: ".stock-page-main"
     font-weight: 600
     color: #787878
 
+    &:not(:only-child)
+      @media screen and (max-width: 960px)
+        margin-bottom: 15px
+
     // $Page main container text MOD: extra text
     &_extra
       font-size: 13px
       color: #1c2841
       text-transform: uppercase
 
-    // $Page main container MOD: size max width
+    // $Page main container text MOD: size max width
     &_size_max
       flex-grow: 1
       flex-shrink: 1
 
-    &_desktop_hidden
-      display: none
-
-      @media screen and (max-width: 960px)
-        display: inline-block
+    // $Page main container text MOD: visible on mobiles
+    &_state_visible-mobile
+      @media screen and (min-width: 960px)
+        display: none
 
