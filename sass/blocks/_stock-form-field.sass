@@ -85,8 +85,6 @@ $block: ".stock-form-field"
       #{$block}_role_control &,
       #{$block}_role_control-reverse &
         width: 90px
-        margin-right: 0
-        margin-left: 0
 
 
   // $Common form field label text
@@ -101,6 +99,10 @@ $block: ".stock-form-field"
     #{$block}_role_control-reverse &
       flex-grow: 1
       flex-shrink: 1
+
+    #{$block}_context_table &
+      flex-grow: 0
+      flex-shrink: 0
 
     &:after
       #{$block}_role_date &

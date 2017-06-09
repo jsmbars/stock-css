@@ -54,63 +54,113 @@ $block: ".stock-activity-card"
     background-color: #f8f8f8
 
 
-  // $Activity card text
-  &__text
+  // $Activity card info
+  &__info
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+    text-align: left
+
+
+  // $Activity card icon
+  &__icon
+    flex-grow: 0
+    flex-shrink: 1
+
+    // $Activity card icon MOD: role user
+    &_role_user
+      width: 77px
+      height: 50px
+      background-image: url('../icons/icon-user-illustration.png')
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: contain
+
+    // $Activity card icon MOD: role rt
+    &_role_rt
+      width: 77px
+      height: 50px
+      background-image: url('../icons/icon-box-illustration.png')
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: contain
+
+
+  // $Activity card delimiter
+  &__delimiter
+    flex-grow: 0
+    flex-shrink: 1
+
+    // $Activity card delimiter MOD: role user
+    &_role_user
+      width: 0
+      margin: 0 10px
+
+    // $Activity card icon MOD: role rt
+    &_role_rt
+      width: 50px
+      height: 18px
+      margin: 0 20px
+      background-image: url('../icons/icon-arrow-illustration.png')
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: contain
+
+
+  // $Activity card title
+  &__title
     font-family: $f-sans
     font-size: 16px
+    line-height: 1.2
+    color: #1c2841
+    font-weight: 600
+    margin-bottom: 5px
+
+
+  // $Activity card note
+  &__note
+    font-family: $f-sans
+    font-size: 12px
     line-height: 1
+    font-weight: 400
+    color: #9F9F9F
+
+
+  // $Activity card text
+  &__text
+    flex-grow: 0
+    flex-shrink: 1
+    flex-basis: 0
+    font-family: $f-sans
+    font-size: 16px
+    line-height: 1.2
+    font-weight: 600
     color: #1c2841
 
-    // $Activity card text MOD: size small
-    &_size_small
-      font-size: 14px
 
-    // $Activity card text MOD: role user
-    &_role_user
-      position: relative
-      margin-bottom: 10px
-      padding-left: 105px
-      font-weight: 600
-      text-align: left
-
-      &:before
-        content: ""
-        position: absolute
-        top: 50%
-        left: 0
-        display: block
-        width: 77px
-        height: 51px
-        margin-top: -25px
-        background-image: url('../icons/icon-user-illustration.png')
-        background-repeat: no-repeat
-        background-position: center center
-        background-size: contain
-
-    // $Activity card text MOD: role date
-    &_role_date
-      font-weight: 600
-      margin-bottom: 5px
+  // $Activity card meta
+  &__meta
+    flex-grow: 0
+    flex-shrink: 1
+    flex-basis: 0
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 1.2
+    font-weight: 400
+    color: #6d6f73
 
 
-  // $Activity card text label
-  &__text-label
+  // $Activity card meta-marked
+  &__meta-marked
     font-weight: 600
+    color: #1c2841
 
 
   // $Activity card text line
   &__text-line
-    display: block
-    margin-bottom: 2px
-
-
-  // $Activity card label
-  &__label
-    font-family: $f-sans
-    font-size: 12px
-    line-height: 1
-    font-weight: 300
-    color: #9F9F9F
+    white-space: nowrap
 
 
   // $Activity card button
@@ -119,4 +169,32 @@ $block: ".stock-activity-card"
     z-index: 1
     width: 195px
     transform: translateY(50%)
+
+
+  &__date
+    position: relative
+    z-index: 1
+    width: 195px
+    padding: 10px
+    font-family: $f-sans
+    font-size: 14px
+    font-weight: 300
+    color: #FFF
+    background-color: #64a5fd
+    border-radius: 20px
+    white-space: nowrap
+    transform: translateY(50%)
+
+    &:before
+      content: ""
+      display: inline-block
+      width: 16px
+      height: 16px
+      margin-right: 10px
+      margin-top: -3px
+      background-image: url('../icons/icon-calendar-white.svg')
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: contain
+      vertical-align: middle
 

@@ -28,6 +28,7 @@ $block: ".stock-accordion"
     flex-direction: row
     justify-content: flex-start
     align-items: stretch
+    border-bottom: 1px solid #f0f0f0
 
 
   // $Accordion dropdown
@@ -87,10 +88,6 @@ $block: ".stock-accordion"
   &__dropdown-content
     padding-left: 30px
 
-    // $Accordion dropdown content MOD: state opened
-    &_state_opened
-      display: block
-
     // $Accordion dropdown content MOD: state closed
     &_state_closed
       display: none
@@ -124,7 +121,7 @@ $block: ".stock-accordion"
     padding-right: 30px
     font-family: $f-sans
     font-size: 11px
-    line-height: 1
+    line-height: 1.5
     font-weight: 600
     color: #1C2841
     text-transform: uppercase

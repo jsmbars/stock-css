@@ -169,6 +169,12 @@ $block: ".stock-page-main"
   // $Page main container filter area
   &__filter
 
+    &_state_board-mobile
+      @media screen and (max-width: 960px)
+        margin-bottom: 20px
+        background-color: #FFF
+        box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
 
   // $Page main container table area
   &__table
@@ -187,14 +193,18 @@ $block: ".stock-page-main"
       padding: 10px
 
     // $Page main container meta area MOD: adjust for bottom area
-    &_adjust_bottom
+    &_adjust_rt-view-bottom
       padding: 20px 15px 25px
 
       @media screen and (max-width: 1120px)
         padding: 20px 10px 15px
 
+      @media screen and (max-width: 960px)
+        background-color: #FFF
+        box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
     // $Page main container meta area MOD: adjust for list view are
-    &_adjust_list-view
+    &_adjust_list-view-bottom
       padding: 45px 15px 40px
 
       @media screen and (max-width: 1120px)

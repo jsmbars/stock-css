@@ -44,11 +44,11 @@ $block: ".stock-filter"
     color: transparent
     outline: none
     background: url(../icons/icon-arrow-down-light-gray.svg) no-repeat 0 0
-    transform: translateY(-50%)
     transition: all .4s
+    transform: translateY(-50%) rotate(180deg)
 
-    #{$block}_state_opened &
-      transform: translateY(-50%) rotate(180deg)
+    &_state_closed
+      transform: translateY(-50%) rotate(0)
 
     &_state_visible-mobile
       @media screen and (min-width: 960px)
@@ -61,14 +61,6 @@ $block: ".stock-filter"
   // $Filter dropdown
   &__dropdown
     display: block
-    padding: 30px 15px 10px
-
-    @media screen and (max-width: 960px)
-      padding: 20px
-
-    // $Filter dropdown MOD: state opened
-    &_state_opened
-      display: block
 
     // $Filter dropdown MOD: state closed
     &_state_closed
@@ -78,6 +70,20 @@ $block: ".stock-filter"
     &_state_visible-mobile
       @media screen and (min-width: 960px)
         display: none !important
+
+
+  // $Filter group dropdown-content
+  &__dropdown-content
+    padding: 20px 15px 20px
+    border-bottom: 1px solid #f0f0f0
+
+    @media screen and (max-width: 960px)
+      padding: 20px
+
+
+  // $Filter group dropdown meta
+  &__dropdown-meta
+    padding: 20px
 
 
   // $Filter row
