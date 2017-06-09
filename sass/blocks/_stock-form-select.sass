@@ -135,6 +135,7 @@ $block: ".stock-form-select"
       line-height: 1.5
       outline: none
       border: 1px solid #d3d3d3
+      border-radius: 0
       background: none
       appearance: none
       -moz-appearance: none
@@ -169,6 +170,9 @@ $block: ".stock-form-select"
           padding-bottom: 20px
           border-right: none
           border-bottom: 1px solid #d3d3d3
+
+        #{$block}_size_s &
+          min-width: 0
 
       &::-ms-expand
         display: none

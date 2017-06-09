@@ -132,12 +132,21 @@ $block: ".stock-activity-card"
   &__text
     flex-grow: 0
     flex-shrink: 1
-    flex-basis: 0
+    width: min-content
     font-family: $f-sans
     font-size: 16px
     line-height: 1.2
     font-weight: 600
     color: #1c2841
+
+    &_align_right
+      text-align: right
+
+
+  // $Activity card text line
+  &__text-line
+    display: block
+    white-space: nowrap
 
 
   // $Activity card meta
@@ -156,11 +165,6 @@ $block: ".stock-activity-card"
   &__meta-marked
     font-weight: 600
     color: #1c2841
-
-
-  // $Activity card text line
-  &__text-line
-    white-space: nowrap
 
 
   // $Activity card button
