@@ -19,27 +19,15 @@ $block: ".stock-form-textarea"
   display: block
   width: 100%
 
-  &_role_control
-    display: flex
-    flex-direction: row
-    justify-content: flex-start
-    align-items: center
-
-  &_role_control-reverse
-    display: flex
-    flex-direction: row-reverse
-    justify-content: flex-end
-    align-items: center
-
+  // $Common form textarea MOD: state error
   &_state_error
 
+  // $Common form textarea MOD: no top label
   &_no-label
     padding-top: 20px
 
-  &_size_s
 
-
-  // $Common form field label
+  // $Common form textarea label
   &__label
     display: block
     width: 100%
@@ -50,34 +38,18 @@ $block: ".stock-form-textarea"
     font-weight: 600
     line-height: 1
 
-    // $Common form field label text CONTEXT: $Common form MOD: role control
-    #{$block}_role_control &,
-    #{$block}_role_control-reverse &
-      flex-grow: 0
-      flex-shrink: 0
-      width: auto
-      margin-bottom: 0
-      font-weight: 400
-      white-space: nowrap
-
-    #{$block}_role_control &
-      margin-right: 10px
-
-    #{$block}_role_control-reverse &
-      margin-left: 10px
-
-    // $Common form field label-text CONTEXT: $Common form field MOD: type required field
+    // $Common form textarea label-text CONTEXT: $Common form textarea MOD: type required field
     #{$block}_type_required &
       &:after
         content: '*'
         margin-left: 2px
 
 
-  // $Common form field label text
+  // $Common form textarea label text
   &__label-text
 
 
-  // $Common form field input
+  // $Common form textarea input
   &__input
     position: relative
 
@@ -99,13 +71,12 @@ $block: ".stock-form-textarea"
       &:focus
         outline: none
 
-      // $Common form textarea MOD: state error
       #{$block}_state_error &
         border-color: #ed7f7e
         color: #ed7f7e
 
 
-  // $Common form field note
+  // $Common form textarea note
   &__note
     margin-top: 10px
     font-family: $f-sans

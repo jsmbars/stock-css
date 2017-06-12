@@ -26,17 +26,21 @@ $block: ".stock-form-select"
     justify-content: flex-start
     align-items: center
 
+  // $Common form select MOD: role control reverse
   &_role_control-reverse
     display: flex
     flex-direction: row-reverse
     justify-content: flex-end
     align-items: center
 
+  // $Common form select MOD: role search
   &_role_search
 
+  // $Common form select MOD: no top label
   &_no-label
     padding-top: 20px
 
+  // $Common form select MOD: size small
   &_size_s
 
 
@@ -87,6 +91,7 @@ $block: ".stock-form-select"
   &__input
     position: relative
 
+    // $Common form select input CONTEXT: $Common form select MOD: role control
     #{$block}_role_control &,
     #{$block}_role_control-reverse &
       flex-grow: 1
@@ -123,7 +128,6 @@ $block: ".stock-form-select"
       background: url(../icons/icon-arrow-down-light-gray.svg) no-repeat 0 0
       transform: translateY(-50%)
 
-    // $Common form select control
     & select
       display: block
       width: 100%
@@ -142,7 +146,6 @@ $block: ".stock-form-select"
       -webkit-appearance: none
       transition: all .3s
 
-      // $Common form select control CONTEXT: $Common form select MOD: state error
       #{$block}_state_error &
         border-color: #ed7f7e
         color: #ed7f7e

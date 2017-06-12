@@ -47,9 +47,11 @@ $block: ".stock-filter"
     transition: all .4s
     transform: translateY(-50%) rotate(180deg)
 
+    // $Filter switch MOD: state closed
     &_state_closed
       transform: translateY(-50%) rotate(0)
 
+    // $Filter switch MOD: state visible on mobile
     &_state_visible-mobile
       @media screen and (min-width: 960px)
         display: none
@@ -66,7 +68,7 @@ $block: ".stock-filter"
     &_state_closed
       display: none
 
-    // $Filter dropdown MOD: visible on mobiles
+    // $Filter dropdown MOD: visible on mobile
     &_state_visible-mobile
       @media screen and (min-width: 960px)
         display: none !important
@@ -119,13 +121,12 @@ $block: ".stock-filter"
     // $Filter field MOD: size third
     // $Filter field MOD: size max
     // $Filter field MOD: size min
+    // $Filter field MOD: size fluid
     &_size_half,
     &_size_third,
     &_size_fourth,
     &_size_max,
     &_size_min
-      flex-grow: 0
-      flex-shrink: 1
       margin-right: 20px
       margin-bottom: 0
 
@@ -139,12 +140,18 @@ $block: ".stock-filter"
           margin-bottom: 20px
 
     &_size_half
-      width: calc(50% - 15px)
+      flex-grow: 0
+      flex-shrink: 1
+      width: calc(50% - 10px)
 
     &_size_third
+      flex-grow: 0
+      flex-shrink: 1
       width: 33%
 
     &_size_fourth
+      flex-grow: 0
+      flex-shrink: 1
       width: calc(25% - 15px)
 
     &_size_max

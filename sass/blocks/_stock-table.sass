@@ -18,7 +18,7 @@ $block: ".stock-table"
   display: block
   width: 100%
 
-  // $Common table MOD: hidden on mobiles
+  // $Common table MOD: hidden on mobile
   &_state_hidden-mobile
     @media screen and (max-width: 960px)
       display: none
@@ -38,7 +38,7 @@ $block: ".stock-table"
     &:nth-child(odd)
       background-color: #f8f8f8
 
-    // $Common table MOD: role header
+    // $Common table row MOD: role header
     &_role_header
 
 
@@ -59,6 +59,7 @@ $block: ".stock-table"
     @media screen and (max-width: 1120px)
       padding: 10px
 
+    // $Common table cell CONTEXT: $Common table MOD: page stock levels list
     #{$block}_page_sl-list &
       justify-content: center
 
