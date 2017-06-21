@@ -68,12 +68,40 @@ $block: ".stock-form-textarea"
       padding: 14px 10px
       box-shadow: none
 
-      &:focus
-        outline: none
-
       #{$block}_state_error &
         border-color: #ed7f7e
         color: #ed7f7e
+
+      &:focus
+        outline: none
+
+      &::-webkit-input-placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+      &:-moz-placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+      &::-moz-placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+      &:-ms-input-placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+      &::-ms-input-placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+      &::placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+      &:placeholder-shown
+        color: #c5c5c5 !important
+        opacity:  1 !important
 
 
   // $Common form textarea note
@@ -83,30 +111,3 @@ $block: ".stock-form-textarea"
     font-size: 14px
     line-height: 1
     color: #757a85
-
-
-  ::-webkit-input-placeholder
-    color: #c5c5c5
-    opacity:  1 !important
-
-
-  :-moz-placeholder
-    color: #c5c5c5
-    opacity:  1 !important
-
-
-  ::-moz-placeholder
-    color: #c5c5c5
-    opacity:  1 !important
-
-
-  :-ms-input-placeholder
-    color: #c5c5c5
-    opacity:  1 !important
-
-
-  :placeholder-shown
-    color: #c5c5c5
-    opacity:  1 !important
-
-
