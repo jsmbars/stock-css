@@ -4,9 +4,9 @@
 List of releases can be found there https://github.com/jsmbars/stock-css/releases
 
 Tags naming convention:
-We use only major numbers for css releases.
-1)`v*-release` - release tag, used for merge commits (* - is a release number)
-2)`v*-fixes` - hotfixes tag, used for commits that were pushed directly to master (* - is a release number)
+* We use only major numbers for css releases.
+* `v*-release` - release tag, used for merge commits (* - is a release number)
+* `v*-fixes` - hotfixes tag, used for commits that were pushed directly to master (* - is a release number)
 
 Checking tags from local repo:
 1) `git ls-remote --tags` - will show list of remote tags
