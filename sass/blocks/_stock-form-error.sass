@@ -17,33 +17,120 @@ $block: ".stock-form-error"
 #{$block}
   display: block
   position: relative
-  margin: 10px 0
-  padding: 10px 20px
+  padding: 8px 10px 8px 30px
   background-color: #ed7f7e
+
+  @media screen and (max-width: 480px)
+    padding: 5px 7px 5px 20px
 
   &:before
     content: ""
     position: absolute
     top: 50%
-    left: 20px
+    left: 10px
     display: block
-    width: 18px
-    height: 18px
-    margin-top: -9px
+    width: 12px
+    height: 10px
+    margin-top: -5px
     background-image: url(../icons/icon-danger-white.svg)
     background-position: center center
     background-repeat: no-repeat
     background-size: contain
 
+    @media screen and (max-width: 480px)
+      left: 5px
+
+  // $Common form error message MOD: tooltip layout
+  &_tooltip
+    border-radius: 3px
+    position: absolute
+    z-index: 10
+
+    &:after
+      content: ""
+      position: absolute
+      z-index: 11
+      display: block
+
+  // $Common form error message MOD: tooltip top left positioned
+  &_tooltip_top-left
+    left: 0
+    bottom: 100%
+    margin-bottom: 5px
+
+    @media screen and (max-width: 480px)
+      left: -5px
+
+    &:after
+      top: 100%
+      left: 15px
+      border-top: 5px solid #ed7f7e
+      border-right: 5px solid transparent
+      border-left: 5px solid transparent
+
+  // $Common form error message MOD: tooltip top right positioned
+  &_tooltip_top-right
+    right: 0
+    bottom: 100%
+    margin-bottom: 5px
+
+    @media screen and (max-width: 480px)
+      right: -5px
+
+    &:after
+      top: 100%
+      right: 15px
+      border-top: 5px solid #ed7f7e
+      border-right: 5px solid transparent
+      border-left: 5px solid transparent
+
+  // $Common form error message MOD: tooltip bottom left positioned
+  &_tooltip_bottom-left
+    left: 0
+    top: 100%
+    margin-top: 5px
+
+    @media screen and (max-width: 480px)
+      left: -5px
+
+    &:after
+      bottom: 100%
+      left: 15px
+      border-bottom: 5px solid #ed7f7e
+      border-right: 5px solid transparent
+      border-left: 5px solid transparent
+
+  // $Common form error message MOD: tooltip bottom right positioned
+  &_tooltip_bottom-right
+    right: 0
+    top: 100%
+    margin-top: 5px
+
+    @media screen and (max-width: 480px)
+      right: -5px
+
+    &:after
+      bottom: 100%
+      right: 15px
+      border-bottom: 5px solid #ed7f7e
+      border-right: 5px solid transparent
+      border-left: 5px solid transparent
+
+
   // $Common form error message text
   &__text
     position: relative
     display: block
-    padding-left: 30px
     font-family: $f-sans
-    font-size: 14px
+    font-size: 11px
     font-weight: 400
     color: #FFF
+
+    @media screen and (max-width: 480px)
+      font-size: 10px
+
+    &_nowrap
+      white-space: nowrap
 
   // $Common form error message text line
   &__line

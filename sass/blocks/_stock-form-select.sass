@@ -112,6 +112,9 @@ $block: ".stock-form-select"
         background-position: center center
         background-size: contain
 
+      #{$block}_role_search#{$block}_state_error &
+        background-image: url(../icons/icon-lens-error.svg)
+
       @media screen and (max-width: 960px)
         #{$block}_role_search &
           left: 25px
@@ -125,8 +128,15 @@ $block: ".stock-form-select"
       display: block
       width: 14px
       height: 14px
-      background: url(../icons/icon-arrow-down-light-gray.svg) no-repeat 0 0
+      background-image: url(../icons/icon-arrow-down-light-gray.svg)
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: contain
       transform: translateY(-50%)
+
+      #{$block}_state_error &
+        background-image: url(../icons/icon-arrow-down-error.svg)
+
 
     & select
       display: block
@@ -158,19 +168,21 @@ $block: ".stock-form-select"
         padding-left: 40px
 
       #{$block}_adjust_manager &
-        padding-top: 24px
-        padding-bottom: 24px
+        padding-top: 20px
+        padding-bottom: 20px
         border-top: none
         border-bottom: none
         border-left: none
+
+      #{$block}_adjust_manager#{$block}_state_error &
+        border: 1px solid #ed7f7e
+        outline: 1px solid #ed7f7e
 
       @media screen and (max-width: 960px)
         #{$block}_role_search &
           padding-left: 55px
 
         #{$block}_adjust_manager &
-          padding-top: 20px
-          padding-bottom: 20px
           border-right: none
           border-bottom: 1px solid #d3d3d3
 
