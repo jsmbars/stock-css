@@ -151,14 +151,18 @@ $block: ".stock-activity-card"
 
   // $Activity card meta
   &__meta
-    flex-grow: 0
-    flex-shrink: 1
-    flex-basis: 0
+    display: block
+    width: 100%
+    margin-bottom: 15px
     font-family: $f-sans
     font-size: 14px
     line-height: 1.2
     font-weight: 400
     color: #6d6f73
+    text-align: center
+
+    &:last-child
+      margin-bottom: 0
 
 
   // $Activity card meta-marked
