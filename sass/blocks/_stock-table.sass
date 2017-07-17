@@ -18,6 +18,11 @@ $block: ".stock-table"
   display: block
   width: 100%
 
+  // $Common table MOD: hidden on mobile
+  &_state_hidden-mobile
+    @media screen and (max-width: 960px)
+      display: none
+
 
   // $Common table row
   &__row
@@ -27,16 +32,14 @@ $block: ".stock-table"
     justify-content: space-between
     align-items: stretch
     width: 100%
-    min-height: 50px
     border-bottom: 1px solid #eee
     background-color: #FFF
 
     &:nth-child(odd)
       background-color: #f8f8f8
 
-    // $Common table MOD: role header
+    // $Common table row MOD: role header
     &_role_header
-      min-height: 60px
 
 
   // $Common table cell
@@ -46,12 +49,17 @@ $block: ".stock-table"
     flex-direction: row
     justify-content: flex-start
     align-items: center
+    min-height: 50px
     font-family: $f-sans
     font-size: 12px
     font-weight: 400
     color: #6c6c6c
     padding: 10px 15px
 
+    @media screen and (max-width: 1120px)
+      padding: 10px
+
+    // $Common table cell CONTEXT: $Common table MOD: page stock levels list
     #{$block}_page_sl-list &
       justify-content: center
 
@@ -151,6 +159,7 @@ $block: ".stock-table"
     // $Common table cell MOD: role footer
     &_role_header,
     &_role_footer
+      min-height: 60px
       font-size: 11px
       font-family: $f-sans
       font-weight: 600

@@ -18,10 +18,18 @@ $block: ".stock-form-interval"
   position: relative
   width: 100%
 
+  // $Common form interval MOD: role control
   &_role_control
     display: flex
     flex-direction: row
     justify-content: flex-start
+    align-items: center
+
+  // $Common form interval MOD: role control reversed
+  &_role_control-reverse
+    display: flex
+    flex-direction: row-reverse
+    justify-content: flex-end
     align-items: center
 
 
@@ -36,6 +44,7 @@ $block: ".stock-form-interval"
     font-weight: 600
     line-height: 1
 
+    // $Common form interval label CONTEXT: $Common form interval MOD: role control
     #{$block}_role_control &,
     #{$block}_role_control-reverse &
       flex-grow: 0
@@ -51,9 +60,7 @@ $block: ".stock-form-interval"
     #{$block}_role_control-reverse &
       margin-left: 10px
 
-    #{$block}_context_table &
-      font-size: 12px
-
+    // $Common form interval label CONTEXT: $Common form interval MOD: required field
     #{$block}_type_required &
       &:after
         content: '*'

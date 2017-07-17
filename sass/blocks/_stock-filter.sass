@@ -16,17 +16,84 @@ $block: ".stock-filter"
 
 #{$block}
 
+
+  // $Filter header
+  &__header
+    position: relative
+    display: block
+    padding: 10px 15px
+
+    @media screen and (max-width: 1120px)
+      padding: 10px
+
+    @media screen and (max-width: 960px)
+      border-bottom: 1px solid #ebebeb
+
+
+  // $Filter switch
+  &__switch
+    position: absolute
+    top: 50%
+    right: 20px
+    z-index: 10
+    display: block
+    width: 14px
+    height: 14px
+    font-size: 0
+    line-height: 0
+    color: transparent
+    outline: none
+    background: url(../icons/icon-arrow-down-light-gray.svg) no-repeat 0 0
+    transition: all .4s
+    transform: translateY(-50%) rotate(180deg)
+
+    // $Filter switch MOD: state closed
+    &_state_closed
+      transform: translateY(-50%) rotate(0)
+
+    // $Filter switch MOD: state visible on mobile
+    &_state_visible-mobile
+      @media screen and (min-width: 961px)
+        display: none
+
+    &:focus
+      outline: none
+
+
+  // $Filter dropdown
   &__dropdown
     display: block
-    padding: 30px 0 10px
 
-    &_state_opened
-      display: block
-
+    // $Filter dropdown MOD: state closed
     &_state_closed
       display: none
 
+    // $Filter dropdown MOD: visible on mobile
+    &_state_visible-mobile
+      @media screen and (min-width: 961px)
+        display: none !important
 
+
+  // $Filter group dropdown-content
+  &__dropdown-content
+    padding: 10px 15px 20px
+    border-bottom: 1px solid #f0f0f0
+
+    @media screen and (max-width: 960px)
+      padding: 20px
+
+
+  // $Filter group dropdown meta
+  &__dropdown-meta
+    padding: 20px
+
+    // $Filter group dropdown meta MOD: visible on mobile
+    &_state_visible-mobile
+      @media screen and (min-width: 961px)
+        display: none
+
+
+  // $Filter row
   &__row
     display: flex
     flex-direction: row
@@ -35,10 +102,16 @@ $block: ".stock-filter"
     width: 100%
     margin-bottom: 20px
 
+    @media screen and (max-width: 960px)
+      #{$block}__dropdown &
+        flex-direction: column
+
+    // $Filter row MOD: position last
     &_position_last
       margin-bottom: 0
 
 
+  // $Filter field
   &__field
     display: block
     width: 100%
@@ -48,23 +121,37 @@ $block: ".stock-filter"
     // $Filter field MOD: size third
     // $Filter field MOD: size max
     // $Filter field MOD: size min
+    // $Filter field MOD: size fluid
     &_size_half,
     &_size_third,
     &_size_fourth,
     &_size_max,
     &_size_min
-      flex-grow: 0
-      flex-shrink: 1
       margin-right: 20px
       margin-bottom: 0
 
+      @media screen and (max-width: 960px)
+        margin-right: 10px
+
+        #{$block}__dropdown &
+          flex-grow: 1
+          width: 100%
+          margin-right: 0
+          margin-bottom: 20px
+
     &_size_half
-      width: 50%
+      flex-grow: 0
+      flex-shrink: 1
+      width: calc(50% - 10px)
 
     &_size_third
+      flex-grow: 0
+      flex-shrink: 1
       width: 33%
 
     &_size_fourth
+      flex-grow: 0
+      flex-shrink: 1
       width: calc(25% - 15px)
 
     &_size_max
@@ -82,7 +169,24 @@ $block: ".stock-filter"
       flex-shrink: 0
       width: auto
 
+    // $Filter field MOD: position last
     &_position_last
       margin-right: 0
       margin-bottom: 0
+
+      @media screen and (max-width: 960px)
+        margin-right: 0
+
+        #{$block}__dropdown &
+          margin-bottom: 0
+
+    // $Filter field MOD: visible on mobiles
+    &_state_visible-mobile
+      @media screen and (min-width: 961px)
+        display: none
+
+    // $Filter field MOD: hidden on mobiles
+    &_state_hidden-mobile
+      @media screen and (max-width: 960px)
+        display: none
 

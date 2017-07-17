@@ -1,0 +1,208 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Activity card
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-activity-card"
+
+#{$block}
+
+  // $Activity card MOD: role board
+  &_role_board
+    margin-bottom: 20px
+    background-color: #FFF
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+  // $Activity card MOD: visible on mobiles
+  &_state_visible-mobile
+    @media screen and (min-width: 961px)
+      display: none
+
+
+  // $Activity card header
+  &__header
+    padding: 20px 10px 10px
+    text-align: center
+    background-color: #FFF
+    border-bottom: 1px solid #ebebeb
+
+
+  // $Activity card content
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    padding: 30px 10px 0
+    text-align: center
+    background-color: #FFF
+
+
+  // $Activity card footer
+  &__footer
+    padding: 35px 10px 15px
+    text-align: center
+    background-color: #f8f8f8
+
+
+  // $Activity card info
+  &__info
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+    text-align: left
+
+
+  // $Activity card icon
+  &__icon
+    flex-grow: 0
+    flex-shrink: 1
+
+    // $Activity card icon MOD: role user
+    &_role_user
+      width: 77px
+      height: 50px
+      background-image: url('../icons/icon-user-illustration.png')
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: contain
+
+    // $Activity card icon MOD: role rt
+    &_role_rt
+      width: 77px
+      height: 50px
+      background-image: url('../icons/icon-box-illustration.png')
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: contain
+
+
+  // $Activity card delimiter
+  &__delimiter
+    flex-grow: 0
+    flex-shrink: 1
+
+    // $Activity card delimiter MOD: role user
+    &_role_user
+      width: 0
+      margin: 0 10px
+
+    // $Activity card icon MOD: role rt
+    &_role_rt
+      width: 50px
+      height: 18px
+      margin: 0 20px
+      background-image: url('../icons/icon-arrow-illustration.png')
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: contain
+
+
+  // $Activity card title
+  &__title
+    font-family: $f-sans
+    font-size: 16px
+    line-height: 1.2
+    color: #1c2841
+    font-weight: 600
+    margin-bottom: 5px
+
+
+  // $Activity card note
+  &__note
+    font-family: $f-sans
+    font-size: 12px
+    line-height: 1
+    font-weight: 400
+    color: #9F9F9F
+
+
+  // $Activity card text
+  &__text
+    flex-grow: 0
+    flex-shrink: 1
+    width: min-content
+    font-family: $f-sans
+    font-size: 16px
+    line-height: 1.2
+    font-weight: 600
+    color: #1c2841
+
+    &_align_right
+      text-align: right
+
+
+  // $Activity card text line
+  &__text-line
+    display: block
+    white-space: nowrap
+
+
+  // $Activity card meta
+  &__meta
+    display: block
+    width: 100%
+    margin-bottom: 15px
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 1.2
+    font-weight: 400
+    color: #6d6f73
+    text-align: center
+
+    &:last-child
+      margin-bottom: 0
+
+
+  // $Activity card meta-marked
+  &__meta-marked
+    font-weight: 600
+    color: #1c2841
+
+
+  // $Activity card button
+  &__button
+    position: relative
+    z-index: 1
+    width: 195px
+    transform: translateY(50%)
+
+
+  &__date
+    position: relative
+    z-index: 1
+    width: 195px
+    padding: 10px
+    font-family: $f-sans
+    font-size: 14px
+    font-weight: 300
+    color: #FFF
+    background-color: #64a5fd
+    border-radius: 20px
+    white-space: nowrap
+    transform: translateY(50%)
+
+    &:before
+      content: ""
+      display: inline-block
+      width: 16px
+      height: 16px
+      margin-right: 10px
+      margin-top: -3px
+      background-image: url('../icons/icon-calendar-white.svg')
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: contain
+      vertical-align: middle
+

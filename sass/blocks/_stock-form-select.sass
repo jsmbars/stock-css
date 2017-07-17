@@ -26,17 +26,21 @@ $block: ".stock-form-select"
     justify-content: flex-start
     align-items: center
 
+  // $Common form select MOD: role control reverse
   &_role_control-reverse
     display: flex
     flex-direction: row-reverse
     justify-content: flex-end
     align-items: center
 
+  // $Common form select MOD: role search
   &_role_search
 
+  // $Common form select MOD: no top label
   &_no-label
     padding-top: 20px
 
+  // $Common form select MOD: size small
   &_size_s
 
 
@@ -73,6 +77,11 @@ $block: ".stock-form-select"
         content: '*'
         margin-left: 2px
 
+    @media screen and (max-width: 960px)
+      #{$block}_role_control &,
+      #{$block}_role_control-reverse &
+        width: 90px
+
 
   // $Common form select label text
   &__label-text
@@ -81,20 +90,15 @@ $block: ".stock-form-select"
   // $Common form select input
   &__input
     position: relative
-    display: block
-    width: 100%
-    border: 1px solid #d3d3d3
 
-    // $Common form input CONTEXT: $Common form select MOD: state error
-    #{$block}_state_error &
-      border-color: #ed7f7e
-      color: #ed7f7e
+    // $Common form select input CONTEXT: $Common form select MOD: role control
+    #{$block}_role_control &,
+    #{$block}_role_control-reverse &
+      flex-grow: 1
+      flex-shrink: 1
 
-    #{$block}_size_s &
-      min-width: 155px
-
-    #{$block}_role_search &
-      &:before
+    &:before
+      #{$block}_role_search &
         content: ""
         position: absolute
         top: 50%
@@ -108,10 +112,12 @@ $block: ".stock-form-select"
         background-position: center center
         background-size: contain
 
-    #{$block}_adjust_manager &
-      border-top: none
-      border-bottom: none
-      border-left: none
+      #{$block}_role_search#{$block}_state_error &
+        background-image: url(../icons/icon-lens-error.svg)
+
+      @media screen and (max-width: 960px)
+        #{$block}_role_search &
+          left: 25px
 
     &:after
       content: ''
@@ -122,65 +128,89 @@ $block: ".stock-form-select"
       display: block
       width: 14px
       height: 14px
-      background: url(../icons/icon-arrow-down-light-gray.svg) no-repeat 0 0
+      background-image: url(../icons/icon-arrow-down-light-gray.svg)
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: contain
       transform: translateY(-50%)
 
+      #{$block}_state_error &
+        background-image: url(../icons/icon-arrow-down-error.svg)
 
-  // $Common form select control
-  &__control
-    display: block
-    width: 100%
-    padding: 14px 40px 14px 10px
-    font-family: $f-sans
-    font-size: 12px
-    color: #757a85
-    font-weight: 400
-    line-height: 1.5
-    outline: none
-    border: none
-    background: none
-    appearance: none
-    -moz-appearance: none
-    -webkit-appearance: none
-    transition: all .3s
 
-    // $Common form select control CONTEXT: $Common form select MOD: state error
-    #{$block}_state_error &
-      color: #ed7f7e
-
-    #{$block}_size_s &
-      padding: 8px 40px 8px 10px
-
-    #{$block}_role_search &
-      padding-left: 40px
-
-    #{$block}_adjust_manager &
-      padding-top: 24px
-      padding-bottom: 24px
-
-    &::-ms-expand
-      display: none
-
-    &:focus::-ms-value
-      background-color: transparent
+    & select
+      display: block
+      width: 100%
+      padding: 14px 40px 14px 10px
+      font-family: $f-sans
+      font-size: 12px
       color: #757a85
+      font-weight: 400
+      line-height: 1.5
+      outline: none
+      border: 1px solid #d3d3d3
+      border-radius: 0
+      background: none
+      appearance: none
+      -moz-appearance: none
+      -webkit-appearance: none
+      transition: all .3s
 
-    &:invalid
-      color: #c5c5c5
+      #{$block}_state_error &
+        border-color: #ed7f7e
+        color: #ed7f7e
 
+      #{$block}_size_s &
+        min-width: 155px
+        padding: 8px 40px 8px 10px
 
-  // $Common form select option
-  &__option
-    display: block
-    width: 100%
-    max-width: 100%
-    font-family: $f-sans
-    font-size: 14px
-    color: #757a85
-    font-weight: 400
-    line-height: 1.5
-    outline: none
-    border: none
+      #{$block}_role_search &
+        padding-left: 40px
+
+      #{$block}_adjust_manager &
+        padding-top: 20px
+        padding-bottom: 20px
+        border-top: none
+        border-bottom: none
+        border-left: none
+
+      #{$block}_adjust_manager#{$block}_state_error &
+        border: 1px solid #ed7f7e
+        outline: 1px solid #ed7f7e
+
+      @media screen and (max-width: 960px)
+        #{$block}_role_search &
+          padding-left: 55px
+
+        #{$block}_adjust_manager &
+          border-right: none
+          border-bottom: 1px solid #d3d3d3
+
+        #{$block}_size_s &
+          min-width: 0
+
+      &::-ms-expand
+        display: none
+
+      &:focus::-ms-value
+        background-color: transparent
+        color: #757a85
+
+      &:invalid
+        color: #c5c5c5
+
+    // $Common form select option
+    & option
+      display: block
+      width: 100%
+      max-width: 100%
+      font-family: $f-sans
+      font-size: 12px
+      color: #757a85
+      font-weight: 400
+      line-height: 1.5
+      outline: none
+      border: none
 
 
   // $Common form select note
@@ -190,28 +220,3 @@ $block: ".stock-form-select"
     font-size: 14px
     line-height: 1
     color: #757a85
-
-
-  ::-webkit-input-placeholder
-    color: #c5c5c5
-    opacity:  1 !important
-
-
-  :-moz-placeholder
-    color: #c5c5c5
-    opacity:  1 !important
-
-
-  ::-moz-placeholder
-    color: #c5c5c5
-    opacity:  1 !important
-
-
-  :-ms-input-placeholder
-    color: #c5c5c5
-    opacity:  1 !important
-
-
-  :placeholder-shown
-    color: #c5c5c5
-    opacity:  1 !important

@@ -1,0 +1,340 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Page content
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-page-content"
+
+#{$block}
+  display: block
+  width: 100%
+
+
+  // $Page content dashboard
+  &__dashboard
+    width: 100%
+    height: 140px
+    background-color: #FFF
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,.2)
+
+    @media screen and (max-width: 1360px)
+      height: auto
+
+
+  // $Page content dashboard navigation bar
+  &__dashboard-navbar
+    position: absolute
+    bottom: 0
+    left: 40px
+
+    @media screen and (max-width: 1360px)
+      position: relative
+      background:
+      left: auto
+
+
+  // $Page content main
+  &__main
+    width: 100%
+
+
+  // $Page content inner area
+  &__inner
+    display: block
+    width: 100%
+    height: 100%
+    padding: 20px 25px
+
+    @media screen and (max-width: 1360px)
+      padding-left: 25px
+      padding-right: 25px
+
+    @media screen and (max-width: 1120px)
+      padding-left: 10px
+      padding-right: 10px
+
+    // $Page content inner area MOD: adjust for dashboard
+    &_adjust_dashboard
+      position: relative
+      padding: 45px 40px 0
+
+      @media screen and (max-width: 1360px)
+        padding-left: 25px
+        padding-right: 25px
+
+      @media screen and (max-width: 1120px)
+        padding: 30px 10px 0
+
+
+  // $Page content tabs
+  &__tabs
+    display: block
+    width: 100%
+
+
+  // $Page content tab
+  &__tab
+    display: none
+
+    // $Page content tab MOD: state visible
+    &_state_visible
+      display: block
+
+    // $Page content tab MOD: state hidden
+    &_state_hidden
+      display: none
+
+
+  // $Page content board
+  &__board
+    margin-bottom: 20px
+    background-color: #FFF
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+    // $Page content board MOD: position last
+    &_position_last
+      margin-bottom: 0
+
+    // $Page content board MOD: transparent on mobiles
+    &_state_transparent-mobile
+      @media screen and (max-width: 960px)
+        background-color: transparent
+        box-shadow: none
+
+
+  // $Page content data area
+  &__data
+    width: 100%
+
+    // $Page content data area MOD: role view
+    &_role_view
+
+    // $Page content data area MOD: state visible
+    &_state_visible
+      display: block
+
+    // $Page content data area MOD: state hidden
+    &_state_hidden
+      display: none
+
+  // $Page content manager area
+  &__manager
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 15px
+    margin-bottom: 5px
+
+    @media screen and (max-width: 1120px)
+      padding: 10px
+
+    @media screen and (max-width: 960px)
+      flex-direction: column
+      padding-left: 0
+      padding-right: 0
+
+    // $Page content manager area MOD: nospace
+    &_nospace
+      padding: 0
+
+
+  // $Page content actions
+  &__actions
+    flex-shrink: 1
+    flex-grow: 0
+    width: auto
+
+    @media screen and (max-width: 960px)
+      flex-grow: 1
+      width: 100%
+
+
+  // $Page content filter area
+  &__filter
+
+    &_state_board-mobile
+      @media screen and (max-width: 960px)
+        margin-bottom: 20px
+        background-color: #FFF
+        box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+
+  // $Page content table area
+  &__table
+
+
+  // $Page content form area
+  &__form
+    padding-bottom: 25px
+
+
+  // $Page content meta area
+  &__meta
+    padding: 15px
+
+    @media screen and (max-width: 1120px)
+      padding: 10px
+
+    // $Page content meta area MOD: adjust for bottom area
+    &_adjust_rt-view-bottom
+      padding: 20px 15px 25px
+
+      @media screen and (max-width: 1120px)
+        padding: 20px 10px 15px
+
+      @media screen and (max-width: 960px)
+        background-color: #FFF
+        box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+    // $Page content meta area MOD: adjust for list view are
+    &_adjust_list-view-bottom
+      padding: 45px 15px 40px
+
+      @media screen and (max-width: 1120px)
+        padding: 45px 10px 40px
+
+      @media screen and (max-width: 960px)
+        padding: 20px 10px 15px
+        background-color: #FFF
+        box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+    // $Page content meta area MOD: adjust for details view top area
+    &_adjust_details-view-top
+      padding: 0
+
+    // $Page content meta area MOD: adkust for details view top area
+    &_adjust_details-view-bottom
+      padding: 25px 15px 40px
+
+      @media screen and (max-width: 1120px)
+        padding: 25px 10px 40px
+
+
+  // $Page content meta area group
+  &__meta-group
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+
+    #{$block}__meta_adjust_bottom &
+      justify-content: flex-end
+
+    #{$block}__meta_adjust_list-view &
+      justify-content: center
+
+    #{$block}__meta_adjust_details-view-top &
+      justify-content: flex-start
+      align-items: stretch
+      border-bottom: 1px solid #d3d3d3
+
+    #{$block}__meta_adjust_details-view-bottom &
+      justify-content: flex-end
+
+    @media screen and (max-width: 960px)
+      flex-direction: column
+
+      #{$block}__meta_adjust_details-view-top &
+        border-bottom: none
+
+    // $Page content meta area group MOD: position last
+    &_position_last
+      #{$block}__meta_adjust_details-view-top &
+        border-bottom: none
+
+
+  // $Page content meta area cell
+  &__meta-cell
+    flex-grow: 0
+    flex-shrink: 1
+    padding: 20px 25px
+
+    @media screen and (max-width: 1120px)
+      padding-left: 20px
+      padding-right: 20px
+
+    #{$block}__meta_adjust_details-view-top &
+      border-right: 1px solid #d3d3d3
+
+    @media screen and (max-width: 960px)
+      #{$block}__meta_adjust_details-view-top &
+        padding: 15px 25px
+        border-right: none
+        border-bottom: 1px solid #d3d3d3
+
+    // $Page content meta area cell MOD: position last
+    &_position_last
+      #{$block}__meta_adjust_details-view-top &
+        border-right: none
+
+
+  // $Page content title
+  &__title
+    display: block
+    max-width: 100%
+    font-size: 24px
+    line-height: 1
+    font-family: $f-sans
+    font-weight: 400
+    color: #1c2841
+    margin-bottom: 35px
+
+    @media screen and (max-width: 1360px)
+      text-align: center
+
+    @media screen and (max-width: 960px)
+      margin-bottom: 30px
+
+
+  // $Page content sub title
+  &__sub-title
+    display: block
+    max-width: 100%
+    font-size: 20px
+    line-height: 1
+    font-family: $f-sans
+    font-weight: 400
+    color: #1c2841
+
+    @media screen and (max-width: 960px)
+      margin-bottom: 15px
+
+
+  // $Page content text
+  &__text
+    font-family: $f-sans
+    font-size: 12px
+    line-height: 1
+    font-weight: 600
+    color: #787878
+
+    &:not(:only-child)
+      @media screen and (max-width: 960px)
+        margin-bottom: 15px
+
+    // $Page content text MOD: extra text
+    &_extra
+      font-size: 13px
+      color: #1c2841
+      text-transform: uppercase
+
+    // $Page content text MOD: size max width
+    &_size_max
+      flex-grow: 1
+      flex-shrink: 1
+
+    // $Page content text MOD: visible on mobiles
+    &_state_visible-mobile
+      @media screen and (min-width: 961px)
+        display: none
+

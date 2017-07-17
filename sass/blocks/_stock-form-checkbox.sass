@@ -43,11 +43,11 @@ $block: ".stock-form-checkbox"
     display: inline-block
     min-height: 20px
     font-family: $f-sans
-    font-size: 12px
+    font-size: 14px
     color: #757a85
     font-weight: 400
-    line-height: 1
-    padding-left: 20px
+    line-height: 20px
+    padding-left: 30px
 
     &:before
       content: ""
@@ -82,3 +82,26 @@ $block: ".stock-form-checkbox"
 
       #{$block}__input:checked ~ &
         visibility: visible
+
+    &_marked
+      font-weight: 600
+      color: #1c2841
+
+    &_type_no-label
+      padding-left: 20px
+
+    &_type_reversed
+      padding-left: 0
+      padding-right: 30px
+
+      &:before
+        left: auto
+        right: 0
+
+      &:after
+        left: auto
+        right: 5px
+
+    &_type_reversed#{&}_type_empty
+      padding-left: 0
+      padding-right: 20px

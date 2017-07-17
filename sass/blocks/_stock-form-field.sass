@@ -19,55 +19,28 @@ $block: ".stock-form-field"
   display: block
   width: 100%
 
+  // $Common form field MOD: role control
   &_role_control
     display: flex
     flex-direction: row
     justify-content: flex-start
     align-items: center
 
+  // $Common form field MOD: role control reversed
   &_role_control-reverse
     display: flex
     flex-direction: row-reverse
     justify-content: flex-end
     align-items: center
 
-  &_role_date
-
-    &:after
-      content: ""
-      position: absolute
-      top: 50%
-      margin-top: -9px
-      right: 13px
-      display: block
-      width: 18px
-      height: 18px
-      background-image: url('../icons/icon-calendar-light-gray.svg')
-      background-repeat: no-repeat
-      background-position: center center
-      background-size: contain
-
-  &_role_search
-
-    &:before
-      content: ""
-      position: absolute
-      top: 50%
-      margin-top: -7px
-      left: 15px
-      display: block
-      width: 14px
-      height: 14px
-      background-image: url('../icons/icon-lens-light-gray.svg')
-      background-repeat: no-repeat
-      background-position: center center
-      background-size: contain
-
+  // $Common form field MOD: state error
   &_state_error
 
+  // $Common form field MOD: no top label
   &_no-label
     padding-top: 20px
 
+  // $Common form field MOD: size small
   &_size_s
 
 
@@ -80,7 +53,7 @@ $block: ".stock-form-field"
     font-size: 14px
     color: #757a85
     font-weight: 600
-    line-height: 1
+    line-height: 1.2
 
     // $Common form field label text CONTEXT: $Common form MOD: role control
     #{$block}_role_control &,
@@ -98,14 +71,22 @@ $block: ".stock-form-field"
     #{$block}_role_control-reverse &
       margin-left: 10px
 
+    // $Common form field label text CONTEXT: $Common form MOD: context table
     #{$block}_context_table &
+      flex-shrink: 1
       font-size: 12px
+      white-space: normal
 
     // $Common form field label-text CONTEXT: $Common form field MOD: type required field
     #{$block}_type_required &
       &:after
         content: '*'
         margin-left: 2px
+
+    @media screen and (max-width: 960px)
+      #{$block}_role_control &,
+      #{$block}_role_control-reverse &
+        width: 90px
 
 
   // $Common form field label text
@@ -114,39 +95,135 @@ $block: ".stock-form-field"
 
   // $Common form field input
   &__input
-    display: block
-    width: 100%
-    padding: 14px 10px
-    font-family: $f-sans
-    font-size: 12px
-    color: #757a85
-    font-weight: 400
-    line-height: 1.5
-    border: 1px solid #d3d3d3
+    position: relative
 
-    #{$block}_role_date &
-      padding-right: 40px
+    // $Common form field input CONTEXT: $Common form MOD: role control
+    #{$block}_role_control &,
+    #{$block}_role_control-reverse &
+      flex-grow: 1
+      flex-shrink: 1
 
-    #{$block}_role_search &
-      padding-left: 40px
-
-    #{$block}_size_s &
-      width: 155px
-      padding: 8px 10px
-
-
+    // $Common form field input CONTEXT: $Common form MOD: context table
     #{$block}_context_table &
-      width: 55px
-      padding: 8px 10px
+      flex-grow: 0
+      flex-shrink: 0
+
+    &:after
+      #{$block}_role_date &
+        content: ""
+        position: absolute
+        top: 50%
+        margin-top: -9px
+        right: 13px
+        display: block
+        width: 18px
+        height: 18px
+        background-image: url('../icons/icon-calendar-light-gray.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+
+    &:before
+      #{$block}_role_search &
+        content: ""
+        position: absolute
+        top: 50%
+        margin-top: -7px
+        left: 15px
+        display: block
+        width: 14px
+        height: 14px
+        background-image: url('../icons/icon-lens-light-gray.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+
+    & input
+      display: block
+      width: 100%
+      padding: 14px 10px
+      font-family: $f-sans
       font-size: 12px
+      color: #757a85
+      font-weight: 400
+      line-height: 1.5
+      border: 1px solid #d3d3d3
+      border-radius: 0
 
-    &:focus
-      outline: none
+      #{$block}_role_date &
+        padding-right: 40px
 
-    // $Common form field input CONTEXT: $Common form field state error
-    #{$block}_state_error &
-      border-color: #ed7f7e
-      color: #ed7f7e
+      #{$block}_role_search &
+        padding-left: 40px
+
+      #{$block}_size_s &
+        width: 155px
+        padding: 8px 10px
+
+      #{$block}_context_table &
+        width: 55px
+        padding: 8px 10px
+        font-size: 12px
+
+      #{$block}_state_error &
+        border-color: #ed7f7e
+        color: #ed7f7e
+
+      @media screen and (max-width: 960px)
+        #{$block}_size_s &
+          width: 100%
+
+      &:focus
+        outline: none
+
+      &::-webkit-input-placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+        #{$block}_state_error &
+          color: #ed7f7e !important
+
+      &:-moz-placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+        #{$block}_state_error &
+          color: #ed7f7e !important
+
+      &::-moz-placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+        #{$block}_state_error &
+          color: #ed7f7e !important
+
+      &:-ms-input-placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+        #{$block}_state_error &
+          color: #ed7f7e !important
+
+      &::-ms-input-placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+        #{$block}_state_error &
+          color: #ed7f7e !important
+
+      &::placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+        #{$block}_state_error &
+          color: #ed7f7e !important
+
+      &:placeholder-shown
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+        #{$block}_state_error &
+          color: #ed7f7e !important
 
 
   // $Common form field note
@@ -156,28 +233,3 @@ $block: ".stock-form-field"
     font-size: 14px
     line-height: 1
     color: #757a85
-
-
-  ::-webkit-input-placeholder
-    color: #c5c5c5
-    opacity:  1 !important
-
-
-  :-moz-placeholder
-    color: #c5c5c5
-    opacity:  1 !important
-
-
-  ::-moz-placeholder
-    color: #c5c5c5
-    opacity:  1 !important
-
-
-  :-ms-input-placeholder
-    color: #c5c5c5
-    opacity:  1 !important
-
-
-  :placeholder-shown
-    color: #c5c5c5
-    opacity:  1 !important

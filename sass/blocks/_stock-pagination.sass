@@ -20,11 +20,6 @@ $block: ".stock-pagination"
   align-items: stretch
   width: 100%
 
-  // $Pagination MOD: size max
-  &_size_max
-    flex-grow: 1
-    flex-shrink: 1
-
   // $Pagination MOD: size min
   &_size_min
     flex-grow: 0
@@ -39,7 +34,7 @@ $block: ".stock-pagination"
     flex-shrink: 0
     display: block
     min-width: 35px
-    margin-right: 12px
+    margin-right: 10px
     padding: 10px
     text-align: center
     font-size: 12px
@@ -53,28 +48,8 @@ $block: ".stock-pagination"
     outline: none
     transition: all .2s
 
-    // $Pagination action CONTEXT: $Pagination MOD: size max
-    #{$block}_size_max &
-      flex-grow: 1
-
     @media screen and (max-width: 960px)
       display: none
-      margin-right: 10px
-
-      #{$block}_size_max &
-        display: block
-
-    @media screen and (max-width: 640px)
-      #{$block}_size_max &
-        margin-right: 8px
-        padding: 12px 8px
-
-    @media screen and (max-width: 400px)
-      margin-right: 0
-      border-right: none
-
-      #{$block}_size_max &
-        margin-right: 0
 
     &:last-of-type
       margin-right: 0
@@ -113,6 +88,11 @@ $block: ".stock-pagination"
     &_role_next
       @media screen and (max-width: 960px)
         display: block
+
+    &_role_prev,
+    &_role_next
+      padding-left: 15px
+      padding-right: 15px
 
 
   // $Pagination action details
