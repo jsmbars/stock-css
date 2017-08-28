@@ -128,6 +128,19 @@ $block: ".stock-button"
     padding: 15px 30px
 
 
+  &_space_left
+    margin-left: 15px
+
+    @media screen and (max-width: 960px)
+      margin-left: 5px
+
+  &_space_right
+    margin-right: 15px
+
+    @media screen and (max-width: 960px)
+      margin-right: 5px
+
+
   // $Common button MOD: state disabled
   &_state_disabled[disabled],
   &_state_disabled,
@@ -227,6 +240,50 @@ $block: ".stock-button"
     +button-with-icon-right($icon-url: '../icons/icon-options-light-gray.svg', $background-size: 15px)
     +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-hover-url: '../icons/icon-options-primary.svg')
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-options-primary.svg')
+
+    & span
+      @media screen and (max-width: 960px)
+        display: none
+
+    &:after,
+    &:before
+      @media screen and (max-width: 960px)
+        margin-right: 0
+        margin-left: 0
+
+  &_role_apply-label
+    text-transform: none
+    padding: 8px 10px
+    cursor: default
+    font-size: 14px
+    +button-bordered($color: #757a85, $bg-color: #fff, $border-color: #fff)
+    +button-with-icon-left($icon-url: '../icons/icon-checked-dark-gray.svg', $background-size: 17px)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff, $icon-hover-url: '../icons/icon-checked-dark-gray.svg')
+
+  &_role_apply
+    text-transform: none
+    padding: 15px 20px
+    +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-color: #d3d3d3)
+    +button-with-icon-right($icon-url: '../icons/icon-checked-light-gray.svg', $background-size: 15px)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-hover-url: '../icons/icon-checked-primary.svg')
+    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-checked-primary.svg')
+
+  &_role_apply-light
+    text-transform: none
+    padding: 8px 10px
+    font-size: 14px
+    +button-bordered($color: #757a85, $bg-color: #fff, $border-color: #fff)
+    +button-with-icon-left($icon-url: '../icons/icon-checked-dark-gray.svg', $background-size: 17px)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff, $icon-hover-url: '../icons/icon-checked-dark-gray.svg')
+    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-checked-primary.svg')
+
+  &_role_apply-fluid
+    text-transform: none
+    padding: 15px 20px
+    +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-color: #d3d3d3)
+    +button-with-icon-right($icon-url: '../icons/icon-checked-light-gray.svg', $background-size: 15px)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-hover-url: '../icons/icon-checked-primary.svg')
+    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-checked-primary.svg')
 
     & span
       @media screen and (max-width: 960px)
