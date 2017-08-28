@@ -196,12 +196,14 @@ $block: ".stock-filter"
       #{$block}_layout_fluid &
         flex-direction: column
 
+    // $Filter row MOD: adjust nowrap
     &_adjust_nowrap
       @media screen and (max-width: 960px)
         #{$block}__dropdown &,
         #{$block}_layout_fluid &
           flex-direction: row
 
+    // $Filter row MOD: align at start
     &_align_start
       align-items: flex-start
 
@@ -246,11 +248,6 @@ $block: ".stock-filter"
       flex-shrink: 1
       width: calc(50% - 10px)
 
-    &_size_two-fifth
-      flex-grow: 0
-      flex-shrink: 1
-      width: calc(40% - 15px)
-
     &_size_third
       flex-grow: 0
       flex-shrink: 1
@@ -265,6 +262,9 @@ $block: ".stock-filter"
       flex-grow: 1
       flex-shrink: 1
       width: auto
+
+      @media screen and (max-width: 960px)
+        width: 50%
 
     &_size_min
       flex-grow: 0
@@ -288,6 +288,7 @@ $block: ".stock-filter"
         #{$block}_layout_fluid &:not(#{$block}__field_adjust_nowrap)
           margin-bottom: 0
 
+    // $Filter field MOD: role buttons nowrap row
     &_role_buttons-row
       white-space: nowrap
 

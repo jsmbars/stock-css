@@ -52,6 +52,7 @@ $block: ".stock-accordion"
     padding: 24px 8px 20px 40px
     border-bottom: 1px solid #f0f0f0
 
+    // $Accordion dropdown header MOD: role switch
     &_role_switch
 
   // $Accordion dropdown switch
@@ -89,6 +90,7 @@ $block: ".stock-accordion"
       outline: #FFF
 
 
+  // $Accordion dropdown row
   &__dropdown-row
     flex-grow: 1
     flex-shrink: 1
@@ -98,6 +100,8 @@ $block: ".stock-accordion"
     justify-content: flex-start
     width: 100%
 
+
+  // $Accordion dropdown cell
   &__dropdown-cell
     flex-grow: 1
     flex-shrink: 1
@@ -108,16 +112,23 @@ $block: ".stock-accordion"
     @media screen and (max-width: 960px)
       margin-right: 15px
 
+    // $Accordion dropdown cell MOD: size max
     &_size_max
       flex-grow: 1
       flex-shrink: 1
       width: auto
 
+      @media screen and (max-width: 960px)
+        width: 50%
+
+    // $Accordion dropdown cell MOD: size min
     &_size_min
       flex-grow: 0
       flex-shrink: 1
       width: auto
 
+
+    // $Accordion dropdown cell MOD: position last
     &_position_last
       margin-right: 0
 
@@ -167,7 +178,6 @@ $block: ".stock-accordion"
     color: #1C2841
     text-transform: uppercase
 
-
     // $Accordion label MOD: role header
     &_role_header
       flex-grow: 1
@@ -178,15 +188,13 @@ $block: ".stock-accordion"
       &:first-of-type
         padding-left: 40px
 
-
     // $Accordion label MOD: role title
     &_role_title
       font-size: 12px
 
-    &_type_single
+    // $Accordion label MOD: size full width
+    &_size_full
       width: 100%
-      font-size: 12px
-
 
 
   // $Accordion text

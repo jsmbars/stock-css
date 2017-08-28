@@ -127,13 +127,14 @@ $block: ".stock-button"
   &_size_l
     padding: 15px 30px
 
-
+  // $Common button MOD: space left
   &_space_left
     margin-left: 15px
 
     @media screen and (max-width: 960px)
       margin-left: 5px
 
+  // $Common button MOD: space right
   &_space_right
     margin-right: 15px
 
@@ -225,8 +226,8 @@ $block: ".stock-button"
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-options-primary.svg')
 
     @media screen and (max-width: 960px)
-      padding-right: 15px
-      padding-left: 15px
+      padding-right: 13px
+      padding-left: 13px
 
   &_role_filter-light
     text-transform: none
@@ -244,6 +245,10 @@ $block: ".stock-button"
     +button-with-icon-right($icon-url: '../icons/icon-options-light-gray.svg', $background-size: 15px)
     +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-hover-url: '../icons/icon-options-primary.svg')
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-options-primary.svg')
+
+    @media screen and (max-width: 960px)
+      padding-right: 13px
+      padding-left: 13px
 
     & span
       @media screen and (max-width: 960px)
@@ -273,8 +278,8 @@ $block: ".stock-button"
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-checked-primary.svg')
 
     @media screen and (max-width: 960px)
-      padding-right: 15px
-      padding-left: 15px
+      padding-right: 13px
+      padding-left: 13px
 
   &_role_apply-light
     text-transform: none
@@ -292,6 +297,10 @@ $block: ".stock-button"
     +button-with-icon-right($icon-url: '../icons/icon-checked-light-gray.svg', $background-size: 15px)
     +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-hover-url: '../icons/icon-checked-primary.svg')
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-checked-primary.svg')
+
+    @media screen and (max-width: 960px)
+      padding-right: 13px
+      padding-left: 13px
 
     & span
       @media screen and (max-width: 960px)
