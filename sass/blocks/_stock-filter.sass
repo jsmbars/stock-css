@@ -103,7 +103,8 @@ $block: ".stock-filter"
     margin-bottom: 20px
 
     @media screen and (max-width: 960px)
-      #{$block}__dropdown &
+      #{$block}__dropdown &,
+      #{$block}_layout_fluid &
         flex-direction: column
 
     // $Filter row MOD: position last
@@ -133,7 +134,8 @@ $block: ".stock-filter"
       @media screen and (max-width: 960px)
         margin-right: 10px
 
-        #{$block}__dropdown &
+        #{$block}__dropdown &,
+        #{$block}_layout_fluid &
           flex-grow: 1
           width: 100%
           margin-right: 0

@@ -147,6 +147,11 @@ $block: ".stock-page-content"
     &_nospace
       padding: 0
 
+    // $Page content manager MOD: visible on mobiles
+    &_state_visible-mobile
+      @media screen and (min-width: 961px)
+        display: none
+
 
   // $Page content actions
   &__actions
@@ -176,6 +181,10 @@ $block: ".stock-page-content"
   // $Page content form area
   &__form
     padding-bottom: 25px
+
+    &_nospace-mobile
+      @media screen and (max-width: 960px)
+        padding-bottom: 0
 
 
   // $Page content meta area
@@ -308,6 +317,13 @@ $block: ".stock-page-content"
 
     @media screen and (max-width: 960px)
       margin-bottom: 15px
+
+    // $Page content sub title MOD: position last
+    &_position_last
+      margin-bottom: 0
+
+      @media screen and (max-width: 960px)
+        margin-bottom: 0
 
 
   // $Page content text

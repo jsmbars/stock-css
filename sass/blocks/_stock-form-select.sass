@@ -82,6 +82,12 @@ $block: ".stock-form-select"
       #{$block}_role_control-reverse &
         width: 90px
 
+    &_type_fluid
+      @media screen and (max-width: 960px)
+        #{$block}_role_control &,
+        #{$block}_role_control-reverse &
+          width: auto
+
 
   // $Common form select label text
   &__label-text
