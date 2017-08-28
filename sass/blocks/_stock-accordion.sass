@@ -181,6 +181,12 @@ $block: ".stock-accordion"
 
     // $Accordion label MOD: role title
     &_role_title
+      font-size: 12px
+
+    &_type_single
+      width: 100%
+      font-size: 12px
+
 
 
   // $Accordion text
@@ -190,4 +196,7 @@ $block: ".stock-accordion"
     line-height: 1
     font-weight: 400
     color: #6c6c6c
+
+    &:not(:only-child):not(:last-child)
+      margin-bottom: 5px
 

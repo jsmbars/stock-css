@@ -35,11 +35,16 @@ $block: ".stock-activity-card"
     background-color: #FFF
     border-bottom: 1px solid #ebebeb
 
+    &_adjust_label
+      padding-bottom: 0
 
   // $Activity card accordion
   &__accordion
     background-color: #f8f8f8
     border-bottom: 1px solid #ebebeb
+
+    &_type_light
+      background-color: #FFF
 
 
 
@@ -52,6 +57,12 @@ $block: ".stock-activity-card"
     padding: 30px 10px 0
     text-align: center
     background-color: #FFF
+
+    &_adjust_details
+      padding-bottom: 15px
+      text-align: center
+      background-color: #f8f8f8
+      border-bottom: 1px solid #ebebeb
 
 
   // $Activity card footer
@@ -189,6 +200,7 @@ $block: ".stock-activity-card"
   &__date
     position: relative
     z-index: 1
+    display: inline-block
     width: 195px
     padding: 10px
     font-family: $f-sans

@@ -177,12 +177,20 @@ $block: ".stock-page-content"
   // $Page content table area
   &__table
 
+    &_space-desktop
+      padding-bottom: 25px
+
+      @media screen and (max-width: 960px)
+        padding-bottom: 0
+
 
   // $Page content form area
   &__form
     padding-bottom: 25px
 
-    &_nospace-mobile
+    &_space-desktop
+      padding-bottom: 25px
+
       @media screen and (max-width: 960px)
         padding-bottom: 0
 

@@ -85,11 +85,16 @@ $block: ".stock-form-select"
       #{$block}_role_control-reverse &
         width: 90px
 
-    &_type_fluid
+    &_adjust_control-fluid
       @media screen and (max-width: 960px)
         #{$block}_role_control &,
         #{$block}_role_control-reverse &
           width: auto
+
+    &_adjust_control-wrap
+      #{$block}_role_control &,
+      #{$block}_role_control-reverse &
+        white-space: normal
 
     &_size_small
       font-size: 12px
