@@ -194,8 +194,10 @@ $block: ".stock-page-content"
     @media screen and (max-width: 1120px)
       padding: 10px
 
-    // $Page content meta area MOD: adjust for bottom area
-    &_adjust_rt-view-bottom
+    // $Page content meta area MOD: adjust for request transfers bottom area
+    // $Page content meta area MOD: adjust for site inventory bottom area
+    &_adjust_rt-view-bottom,
+    &_adjust_si-view-bottom
       padding: 20px 15px 25px
 
       @media screen and (max-width: 1120px)
@@ -204,6 +206,10 @@ $block: ".stock-page-content"
       @media screen and (max-width: 960px)
         background-color: #FFF
         box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+    &_adjust_si-view-bottom
+      @media screen and (min-width: 961px)
+        display: none
 
     // $Page content meta area MOD: adjust for list view are
     &_adjust_list-view-bottom

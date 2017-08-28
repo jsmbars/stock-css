@@ -224,6 +224,10 @@ $block: ".stock-button"
     +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-hover-url: '../icons/icon-options-primary.svg')
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-options-primary.svg')
 
+    @media screen and (max-width: 960px)
+      padding-right: 15px
+      padding-left: 15px
+
   &_role_filter-light
     text-transform: none
     padding: 8px 10px
@@ -267,6 +271,10 @@ $block: ".stock-button"
     +button-with-icon-right($icon-url: '../icons/icon-checked-light-gray.svg', $background-size: 15px)
     +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-hover-url: '../icons/icon-checked-primary.svg')
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-checked-primary.svg')
+
+    @media screen and (max-width: 960px)
+      padding-right: 15px
+      padding-left: 15px
 
   &_role_apply-light
     text-transform: none

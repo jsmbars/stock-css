@@ -43,6 +43,9 @@ $block: ".stock-form-field"
   // $Common form field MOD: size small
   &_size_s
 
+  // $Common form field MOD: size narrow
+  &_size_narrow
+
 
   // $Common form field label
   &__label
@@ -93,6 +96,9 @@ $block: ".stock-form-field"
         #{$block}_role_control &,
         #{$block}_role_control-reverse &
           width: auto
+
+    &_size_small
+      font-size: 12px
 
 
   // $Common form field label text
@@ -166,6 +172,9 @@ $block: ".stock-form-field"
 
       #{$block}_size_s &
         width: 155px
+        padding: 8px 10px
+
+      #{$block}_size_narrow &
         padding: 8px 10px
 
       #{$block}_context_table &

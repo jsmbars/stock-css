@@ -89,6 +89,42 @@ $block: ".stock-accordion"
       outline: #FFF
 
 
+  &__dropdown-row
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+
+  &__dropdown-cell
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 100%
+    margin-right: 20px
+
+    @media screen and (max-width: 960px)
+      margin-right: 15px
+
+    &_size_max
+      flex-grow: 1
+      flex-shrink: 1
+      width: auto
+
+    &_size_min
+      flex-grow: 0
+      flex-shrink: 1
+      width: auto
+
+    &_position_last
+      margin-right: 0
+
+      @media screen and (max-width: 960px)
+        margin-right: 0
+
+
   // $Accordion dropdown content
   &__dropdown-content
     padding-left: 30px
