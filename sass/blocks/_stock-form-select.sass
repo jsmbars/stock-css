@@ -43,6 +43,9 @@ $block: ".stock-form-select"
   // $Common form select MOD: size small
   &_size_s
 
+  // $Common form select MOD: size narrow
+  &_size_narrow
+
 
   // $Common form select label
   &__label
@@ -81,6 +84,20 @@ $block: ".stock-form-select"
       #{$block}_role_control &,
       #{$block}_role_control-reverse &
         width: 90px
+
+    &_adjust_control-fluid
+      @media screen and (max-width: 960px)
+        #{$block}_role_control &,
+        #{$block}_role_control-reverse &
+          width: auto
+
+    &_adjust_control-wrap
+      #{$block}_role_control &,
+      #{$block}_role_control-reverse &
+        white-space: normal
+
+    &_size_small
+      font-size: 12px
 
 
   // $Common form select label text
@@ -162,6 +179,9 @@ $block: ".stock-form-select"
 
       #{$block}_size_s &
         min-width: 155px
+        padding: 8px 40px 8px 10px
+
+      #{$block}_size_narrow &
         padding: 8px 40px 8px 10px
 
       #{$block}_role_search &

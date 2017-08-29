@@ -93,6 +93,95 @@ $block: ".stock-filter"
         display: none
 
 
+  // $Filter group
+  &__group
+    position: relative
+    display: block
+    width: 100%
+    margin-bottom: 20px
+
+    // $Filter group MOD: size half
+    // $Filter group MOD: size third
+    // $Filter group MOD: size fourth
+    // $Filter group MOD: size max
+    // $Filter group MOD: size min
+    &_size_half,
+    &_size_third,
+    &_size_fourth,
+    &_size_max,
+    &_size_min,
+    &_size_fluid,
+      margin-right: 20px
+      margin-bottom: 0
+
+      @media screen and (max-width: 960px)
+        margin-right: 0
+        margin-bottom: 20px
+
+    &_size_half
+      flex-grow: 0
+      flex-shrink: 1
+      width: 50%
+
+      @media screen and (max-width: 960px)
+        flex-grow: 1
+        width: 100%
+
+    &_size_third
+      flex-grow: 0
+      flex-shrink: 1
+      width: 33%
+
+      @media screen and (max-width: 960px)
+        flex-grow: 1
+        width: 100%
+
+    &_size_fourth
+      flex-grow: 0
+      flex-shrink: 1
+      width: 25%
+
+      @media screen and (max-width: 960px)
+        flex-grow: 1
+        width: 100%
+
+    &_size_max
+      flex-grow: 1
+      flex-shrink: 1
+      width: auto
+
+      @media screen and (max-width: 960px)
+        flex-grow: 1
+        width: 100%
+
+    &_size_min
+      flex-grow: 0
+      flex-shrink: 1
+      width: auto
+
+      @media screen and (max-width: 960px)
+        flex-grow: 1
+        width: 100%
+
+    &_size_fluid
+      flex-grow: 0
+      flex-shrink: 0
+      width: auto
+
+      @media screen and (max-width: 960px)
+        flex-grow: 1
+        flex-shrink: 1
+        width: 100%
+
+    // $Filter group MOD: position last
+    &_position_last
+      margin-right: 0
+      margin-bottom: 0
+
+      @media screen and (max-width: 960px)
+        margin-right: 0
+
+
   // $Filter row
   &__row
     display: flex
@@ -103,8 +192,20 @@ $block: ".stock-filter"
     margin-bottom: 20px
 
     @media screen and (max-width: 960px)
-      #{$block}__dropdown &
+      #{$block}__dropdown &,
+      #{$block}_layout_fluid &
         flex-direction: column
+
+    // $Filter row MOD: adjust nowrap
+    &_adjust_nowrap
+      @media screen and (max-width: 960px)
+        #{$block}__dropdown &,
+        #{$block}_layout_fluid &
+          flex-direction: row
+
+    // $Filter row MOD: align at start
+    &_align_start
+      align-items: flex-start
 
     // $Filter row MOD: position last
     &_position_last
@@ -118,11 +219,13 @@ $block: ".stock-filter"
     margin-bottom: 20px
 
     // $Filter field MOD: size half
+    // $Filter field MOD: size two-fifth
     // $Filter field MOD: size third
     // $Filter field MOD: size max
     // $Filter field MOD: size min
     // $Filter field MOD: size fluid
     &_size_half,
+    &_size_two-fifth,
     &_size_third,
     &_size_fourth,
     &_size_max,
@@ -133,7 +236,8 @@ $block: ".stock-filter"
       @media screen and (max-width: 960px)
         margin-right: 10px
 
-        #{$block}__dropdown &
+        #{$block}__dropdown &:not(#{$block}__field_adjust_nowrap),
+        #{$block}_layout_fluid &:not(#{$block}__field_adjust_nowrap)
           flex-grow: 1
           width: 100%
           margin-right: 0
@@ -159,6 +263,9 @@ $block: ".stock-filter"
       flex-shrink: 1
       width: auto
 
+      @media screen and (max-width: 960px)
+        width: 50%
+
     &_size_min
       flex-grow: 0
       flex-shrink: 1
@@ -177,8 +284,13 @@ $block: ".stock-filter"
       @media screen and (max-width: 960px)
         margin-right: 0
 
-        #{$block}__dropdown &
+        #{$block}__dropdown &:not(#{$block}__field_adjust_nowrap),
+        #{$block}_layout_fluid &:not(#{$block}__field_adjust_nowrap)
           margin-bottom: 0
+
+    // $Filter field MOD: role buttons nowrap row
+    &_role_buttons-row
+      white-space: nowrap
 
     // $Filter field MOD: visible on mobiles
     &_state_visible-mobile

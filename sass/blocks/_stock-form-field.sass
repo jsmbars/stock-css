@@ -43,6 +43,9 @@ $block: ".stock-form-field"
   // $Common form field MOD: size small
   &_size_s
 
+  // $Common form field MOD: size narrow
+  &_size_narrow
+
 
   // $Common form field label
   &__label
@@ -88,6 +91,20 @@ $block: ".stock-form-field"
       #{$block}_role_control-reverse &
         width: 90px
 
+    &_adjust_control-fluid
+      @media screen and (max-width: 960px)
+        #{$block}_role_control &,
+        #{$block}_role_control-reverse &
+          width: auto
+
+    &_adjust_control-wrap
+      #{$block}_role_control &,
+      #{$block}_role_control-reverse &
+        white-space: normal
+
+    &_size_small
+      font-size: 12px
+
 
   // $Common form field label text
   &__label-text
@@ -103,8 +120,10 @@ $block: ".stock-form-field"
       flex-grow: 1
       flex-shrink: 1
 
-    // $Common form field input CONTEXT: $Common form MOD: context table
-    #{$block}_context_table &
+    // $Common form field input CONTEXT: $Common form MOD: context table control
+    // $Common form field input CONTEXT: $Common form MOD: context table control reversed
+    #{$block}_role_control#{$block}_context_table &,
+    #{$block}_role_control-reverse#{$block}_context_table &
       flex-grow: 0
       flex-shrink: 0
 
@@ -160,7 +179,15 @@ $block: ".stock-form-field"
         width: 155px
         padding: 8px 10px
 
+      #{$block}_size_narrow &
+        padding: 8px 10px
+
       #{$block}_context_table &
+        padding: 8px 10px
+        font-size: 12px
+
+      #{$block}_role_control#{$block}_context_table &,
+      #{$block}_role_control-reverse#{$block}_context_table &
         width: 55px
         padding: 8px 10px
         font-size: 12px

@@ -20,6 +20,20 @@ $block: ".stock-form-checkbox"
 
   // $Common form checkbox label
   &__label
+    display: block
+    width: 100%
+    margin-bottom: 15px
+    font-family: $f-sans
+    font-size: 14px
+    color: #757a85
+    font-weight: 600
+    line-height: 1.2
+
+    // $Common form field label-text CONTEXT: $Common form field MOD: type required field
+    #{$block}_type_required &
+      &:after
+        content: '*'
+        margin-left: 2px
 
 
   // $Common form checkbox label text
@@ -83,13 +97,16 @@ $block: ".stock-form-checkbox"
       #{$block}__input:checked ~ &
         visibility: visible
 
+    // $Common form checkbox input label text MOD: marked
     &_marked
       font-weight: 600
       color: #1c2841
 
+    // $Common form checkbox input label text MOD: no-label text
     &_type_no-label
       padding-left: 20px
 
+    // $Common form checkbox input label text MOD: type reversed label text
     &_type_reversed
       padding-left: 0
       padding-right: 30px
@@ -102,6 +119,22 @@ $block: ".stock-form-checkbox"
         left: auto
         right: 5px
 
-    &_type_reversed#{&}_type_empty
+    // $Common form checkbox input label text MOD: type reversed label text MOD: no-label text
+    &_type_reversed#{&}_type_no-label
       padding-left: 0
       padding-right: 20px
+
+    // $Common form checkbox input label text MOD: small text
+    &_size_small
+      font-size: 12px
+
+    // $Common form checkbox input label text MOD: adjust field
+    &_adjust_field
+      min-height: 45px
+
+    // $Common form checkbox input label text MOD: adjust fluid field
+    &_adjust_field-fluid
+      min-height: 45px
+
+      @media screen and (max-width: 960px)
+        min-height: 20px

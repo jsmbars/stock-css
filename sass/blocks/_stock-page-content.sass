@@ -147,6 +147,11 @@ $block: ".stock-page-content"
     &_nospace
       padding: 0
 
+    // $Page content manager MOD: visible on mobiles
+    &_state_visible-mobile
+      @media screen and (min-width: 961px)
+        display: none
+
 
   // $Page content actions
   &__actions
@@ -162,6 +167,7 @@ $block: ".stock-page-content"
   // $Page content filter area
   &__filter
 
+    // $Page content filter area MOD: board style on mobiles
     &_state_board-mobile
       @media screen and (max-width: 960px)
         margin-bottom: 20px
@@ -172,10 +178,24 @@ $block: ".stock-page-content"
   // $Page content table area
   &__table
 
+    // $Page content table area MOD: space on desktops
+    &_space-desktop
+      padding-bottom: 25px
+
+      @media screen and (max-width: 960px)
+        padding-bottom: 0
+
 
   // $Page content form area
   &__form
     padding-bottom: 25px
+
+    // $Page content form area MOD: space on desktops
+    &_space-desktop
+      padding-bottom: 25px
+
+      @media screen and (max-width: 960px)
+        padding-bottom: 0
 
 
   // $Page content meta area
@@ -185,8 +205,10 @@ $block: ".stock-page-content"
     @media screen and (max-width: 1120px)
       padding: 10px
 
-    // $Page content meta area MOD: adjust for bottom area
-    &_adjust_rt-view-bottom
+    // $Page content meta area MOD: adjust for request transfers bottom area
+    // $Page content meta area MOD: adjust for site inventory bottom area
+    &_adjust_rt-view-bottom,
+    &_adjust_si-view-bottom
       padding: 20px 15px 25px
 
       @media screen and (max-width: 1120px)
@@ -195,6 +217,10 @@ $block: ".stock-page-content"
       @media screen and (max-width: 960px)
         background-color: #FFF
         box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+    &_adjust_si-view-bottom
+      @media screen and (min-width: 961px)
+        display: none
 
     // $Page content meta area MOD: adjust for list view are
     &_adjust_list-view-bottom
@@ -308,6 +334,13 @@ $block: ".stock-page-content"
 
     @media screen and (max-width: 960px)
       margin-bottom: 15px
+
+    // $Page content sub title MOD: position last
+    &_position_last
+      margin-bottom: 0
+
+      @media screen and (max-width: 960px)
+        margin-bottom: 0
 
 
   // $Page content text

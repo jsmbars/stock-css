@@ -52,8 +52,13 @@ $block: ".stock-accordion"
     padding: 24px 8px 20px 40px
     border-bottom: 1px solid #f0f0f0
 
+    // $Accordion dropdown header MOD: role switch
+    &_role_switch
+
   // $Accordion dropdown switch
-  &__dropdown-switch
+  // $Accordion dropdown icon
+  &__dropdown-switch,
+  &__dropdown-icon
     position: absolute
     top: 50%
     left: 10px
@@ -73,6 +78,7 @@ $block: ".stock-accordion"
     border-radius: 50%
     transform: translateY(-50%)
     transition: all .4s
+    cursor: pointer
 
     #{$block}_state_opened &
       transform: translateY(-50%) rotate(180deg)
@@ -82,6 +88,52 @@ $block: ".stock-accordion"
 
     &:focus
       outline: #FFF
+
+
+  // $Accordion dropdown row
+  &__dropdown-row
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+
+
+  // $Accordion dropdown cell
+  &__dropdown-cell
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: 100%
+    margin-right: 20px
+
+    @media screen and (max-width: 960px)
+      margin-right: 15px
+
+    // $Accordion dropdown cell MOD: size max
+    &_size_max
+      flex-grow: 1
+      flex-shrink: 1
+      width: auto
+
+      @media screen and (max-width: 960px)
+        width: 50%
+
+    // $Accordion dropdown cell MOD: size min
+    &_size_min
+      flex-grow: 0
+      flex-shrink: 1
+      width: auto
+
+
+    // $Accordion dropdown cell MOD: position last
+    &_position_last
+      margin-right: 0
+
+      @media screen and (max-width: 960px)
+        margin-right: 0
 
 
   // $Accordion dropdown content
@@ -126,7 +178,6 @@ $block: ".stock-accordion"
     color: #1C2841
     text-transform: uppercase
 
-
     // $Accordion label MOD: role header
     &_role_header
       flex-grow: 1
@@ -137,9 +188,13 @@ $block: ".stock-accordion"
       &:first-of-type
         padding-left: 40px
 
-
     // $Accordion label MOD: role title
     &_role_title
+      font-size: 12px
+
+    // $Accordion label MOD: size full width
+    &_size_full
+      width: 100%
 
 
   // $Accordion text
@@ -149,4 +204,7 @@ $block: ".stock-accordion"
     line-height: 1
     font-weight: 400
     color: #6c6c6c
+
+    &:not(:only-child):not(:last-child)
+      margin-bottom: 5px
 
