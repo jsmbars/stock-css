@@ -17,6 +17,12 @@ $block: ".stock-form-checkbox"
 #{$block}
   display: inline-block
 
+  // $Common form checkbox MOD: role control
+  &_role_control
+
+  // $Common form checkbox MOD: role control reversed
+  &_role_control-reverse
+
 
   // $Common form checkbox label
   &__label
@@ -62,6 +68,11 @@ $block: ".stock-form-checkbox"
     font-weight: 400
     line-height: 20px
     padding-left: 30px
+
+    // $Common form field label text CONTEXT: $Common form MOD: role control
+    #{$block}_role_control &,
+    #{$block}_role_control-reverse &
+      width: 130px
 
     &:before
       content: ""
