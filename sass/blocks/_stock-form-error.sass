@@ -26,25 +26,35 @@ $block: ".stock-form-error"
   &:before
     content: ""
     position: absolute
-    top: 50%
+    top: 12px
     left: 10px
     display: block
     width: 12px
     height: 10px
-    margin-top: -5px
     background-image: url(../icons/icon-danger-white.svg)
     background-position: center center
     background-repeat: no-repeat
     background-size: contain
 
     @media screen and (max-width: 480px)
+      top: 9px
       left: 5px
+
+  // $Common form error message MOD: position above
+  &_position_above
+    margin-bottom: 25px
 
   // $Common form error message MOD: tooltip layout
   &_tooltip
     border-radius: 3px
     position: absolute
     z-index: 10
+
+    &:before
+      top: 10px
+
+      @media screen and (max-width: 480px)
+        top: 7px
 
     &:after
       content: ""
@@ -68,6 +78,9 @@ $block: ".stock-form-error"
       border-right: 5px solid transparent
       border-left: 5px solid transparent
 
+  &_tooltip_top-left#{&}_tooltip_context-label
+    bottom: calc(100% - 30px)
+
   // $Common form error message MOD: tooltip top right positioned
   &_tooltip_top-right
     right: 0
@@ -83,6 +96,9 @@ $block: ".stock-form-error"
       border-top: 5px solid #ed7f7e
       border-right: 5px solid transparent
       border-left: 5px solid transparent
+
+  &_tooltip_top-right#{&}_tooltip_context-label
+    bottom: calc(100% - 30px)
 
   // $Common form error message MOD: tooltip bottom left positioned
   &_tooltip_bottom-left
@@ -129,9 +145,26 @@ $block: ".stock-form-error"
     @media screen and (max-width: 480px)
       font-size: 10px
 
+    &_size_regular
+      font-size: 14px
+
+      @media screen and (max-width: 480px)
+        font-size: 13px
+
     &_nowrap
       white-space: nowrap
+
 
   // $Common form error message text line
   &__line
     display: block
+
+
+  // $Common form error message text link
+  &__text-link
+    color: inherit
+    text-decoration: underline
+
+    &:hover
+      text-decoration: none
+
