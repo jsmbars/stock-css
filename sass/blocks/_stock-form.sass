@@ -242,6 +242,10 @@ $block: ".stock-form"
     &_justify_center
       text-align: center
 
+    // $Common form field MOD: justify end
+    &_justify_end
+      text-align: right
+
     // $Common form field MOD: visible on mobiles
     &_state_visible-mobile
       @media screen and (min-width: 961px)
@@ -252,6 +256,28 @@ $block: ".stock-form"
       @media screen and (max-width: 960px)
         display: none
 
+
+  &__actions
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+    &_end-center
+      justify-content: flex-end
+
+      @media screen and (max-width: 960px)
+        justify-content: center
+
+
+  &__action
+    display: block
+    flex-grow: 0
+    flex-shrink: 1
+
+    &_size_full-mobile
+      @media screen and (max-width: 960px)
+        flex-grow: 1
 
   // $Common form text
   &__text
