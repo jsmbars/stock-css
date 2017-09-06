@@ -66,6 +66,48 @@ $block: ".stock-activity-card"
       border-bottom: 1px solid #ebebeb
 
 
+
+  // $Activity card row
+  &__row
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: stretch
+    border-bottom: 1px solid #eee
+
+    // $Activity card row MOD: actions
+    &_role_actions
+      padding: 15px 10px
+
+    // $Activity card row MOD: marked
+    &_marked
+      background-color: #f8f8f8
+
+
+  // $Activity card cell
+  &__cell
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    padding: 15px
+    text-align: center
+
+    @media screen and (max-width: 960px)
+      padding: 15px 10px
+
+    &_size_half
+      width: 50%
+
+      &:not(:last-child)
+        border-right: 1px solid #eee
+
+    // $Activity card cell MOD: no border
+    &_no-border:not(:last-child)
+      border: none
+
+
   // $Activity card footer
   &__footer
     padding: 35px 10px 15px

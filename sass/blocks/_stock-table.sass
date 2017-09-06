@@ -56,8 +56,16 @@ $block: ".stock-table"
     color: #6c6c6c
     padding: 10px 15px
 
+    #{$block}_page_p-list &
+      padding-left: 10px
+      padding-right: 10px
+
     @media screen and (max-width: 1120px)
       padding: 10px
+
+      #{$block}_page_p-list &
+        padding-left: 8px
+        padding-right: 8px
 
     // $Common table cell CONTEXT: $Common table MOD: page stock levels list
     #{$block}_page_sl-list &
@@ -90,6 +98,9 @@ $block: ".stock-table"
       #{$block}_page_oh-details &
         width: 13%
 
+      #{$block}_page_p-list &
+        width: 13%
+
     // $Common table cell second column
     &:nth-child(2)
       #{$block}_page_sl-list &
@@ -112,6 +123,9 @@ $block: ".stock-table"
         width: 15%
 
       #{$block}_page_oh-details &
+        width: 13%
+
+      #{$block}_page_p-list &
         width: 13%
 
     // $Common table cell third column
@@ -137,6 +151,13 @@ $block: ".stock-table"
 
       #{$block}_page_oh-details &
         width: 10%
+
+      #{$block}_page_p-list &
+        width: 10%
+
+      @media screen and (max-width: 1120px)
+        #{$block}_page_p-list &
+          width: 9%
 
     // $Common table cell fourth column
     &:nth-child(4)
@@ -165,6 +186,14 @@ $block: ".stock-table"
         justify-content: center
         width: 9%
 
+      #{$block}_page_p-list &
+        justify-content: center
+        width: 9%
+
+      @media screen and (max-width: 1120px)
+        #{$block}_page_p-list &
+          width: 10%
+
     // $Common table cell fifth column
     &:nth-child(5)
 
@@ -185,6 +214,9 @@ $block: ".stock-table"
         width: 14%
 
       #{$block}_page_oh-details &
+        width: 9%
+
+      #{$block}_page_p-list &
         width: 9%
 
     // $Common table cell sixth column
@@ -210,6 +242,11 @@ $block: ".stock-table"
       #{$block}_page_oh-details &
         width: 9%
 
+      #{$block}_page_p-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 120px
+
     // $Common table cell seventh column
     &:nth-child(7)
 
@@ -234,6 +271,15 @@ $block: ".stock-table"
       #{$block}_page_oh-details &
         width: 9%
 
+      #{$block}_page_p-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 130px
+
+      @media screen and (max-width: 1120px)
+        #{$block}_page_p-list &
+          width: 125px
+
     // $Common table cell eighth column
     &:nth-child(8)
 
@@ -252,11 +298,29 @@ $block: ".stock-table"
       #{$block}_page_oh-details &
         width: 13%
 
+      #{$block}_page_p-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 100px
+
+      @media screen and (max-width: 1120px)
+        #{$block}_page_p-list &
+          width: 95px
+
     // $Common table cell ninth column
     &:nth-child(9)
 
       #{$block}_page_oh-details &
         width: 15%
+
+      #{$block}_page_p-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 125px
+
+      @media screen and (max-width: 1120px)
+        #{$block}_page_p-list &
+          width: 115px
 
     // $Common table cell MOD: role header
     // $Common table cell MOD: role footer

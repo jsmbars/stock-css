@@ -20,7 +20,7 @@
     background-color: lighten($background-color, $amount)
 
 
-=button-bordered($color: #d3d3d3, $border-color: #d3d3d3, $border-width: 2px, $border-radius: 15px, $bg-color: #fff)
+=button-bordered($color: #d3d3d3, $border-color: #d3d3d3, $border-width: 2px, $border-radius: 20px, $bg-color: #fff)
   border: $border-width solid $border-color
   border-radius: $border-radius
   background-color: $bg-color
@@ -139,6 +139,10 @@ $block: ".stock-button"
       display: block
       width: 100%
 
+  // $Common button MOD: size extra small
+  &_size_xs
+    padding: 8px 12px
+
   // $Common button MOD: size small
   &_size_s
     padding: 9px 23px
@@ -234,20 +238,20 @@ $block: ".stock-button"
 
   // Border modifiers
   &_border_accent-blue
-    +button-bordered($color: map-get($app-palette, accent-blue), $bg-color: #fff, $border-color: map-get($app-palette, accent-blue))
-    +button-bordered-hover-behavior($color: map-get($app-palette, accent-blue), $bg-color: #fff, $border-color: map-get($app-palette, accent-blue))
+    +button-bordered($color: map-get($app-palette, accent-blue), $bg-color: transparent, $border-color: map-get($app-palette, accent-blue))
+    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-blue), $border-color: map-get($app-palette, accent-blue))
 
   &_border_accent-green
-    +button-bordered($color: map-get($app-palette, accent-green), $bg-color: #fff, $border-color: map-get($app-palette, accent-green))
-    +button-bordered-hover-behavior($color: map-get($app-palette, accent-green), $bg-color: #fff, $border-color: map-get($app-palette, accent-green))
+    +button-bordered($color: map-get($app-palette, accent-green), $bg-color: transparent, $border-color: map-get($app-palette, accent-green))
+    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-green), $border-color: map-get($app-palette, accent-green))
 
   &_border_accent-red
-    +button-bordered($color: map-get($app-palette, accent-red), $bg-color: #fff, $border-color: map-get($app-palette, accent-red))
-    +button-bordered-hover-behavior($color: map-get($app-palette, accent-red), $bg-color: #fff, $border-color: map-get($app-palette, accent-red))
+    +button-bordered($color: map-get($app-palette, accent-red), $bg-color: transparent, $border-color: map-get($app-palette, accent-red))
+    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-red), $border-color: map-get($app-palette, accent-red))
 
   &_border_accent-pink
-    +button-bordered($color: map-get($app-palette, accent-pink), $bg-color: #fff, $border-color: map-get($app-palette, accent-pink))
-    +button-bordered-hover-behavior($color: map-get($app-palette, accent-pink), $bg-color: #fff, $border-color: map-get($app-palette, accent-pink))
+    +button-bordered($color: map-get($app-palette, accent-pink), $bg-color: transparent, $border-color: map-get($app-palette, accent-pink))
+    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-pink), $border-color: map-get($app-palette, accent-pink))
 
 
 
@@ -264,9 +268,15 @@ $block: ".stock-button"
   &_icon_close
     +button-with-icon-left($icon-url: '../icons/icon-close-white.svg', $background-size: 11px)
 
-  // $Common button MOD: icon close red
-  &_icon_close-red
-    +button-with-icon-left($icon-url: '../icons/icon-close-white.svg', $background-size: 11px)
+  &_icon_close#{&}_border_accent-red
+    +button-with-icon-left($icon-url: '../icons/icon-close-red.svg', $background-size: 11px, $icon-hover-url: '../icons/icon-close-white.svg')
+
+  // $Common button MOD: icon pencil
+  &_icon_pencil
+    +button-with-icon-left($icon-url: '../icons/icon-pencil-white.svg')
+
+  &_icon_pencil#{&}_border_accent-green
+    +button-with-icon-left($icon-url: '../icons/icon-pencil-green.svg', $icon-hover-url: '../icons/icon-pencil-white.svg')
 
 
   // Specific buttons
