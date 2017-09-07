@@ -174,27 +174,6 @@ $block: ".stock-page-content"
         background-color: #FFF
         box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
 
-    // $Page content filter MOD: hidden on mobiles
-    &_state_hidden-mobile
-      @media screen and (max-width: 960px)
-        display: none
-
-    &_state_hidden-mobile#{&}_adjust_products-list-view
-      @media screen and (max-width: 1120px)
-        display: none
-
-    // $Page content filter MOD: visible on mobiles
-    &_state_visible-mobile
-      @media screen and (min-width: 961px)
-        display: none
-
-    &_state_visible-mobile#{&}_adjust_products-list-view
-      @media screen and (min-width: 1121px)
-        display: none
-
-      @media screen and (min-width: 961px) and (max-width: 1120px)
-        display: block
-
 
   // $Page content table area
   &__table
@@ -210,6 +189,9 @@ $block: ".stock-page-content"
   // $Page content form area
   &__form
     padding-bottom: 25px
+
+    &_space_empty
+      padding: 0
 
     &_space_regular
       padding: 25px

@@ -240,18 +240,22 @@ $block: ".stock-button"
   &_border_accent-blue
     +button-bordered($color: map-get($app-palette, accent-blue), $bg-color: transparent, $border-color: map-get($app-palette, accent-blue))
     +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-blue), $border-color: map-get($app-palette, accent-blue))
+    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, accent-blue), $border-color: map-get($app-palette, accent-blue))
 
   &_border_accent-green
     +button-bordered($color: map-get($app-palette, accent-green), $bg-color: transparent, $border-color: map-get($app-palette, accent-green))
     +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-green), $border-color: map-get($app-palette, accent-green))
+    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, accent-green), $border-color: map-get($app-palette, accent-green))
 
   &_border_accent-red
     +button-bordered($color: map-get($app-palette, accent-red), $bg-color: transparent, $border-color: map-get($app-palette, accent-red))
     +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-red), $border-color: map-get($app-palette, accent-red))
+    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, accent-red), $border-color: map-get($app-palette, accent-red))
 
   &_border_accent-pink
     +button-bordered($color: map-get($app-palette, accent-pink), $bg-color: transparent, $border-color: map-get($app-palette, accent-pink))
     +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-pink), $border-color: map-get($app-palette, accent-pink))
+    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, accent-pink), $border-color: map-get($app-palette, accent-pink))
 
 
 
@@ -263,6 +267,10 @@ $block: ".stock-button"
   // $Common button MOD: icon plus reversed
   &_icon_plus-reversed
     +button-with-icon-right($icon-url: '../icons/icon-plus-white.svg')
+
+  // $Common button MOD: icon checked
+  &_icon_checked
+    +button-with-icon-left($icon-url: '../icons/icon-checked-white.svg')
 
   // $Common button MOD: icon close
   &_icon_close

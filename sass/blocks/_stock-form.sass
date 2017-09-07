@@ -263,7 +263,7 @@ $block: ".stock-form"
     justify-content: flex-start
     align-items: center
 
-    &_end-center
+    &_adjust_c-u-forms
       justify-content: flex-end
 
       @media screen and (max-width: 960px)
@@ -275,9 +275,12 @@ $block: ".stock-form"
     flex-grow: 0
     flex-shrink: 1
 
-    &_size_full-mobile
+    #{$block}__actions_adjust_c-u-forms &
       @media screen and (max-width: 960px)
         flex-grow: 1
+
+    &:not(:last-child)
+      margin-right: 20px
 
   // $Common form text
   &__text

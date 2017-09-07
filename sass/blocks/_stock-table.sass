@@ -24,12 +24,60 @@ $block: ".stock-table"
       display: none
 
 
+  &__group
+    position: relative
+    width: 100%
+    background-color: #FFF
+
+    &:nth-child(odd)
+      background-color: #f8f8f8
+
+
+  &__dropdown
+    position: relative
+    border-bottom: 1px solid #eee
+
+    &_state_hidden
+      display: none
+
+    &_space_regular
+      padding: 0 0 45px 45px
+
+  &__dropdown-close
+    position: absolute
+    bottom: 20px
+    left: 20px
+    z-index: 10
+    display: block
+    width: 20px
+    height: 20px
+    font-size: 0
+    line-height: 0
+    color: transparent
+    outline: none
+    background-color: #454d5e
+    background-image: url(../icons/icon-arrow-down-white.svg)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 9px 9px
+    border-radius: 50%
+    transition: all .4s
+    cursor: pointer
+    transform: rotate(180deg)
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: #FFF
+
+
   // $Common table row
   &__row
     position: relative
     display: flex
     flex-direction: row
-    justify-content: space-between
+    justify-content: flex-start
     align-items: stretch
     width: 100%
     border-bottom: 1px solid #eee
@@ -38,8 +86,21 @@ $block: ".stock-table"
     &:nth-child(odd)
       background-color: #f8f8f8
 
+    &:not(:last-child)
+      border-bottom: 1px solid #eee
+
     // $Common table row MOD: role header
     &_role_header
+
+    &_adjust_group
+      background-color: transparent
+
+      &:nth-child(odd)
+        background-color: transparent
+
+    &_no-border,
+    &_no-border:not(:last-child)
+      border: none
 
 
   // $Common table cell
@@ -101,6 +162,14 @@ $block: ".stock-table"
       #{$block}_page_p-list &
         width: 13%
 
+      #{$block}_page_p-list-prices &
+        flex-grow: 0
+        width: 15%
+
+      #{$block}_page_p-list-itenerarys &
+        flex-grow: 0
+        width: 15%
+
     // $Common table cell second column
     &:nth-child(2)
       #{$block}_page_sl-list &
@@ -127,6 +196,16 @@ $block: ".stock-table"
 
       #{$block}_page_p-list &
         width: 13%
+
+      #{$block}_page_p-list-prices &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 100px
+
+      #{$block}_page_p-list-itenerarys &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 100px
 
     // $Common table cell third column
     &:nth-child(3)
@@ -155,9 +234,19 @@ $block: ".stock-table"
       #{$block}_page_p-list &
         width: 10%
 
+      #{$block}_page_p-list-prices &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 120px
+
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
           width: 9%
+
+        #{$block}_page_p-list-prices &
+          flex-grow: 0
+          flex-shrink: 0
+          width: 120px
 
     // $Common table cell fourth column
     &:nth-child(4)
@@ -190,9 +279,19 @@ $block: ".stock-table"
         justify-content: center
         width: 9%
 
+      #{$block}_page_p-list-prices &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 110px
+
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
           width: 10%
+
+        #{$block}_page_p-list-prices &
+          flex-grow: 0
+          flex-shrink: 0
+          width: 110px
 
     // $Common table cell fifth column
     &:nth-child(5)
@@ -333,14 +432,27 @@ $block: ".stock-table"
       color: #1c2841
       text-transform: uppercase
 
+    &_role_header
+      border-top: 1px solid #eee
+
+    &_role_footer
+      border-bottom: 1px solid #eee
+
+    &_no-border
+      &:not(:last-child)
+        border: none
+
 
   // $Common table info
   &__info
-
+    width: 100%
 
   // $Common table text
   &__text
-
+    font-family: $f-sans
+    font-size: 12px
+    font-weight: 400
+    color: #6c6c6c
 
   // $Common table actions
   &__actions

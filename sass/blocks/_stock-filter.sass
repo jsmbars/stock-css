@@ -73,6 +73,11 @@ $block: ".stock-filter"
       @media screen and (min-width: 961px)
         display: none !important
 
+    // $Filter field MOD: visible on small tablets
+    &_state_visible-tablet
+      @media screen and (min-width: 1121px)
+        display: none !important
+
 
   // $Filter group dropdown-content
   &__dropdown-content
@@ -300,5 +305,15 @@ $block: ".stock-filter"
     // $Filter field MOD: hidden on mobiles
     &_state_hidden-mobile
       @media screen and (max-width: 960px)
+        display: none
+
+    // $Filter field MOD: visible on tablets
+    &_state_visible-tablet
+      @media screen and (min-width: 1121px)
+        display: none
+
+    // $Filter field MOD: hidden on tablets
+    &_state_hidden-tablet
+      @media screen and (max-width: 1120px)
         display: none
 
