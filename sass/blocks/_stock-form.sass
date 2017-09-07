@@ -279,8 +279,12 @@ $block: ".stock-form"
       @media screen and (max-width: 960px)
         flex-grow: 1
 
-    &:not(:last-child)
-      margin-right: 20px
+    &:not(:first-child)
+      #{$block}__actions_adjust_c-u-forms &
+        margin-left: 20px
+
+    &_state_hidden
+      display: none
 
   // $Common form text
   &__text
