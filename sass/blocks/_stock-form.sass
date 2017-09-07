@@ -160,6 +160,11 @@ $block: ".stock-form"
       @media screen and (max-width: 1120px)
         padding: 0 10px
 
+    // $Common form row MOD: adjust nowrap
+    &_adjust_nowrap
+      @media screen and (max-width: 960px)
+        flex-direction: row
+
 
   // $Common form field
   &__field
@@ -183,35 +188,27 @@ $block: ".stock-form"
       margin-bottom: 0
 
       @media screen and (max-width: 960px)
-        margin-right: 0
-        margin-bottom: 20px
+        &:not(#{$block}__field_adjust_nowrap)
+          flex-shrink: 1
+          flex-grow: 1
+          width: 100%
+          margin-right: 0
+          margin-bottom: 20px
 
     &_size_half
       flex-grow: 0
       flex-shrink: 1
       width: 50%
 
-      @media screen and (max-width: 960px)
-        flex-grow: 1
-        width: 100%
-
     &_size_third
       flex-grow: 0
       flex-shrink: 1
       width: 33%
 
-      @media screen and (max-width: 960px)
-        flex-grow: 1
-        width: 100%
-
     &_size_fourth
       flex-grow: 0
       flex-shrink: 1
       width: 25%
-
-      @media screen and (max-width: 960px)
-        flex-grow: 1
-        width: 100%
 
     &_size_max
       flex-grow: 1
@@ -219,27 +216,17 @@ $block: ".stock-form"
       width: auto
 
       @media screen and (max-width: 960px)
-        flex-grow: 1
-        width: 100%
+        width: 50%
 
     &_size_min
       flex-grow: 0
       flex-shrink: 1
       width: auto
 
-      @media screen and (max-width: 960px)
-        flex-grow: 1
-        width: 100%
-
     &_size_fluid
       flex-grow: 0
       flex-shrink: 0
       width: auto
-
-      @media screen and (max-width: 960px)
-        flex-grow: 1
-        flex-shrink: 1
-        width: 100%
 
     // $Common form field: MOD: position last
     &_position_last
@@ -247,12 +234,17 @@ $block: ".stock-form"
       margin-bottom: 0
 
       @media screen and (max-width: 960px)
-        margin-right: 0
-        margin-bottom: 0
+        &:not(#{$block}__field_adjust_nowrap)
+          margin-right: 0
+          margin-bottom: 0
 
     // $Common form field MOD: justify center
     &_justify_center
       text-align: center
+
+    // $Common form field MOD: justify end
+    &_justify_end
+      text-align: right
 
     // $Common form field MOD: visible on mobiles
     &_state_visible-mobile
@@ -264,6 +256,35 @@ $block: ".stock-form"
       @media screen and (max-width: 960px)
         display: none
 
+
+  &__actions
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+    &_adjust_c-u-forms
+      justify-content: flex-end
+
+      @media screen and (max-width: 960px)
+        justify-content: center
+
+
+  &__action
+    display: block
+    flex-grow: 0
+    flex-shrink: 1
+
+    #{$block}__actions_adjust_c-u-forms &
+      @media screen and (max-width: 960px)
+        flex-grow: 1
+
+    &:not(:first-child)
+      #{$block}__actions_adjust_c-u-forms &
+        margin-left: 20px
+
+    &_state_hidden
+      display: none
 
   // $Common form text
   &__text

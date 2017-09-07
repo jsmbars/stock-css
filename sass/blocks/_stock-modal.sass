@@ -29,6 +29,17 @@ $block: ".stock-modal"
     margin-top: 50px
     margin-bottom: 50px
 
+  // $Modal window MOD: role confirm dialog
+  &_role_confirm
+    max-width: 480px
+    margin-top: 150px
+    margin-bottom: 150px
+
+    @media screen and (max-width: 480px)
+      margin-top: 100px
+      margin-bottom: 100px
+
+
   // $Modal window MOD: state visible
   &_state_visible
     display: block
@@ -56,6 +67,49 @@ $block: ".stock-modal"
 
     @media screen and (max-width: 960px)
       padding: 30px 20px 30px
+
+    // $Modal window content MOD: justify center
+    &_justify_center
+      text-align: center
+
+
+  // $Modal window footer
+  &__footer
+    width: 100%
+    padding: 35px 20px
+    background-color: #f9f9f9
+    text-align: center
+
+
+  // $Modal window actions
+  &__actions
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    width: 100%
+
+    @media screen and (max-width: 480px)
+      // $Modal window actions CONTEXT: $Modal window MOD: confirm dialog
+      #{$block}_role_confirm &
+        flex-direction: column
+
+
+  // $Modal window action
+  &__action
+
+    @media screen and (max-width: 480px)
+      // $Modal window action CONTEXT: $Modal window MOD: confirm dialog
+      #{$block}_role_confirm &
+        width: 100%
+
+    &:not(:last-child)
+      margin-right: 20px
+
+      @media screen and (max-width: 480px)
+        #{$block}_role_confirm &
+          margin-right: 0
+          margin-bottom: 20px
 
 
   // $Modal window inner container
@@ -99,6 +153,9 @@ $block: ".stock-modal"
     color: #757a85
     font-weight: 500
 
+    &_size_extra
+      font-size: 22px
+
 
   // $Modal window text
   &__text
@@ -107,6 +164,9 @@ $block: ".stock-modal"
     line-height: 1.5
     color: #757a85
     font-weight: 500
+
+    &_size_extra
+      font-size: 16px
 
 
   // $Modal window form
@@ -118,6 +178,7 @@ $block: ".stock-modal"
 
 
   @at-root
+    // $Modal window portal
     &-portal
       position: fixed
       top: 0
@@ -126,6 +187,11 @@ $block: ".stock-modal"
       left: 0
       z-index: 10000
 
+      // $Modal window portal MOD: state hidden
+      &_state_hidden
+        display: none
+
+    // $Modal window overlay
     &-overlay
       position: relative
       display: block
@@ -134,3 +200,7 @@ $block: ".stock-modal"
       z-index: 10001
       overflow-x: hidden
       overflow-y: auto
+
+      // $Modal window overlay MOD: dark overlay
+      &_dark
+        background-color: rgba(0,0,0,.75)

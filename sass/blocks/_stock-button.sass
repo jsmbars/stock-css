@@ -20,36 +20,30 @@
     background-color: lighten($background-color, $amount)
 
 
-=button-bordered($color: '#d3d3d3', $border-color: '#d3d3d3', $bg-color: '#fff')
-  border: 1px solid $border-color
-  border-radius: 0
+=button-bordered($color: #d3d3d3, $border-color: #d3d3d3, $border-width: 2px, $border-radius: 20px, $bg-color: #fff)
+  border: $border-width solid $border-color
+  border-radius: $border-radius
   background-color: $bg-color
   color: $color
 
 
-=button-bordered-hover-behavior($color: '#d3d3d3', $border-color: '#d3d3d3', $bg-color: '#fff', $icon-hover-url: '')
+=button-bordered-hover-behavior($color: #d3d3d3, $border-color: #d3d3d3, $bg-color: #fff)
 
   &:hover
     color: $color
+    border-color: $border-color
     background-color: $bg-color
 
-    &:after,
-    &:before
-      background-image: url($icon-hover-url)
 
-
-=button-bordered-active-behavior($color: '#d3d3d3', $border-color: '#d3d3d3', $bg-color: '#fff', $icon-active-url: '')
+=button-bordered-active-behavior($color: #d3d3d3, $border-color: #d3d3d3, $bg-color: #fff)
 
   &#{$block}_state_active
     color: $color
+    border-color: $border-color
     background-color: $bg-color
 
-    &:after,
-    &:before
-      background-image: url($icon-active-url)
 
-
-=button-with-icon-left($icon-url: '', $background-size: 13px)
+=button-with-icon-left($icon-url: '', $background-size: 13px, $icon-hover-url: null, $icon-active-url: null)
 
   &:before
     content: ""
@@ -64,8 +58,18 @@
     background-position: center center
     background-size: contain
 
+  @if $icon-hover-url != null
+    &:hover
+      &:before
+        background-image: url($icon-hover-url)
 
-=button-with-icon-right($icon-url: '', $background-size: 13px)
+  @if $icon-active-url != null
+    &#{$block}_state_active
+      &:before
+        background-image: url($icon-active-url)
+
+
+=button-with-icon-right($icon-url: '', $background-size: 13px, $icon-hover-url: null, $icon-active-url: null)
 
   &:after
     content: ""
@@ -79,6 +83,16 @@
     background-repeat: no-repeat
     background-position: center center
     background-size: auto $background-size
+
+  @if $icon-hover-url != null
+    &:hover
+      &:after
+        background-image: url($icon-hover-url)
+
+  @if $icon-active-url != null
+    &#{$block}_state_active
+      &:after
+        background-image: url($icon-active-url)
 
 
 //////////////////////////////////////// Block styles
@@ -106,7 +120,7 @@ $block: ".stock-button"
   outline: none
   cursor: pointer
   border: none
-  transition: all .4s
+  transition: all .2s
 
   &:hover
     color: #FFF
@@ -118,6 +132,16 @@ $block: ".stock-button"
   &_size_full
     display: block
     width: 100%
+
+  // $Common button MOD: size full mobile
+  &_size_full-mobile
+    @media screen and (max-width: 960px)
+      display: block
+      width: 100%
+
+  // $Common button MOD: size extra small
+  &_size_xs
+    padding: 8px 12px
 
   // $Common button MOD: size small
   &_size_s
@@ -135,12 +159,20 @@ $block: ".stock-button"
     @media screen and (max-width: 960px)
       margin-left: 5px
 
+  // $Common button MOD: space left-extra
+  &_space_left-extra
+    margin-left: 20px
+
   // $Common button MOD: space right
   &_space_right
     margin-right: 15px
 
     @media screen and (max-width: 960px)
       margin-right: 5px
+
+  // $Common button MOD: space right-extra
+  &_space_right-extra
+    margin-right: 20px
 
 
   // $Common button MOD: state disabled
@@ -181,16 +213,50 @@ $block: ".stock-button"
   // $Common button variations:
 
   // Color modifiers
-  // $Common button MOD: role primary
   &_role_primary
-    $background-color: #64a5fd
+  &_color_accent-blue
+    $background-color: map-get($app-palette, accent-blue)
     +button-common($background-color: $background-color)
     +button-common-hover-behavior($background-color: $background-color)
 
-  &_role_accent
-    $background-color: #fd649a
+  &_role_accent,
+  &_color_accent-pink
+    $background-color: map-get($app-palette, accent-pink)
     +button-common($background-color: $background-color)
     +button-common-hover-behavior($background-color: $background-color)
+
+  &_color_accent-red
+    $background-color: map-get($app-palette, accent-red)
+    +button-common($background-color: $background-color)
+    +button-common-hover-behavior($background-color: $background-color)
+
+  &_color_accent-green
+    $background-color: map-get($app-palette, accent-green)
+    +button-common($background-color: $background-color)
+    +button-common-hover-behavior($background-color: $background-color)
+
+
+  // Border modifiers
+  &_border_accent-blue
+    +button-bordered($color: map-get($app-palette, accent-blue), $bg-color: transparent, $border-color: map-get($app-palette, accent-blue))
+    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-blue), $border-color: map-get($app-palette, accent-blue))
+    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, accent-blue), $border-color: map-get($app-palette, accent-blue))
+
+  &_border_accent-green
+    +button-bordered($color: map-get($app-palette, accent-green), $bg-color: transparent, $border-color: map-get($app-palette, accent-green))
+    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-green), $border-color: map-get($app-palette, accent-green))
+    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, accent-green), $border-color: map-get($app-palette, accent-green))
+
+  &_border_accent-red
+    +button-bordered($color: map-get($app-palette, accent-red), $bg-color: transparent, $border-color: map-get($app-palette, accent-red))
+    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-red), $border-color: map-get($app-palette, accent-red))
+    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, accent-red), $border-color: map-get($app-palette, accent-red))
+
+  &_border_accent-pink
+    +button-bordered($color: map-get($app-palette, accent-pink), $bg-color: transparent, $border-color: map-get($app-palette, accent-pink))
+    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-pink), $border-color: map-get($app-palette, accent-pink))
+    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, accent-pink), $border-color: map-get($app-palette, accent-pink))
+
 
 
   // Icon modifiers
@@ -202,9 +268,23 @@ $block: ".stock-button"
   &_icon_plus-reversed
     +button-with-icon-right($icon-url: '../icons/icon-plus-white.svg')
 
+  // $Common button MOD: icon checked
+  &_icon_checked
+    +button-with-icon-left($icon-url: '../icons/icon-checked-white.svg')
+
   // $Common button MOD: icon close
   &_icon_close
     +button-with-icon-left($icon-url: '../icons/icon-close-white.svg', $background-size: 11px)
+
+  &_icon_close#{&}_border_accent-red
+    +button-with-icon-left($icon-url: '../icons/icon-close-red.svg', $background-size: 11px, $icon-hover-url: '../icons/icon-close-white.svg')
+
+  // $Common button MOD: icon pencil
+  &_icon_pencil
+    +button-with-icon-left($icon-url: '../icons/icon-pencil-white.svg')
+
+  &_icon_pencil#{&}_border_accent-green
+    +button-with-icon-left($icon-url: '../icons/icon-pencil-green.svg', $icon-hover-url: '../icons/icon-pencil-white.svg')
 
 
   // Specific buttons
@@ -214,17 +294,17 @@ $block: ".stock-button"
     padding: 8px 10px
     cursor: default
     font-size: 14px
-    +button-bordered($color: #757a85, $bg-color: #fff, $border-color: #fff)
-    +button-with-icon-left($icon-url: '../icons/icon-options-dark-gray.svg', $background-size: 17px)
-    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff, $icon-hover-url: '../icons/icon-options-dark-gray.svg')
+    +button-bordered($color: #757a85, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #fff)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff)
+    +button-with-icon-left($icon-url: '../icons/icon-options-dark-gray.svg', $background-size: 17px, $icon-hover-url: '../icons/icon-options-dark-gray.svg')
 
   &_role_filter
     text-transform: none
     padding: 15px 20px
-    +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-color: #d3d3d3)
-    +button-with-icon-right($icon-url: '../icons/icon-options-light-gray.svg', $background-size: 15px)
-    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-hover-url: '../icons/icon-options-primary.svg')
-    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-options-primary.svg')
+    +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #d3d3d3)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
+    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
+    +button-with-icon-right($icon-url: '../icons/icon-options-light-gray.svg', $background-size: 15px, $icon-hover-url: '../icons/icon-options-primary.svg', $icon-active-url: '../icons/icon-options-primary.svg')
 
     @media screen and (max-width: 960px)
       padding-right: 13px
@@ -234,18 +314,18 @@ $block: ".stock-button"
     text-transform: none
     padding: 8px 10px
     font-size: 14px
-    +button-bordered($color: #757a85, $bg-color: #fff, $border-color: #fff)
-    +button-with-icon-left($icon-url: '../icons/icon-options-dark-gray.svg', $background-size: 17px)
-    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff, $icon-hover-url: '../icons/icon-options-dark-gray.svg')
-    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-options-primary.svg')
+    +button-bordered($color: #757a85, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #fff)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff)
+    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff)
+    +button-with-icon-left($icon-url: '../icons/icon-options-dark-gray.svg', $background-size: 17px, $icon-hover-url: '../icons/icon-options-dark-gray.svg', $icon-active-url: '../icons/icon-options-primary.svg')
 
   &_role_filter-fluid
     text-transform: none
     padding: 15px 20px
-    +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-color: #d3d3d3)
-    +button-with-icon-right($icon-url: '../icons/icon-options-light-gray.svg', $background-size: 15px)
-    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-hover-url: '../icons/icon-options-primary.svg')
-    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-options-primary.svg')
+    +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #d3d3d3)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
+    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
+    +button-with-icon-right($icon-url: '../icons/icon-options-light-gray.svg', $background-size: 15px, $icon-hover-url: '../icons/icon-options-primary.svg', $icon-active-url: '../icons/icon-options-primary.svg')
 
     @media screen and (max-width: 960px)
       padding-right: 13px
@@ -266,17 +346,17 @@ $block: ".stock-button"
     padding: 8px 10px
     cursor: default
     font-size: 14px
-    +button-bordered($color: #757a85, $bg-color: #fff, $border-color: #fff)
-    +button-with-icon-left($icon-url: '../icons/icon-checked-dark-gray.svg', $background-size: 17px)
-    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff, $icon-hover-url: '../icons/icon-checked-dark-gray.svg')
+    +button-bordered($color: #757a85, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #fff)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff)
+    +button-with-icon-left($icon-url: '../icons/icon-checked-dark-gray.svg', $background-size: 17px, $icon-hover-url: '../icons/icon-checked-dark-gray.svg')
 
   &_role_apply
     text-transform: none
     padding: 15px 20px
-    +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-color: #d3d3d3)
-    +button-with-icon-right($icon-url: '../icons/icon-checked-light-gray.svg', $background-size: 15px)
-    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-hover-url: '../icons/icon-checked-primary.svg')
-    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-checked-primary.svg')
+    +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #d3d3d3)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
+    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
+    +button-with-icon-right($icon-url: '../icons/icon-checked-light-gray.svg', $background-size: 15px, $icon-hover-url: '../icons/icon-checked-primary.svg', $icon-active-url: '../icons/icon-checked-primary.svg')
 
     @media screen and (max-width: 960px)
       padding-right: 13px
@@ -286,18 +366,18 @@ $block: ".stock-button"
     text-transform: none
     padding: 8px 10px
     font-size: 14px
-    +button-bordered($color: #757a85, $bg-color: #fff, $border-color: #fff)
-    +button-with-icon-left($icon-url: '../icons/icon-checked-dark-gray.svg', $background-size: 17px)
-    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff, $icon-hover-url: '../icons/icon-checked-dark-gray.svg')
-    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-checked-primary.svg')
+    +button-bordered($color: #757a85, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #fff)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff)
+    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
+    +button-with-icon-left($icon-url: '../icons/icon-checked-dark-gray.svg', $background-size: 17px, $icon-hover-url: '../icons/icon-checked-dark-gray.svg', $icon-active-url: '../icons/icon-checked-primary.svg')
 
   &_role_apply-fluid
     text-transform: none
     padding: 15px 20px
-    +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-color: #d3d3d3)
-    +button-with-icon-right($icon-url: '../icons/icon-checked-light-gray.svg', $background-size: 15px)
-    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-hover-url: '../icons/icon-checked-primary.svg')
-    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3, $icon-active-url: '../icons/icon-checked-primary.svg')
+    +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #d3d3d3)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
+    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
+    +button-with-icon-right($icon-url: '../icons/icon-checked-light-gray.svg', $background-size: 15px, $icon-hover-url: '../icons/icon-checked-primary.svg', $icon-active-url: '../icons/icon-checked-primary.svg')
 
     @media screen and (max-width: 960px)
       padding-right: 13px

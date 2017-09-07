@@ -46,6 +46,48 @@ $block: ".stock-activity-card"
     &_type_light
       background-color: #FFF
 
+  // $Activity card dropdown
+  &__dropdown
+    background-color: #f8f8f8
+    border-bottom: 1px solid #eee
+
+    &_state_hidden
+      display: none
+
+    &_type_light
+      background-color: #FFF
+
+  &__dropdown-content
+    border-bottom: 1px solid #ebebeb
+
+  &__dropdown-footer
+    padding: 10px
+
+  &__dropdown-close
+    display: block
+    width: 20px
+    height: 20px
+    margin: 0 auto
+    font-size: 0
+    line-height: 0
+    color: transparent
+    outline: none
+    background-color: #454d5e
+    background-image: url(../icons/icon-arrow-down-white.svg)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 9px 9px
+    border-radius: 50%
+    transition: all .4s
+    cursor: pointer
+    transform: rotate(180deg)
+
+    &:hover
+      opacity: .8
+
+    &:focus
+      outline: #FFF
+
 
   // $Activity card content
   &__content
@@ -64,6 +106,68 @@ $block: ".stock-activity-card"
       text-align: center
       background-color: #f8f8f8
       border-bottom: 1px solid #ebebeb
+
+
+  &__group
+    border-bottom: 1px solid #eee
+
+    // $Activity card cell MOD: no border
+    &_no-border,
+    &_no-border:not(:last-child)
+      border: none
+
+
+  // $Activity card row
+  &__row
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: stretch
+    border-bottom: 1px solid #eee
+
+    // $Activity card row MOD: actions
+    &_role_actions
+      padding: 15px 10px
+
+    // $Activity card row MOD: marked
+    &_marked
+      background-color: #f8f8f8
+
+    // $Activity card cell MOD: no border
+    &_no-border,
+    &_no-border:not(:last-child)
+      border: none
+
+
+  // $Activity card cell
+  &__cell
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    padding: 15px
+    text-align: center
+
+    @media screen and (max-width: 960px)
+      padding: 15px 10px
+
+    &_size_half
+      width: 50%
+
+      &:not(:last-child)
+        border-right: 1px solid #eee
+
+    // $Activity card cell MOD: no border
+    &_no-border,
+    &_no-border:not(:last-child)
+      border: none
+
+    &_justify_end
+      align-items: flex-end
+
+    &_justify_start
+      align-items: flex-start
 
 
   // $Activity card footer
@@ -166,6 +270,13 @@ $block: ".stock-activity-card"
   &__text-line
     display: block
     white-space: nowrap
+
+
+  &__label
+    font-family: $f-sans
+    font-size: 12px
+    font-weight: 400
+    color: #6c6c6c
 
 
   // $Activity card meta
