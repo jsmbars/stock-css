@@ -38,6 +38,9 @@ $block: ".stock-activity-card"
     &_adjust_label
       padding-bottom: 0
 
+    &_type_dark
+      background-color: #f8f8f8
+
   // $Activity card accordion
   &__accordion
     background-color: #f8f8f8
@@ -107,6 +110,9 @@ $block: ".stock-activity-card"
       background-color: #f8f8f8
       border-bottom: 1px solid #ebebeb
 
+    &_type_dark
+      background-color: #f8f8f8
+
 
   &__group
     border-bottom: 1px solid #eee
@@ -175,6 +181,9 @@ $block: ".stock-activity-card"
     padding: 35px 10px 15px
     text-align: center
     background-color: #f8f8f8
+
+    &_type_light
+      background-color: #FFF
 
 
   // $Activity card info
@@ -264,6 +273,25 @@ $block: ".stock-activity-card"
 
     &_align_right
       text-align: right
+
+    &_type_regular
+      width: auto
+      font-size: 14px
+      font-weight: 400
+
+    &_role_date
+      &:before
+        content: ""
+        display: inline-block
+        width: 16px
+        height: 16px
+        margin-right: 10px
+        margin-top: -3px
+        background-image: url('../icons/icon-calendar-dark.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+        vertical-align: middle
 
 
   // $Activity card text line
