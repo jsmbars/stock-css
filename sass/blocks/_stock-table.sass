@@ -27,6 +27,8 @@ $block: ".stock-table"
     @media screen and (max-width: 1120px)
       display: none
 
+
+  // $Common table group
   &__group
     position: relative
     width: 100%
@@ -36,16 +38,21 @@ $block: ".stock-table"
       background-color: #f8f8f8
 
 
+  // $Common table dropdown
   &__dropdown
     position: relative
     border-bottom: 1px solid #eee
 
+    // $Common table dropdown MOD: state hidden
     &_state_hidden
       display: none
 
+    // $Common table dropdown MOD: space regular
     &_space_regular
       padding: 20px 45px 45px
 
+
+  // $Common table dropdown close
   &__dropdown-close
     position: absolute
     bottom: 20px
@@ -95,21 +102,25 @@ $block: ".stock-table"
     // $Common table row MOD: role header
     &_role_header
 
+    // $Common table row MOD: adjust group
     &_adjust_group
       background-color: transparent
 
       &:nth-child(odd)
         background-color: transparent
 
+    // $Common table row MOD:  no border
     &_no-border,
     &_no-border:not(:last-child)
       border: none
 
+    // $Common table row MOD: state success
     &_state_success,
     &_state_success:nth-child(odd),
     &_state_success:nth-child(even),
       background-color: #dafddf
 
+    // $Common table row MOD: state alert
     &_state_alert,
     &_state_alert:nth-child(odd),
     &_state_alert:nth-child(even)

@@ -91,6 +91,7 @@ $block: ".stock-form-field"
       #{$block}_role_control-reverse &
         width: 90px
 
+    // $Common form field label MOD: adjust control fluid
     &_adjust_control-fluid
       width: auto
       @media screen and (max-width: 960px)
@@ -98,14 +99,17 @@ $block: ".stock-form-field"
         #{$block}_role_control-reverse &
           width: auto
 
+    // $Common form field label MOD: adjust control wrap
     &_adjust_control-wrap
       #{$block}_role_control &,
       #{$block}_role_control-reverse &
         white-space: normal
 
+    // $Common form field label MOD: size small
     &_size_small
       font-size: 12px
 
+    // $Common form field label MOD: no wrap
     &_nowrap
       white-space: nowrap
 

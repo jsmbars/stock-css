@@ -44,6 +44,7 @@ $block: ".stock-activity-card"
     text-align: center
     border-bottom: 1px solid #ebebeb
 
+    // $Activity card header MOD: adjust translated label button
     &_adjust_label
       padding-bottom: 0
 
@@ -53,6 +54,7 @@ $block: ".stock-activity-card"
     background-color: #f8f8f8
     border-bottom: 1px solid #ebebeb
 
+    // $Activity card accordion
     &_type_light
       background-color: transparent
 
@@ -62,21 +64,26 @@ $block: ".stock-activity-card"
     background-color: #f8f8f8
     border-bottom: 1px solid #eee
 
+    // $Activity card dropdown MOD: state hidden
     &_state_hidden
       display: none
 
+    // $Activity card dropdown MOD: type light
     &_type_light
       background-color: transparent
 
 
+  // $Activity card dropdown content
   &__dropdown-content
     border-bottom: 1px solid #ebebeb
 
 
+  // $Activity card dropdown footer
   &__dropdown-footer
     padding: 10px
 
 
+  // $Activity card dropdown close
   &__dropdown-close
     display: block
     width: 20px
@@ -121,6 +128,7 @@ $block: ".stock-activity-card"
       border-bottom: 1px solid #ebebeb
 
 
+  // $Activity card group
   &__group
     border-bottom: 1px solid #eee
 
@@ -160,6 +168,7 @@ $block: ".stock-activity-card"
     @media screen and (max-width: 960px)
       padding: 15px 10px
 
+    // $Activity card cell MOD: size half
     &_size_half
       width: 50%
 
@@ -171,12 +180,15 @@ $block: ".stock-activity-card"
     &_no-border:not(:last-child)
       border: none
 
+    // $Activity card cell MOD: justify end
     &_justify_end
       align-items: flex-end
 
+    // $Activity card cell MOD: justify start
     &_justify_start
       align-items: flex-start
 
+    // $Activity card cell MOD: half-colored
     &_marked-half
       background-image: -ms-linear-gradient(top, #fff 0%, #fff 50%, #f8f8f8 50%, #f8f8f8 100%)
       background-image: -moz-linear-gradient(top, #fff 0%, #fff 50%, #f8f8f8 50%, #f8f8f8 100%)
@@ -185,6 +197,7 @@ $block: ".stock-activity-card"
       background-image: -webkit-linear-gradient(top, #fff 0%, #fff 50%, #f8f8f8 50%, #f8f8f8 100%)
       background-image: linear-gradient(to bottom, #fff 0%, #fff 50%, #f8f8f8 50%, #f8f8f8 100%)
 
+    // $Activity card cell MOD: half-colored reverse
     &_marked-half-reverse
       background-image: -ms-linear-gradient(top, #f8f8f8 0%, #f8f8f8 50%, #fff 50%, #fff 100%)
       background-image: -moz-linear-gradient(top, #f8f8f8 0%, #f8f8f8 50%, #fff 50%, #fff 100%)
@@ -193,9 +206,11 @@ $block: ".stock-activity-card"
       background-image: -webkit-linear-gradient(top, #f8f8f8 0%, #f8f8f8 50%, #fff 50%, #fff 100%)
       background-image: linear-gradient(to bottom, #f8f8f8 0%, #f8f8f8 50%, #fff 50%, #fff 100%)
 
+    // $Activity card cell MOD: adjust label over other elements
     &_adjust_label-before
       padding-bottom: 0
 
+    // $Activity card cell MOD: adjust label under other elements
     &_adjust_label-after
       padding-top: 0
 
@@ -206,6 +221,7 @@ $block: ".stock-activity-card"
     text-align: center
     background-color: #f8f8f8
 
+    // $Activity card footer MOD: type light
     &_type_light
       background-color: transparent
 
@@ -296,14 +312,17 @@ $block: ".stock-activity-card"
     font-weight: 600
     color: #1c2841
 
+    // $Activity card text MOD: align right
     &_align_right
       text-align: right
 
+    // $Activity card text MOD: type regular text
     &_type_regular
       width: auto
       font-size: 14px
       font-weight: 400
 
+    // $Activity card text MOD: role date
     &_role_date
       &:before
         content: ""
@@ -326,6 +345,7 @@ $block: ".stock-activity-card"
     white-space: nowrap
 
 
+  // $Activity card label
   &__label
     max-width: 100%
     font-family: $f-sans
@@ -336,6 +356,8 @@ $block: ".stock-activity-card"
     &_context_stack:not(:last-child)
       margin-bottom: 10px
 
+
+  // $Activity card label marked text
   &__label-marked
     font-weight: 600
 
@@ -355,11 +377,12 @@ $block: ".stock-activity-card"
     &:last-child
       margin-bottom: 0
 
+    // $Activity card meta MOD: no wrap
     &_nowrap
       white-space: nowrap
 
 
-  // $Activity card meta-marked
+  // $Activity card meta marked text
   &__meta-marked
     font-weight: 600
     color: #1c2841
@@ -373,6 +396,7 @@ $block: ".stock-activity-card"
     transform: translateY(50%)
 
 
+  // $Activity card date
   &__date
     position: relative
     z-index: 1
