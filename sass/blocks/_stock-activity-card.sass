@@ -27,6 +27,10 @@ $block: ".stock-activity-card"
     @media screen and (min-width: 961px)
       display: none
 
+  &_state_visible-tablet
+    @media screen and (min-width: 1121px)
+      display: none
+
   &_state_success
     background-color: #dafddf
 
@@ -43,6 +47,7 @@ $block: ".stock-activity-card"
     &_adjust_label
       padding-bottom: 0
 
+
   // $Activity card accordion
   &__accordion
     background-color: #f8f8f8
@@ -50,6 +55,7 @@ $block: ".stock-activity-card"
 
     &_type_light
       background-color: transparent
+
 
   // $Activity card dropdown
   &__dropdown
@@ -62,11 +68,14 @@ $block: ".stock-activity-card"
     &_type_light
       background-color: transparent
 
+
   &__dropdown-content
     border-bottom: 1px solid #ebebeb
 
+
   &__dropdown-footer
     padding: 10px
+
 
   &__dropdown-close
     display: block
@@ -151,7 +160,6 @@ $block: ".stock-activity-card"
     align-items: center
     width: 100%
     padding: 15px
-    text-align: center
 
     @media screen and (max-width: 960px)
       padding: 15px 10px
@@ -303,6 +311,12 @@ $block: ".stock-activity-card"
     font-size: 12px
     font-weight: 400
     color: #6c6c6c
+
+    &_context_stack:not(:last-child)
+      margin-bottom: 10px
+
+  &__label-marked
+    font-weight: 600
 
 
   // $Activity card meta

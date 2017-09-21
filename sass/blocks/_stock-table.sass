@@ -23,6 +23,9 @@ $block: ".stock-table"
     @media screen and (max-width: 960px)
       display: none
 
+  &_state_hidden-tablet
+    @media screen and (max-width: 1120px)
+      display: none
 
   &__group
     position: relative
@@ -41,7 +44,7 @@ $block: ".stock-table"
       display: none
 
     &_space_regular
-      padding: 0 0 45px 45px
+      padding: 20px 45px 45px
 
   &__dropdown-close
     position: absolute
@@ -127,9 +130,15 @@ $block: ".stock-table"
     color: #6c6c6c
     padding: 10px 15px
 
-    #{$block}_page_p-list &
+    #{$block}_page_p-list &,
+    #{$block}_page_ed-form &
       padding-left: 10px
       padding-right: 10px
+
+    @media screen and (max-width: 1280px)
+      #{$block}_page_ed-form &
+        padding-left: 8px
+        padding-right: 8px
 
     @media screen and (max-width: 1120px)
       padding: 10px
@@ -183,6 +192,14 @@ $block: ".stock-table"
       #{$block}_page_ed-list &
         width: 20%
 
+      #{$block}_page_ed-form &
+        width: 10%
+        min-width: 80px
+
+      #{$block}_page_ed-form-offers &
+        flex-grow: 0
+        width: 15%
+
     // $Common table cell second column
     &:nth-child(2)
       #{$block}_page_sl-list &
@@ -223,6 +240,14 @@ $block: ".stock-table"
       #{$block}_page_ed-list &
         width: 20%
 
+      #{$block}_page_ed-form &
+        width: 10%
+        min-width: 80px
+
+      #{$block}_page_ed-form-offers &
+        flex-grow: 0
+        width: 200px
+
     // $Common table cell third column
     &:nth-child(3)
       #{$block}_page_sl-list &
@@ -257,6 +282,14 @@ $block: ".stock-table"
 
       #{$block}_page_ed-list &
         width: 20%
+
+      #{$block}_page_ed-form &
+        width: 7%
+        min-width: 70px
+
+      #{$block}_page_ed-form-offers &
+        flex-grow: 0
+        width: 300px
 
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
@@ -307,6 +340,11 @@ $block: ".stock-table"
         justify-content: center
         width: 10%
 
+      #{$block}_page_ed-form &
+        justify-content: center
+        width: 8%
+        min-width: 80px
+
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
           width: 10%
@@ -346,6 +384,10 @@ $block: ".stock-table"
         flex-shrink: 0
         width: 130px
 
+      #{$block}_page_ed-form &
+        width: 8%
+        min-width: 80px
+
     // $Common table cell sixth column
     &:nth-child(6)
 
@@ -379,6 +421,10 @@ $block: ".stock-table"
         flex-shrink: 0
         width: 145px
 
+      #{$block}_page_ed-form &
+        width: 8%
+        min-width: 80px
+
     // $Common table cell seventh column
     &:nth-child(7)
 
@@ -408,6 +454,10 @@ $block: ".stock-table"
         flex-shrink: 0
         width: 130px
 
+      #{$block}_page_ed-form &
+        width: 9%
+        min-width: 90px
+
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
           width: 125px
@@ -435,6 +485,10 @@ $block: ".stock-table"
         flex-shrink: 0
         width: 100px
 
+      #{$block}_page_ed-form &
+        width: 7%
+        min-width: 70px
+
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
           width: 95px
@@ -450,9 +504,27 @@ $block: ".stock-table"
         flex-shrink: 0
         width: 125px
 
+      #{$block}_page_ed-form &
+        width: 9%
+        min-width: 90px
+
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
           width: 115px
+
+    // $Common table cell tenth column
+    &:nth-child(10)
+      #{$block}_page_ed-form &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 135px
+
+    // $Common table cell eleventh column
+    &:nth-child(11)
+      #{$block}_page_ed-form &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 125px
 
     // $Common table cell MOD: role header
     // $Common table cell MOD: role footer
@@ -478,7 +550,7 @@ $block: ".stock-table"
 
   // $Common table info
   &__info
-    max-width: 100%
+    width: 100%
 
   // $Common table text
   &__text

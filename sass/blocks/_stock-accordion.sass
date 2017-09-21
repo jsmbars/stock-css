@@ -112,6 +112,24 @@ $block: ".stock-accordion"
     @media screen and (max-width: 960px)
       margin-right: 15px
 
+    &_size_half
+      width: 50%
+
+    &_size_half#{&}_adjust_header
+      &:first-child
+        width: calc(50% - 40px)
+        margin-right: 0
+        padding-right: 15px
+
+        @media screen and (max-width: 960px)
+          padding-right: 10px
+
+      &:last-child
+        padding-left: 20px
+
+        @media screen and (max-width: 960px)
+          padding-left: 15px
+
     // $Accordion dropdown cell MOD: size max
     &_size_max
       flex-grow: 1
