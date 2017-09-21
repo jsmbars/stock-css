@@ -138,10 +138,6 @@ $block: ".stock-activity-card"
     align-items: stretch
     border-bottom: 1px solid #eee
 
-    // $Activity card row MOD: actions
-    &_role_actions
-      padding: 15px 10px
-
     // $Activity card row MOD: marked
     &_marked
       background-color: #f8f8f8
@@ -180,6 +176,28 @@ $block: ".stock-activity-card"
 
     &_justify_start
       align-items: flex-start
+
+    &_marked-half
+      background-image: -ms-linear-gradient(top, #fff 0%, #fff 50%, #f8f8f8 50%, #f8f8f8 100%)
+      background-image: -moz-linear-gradient(top, #fff 0%, #fff 50%, #f8f8f8 50%, #f8f8f8 100%)
+      background-image: -o-linear-gradient(top, #fff 0%, #fff 50%, #f8f8f8 50%, #f8f8f8 100%)
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(50, #fff), color-stop(50, #f8f8f8), color-stop(100, #f8f8f8))
+      background-image: -webkit-linear-gradient(top, #fff 0%, #fff 50%, #f8f8f8 50%, #f8f8f8 100%)
+      background-image: linear-gradient(to bottom, #fff 0%, #fff 50%, #f8f8f8 50%, #f8f8f8 100%)
+
+    &_marked-half-reverse
+      background-image: -ms-linear-gradient(top, #f8f8f8 0%, #f8f8f8 50%, #fff 50%, #fff 100%)
+      background-image: -moz-linear-gradient(top, #f8f8f8 0%, #f8f8f8 50%, #fff 50%, #fff 100%)
+      background-image: -o-linear-gradient(top, #f8f8f8 0%, #f8f8f8 50%, #fff 50%, #fff 100%)
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8f8f8), color-stop(50, #f8f8f8), color-stop(50, #fff), color-stop(100, #fff))
+      background-image: -webkit-linear-gradient(top, #f8f8f8 0%, #f8f8f8 50%, #fff 50%, #fff 100%)
+      background-image: linear-gradient(to bottom, #f8f8f8 0%, #f8f8f8 50%, #fff 50%, #fff 100%)
+
+    &_adjust_label-before
+      padding-bottom: 0
+
+    &_adjust_label-after
+      padding-top: 0
 
 
   // $Activity card footer
