@@ -289,6 +289,11 @@ $block: ".stock-button"
 
   // Specific buttons
 
+  &_role_create-email
+    +button-bordered($color: map-get($app-palette, accent-blue), $bg-color: #fff, $border-color: map-get($app-palette, accent-blue))
+    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-blue), $border-color: map-get($app-palette, accent-blue))
+    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, accent-blue), $border-color: map-get($app-palette, accent-blue))
+
   &_role_filter-label
     text-transform: none
     padding: 8px 10px

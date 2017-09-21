@@ -27,16 +27,26 @@ $block: ".stock-activity-card"
     @media screen and (min-width: 961px)
       display: none
 
+  &_state_visible-tablet
+    @media screen and (min-width: 1121px)
+      display: none
+
+  &_state_success
+    background-color: #dafddf
+
+  &_state_alert
+    background-color: #ffe1e3
+
 
   // $Activity card header
   &__header
     padding: 20px 10px 10px
     text-align: center
-    background-color: #FFF
     border-bottom: 1px solid #ebebeb
 
     &_adjust_label
       padding-bottom: 0
+
 
   // $Activity card accordion
   &__accordion
@@ -44,7 +54,8 @@ $block: ".stock-activity-card"
     border-bottom: 1px solid #ebebeb
 
     &_type_light
-      background-color: #FFF
+      background-color: transparent
+
 
   // $Activity card dropdown
   &__dropdown
@@ -55,13 +66,16 @@ $block: ".stock-activity-card"
       display: none
 
     &_type_light
-      background-color: #FFF
+      background-color: transparent
+
 
   &__dropdown-content
     border-bottom: 1px solid #ebebeb
 
+
   &__dropdown-footer
     padding: 10px
+
 
   &__dropdown-close
     display: block
@@ -97,7 +111,6 @@ $block: ".stock-activity-card"
     align-items: center
     padding: 30px 10px 0
     text-align: center
-    background-color: #FFF
 
     // $Activity card content MOD: adjust action control
     &_adjust_action
@@ -125,10 +138,6 @@ $block: ".stock-activity-card"
     align-items: stretch
     border-bottom: 1px solid #eee
 
-    // $Activity card row MOD: actions
-    &_role_actions
-      padding: 15px 10px
-
     // $Activity card row MOD: marked
     &_marked
       background-color: #f8f8f8
@@ -147,7 +156,6 @@ $block: ".stock-activity-card"
     align-items: center
     width: 100%
     padding: 15px
-    text-align: center
 
     @media screen and (max-width: 960px)
       padding: 15px 10px
@@ -169,12 +177,37 @@ $block: ".stock-activity-card"
     &_justify_start
       align-items: flex-start
 
+    &_marked-half
+      background-image: -ms-linear-gradient(top, #fff 0%, #fff 50%, #f8f8f8 50%, #f8f8f8 100%)
+      background-image: -moz-linear-gradient(top, #fff 0%, #fff 50%, #f8f8f8 50%, #f8f8f8 100%)
+      background-image: -o-linear-gradient(top, #fff 0%, #fff 50%, #f8f8f8 50%, #f8f8f8 100%)
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(50, #fff), color-stop(50, #f8f8f8), color-stop(100, #f8f8f8))
+      background-image: -webkit-linear-gradient(top, #fff 0%, #fff 50%, #f8f8f8 50%, #f8f8f8 100%)
+      background-image: linear-gradient(to bottom, #fff 0%, #fff 50%, #f8f8f8 50%, #f8f8f8 100%)
+
+    &_marked-half-reverse
+      background-image: -ms-linear-gradient(top, #f8f8f8 0%, #f8f8f8 50%, #fff 50%, #fff 100%)
+      background-image: -moz-linear-gradient(top, #f8f8f8 0%, #f8f8f8 50%, #fff 50%, #fff 100%)
+      background-image: -o-linear-gradient(top, #f8f8f8 0%, #f8f8f8 50%, #fff 50%, #fff 100%)
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8f8f8), color-stop(50, #f8f8f8), color-stop(50, #fff), color-stop(100, #fff))
+      background-image: -webkit-linear-gradient(top, #f8f8f8 0%, #f8f8f8 50%, #fff 50%, #fff 100%)
+      background-image: linear-gradient(to bottom, #f8f8f8 0%, #f8f8f8 50%, #fff 50%, #fff 100%)
+
+    &_adjust_label-before
+      padding-bottom: 0
+
+    &_adjust_label-after
+      padding-top: 0
+
 
   // $Activity card footer
   &__footer
     padding: 35px 10px 15px
     text-align: center
     background-color: #f8f8f8
+
+    &_type_light
+      background-color: transparent
 
 
   // $Activity card info
@@ -253,6 +286,7 @@ $block: ".stock-activity-card"
 
   // $Activity card text
   &__text
+    max-width: 100%
     flex-grow: 0
     flex-shrink: 1
     width: min-content
@@ -265,18 +299,45 @@ $block: ".stock-activity-card"
     &_align_right
       text-align: right
 
+    &_type_regular
+      width: auto
+      font-size: 14px
+      font-weight: 400
+
+    &_role_date
+      &:before
+        content: ""
+        display: inline-block
+        width: 16px
+        height: 16px
+        margin-right: 10px
+        margin-top: -3px
+        background-image: url('../icons/icon-calendar-dark.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+        vertical-align: middle
+
 
   // $Activity card text line
   &__text-line
+    max-width: 100%
     display: block
     white-space: nowrap
 
 
   &__label
+    max-width: 100%
     font-family: $f-sans
     font-size: 12px
     font-weight: 400
     color: #6c6c6c
+
+    &_context_stack:not(:last-child)
+      margin-bottom: 10px
+
+  &__label-marked
+    font-weight: 600
 
 
   // $Activity card meta
@@ -293,6 +354,9 @@ $block: ".stock-activity-card"
 
     &:last-child
       margin-bottom: 0
+
+    &_nowrap
+      white-space: nowrap
 
 
   // $Activity card meta-marked

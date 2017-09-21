@@ -18,6 +18,10 @@ $block: ".stock-form"
   display: block
   width: 100%
 
+  &_adjust_c-form
+
+  &_adjust_u-form
+
 
   // $Common form group
   &__group
@@ -263,7 +267,8 @@ $block: ".stock-form"
     justify-content: flex-start
     align-items: center
 
-    &_adjust_c-u-forms
+    &_adjust_c-u-forms,
+    &_adjust_em-form
       justify-content: flex-end
 
       @media screen and (max-width: 960px)
@@ -275,12 +280,14 @@ $block: ".stock-form"
     flex-grow: 0
     flex-shrink: 1
 
-    #{$block}__actions_adjust_c-u-forms &
+    #{$block}__actions_adjust_c-u-forms &,
+    #{$block}__actions_adjust_em-form &
       @media screen and (max-width: 960px)
         flex-grow: 1
 
     &:not(:first-child)
-      #{$block}__actions_adjust_c-u-forms &
+      #{$block}__actions_adjust_c-u-forms &,
+      #{$block}__actions_adjust_em-form &
         margin-left: 20px
 
     &_state_hidden

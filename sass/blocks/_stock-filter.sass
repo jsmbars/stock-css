@@ -113,6 +113,8 @@ $block: ".stock-filter"
     &_size_half,
     &_size_third,
     &_size_fourth,
+    &_size_fifth,
+    &_size_sixth,
     &_size_max,
     &_size_min,
     &_size_fluid,
@@ -145,6 +147,24 @@ $block: ".stock-filter"
       flex-grow: 0
       flex-shrink: 1
       width: 25%
+
+      @media screen and (max-width: 960px)
+        flex-grow: 1
+        width: 100%
+
+    &_size_fifth
+      flex-grow: 0
+      flex-shrink: 1
+      width: 20%
+
+      @media screen and (max-width: 960px)
+        flex-grow: 1
+        width: 100%
+
+    &_size_sixth
+      flex-grow: 0
+      flex-shrink: 1
+      width: 16.6%
 
       @media screen and (max-width: 960px)
         flex-grow: 1

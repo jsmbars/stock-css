@@ -74,6 +74,12 @@ $block: ".stock-form-select"
     #{$block}_role_control-reverse &
       margin-left: 10px
 
+    // $Common form select label text CONTEXT: $Common form MOD: context table
+    #{$block}_context_table &
+      flex-shrink: 1
+      font-size: 12px
+      white-space: normal
+
     // $Common form select label-text CONTEXT: $Common form select MOD: type required field
     #{$block}_type_required &
       &:after
@@ -84,6 +90,7 @@ $block: ".stock-form-select"
       #{$block}_role_control &,
       #{$block}_role_control-reverse &
         width: 90px
+        white-space: normal
 
     &_adjust_control-fluid
       @media screen and (max-width: 960px)
@@ -99,6 +106,9 @@ $block: ".stock-form-select"
     &_size_small
       font-size: 12px
 
+    &_nowrap
+      white-space: nowrap
+
 
   // $Common form select label text
   &__label-text
@@ -113,6 +123,13 @@ $block: ".stock-form-select"
     #{$block}_role_control-reverse &
       flex-grow: 1
       flex-shrink: 1
+
+    // $Common form select input CONTEXT: $Common form MOD: context table control
+    // $Common form select input CONTEXT: $Common form MOD: context table control reversed
+    #{$block}_role_control#{$block}_context_table &,
+    #{$block}_role_control-reverse#{$block}_context_table &
+      flex-grow: 0
+      flex-shrink: 0
 
     &:before
       #{$block}_role_search &
@@ -154,6 +171,11 @@ $block: ".stock-form-select"
       #{$block}_state_error &
         background-image: url(../icons/icon-arrow-down-error.svg)
 
+      #{$block}_context_table &
+        width: 10px
+        height: 10px
+        right: 10px
+
 
     & select
       display: block
@@ -168,6 +190,7 @@ $block: ".stock-form-select"
       border: 1px solid #d3d3d3
       border-radius: 0
       background: none
+      background-color: #FFF
       appearance: none
       -moz-appearance: none
       -webkit-appearance: none
@@ -179,10 +202,10 @@ $block: ".stock-form-select"
 
       #{$block}_size_s &
         min-width: 155px
-        padding: 8px 40px 8px 10px
+        padding: 9px 40px 9px 10px
 
       #{$block}_size_narrow &
-        padding: 8px 40px 8px 10px
+        padding: 9px 40px 9px 10px
 
       #{$block}_role_search &
         padding-left: 40px
@@ -193,6 +216,16 @@ $block: ".stock-form-select"
         border-top: none
         border-bottom: none
         border-left: none
+
+      #{$block}_context_table &
+        padding: 9px 10px
+        font-size: 12px
+
+      #{$block}_role_control#{$block}_context_table &,
+      #{$block}_role_control-reverse#{$block}_context_table &
+        width: 55px
+        padding: 9px 10px
+        font-size: 12px
 
       #{$block}_adjust_manager#{$block}_state_error &
         border: 1px solid #ed7f7e
