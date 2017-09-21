@@ -286,6 +286,7 @@ $block: ".stock-activity-card"
 
   // $Activity card text
   &__text
+    max-width: 100%
     flex-grow: 0
     flex-shrink: 1
     width: min-content
@@ -320,11 +321,13 @@ $block: ".stock-activity-card"
 
   // $Activity card text line
   &__text-line
+    max-width: 100%
     display: block
     white-space: nowrap
 
 
   &__label
+    max-width: 100%
     font-family: $f-sans
     font-size: 12px
     font-weight: 400
@@ -351,6 +354,9 @@ $block: ".stock-activity-card"
 
     &:last-child
       margin-bottom: 0
+
+    &_nowrap
+      white-space: nowrap
 
 
   // $Activity card meta-marked
