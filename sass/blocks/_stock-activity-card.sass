@@ -172,6 +172,15 @@ $block: ".stock-activity-card"
     &_size_half
       width: 50%
 
+    // $Activity card cell MOD: size half
+    &_size_third
+      width: 33.3%
+
+      @media screen and (max-width: 479px)
+        padding: 15px 5px
+
+    &_size_half,
+    &_size_third
       &:not(:last-child)
         border-right: 1px solid #eee
 

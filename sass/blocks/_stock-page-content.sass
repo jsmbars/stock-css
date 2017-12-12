@@ -161,12 +161,18 @@ $block: ".stock-page-content"
 
   // $Page content actions
   &__actions
-    flex-shrink: 1
+    flex-shrink: 0
     flex-grow: 0
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
     width: auto
 
     @media screen and (max-width: 960px)
       flex-grow: 1
+      flex-shrink: 1
+      justify-content: center
       width: 100%
 
 
@@ -357,6 +363,7 @@ $block: ".stock-page-content"
 
     @media screen and (max-width: 960px)
       margin-bottom: 15px
+      text-align: center
 
     // $Page content sub title MOD: position last
     &_position_last
@@ -364,6 +371,9 @@ $block: ".stock-page-content"
 
       @media screen and (max-width: 960px)
         margin-bottom: 0
+
+  &__marked
+    font-weight: 600
 
 
   // $Page content text
