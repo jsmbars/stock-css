@@ -139,9 +139,25 @@ $block: ".stock-button"
       display: block
       width: 100%
 
+  &_size_half-mobile
+    &:first-child
+      margin-right: 10px
+
+    &:last-child
+      margin-left: 10px
+
+    @media screen and (max-width: 960px)
+      width: 50%
+
   // $Common button MOD: size extra small
   &_size_xs
     padding: 8px 12px
+
+  // $Common button MOD: size extra small
+  &_size_xxs
+    padding: 8px
+    font-size: 11px
+
 
   // $Common button MOD: size small
   &_size_s
@@ -173,6 +189,7 @@ $block: ".stock-button"
   // $Common button MOD: space right-extra
   &_space_right-extra
     margin-right: 20px
+
 
 
   // $Common button MOD: state disabled
