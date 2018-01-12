@@ -204,7 +204,7 @@ $block: ".stock-form-select"
         color: #ed7f7e
 
       #{$block}_size_s &
-        min-width: 155px
+        min-width: 150px
         padding: 9px 40px 9px 10px
 
       #{$block}_size_narrow &
@@ -244,6 +244,10 @@ $block: ".stock-form-select"
 
         #{$block}_size_s &
           min-width: 0
+
+      &:focus
+        outline: none
+        box-shadow: 0 0 1px 0 map-get($app-palette, accent-blue)
 
       &::-ms-expand
         display: none
