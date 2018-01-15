@@ -16,7 +16,7 @@
 
 =button-common-hover-behavior($background-color, $amount: 3%)
 
-  &:hover
+  &:not(.stock-button_type_no-behavior):hover
     background-color: lighten($background-color, $amount)
 
 
@@ -29,7 +29,7 @@
 
 =button-bordered-hover-behavior($color: #d3d3d3, $border-color: #d3d3d3, $bg-color: #fff)
 
-  &:hover
+  &:not(.stock-button_type_no-behavior):hover
     color: $color
     border-color: $border-color
     background-color: $bg-color
@@ -148,6 +148,17 @@ $block: ".stock-button"
 
     @media screen and (max-width: 960px)
       width: 50%
+      padding-left: 10px
+      padding-right: 10px
+
+  // $Common button MOD: size large
+  &_size_l
+    padding: 15px 30px
+    border-radius: 25px
+
+  // $Common button MOD: size small
+  &_size_s
+    padding: 9px 23px
 
   // $Common button MOD: size extra small
   &_size_xs
@@ -157,16 +168,6 @@ $block: ".stock-button"
   &_size_xxs
     padding: 8px
     font-size: 11px
-
-
-  // $Common button MOD: size small
-  &_size_s
-    padding: 9px 23px
-
-  // $Common button MOD: size large
-  &_size_l
-    padding: 15px 30px
-    border-radius: 25px
 
   // $Common button MOD: space left
   &_space_left
@@ -189,8 +190,6 @@ $block: ".stock-button"
   // $Common button MOD: space right-extra
   &_space_right-extra
     margin-right: 20px
-
-
 
   // $Common button MOD: state disabled
   &_state_disabled[disabled],
@@ -220,6 +219,9 @@ $block: ".stock-button"
   &_state_hidden-mobile
     @media screen and (max-width: 960px)
       display: none
+
+  &_type_no-behavior
+    cursor: default !important
 
 
   // $Common button text

@@ -185,7 +185,7 @@ $block: ".stock-form-field"
         padding-left: 40px
 
       #{$block}_size_s &
-        width: 155px
+        width: 150px
         padding: 8px 10px
 
       #{$block}_size_narrow &
@@ -211,6 +211,7 @@ $block: ".stock-form-field"
 
       &:focus
         outline: none
+        box-shadow: 0 0 1px 0 map-get($app-palette, accent-blue)
 
       &::-webkit-input-placeholder
         color: #c5c5c5 !important
