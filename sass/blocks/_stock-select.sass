@@ -127,6 +127,10 @@ $block: ".stock-select"
     #{$block}_role_site &
       border-radius: 10px
 
+    @media screen and (max-width: 1360px)
+      overflow-y: scroll;
+      -webkit-overflow-scrolling: touch;
+
     @media screen and (max-height: 480px)
       #{$block}_role_site &
         max-height: 170px
