@@ -143,12 +143,14 @@ $block: ".stock-table"
 
     #{$block}_page_p-list &,
     #{$block}_page_po-list &,
-    #{$block}_page_ed-form &
+    #{$block}_page_ed-form &,
+    #{$block}_page_od-details &
       padding-left: 10px
       padding-right: 10px
 
     @media screen and (max-width: 1280px)
-      #{$block}_page_ed-form &
+      #{$block}_page_ed-form &,
+      #{$block}_page_od-details &
         padding-left: 8px
         padding-right: 8px
 
@@ -245,7 +247,7 @@ $block: ".stock-table"
         width: 13%
 
       #{$block}_page_od-details &
-        width: 13%
+        width: 11%
 
       #{$block}_page_p-list &,
       #{$block}_page_po-list &
@@ -300,7 +302,7 @@ $block: ".stock-table"
         width: 10%
 
       #{$block}_page_od-details &
-        width: 13%
+        width: 10%
 
       #{$block}_page_p-list &
         width: 10%
@@ -414,7 +416,7 @@ $block: ".stock-table"
 
       #{$block}_page_od-details &
         justify-content: center
-        width: 9%
+        width: 8%
 
       #{$block}_page_p-list &,
       #{$block}_page_po-list &
@@ -457,7 +459,7 @@ $block: ".stock-table"
         width: 9%
 
       #{$block}_page_od-details &
-        width: 9%
+        width: 7%
 
       #{$block}_page_p-list &
         flex-grow: 0
@@ -501,7 +503,7 @@ $block: ".stock-table"
         width: 9%
 
       #{$block}_page_od-details &
-        width: 9%
+        width: 7%
 
       #{$block}_page_p-list &
         flex-grow: 0
@@ -540,7 +542,7 @@ $block: ".stock-table"
         width: 13%
 
       #{$block}_page_od-details &
-        width: 12%
+        width: 8%
 
       #{$block}_page_p-list &
         flex-grow: 0
@@ -568,7 +570,7 @@ $block: ".stock-table"
 
       #{$block}_page_od-details &
         justify-content: center
-        width: 15%
+        width: 7%
 
       #{$block}_page_p-list &
         flex-grow: 0
@@ -590,6 +592,9 @@ $block: ".stock-table"
 
     // $Common table cell tenth column
     &:nth-child(10)
+      #{$block}_page_od-details &
+        width: 8%
+
       #{$block}_page_p-list &
         flex-grow: 0
         flex-shrink: 0
@@ -606,6 +611,12 @@ $block: ".stock-table"
 
     // $Common table cell eleventh column
     &:nth-child(11)
+      #{$block}_page_od-details &
+        justify-content: center
+        flex-grow: 0
+        flex-shrink: 0
+        width: 140px
+
       #{$block}_page_ed-form &
         flex-grow: 0
         flex-shrink: 0
@@ -642,6 +653,7 @@ $block: ".stock-table"
     #{$block}_page_si-form #{$block}__cell:nth-child(4) &,
     #{$block}_page_oh-details #{$block}__cell:nth-child(4) &,
     #{$block}_page_od-details #{$block}__cell:nth-child(5) &,
+    #{$block}_page_od-details #{$block}__cell:nth-child(9) &,
     #{$block}_page_p-list #{$block}__cell:nth-child(4) &,
     #{$block}_page_ed-list #{$block}__cell:nth-child(4) &,
     #{$block}_page_ed-list #{$block}__cell:nth-child(5) &,
