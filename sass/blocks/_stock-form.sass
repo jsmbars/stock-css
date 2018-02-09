@@ -18,10 +18,6 @@ $block: ".stock-form"
   display: block
   width: 100%
 
-  &_adjust_c-form
-
-  &_adjust_u-form
-
 
   // $Common form group
   &__group
@@ -127,6 +123,40 @@ $block: ".stock-form"
 
       @media screen and (max-width: 1120px)
         padding: 0 10px
+
+
+  // $Common form board
+  &__board
+    display: block
+    width: 100%
+    background-color: #FFF
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+
+  // $Common form board header
+  &__board-header
+      padding: 15px 25px
+      background-color: #f0f0f0
+
+      @media screen and (max-width: 960px)
+        padding: 15px 10px
+
+
+  // $Common form board title
+  &__board-title
+    font-size: 18px
+    line-height: 1
+    font-family: $f-sans
+    font-weight: 400
+    color: #1c2841
+
+
+  // $Common form board content
+  &__board-content
+      padding: 15px 25px 25px
+
+      @media screen and (max-width: 960px)
+        padding: 15px 10px 25px
 
 
   // $Common form row
@@ -260,6 +290,20 @@ $block: ".stock-form"
       @media screen and (max-width: 960px)
         display: none
 
+    // $Common form field MOD: no label tablet
+    &_no-label-tablet
+      padding-top: 25px
+
+      @media screen and (max-width: 1120px)
+        padding-top: 0
+
+    // $Common form field MOD: no label
+    &_no-label-mobile
+      padding-top: 25px
+
+      @media screen and (max-width: 960px)
+        padding-top: 0
+
 
   // $Common form actions
   &__actions
@@ -271,7 +315,8 @@ $block: ".stock-form"
     // $Common form actions MOD: adjust categories-units forms
     // $Common form actions MOD: email orders form
     &_adjust_c-u-forms,
-    &_adjust_em-form
+    &_adjust_em-form,
+    &_adjust_m-form
       justify-content: flex-end
 
       @media screen and (max-width: 960px)
@@ -285,13 +330,15 @@ $block: ".stock-form"
     flex-shrink: 1
 
     #{$block}__actions_adjust_c-u-forms &,
-    #{$block}__actions_adjust_em-form &
+    #{$block}__actions_adjust_em-form &,
+    #{$block}__actions_adjust_m-form &
       @media screen and (max-width: 960px)
         flex-grow: 1
 
     &:not(:first-child)
       #{$block}__actions_adjust_c-u-forms &,
-      #{$block}__actions_adjust_em-form &
+      #{$block}__actions_adjust_em-form &,
+      #{$block}__actions_adjust_m-form &
         margin-left: 20px
 
     // $Common form action MOD: state hidden
