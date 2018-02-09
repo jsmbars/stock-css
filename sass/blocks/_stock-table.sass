@@ -421,9 +421,8 @@ $block: ".stock-table"
         width: 9%
 
       #{$block}_page_ed-list &
-        flex-grow: 0
-        flex-shrink: 0
-        width: 130px
+        justify-content: center
+        width: 15%
 
       #{$block}_page_ed-form &
         width: 8%
@@ -471,7 +470,7 @@ $block: ".stock-table"
       #{$block}_page_ed-list &
         flex-grow: 0
         flex-shrink: 0
-        width: 145px
+        width: 130px
 
       #{$block}_page_ed-form &
         width: 8%
@@ -511,6 +510,11 @@ $block: ".stock-table"
 
       #{$block}_page_po-list &
         width: 9%
+
+      #{$block}_page_ed-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 145px
 
       #{$block}_page_ed-form &
         width: 9%
@@ -640,6 +644,7 @@ $block: ".stock-table"
     #{$block}_page_od-details #{$block}__cell:nth-child(5) &,
     #{$block}_page_p-list #{$block}__cell:nth-child(4) &,
     #{$block}_page_ed-list #{$block}__cell:nth-child(4) &,
+    #{$block}_page_ed-list #{$block}__cell:nth-child(5) &,
     #{$block}_page_ed-form #{$block}__cell:nth-child(4) &,
     #{$block}_page_em-form #{$block}__cell:nth-child(4) &,
     #{$block}_page_si-form #{$block}__cell:nth-child(6) &,
