@@ -335,7 +335,7 @@ $block: ".stock-form"
       @media screen and (max-width: 960px)
         flex-grow: 1
 
-    &:not(:first-child)
+    &:not(#{&}_single):not(:first-child)
       #{$block}__actions_adjust_c-u-forms &,
       #{$block}__actions_adjust_em-form &,
       #{$block}__actions_adjust_m-form &
