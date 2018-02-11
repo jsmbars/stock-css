@@ -283,6 +283,9 @@ $block: ".stock-button"
   &_icon_plus
     +button-with-icon-left($icon-url: '../icons/icon-plus-white.svg')
 
+  &_icon_plus#{&}_border_accent-blue
+    +button-with-icon-left($icon-url: '../icons/icon-plus-primary.svg', $icon-hover-url: '../icons/icon-plus-white.svg')
+
   // $Common button MOD: icon plus reversed
   &_icon_plus-reversed
     +button-with-icon-right($icon-url: '../icons/icon-plus-white.svg')
