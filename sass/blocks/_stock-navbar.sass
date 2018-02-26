@@ -23,18 +23,14 @@ $block: ".stock-navbar"
     padding: 0 20px
     text-align: center
 
-  @media screen and (max-width: 1120px)
-    padding: 0 10px
-
 
   // $Navigation bar control
   &__control
     position: absolute
-    top: 50%
+    bottom: 16px
     display: none
     width: 16px
     height: 16px
-    margin-top: -8px
     font-size: 0
     line-height: 0
     color: transparent
@@ -81,11 +77,11 @@ $block: ".stock-navbar"
 
     &:before
       left: 0
-      box-shadow: inset 30px 0 10px -10px #fff
+      box-shadow: inset 20px 0 10px -10px rgba(255,255,255,.75)
 
     &:after
       right: 0
-      box-shadow: inset -30px 0 10px -10px #fff
+      box-shadow: inset -20px 0 10px -10px rgba(255,255,255,.75)
 
 
   // $Navigation bar links
