@@ -141,6 +141,7 @@ $block: ".stock-table"
     color: #6c6c6c
     padding: 10px 15px
 
+    #{$block}_page_st &,
     #{$block}_page_p-list &,
     #{$block}_page_po-list &,
     #{$block}_page_ed-form &,
@@ -177,9 +178,11 @@ $block: ".stock-table"
       #{$block}_page_sl-form &
         width: 15%
 
-      #{$block}_page_sr &,
-      #{$block}_page_st &
+      #{$block}_page_sr &
         width: 13%
+
+      #{$block}_page_st &
+        width: 11%
 
       #{$block}_page_po-form &
         width: 16%
@@ -233,7 +236,9 @@ $block: ".stock-table"
       #{$block}_page_sl-form &
         width: 15%
 
-      #{$block}_page_sr &,
+      #{$block}_page_sr &
+        width: 13%
+
       #{$block}_page_st &
         width: 13%
 
@@ -291,9 +296,11 @@ $block: ".stock-table"
       #{$block}_page_sl-form &
         width: 10%
 
-      #{$block}_page_sr &,
-      #{$block}_page_st &
+      #{$block}_page_sr &
         width: 13%
+
+      #{$block}_page_st &
+        width: 11%
 
       #{$block}_page_po-form &
         width: 10%
@@ -355,9 +362,11 @@ $block: ".stock-table"
       #{$block}_page_sl-form &
         width: 16%
 
-      #{$block}_page_sr &,
-      #{$block}_page_st &
+      #{$block}_page_sr &
         width: 10%
+
+      #{$block}_page_st &
+        width: 9%
 
       #{$block}_page_po-form &
         justify-content: center
@@ -411,9 +420,11 @@ $block: ".stock-table"
       #{$block}_page_sl-form &
         width: 16%
 
-      #{$block}_page_sr &,
-      #{$block}_page_st &
+      #{$block}_page_sr &
         width: 13%
+
+      #{$block}_page_st &
+        width: 11%
 
       #{$block}_page_po-form &
         width: 9%
@@ -457,7 +468,9 @@ $block: ".stock-table"
       #{$block}_page_sl-form &
         width: 16%
 
-      #{$block}_page_sr &,
+      #{$block}_page_sr &
+        width: 13%
+
       #{$block}_page_st &
         width: 13%
 
@@ -503,9 +516,11 @@ $block: ".stock-table"
       #{$block}_page_sl-form &
         width: 12%
 
-      #{$block}_page_sr &,
-      #{$block}_page_st &
+      #{$block}_page_sr &
         width: 15%
+
+      #{$block}_page_st &
+        width: 10%
 
       #{$block}_page_po-form &
         width: 13%
@@ -548,9 +563,12 @@ $block: ".stock-table"
     // $Common table cell eighth column
     &:nth-child(8)
 
-      #{$block}_page_sr &,
-      #{$block}_page_st &
+      #{$block}_page_sr &
         width: 10%
+        justify-content: center
+
+      #{$block}_page_st &
+        width: 9%
         justify-content: center
 
       #{$block}_page_po-form &
@@ -583,6 +601,10 @@ $block: ".stock-table"
 
     // $Common table cell ninth column
     &:nth-child(9)
+      #{$block}_page_st &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 120px
 
       #{$block}_page_oh-details &
         width: 15%
