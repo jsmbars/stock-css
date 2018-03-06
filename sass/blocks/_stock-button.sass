@@ -43,14 +43,14 @@
     background-color: $bg-color
 
 
-=button-with-icon-left($icon-url: '', $background-size: 13px, $icon-hover-url: null, $icon-active-url: null)
+=button-with-icon-left($icon-url: '', $background-size: 12px, $icon-hover-url: null, $icon-active-url: null)
 
   &:before
     content: ""
     display: inline-block
     width: $background-size
     height: $background-size
-    margin-right: 10px
+    margin-right: 8px
     line-height: 100%
     vertical-align: middle
     background-image: url($icon-url)
@@ -69,7 +69,7 @@
         background-image: url($icon-active-url)
 
 
-=button-with-icon-right($icon-url: '', $background-size: 13px, $icon-hover-url: null, $icon-active-url: null)
+=button-with-icon-right($icon-url: '', $background-size: 12px, $icon-hover-url: null, $icon-active-url: null)
 
   &:after
     content: ""
@@ -298,10 +298,10 @@ $block: ".stock-button"
 
   // $Common button MOD: icon close
   &_icon_close
-    +button-with-icon-left($icon-url: '../icons/icon-close-white.svg', $background-size: 11px)
+    +button-with-icon-left($icon-url: '../icons/icon-close-white.svg', $background-size: 10px)
 
   &_icon_close#{&}_border_accent-red
-    +button-with-icon-left($icon-url: '../icons/icon-close-red.svg', $background-size: 11px, $icon-hover-url: '../icons/icon-close-white.svg')
+    +button-with-icon-left($icon-url: '../icons/icon-close-red.svg', $background-size: 10px, $icon-hover-url: '../icons/icon-close-white.svg')
 
   // $Common button MOD: icon pencil
   &_icon_pencil
