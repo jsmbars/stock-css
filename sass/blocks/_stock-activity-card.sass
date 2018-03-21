@@ -31,10 +31,12 @@ $block: ".stock-activity-card"
     @media screen and (min-width: 1121px)
       display: none
 
-  &_state_success
+  &_state_success,
+  &_state_variance-positive
     background-color: #dafddf
 
-  &_state_alert
+  &_state_alert,
+  &_state_variance-negative
     background-color: #ffe1e3
 
 
@@ -54,6 +56,14 @@ $block: ".stock-activity-card"
     background-color: #f8f8f8
     border-bottom: 1px solid #ebebeb
 
+    #{$block}_state_success &,
+    #{$block}_state_variance-positive &
+      background-color: #dafddf
+
+    #{$block}_state_alert &,
+    #{$block}_state_variance-negative &
+      background-color: #ffe1e3
+
     // $Activity card accordion
     &_type_light
       background-color: transparent
@@ -66,6 +76,14 @@ $block: ".stock-activity-card"
   &__dropdown
     background-color: #f8f8f8
     border-bottom: 1px solid #eee
+
+    #{$block}_state_success &,
+    #{$block}_state_variance-positive &
+      background-color: #dafddf
+
+    #{$block}_state_alert &,
+    #{$block}_state_variance-negative &
+      background-color: #ffe1e3
 
     // $Activity card dropdown MOD: state hidden
     &_state_hidden
@@ -152,6 +170,14 @@ $block: ".stock-activity-card"
     // $Activity card row MOD: marked
     &_marked
       background-color: #f8f8f8
+
+      #{$block}_state_success &,
+      #{$block}_state_variance-positive &
+        background-color: #dafddf
+
+      #{$block}_state_alert &,
+      #{$block}_state_variance-negative &
+        background-color: #ffe1e3
 
     // $Activity card cell MOD: no border
     &_no-border,
@@ -377,17 +403,14 @@ $block: ".stock-activity-card"
   // $Activity card meta
   &__meta
     display: block
-    width: 100%
-    margin-bottom: 15px
     font-family: $f-sans
     font-size: 14px
     line-height: 1.2
     font-weight: 400
     color: #6d6f73
-    text-align: center
 
-    &:last-child
-      margin-bottom: 0
+    &:not(:last-child)
+      margin-bottom: 15px
 
     // $Activity card meta MOD: no wrap
     &_nowrap
@@ -398,6 +421,14 @@ $block: ".stock-activity-card"
   &__meta-marked
     font-weight: 600
     color: #1c2841
+
+
+  &__meta-line
+    display: block
+    text-align-last: left
+
+    &:not(:last-child)
+      margin-bottom: 8px
 
 
   // $Activity card button
