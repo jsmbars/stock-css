@@ -144,6 +144,7 @@ $block: ".stock-table"
     #{$block}_page_st &,
     #{$block}_page_p-list &,
     #{$block}_page_po-list &,
+    #{$block}_page_oh-details &,
     #{$block}_page_od-details &
       padding-left: 10px
       padding-right: 10px
@@ -154,16 +155,13 @@ $block: ".stock-table"
 
     @media screen and (max-width: 1600px)
       #{$block}_page_ed-form &,
-      #{$block}_page_oh-details &
+      #{$block}_page_oh-details &,
+      #{$block}_page_od-details &
         padding-left: 5px
         padding-left: 5px
 
     @media screen and (max-width: 1360px)
-      #{$block}_page_oh-details &
-        padding-left: 8px
-        padding-right: 8px
-
-    @media screen and (max-width: 1280px)
+      #{$block}_page_oh-details &,
       #{$block}_page_od-details &
         padding-left: 8px
         padding-right: 8px
@@ -213,7 +211,7 @@ $block: ".stock-table"
         width: 10%
 
       #{$block}_page_od-details &
-        width: 11%
+        width: 9%
 
       #{$block}_page_p-list &,
       #{$block}_page_po-list &
@@ -271,7 +269,7 @@ $block: ".stock-table"
         width: 10%
 
       #{$block}_page_od-details &
-        width: 11%
+        width: 10%
 
       #{$block}_page_p-list &,
       #{$block}_page_po-list &
@@ -397,11 +395,10 @@ $block: ".stock-table"
         width: 21%
 
       #{$block}_page_oh-details &
-        justify-content: center
         width: 7%
 
       #{$block}_page_od-details &
-        width: 9%
+        width: 7%
 
       #{$block}_page_p-list &
         justify-content: center
@@ -460,8 +457,7 @@ $block: ".stock-table"
         width: 7%
 
       #{$block}_page_od-details &
-        justify-content: center
-        width: 8%
+        width: 7%
 
       #{$block}_page_p-list &,
       #{$block}_page_po-list &
@@ -511,7 +507,7 @@ $block: ".stock-table"
         width: 8%
 
       #{$block}_page_od-details &
-        width: 7%
+        width: 8%
 
       #{$block}_page_p-list &
         flex-grow: 0
@@ -602,7 +598,7 @@ $block: ".stock-table"
         width: 7%
 
       #{$block}_page_od-details &
-        width: 8%
+        width: 7%
 
       #{$block}_page_p-list &
         flex-grow: 0
@@ -638,8 +634,7 @@ $block: ".stock-table"
         width: 8%
 
       #{$block}_page_od-details &
-        justify-content: center
-        width: 7%
+        width: 8%
 
       #{$block}_page_p-list &
         flex-grow: 0
@@ -674,7 +669,7 @@ $block: ".stock-table"
         width: 7%
 
       #{$block}_page_od-details &
-        width: 8%
+        width: 7%
 
       #{$block}_page_p-list &
         flex-grow: 0
@@ -700,10 +695,7 @@ $block: ".stock-table"
         width: 11%
 
       #{$block}_page_od-details &
-        justify-content: center
-        flex-grow: 0
-        flex-shrink: 0
-        width: 140px
+        width: 7%
 
       #{$block}_page_ed-form &
         flex-grow: 0
@@ -718,6 +710,15 @@ $block: ".stock-table"
     &:nth-child(12)
       #{$block}_page_oh-details &
         width: 11%
+
+      #{$block}_page_od-details &
+        justify-content: center
+        flex-grow: 0
+        flex-shrink: 0
+        width: 140px
+
+        @media screen and (max-width: 1600px)
+          width: 130px
 
     // $Common table cell MOD: role header
     // $Common table cell MOD: role footer
