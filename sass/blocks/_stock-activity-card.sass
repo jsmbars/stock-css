@@ -44,6 +44,12 @@ $block: ".stock-activity-card"
     text-align: center
     border-bottom: 1px solid #ebebeb
 
+    #{$block}_state_success &
+      border-bottom-color: #e0e0e0
+
+    #{$block}_state_alert &
+      border-bottom-color: #f0f0f0
+
     // $Activity card header MOD: adjust translated label button
     &_adjust_label
       padding-bottom: 0
@@ -53,6 +59,14 @@ $block: ".stock-activity-card"
   &__accordion
     background-color: #f8f8f8
     border-bottom: 1px solid #ebebeb
+
+    #{$block}_state_success &
+      background-color: #dafddf
+      border-bottom-color: #e0e0e0
+
+    #{$block}_state_alert &
+      background-color: #ffe1e3
+      border-bottom-color: #f0f0f0
 
     // $Activity card accordion
     &_type_light
@@ -66,6 +80,14 @@ $block: ".stock-activity-card"
   &__dropdown
     background-color: #f8f8f8
     border-bottom: 1px solid #eee
+
+    #{$block}_state_success &
+      background-color: #dafddf
+      border-bottom-color: #e0e0e0
+
+    #{$block}_state_alert &
+      background-color: #ffe1e3
+      border-bottom-color: #f0f0f0
 
     // $Activity card dropdown MOD: state hidden
     &_state_hidden
@@ -149,6 +171,14 @@ $block: ".stock-activity-card"
     align-items: stretch
     border-bottom: 1px solid #eee
 
+    #{$block}_state_success &
+      background-color: #dafddf
+      border-bottom-color: #e0e0e0
+
+    #{$block}_state_alert &
+      background-color: #ffe1e3
+      border-bottom-color: #f0f0f0
+
     // $Activity card row MOD: marked
     &_marked
       background-color: #f8f8f8
@@ -186,6 +216,12 @@ $block: ".stock-activity-card"
     &_size_third
       &:not(:last-child)
         border-right: 1px solid #eee
+
+        #{$block}_state_success &
+          border-right-color: #e0e0e0
+
+        #{$block}_state_alert &
+          border-right-color: #f0f0f0
 
     // $Activity card cell MOD: no border
     &_no-border,
@@ -232,6 +268,12 @@ $block: ".stock-activity-card"
     padding: 35px 10px 15px
     text-align: center
     background-color: #f8f8f8
+
+    #{$block}_state_success &
+      background-color: #dafddf
+
+    #{$block}_state_alert &
+      background-color: #ffe1e3
 
     // $Activity card footer MOD: type light
     &_type_light
@@ -377,8 +419,7 @@ $block: ".stock-activity-card"
   // $Activity card meta
   &__meta
     display: block
-    width: 100%
-    margin-bottom: 15px
+    max-width: 100%
     font-family: $f-sans
     font-size: 14px
     line-height: 1.2
@@ -386,8 +427,8 @@ $block: ".stock-activity-card"
     color: #6d6f73
     text-align: center
 
-    &:last-child
-      margin-bottom: 0
+    &:not(:last-child)
+      margin-bottom: 15px
 
     // $Activity card meta MOD: no wrap
     &_nowrap
@@ -398,6 +439,14 @@ $block: ".stock-activity-card"
   &__meta-marked
     font-weight: 600
     color: #1c2841
+
+
+  &__meta-line
+    display: block
+    text-align: left
+
+    &:not(:last-child)
+      margin-bottom: 8px
 
 
   // $Activity card button
