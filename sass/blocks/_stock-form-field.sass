@@ -96,9 +96,6 @@ $block: ".stock-form-field"
 
     // $Common form field label MOD: adjust control fluid
     &_adjust_control-fluid
-      #{$block}_role_control &,
-      #{$block}_role_control-reverse &
-        width: auto
 
       @media screen and (max-width: 960px)
         #{$block}_role_control &,
@@ -109,21 +106,13 @@ $block: ".stock-form-field"
     &_adjust_control-wrap
       #{$block}_role_control &,
       #{$block}_role_control-reverse &
-        white-space: normal
-
-    // $Common form field label MOD: adjust control min wrap
-    &_adjust_control-min-wrap
-      #{$block}_role_control &,
-      #{$block}_role_control-reverse &
-        width: auto
-        width: min-content
         flex-shrink: 1
         white-space: normal
 
       @media screen and (max-width: 960px)
         #{$block}_role_control &,
         #{$block}_role_control-reverse &
-          width: 90px
+          flex-shrink: 0
 
     // $Common form select label MOD: adjust meta
     &_adjust_meta
