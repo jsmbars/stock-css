@@ -43,6 +43,9 @@ $block: ".stock-form-field"
   // $Common form field MOD: size small
   &_size_s
 
+  // $Common form field MOD: size extra small
+  &_size_xs
+
   // $Common form field MOD: size narrow
   &_size_narrow
 
@@ -93,7 +96,10 @@ $block: ".stock-form-field"
 
     // $Common form field label MOD: adjust control fluid
     &_adjust_control-fluid
-      width: auto
+      #{$block}_role_control &,
+      #{$block}_role_control-reverse &
+        width: auto
+
       @media screen and (max-width: 960px)
         #{$block}_role_control &,
         #{$block}_role_control-reverse &
@@ -104,6 +110,20 @@ $block: ".stock-form-field"
       #{$block}_role_control &,
       #{$block}_role_control-reverse &
         white-space: normal
+
+    // $Common form field label MOD: adjust control min wrap
+    &_adjust_control-min-wrap
+      #{$block}_role_control &,
+      #{$block}_role_control-reverse &
+        width: auto
+        width: min-content
+        flex-shrink: 1
+        white-space: normal
+
+      @media screen and (max-width: 960px)
+        #{$block}_role_control &,
+        #{$block}_role_control-reverse &
+          width: 90px
 
     // $Common form select label MOD: adjust meta
     &_adjust_meta
@@ -196,6 +216,10 @@ $block: ".stock-form-field"
         width: 150px
         padding: 8px 10px
 
+      #{$block}_size_xs &
+        width: 100px
+        padding: 8px 10px
+
       #{$block}_size_narrow &
         padding: 8px 10px
 
@@ -214,7 +238,8 @@ $block: ".stock-form-field"
         color: #ed7f7e
 
       @media screen and (max-width: 960px)
-        #{$block}_size_s &
+        #{$block}_size_s &,
+        #{$block}_size_xs &
           width: 100%
 
       &:focus
