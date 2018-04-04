@@ -49,6 +49,14 @@ $block: ".stock-page-nav"
     border-left: 3px solid transparent
     transition: all .5s
 
+    @media screen and (max-width: 1600px)
+      padding-left: 60px
+      padding-right: 20px
+
+    @media screen and (max-width: 1360px)
+      padding-left: 70px
+      padding-right: 30px
+
     &:before
       content: ""
       position: absolute
@@ -61,6 +69,12 @@ $block: ".stock-page-nav"
       background-repeat: no-repeat
       background-size: contain
       background-position: center center
+
+      @media screen and (max-width: 1600px)
+        left: 20px
+
+      @media screen and (max-width: 1360px)
+        left: 30px
 
     &:hover,
     &_state_active
@@ -95,6 +109,14 @@ $block: ".stock-page-nav"
 
     // $Page navigation link MOD: role submenu
     &_role_sub
+      padding-right: 45px
+
+      @media screen and (max-width: 1600px)
+        padding-right: 35px
+
+      @media screen and (max-width: 1360px)
+        padding-right: 45px
+
       &:after
         content: ""
         position: absolute
@@ -110,6 +132,12 @@ $block: ".stock-page-nav"
         background-position: center center
         transform-origin: center center
         transition: all .5s
+
+        @media screen and (max-width: 1600px)
+          right: 20px
+
+        @media screen and (max-width: 1360px)
+          right: 30px
 
     // $Page navigation link MOD: role submenu state opened
     &_role_sub#{&}_state_opened
@@ -130,10 +158,22 @@ $block: ".stock-page-nav"
       content: ""
       position: absolute
       bottom: 100%
-      right: 13px
+      right: 17px
       border-bottom: 10px solid #fff
       border-right: 10px solid transparent
       border-left: 10px solid transparent
+
+      @media screen and (max-width: 1600px)
+        right: 9px
+        border-bottom-width: 8px
+        border-right-width: 8px
+        border-left-width: 8px
+
+      @media screen and (max-width: 1360px)
+        right: 17px
+        border-bottom-width: 10px
+        border-right-width: 10px
+        border-left-width: 10px
 
     // $Page navigation submenu MOD: state opened
     &_state_opened
@@ -161,6 +201,14 @@ $block: ".stock-page-nav"
     background-color: transparent
     transition: all .5s
 
+    @media screen and (max-width: 1600px)
+      padding-left: 50px
+      padding-right: 10px
+
+    @media screen and (max-width: 1360px)
+      padding-left: 60px
+      padding-right: 20px
+
     &:before
       content: ""
       position: absolute
@@ -173,6 +221,12 @@ $block: ".stock-page-nav"
       background-repeat: no-repeat
       background-size: contain
       background-position: center center
+
+      @media screen and (max-width: 1600px)
+        left: 15px
+
+      @media screen and (max-width: 1360px)
+        left: 25px
 
     &:hover,
     &_state_active
