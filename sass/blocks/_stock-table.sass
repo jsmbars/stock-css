@@ -213,7 +213,9 @@ $block: ".stock-table"
         width: 21%
 
       #{$block}_page_oh-list &
-        width: 18%
+        justify-content: center
+        width: 6%
+        min-width: 60px
 
       #{$block}_page_oh-details &
         width: 9%
@@ -271,7 +273,7 @@ $block: ".stock-table"
         width: 20%
 
       #{$block}_page_oh-list &
-        width: 18%
+        width: 17%
 
       #{$block}_page_oh-details &
         width: 9%
@@ -331,7 +333,7 @@ $block: ".stock-table"
         width: 12%
 
       #{$block}_page_oh-list &
-        width: 18%
+        width: 17%
 
       #{$block}_page_oh-details &
         width: 6%
@@ -400,7 +402,7 @@ $block: ".stock-table"
         width: 9%
 
       #{$block}_page_oh-list &
-        width: 18%
+        width: 17%
 
       #{$block}_page_oh-details &
         width: 6%
@@ -458,8 +460,7 @@ $block: ".stock-table"
         width: 14%
 
       #{$block}_page_oh-list &
-        justify-content: center
-        width: 14%
+        width: 17%
 
       #{$block}_page_oh-details &
         width: 6%
@@ -513,7 +514,7 @@ $block: ".stock-table"
 
       #{$block}_page_oh-list &
         justify-content: center
-        width: 14%
+        width: 13%
 
       #{$block}_page_oh-details &
         width: 6%
@@ -563,6 +564,10 @@ $block: ".stock-table"
       #{$block}_page_si-form &
         justify-content: center
         width: 9%
+
+      #{$block}_page_oh-list &
+        justify-content: center
+        width: 13%
 
       #{$block}_page_oh-details &
         width: 6%
@@ -776,6 +781,7 @@ $block: ".stock-table"
     #{$block}_page_po-form #{$block}__cell:nth-child(4) &,
     #{$block}_page_pfo-form #{$block}__cell:nth-child(4) &,
     #{$block}_page_si-form #{$block}__cell:nth-child(4) &,
+    #{$block}_page_oh-list #{$block}__cell:nth-child(1) &,
     #{$block}_page_oh-details #{$block}__cell:nth-child(4) &,
     #{$block}_page_od-details #{$block}__cell:nth-child(5) &,
     #{$block}_page_od-details #{$block}__cell:nth-child(9) &,
@@ -811,3 +817,22 @@ $block: ".stock-table"
 
   // $Common table action
   &__action
+
+
+  // $Common table icon
+  &__icon
+    display: inline-block
+    width: 30px
+    height: 30px
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
+
+    // $Common table icon MOD: role food
+    &_role_food
+      background-image: url("../icons/icon-food-medium-gray.svg")
+
+    // $Common table icon MOD: role drink
+    &_role_drink
+      background-image: url("../icons/icon-drink-medium-gray.svg")
+
