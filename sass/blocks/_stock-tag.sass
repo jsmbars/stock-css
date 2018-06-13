@@ -46,9 +46,14 @@ $block: ".stock-tag"
     background-color: #f0f0f0
     border-radius: 4px
 
+    @media screen and (max-width: 960px)
+      padding-left: 10px
+      padding-right: 10px
+
 
   // $Tag info
   &__info
+
 
   // $Tag title
   &__title
@@ -60,8 +65,13 @@ $block: ".stock-tag"
     color: #1c2841
     font-weight: 400
 
+
   // $Tag field
   &__field
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+
 
   // $Tag actions
   &__actions
@@ -69,6 +79,7 @@ $block: ".stock-tag"
     flex-shrink: 0
     display: block
     white-space: nowrap
+
 
   // $Tag action
   &__action
