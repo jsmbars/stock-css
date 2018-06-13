@@ -1,0 +1,388 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Common form color picker
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-form-color-picker"
+
+#{$block}
+  position: relative
+  display: block
+  width: 100%
+
+  // $Common form color picker MOD: role control
+  &_role_control
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+  // $Common form color-picker MOD: role control reversed
+  &_role_control-reverse
+    display: flex
+    flex-direction: row-reverse
+    justify-content: flex-end
+    align-items: center
+
+  // $Common form color-picker MOD: state error
+  &_state_error
+
+  // $Common form color-picker MOD: no top label
+  &_no-label
+    padding-top: 20px
+
+  // $Common form color-picker MOD: size small
+  &_size_s
+
+  // $Common form color-picker MOD: size extra small
+  &_size_xs
+
+  // $Common form color-picker MOD: size narrow
+  &_size_narrow
+
+
+  // $Common form color-picker label
+  &__label
+    display: block
+    width: 100%
+    margin-bottom: 15px
+    font-family: $f-sans
+    font-size: 14px
+    color: #757a85
+    font-weight: 600
+    line-height: 1.2
+
+    // $Common form color-picker label text CONTEXT: $Common form MOD: role control
+    #{$block}_role_control &,
+    #{$block}_role_control-reverse &
+      flex-grow: 0
+      flex-shrink: 0
+      width: auto
+      margin-bottom: 0
+      font-weight: 400
+      white-space: nowrap
+
+    #{$block}_role_control &
+      margin-right: 10px
+
+    #{$block}_role_control-reverse &
+      margin-left: 10px
+
+    // $Common form color-picker label text CONTEXT: $Common form MOD: context table
+    #{$block}_context_table &
+      flex-shrink: 1
+      font-size: 12px
+      white-space: normal
+
+    // $Common form color-picker label-text CONTEXT: $Common form color-picker MOD: type required field
+    #{$block}_type_required &
+      &:after
+        content: '*'
+        margin-left: 2px
+
+    @media screen and (max-width: 960px)
+      #{$block}_role_control &,
+      #{$block}_role_control-reverse &
+        width: 90px
+
+    // $Common form color-picker label MOD: adjust control fluid
+    &_adjust_control-fluid
+
+      @media screen and (max-width: 960px)
+        #{$block}_role_control &,
+        #{$block}_role_control-reverse &
+          width: auto
+
+    // $Common form color-picker label MOD: adjust control wrap
+    &_adjust_control-wrap
+      #{$block}_role_control &,
+      #{$block}_role_control-reverse &
+        flex-shrink: 1
+        white-space: normal
+
+      @media screen and (max-width: 960px)
+        #{$block}_role_control &,
+        #{$block}_role_control-reverse &
+          flex-shrink: 0
+
+    // $Common form select label MOD: adjust meta
+    &_adjust_meta
+      #{$block}_context_table &
+        margin-bottom: 8px
+        font-size: 14px
+        color: #6d6f73
+        font-weight: 400
+
+    // $Common form color-picker label MOD: size small
+    &_size_small
+      font-size: 12px
+
+    // $Common form color-picker label MOD: no wrap
+    &_nowrap
+      white-space: nowrap
+
+
+  // $Common form color-picker label text
+  &__label-text
+
+
+  // $Common form color-picker input
+  &__input
+    position: relative
+
+    // $Common form color-picker input CONTEXT: $Common form MOD: role control
+    #{$block}_role_control &,
+    #{$block}_role_control-reverse &
+      flex-grow: 1
+      flex-shrink: 1
+
+    // $Common form color-picker input CONTEXT: $Common form MOD: context table control
+    // $Common form color-picker input CONTEXT: $Common form MOD: context table control reversed
+    #{$block}_role_control#{$block}_context_table &,
+    #{$block}_role_control-reverse#{$block}_context_table &
+      flex-grow: 0
+      flex-shrink: 0
+
+    &:after
+      #{$block}_role_date &
+        content: ""
+        position: absolute
+        top: 50%
+        margin-top: -9px
+        right: 13px
+        display: block
+        width: 18px
+        height: 18px
+        background-image: url('../icons/icon-calendar-light-gray.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+
+    &:before
+      #{$block}_role_search &
+        content: ""
+        position: absolute
+        top: 50%
+        margin-top: -7px
+        left: 15px
+        display: block
+        width: 14px
+        height: 14px
+        background-image: url('../icons/icon-lens-light-gray.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain
+
+    & input
+      display: block
+      width: 100%
+      height: 50px
+      padding: 14px 10px
+      font-family: $f-sans
+      font-size: 12px
+      color: #757a85
+      font-weight: 400
+      line-height: 1.5
+      background-color: #FFF
+      border: 1px solid #d3d3d3
+      border-radius: 0
+
+      #{$block}_role_date &
+        padding-right: 40px
+
+      #{$block}_role_search &
+        padding-left: 40px
+
+      #{$block}_size_s &
+        width: 150px
+        height: 35px
+        padding: 8px 10px
+
+      #{$block}_size_xs &
+        width: 100px
+        height: 35px
+        padding: 8px 10px
+
+      #{$block}_size_narrow &
+        height: 35px
+        padding: 8px 10px
+
+      #{$block}_context_table &
+        height: 35px
+        padding: 8px 10px
+        font-size: 12px
+
+      #{$block}_role_control#{$block}_context_table &,
+      #{$block}_role_control-reverse#{$block}_context_table &
+        width: 55px
+        padding: 8px 10px
+        font-size: 12px
+
+      #{$block}_state_error &
+        border-color: #ed7f7e
+        color: #ed7f7e
+
+      @media screen and (max-width: 960px)
+        #{$block}_size_s &,
+        #{$block}_size_xs &
+          width: 100%
+
+      &:focus
+        outline: none
+        box-shadow: 0 0 1px 0 map-get($app-palette, accent-blue)
+
+      &::-webkit-input-placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+        #{$block}_state_error &
+          color: #ed7f7e !important
+
+      &:-moz-placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+        #{$block}_state_error &
+          color: #ed7f7e !important
+
+      &::-moz-placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+        #{$block}_state_error &
+          color: #ed7f7e !important
+
+      &:-ms-input-placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+        #{$block}_state_error &
+          color: #ed7f7e !important
+
+      &::-ms-input-placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+        #{$block}_state_error &
+          color: #ed7f7e !important
+
+      &::placeholder
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+        #{$block}_state_error &
+          color: #ed7f7e !important
+
+      &:placeholder-shown
+        color: #c5c5c5 !important
+        opacity:  1 !important
+
+        #{$block}_state_error &
+          color: #ed7f7e !important
+
+
+  // $Common form color-picker note
+  &__note
+    margin-top: 10px
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 1
+    color: #757a85
+
+  // Spectrum color picker overrides
+  @at-root
+    .stock-form-color-picker-sp-replacer
+      &.sp-replacer
+        height: 50px
+        padding: 14px 10px
+        border: solid 1px #d3d3d3
+        background: #fff
+        color: #757a85
+        vertical-align: middle
+
+        #{$block}_size_s &,
+        #{$block}_size_xs &,
+        #{$block}_size_narrow &,
+        #{$block}_context_table &
+          height: 35px
+          padding: 8px 10px
+
+      &.sp-replacer:hover,
+      &.sp-replacer.sp-active
+        border-color: #d3d3d3
+        color: #757a85
+
+      &.sp-replacer.sp-disabled
+        border-color: #d8d8d8
+        color: #d8d8d8
+
+      & .sp-preview
+        height: 18px
+        border: solid 1px #9c9c9c
+
+
+    .stock-form-color-picker-sp-container
+      &.sp-container
+        background-color: #fff
+        border: solid 1px #d3d3d3
+
+      & .sp-input-container
+        margin-bottom: 10px
+
+      & .sp-input
+        padding: 8px 10px
+        font-family: $f-sans
+        font-size: 12px
+        color: #757a85
+        font-weight: 400
+        line-height: 1.5
+        background-color: #FFF
+        border: 1px solid #d3d3d3
+        border-radius: 0
+
+      & .sp-input:focus
+        outline: none
+        box-shadow: 0 0 1px 0 map-get($app-palette, accent-blue)
+
+      & .sp-input.sp-validation-error
+        border-color: #ed7f7e
+        color: #ed7f7e
+
+      & .sp-cancel
+        margin-right: 10px
+        font-family: $f-sans
+        font-size: 12px
+        color: #ed7f7e !important
+
+      & .sp-choose
+        padding: 8px 12px
+        border-radius: 20px
+        font-family: $f-sans
+        font-size: 12px
+        line-height: 1
+        color: #fff
+        font-weight: 600
+        text-decoration: none
+        text-transform: uppercase
+        white-space: nowrap
+        vertical-align: middle
+        text-align: center
+        outline: none
+        cursor: pointer
+        border: none
+        background: map-get($app-palette, accent-blue)
+        transition: all .2s
+
+        &:hover
+          outline: none
+          border: none
+          background: lighten(map-get($app-palette, accent-blue), 5%)
