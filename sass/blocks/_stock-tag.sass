@@ -1,0 +1,100 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Tag
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-tag"
+
+#{$block}
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: center
+
+  // $Tag MOD: size full
+  &_size_full
+    width: 100%
+
+  // $Tag MOD: context stack
+  &_context_stack
+    &:not(:last-child)
+      margin-bottom: 20px
+
+
+  // $Tag content
+  &__content
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    padding: 10px 15px
+    background-color: #f0f0f0
+    border-radius: 4px
+
+
+  // $Tag info
+  &__info
+
+  // $Tag title
+  &__title
+    display: block
+    width: 100%
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 1
+    color: #1c2841
+    font-weight: 400
+
+  // $Tag field
+  &__field
+
+  // $Tag actions
+  &__actions
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    white-space: nowrap
+
+  // $Tag action
+  &__action
+    display: inline-block
+    margin-left: 15px
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 1
+    color: #1c2841
+    font-weight: 400
+    vertical-align: middle
+    cursor: pointer
+    transition: opacity .3s
+
+    &:hover
+      opacity: .8
+
+    // $Tag action MOD: role icon-delete
+    &_role_icon-delete
+      font-size: 0
+      line-height: 0
+      color: transparent
+
+      &:after
+        content: ''
+        display: inline-block
+        width: 16px
+        height: 16px
+        vertical-align: middle
+        background-image: url('../icons/icon-close-red.svg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: contain

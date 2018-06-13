@@ -130,25 +130,28 @@ $block: ".stock-page-content"
 
   &__split-half
     width: 50%
-    min-height: 720px
-    margin-bottom: 20px
 
     @media screen and (max-width: 960px)
       width: 100%
 
-    &:not(:last-child)
-      margin-right: 20px
-
-      @media screen and (max-width: 960px)
-        margin-right: 0
-
-    &_adjust_first-mobile
-      @media screen and (max-width: 960px)
-        order: -99
-
-    &_role_board
+    &_role_cocktail-gp-calculator
+      min-height: 720px
+      margin-bottom: 20px
       background-color: #FFF
       box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+      @media screen and (max-width: 960px)
+        min-height: 0
+
+      &:not(:last-child)
+        margin-right: 20px
+
+        @media screen and (max-width: 960px)
+          margin-right: 0
+
+      &:last-child
+        @media screen and (max-width: 960px)
+          order: -99
 
 
   // $Page content data area
