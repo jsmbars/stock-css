@@ -62,14 +62,22 @@ $block: ".stock-form-group"
     #{$block}_state_error &
       border-color: #ed7f7e
 
-    // $Common form action content MOD: role tag list
-    &_role_tag-list
-      height: 225px
-      overflow: auto
-
-    // $Common form action content MOD: role chart
-    &_role_chart
+    &_no-border
       border: none
+
+  // $Common form group tags
+  &__tag-list
+    position: relative
+    display: block
+    width: 100%
+    height: 225px
+    overflow: auto
+
+  // $Common form group chart
+  &__chart
+    position: relative
+    display: block
+    width: 100%
 
 
   // $Common form group note
