@@ -289,30 +289,6 @@ $block: ".stock-activity-card"
     text-align: left
 
 
-  // $Activity card icon
-  &__icon
-    flex-grow: 0
-    flex-shrink: 1
-
-    // $Activity card icon MOD: role user
-    &_role_user
-      width: 77px
-      height: 50px
-      background-image: url('../icons/icon-user-illustration.png')
-      background-repeat: no-repeat
-      background-position: center center
-      background-size: contain
-
-    // $Activity card icon MOD: role rt
-    &_role_rt
-      width: 77px
-      height: 50px
-      background-image: url('../icons/icon-box-illustration.png')
-      background-repeat: no-repeat
-      background-position: center center
-      background-size: contain
-
-
   // $Activity card delimiter
   &__delimiter
     flex-grow: 0
@@ -496,6 +472,8 @@ $block: ".stock-activity-card"
 
   // $Activity card icon
   &__icon
+    flex-grow: 0
+    flex-shrink: 1
     display: inline-block
     width: 30px
     height: 30px
@@ -510,6 +488,18 @@ $block: ".stock-activity-card"
     // $Activity card icon MOD: role drink
     &_role_drink
       background-image: url("../icons/icon-drink-medium-gray.svg")
+
+    // $Activity card icon MOD: role user
+    &_role_user
+      width: 77px
+      height: 50px
+      background-image: url('../icons/icon-user-illustration.png')
+
+    // $Activity card icon MOD: role rt
+    &_role_rt
+      width: 77px
+      height: 50px
+      background-image: url('../icons/icon-box-illustration.png')
 
 
   // $Activity card corner
