@@ -29,13 +29,12 @@ $block: ".stock-tag"
     &:not(:last-child)
       margin-bottom: 20px
 
-  // $Tag MOD: type sortable
   &_type_sortable
-    cursor: move
 
 
   // $Tag content
   &__content
+    position: relative
     flex-grow: 1
     flex-shrink: 1
     display: flex
@@ -46,9 +45,46 @@ $block: ".stock-tag"
     background-color: #f0f0f0
     border-radius: 4px
 
+    #{$block}_type_sortable &
+      padding-left: 20px
+
     @media screen and (max-width: 960px)
-      padding-left: 10px
       padding-right: 10px
+      padding-left: 10px
+
+      #{$block}_type_sortable &
+        padding-left: 20px
+
+
+  // $Tag handle
+  &__handle
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    z-index: 5
+    display: block
+    width: 20px
+    cursor: move
+
+    &:before
+      content: ''
+      position: absolute
+      top: 10px
+      bottom: 10px
+      left: 6px
+      display: block
+      border-left: 2px dotted #b8b8b8
+
+    &:after
+      content: ''
+      position: absolute
+      top: 10px
+      bottom: 10px
+      left: 10px
+      display: block
+      border-left: 2px dotted #b8b8b8
+
 
 
   // $Tag info
