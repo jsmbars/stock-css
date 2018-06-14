@@ -1,0 +1,85 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Cocktail
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-cocktail"
+
+#{$block}
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 100%
+  max-width: 560px
+  min-height: 640px
+
+  @media screen and (max-width: 960px)
+    min-height: 0
+
+
+  // $Cocktail glassware
+  &__glassware
+    position: relative
+    display: block
+    width: 100%
+
+
+  // $Cocktail glassware mask
+  &__glassware-mask
+    position: relative
+    z-index: 5
+    display: block
+    width: 100%
+    max-width: 100%
+
+
+  // $Cocktail glassware-content
+  &__glassware-content
+    position: absolute
+    top: 1px
+    right: 1px
+    left: 1px
+    z-index: 0
+    overflow: hidden
+
+
+  // $Cocktail volume spacer
+  &__glassware-volume-spacer
+    display: block
+    width: 100%
+    max-width: 100%
+
+
+  // $Cocktail ingredients
+  &__ingredients
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 1
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: flex-start
+    width: 100%
+    filter: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg"><filter id="blur"><feGaussianBlur stdDeviation="1" /></filter></svg>#blur');
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='1');
+
+
+  // $Cocktail ingredient
+  &__ingredient
+    display: block
+    width: 100%

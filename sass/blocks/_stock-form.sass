@@ -322,6 +322,9 @@ $block: ".stock-form"
       @media screen and (max-width: 960px)
         justify-content: center
 
+    &_adjust_cgpc-form
+      justify-content: center
+
 
   // $Common form action
   &__action
@@ -338,7 +341,8 @@ $block: ".stock-form"
     &:not(#{&}_single):not(:first-child)
       #{$block}__actions_adjust_c-u-forms &,
       #{$block}__actions_adjust_em-form &,
-      #{$block}__actions_adjust_m-form &
+      #{$block}__actions_adjust_m-form &,
+      #{$block}__actions_adjust_cgpc-form &
         margin-left: 20px
 
     // $Common form action MOD: state hidden

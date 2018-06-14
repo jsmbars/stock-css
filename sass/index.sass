@@ -5,6 +5,7 @@
 // CONTENTS.............................Here we are!
 //
 // VENDOR...............................
+//  $Spectrum color picker..............Color picker styles
 //
 // HELPERS..............................Variables, mixins, elements
 //  $Fonts..............................Offline and online fonts
@@ -21,6 +22,8 @@
 //  $Common form select.................
 //  $Common form interval...............
 //  $Common form checkbox...............
+//  $Common form group..................
+//  $Common form color picker...........
 //  $Common table.......................
 //  $Body...............................
 //  $Page header........................
@@ -34,12 +37,16 @@
 //  $Meta information...................
 //  $Activity card......................
 //  $Accordion..........................
+//  $Tag................................
 //  $Modal window.......................
 
 
 ////////////////////////////////////////
 /// $VENDOR
 ////////////////////////////////////////
+
+//  $Spectrum color picker
+@import './vendor/spectrum.scss'
 
 
 ////////////////////////////////////////
@@ -90,6 +97,12 @@
 // $Common form checkbox
 @import './blocks/stock-form-checkbox'
 
+// $Common form group
+@import './blocks/stock-form-group'
+
+// $Common form color picker
+@import './blocks/stock-form-color-picker'
+
 // $Common table
 @import './blocks/stock-table'
 
@@ -128,6 +141,12 @@
 
 // $Accordion
 @import './blocks/stock-accordion'
+
+// $Tag
+@import './blocks/stock-tag'
+
+// $Cocktail
+@import './blocks/stock-cocktail'
 
 // $Modal window
 @import './blocks/stock-modal'
