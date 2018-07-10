@@ -126,6 +126,12 @@ $block: ".stock-table"
     &_state_alert:nth-child(even)
       background-color: #ffe1e3
 
+    // $Common table row MOD: state warning
+    &_state_warning,
+    &_state_warning:nth-child(odd),
+    &_state_warning:nth-child(even)
+      background-color: #ffe3bd
+
 
   // $Common table cell
   &__cell
@@ -834,6 +840,10 @@ $block: ".stock-table"
     // $Common table cell MOD: state alert
     &_state_alert
       background-color: #ffc8cb
+
+    // $Common table cell MOD: state warning
+    &_state_warning
+      background-color: #ffcd8a
 
 
   // $Common table info
