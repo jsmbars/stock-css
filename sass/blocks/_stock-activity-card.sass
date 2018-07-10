@@ -28,15 +28,22 @@ $block: ".stock-activity-card"
     @media screen and (min-width: 961px)
       display: none
 
+  // $Activity card MOD: visible on tablets
   &_state_visible-tablet
     @media screen and (min-width: 1121px)
       display: none
 
+  // $Activity card MOD: state success
   &_state_success
     background-color: #dafddf
 
+  // $Activity card MOD: state alert
   &_state_alert
     background-color: #ffe1e3
+
+  // $Activity card MOD: state warning
+  &_state_warning
+    background-color: #ffe3bd
 
 
   // $Activity card header
@@ -49,6 +56,10 @@ $block: ".stock-activity-card"
       border-bottom-color: #e0e0e0
 
     #{$block}_state_alert &
+      border-bottom-color: #f0f0f0
+
+    #{$block}_state_warning &
+      background-color: #ffe3bd
       border-bottom-color: #f0f0f0
 
     // $Activity card header MOD: adjust translated label button
@@ -67,6 +78,10 @@ $block: ".stock-activity-card"
 
     #{$block}_state_alert &
       background-color: #ffe1e3
+      border-bottom-color: #f0f0f0
+
+    #{$block}_state_warning &
+      background-color: #ffe3bd
       border-bottom-color: #f0f0f0
 
     // $Activity card accordion
@@ -88,6 +103,10 @@ $block: ".stock-activity-card"
 
     #{$block}_state_alert &
       background-color: #ffe1e3
+      border-bottom-color: #f0f0f0
+
+    #{$block}_state_warning &
+      background-color: #ffe3bd
       border-bottom-color: #f0f0f0
 
     // $Activity card dropdown MOD: state hidden
@@ -180,6 +199,10 @@ $block: ".stock-activity-card"
       background-color: #ffe1e3
       border-bottom-color: #f0f0f0
 
+    #{$block}_state_warning &
+      background-color: #ffe3bd
+      border-bottom-color: #f0f0f0
+
     // $Activity card row MOD: marked
     &_marked
       background-color: #f8f8f8
@@ -223,6 +246,9 @@ $block: ".stock-activity-card"
 
         #{$block}_state_alert &
           border-right-color: #f0f0f0
+
+        #{$block}_state_warning &
+          border-bottom-color: #f0f0f0
 
     // $Activity card cell MOD: no border
     &_no-border,
@@ -269,6 +295,10 @@ $block: ".stock-activity-card"
     &_state_alert
       background-color: #ffc8cb
 
+    // $Activity card cell MOD: state warning
+    &_state_warning
+      background-color: #ffcd8a
+
 
   // $Activity card footer
   &__footer
@@ -281,6 +311,9 @@ $block: ".stock-activity-card"
 
     #{$block}_state_alert &
       background-color: #ffe1e3
+
+    #{$block}_state_warning &
+      background-color: #ffe3bd
 
     // $Activity card footer MOD: type light
     &_type_light
