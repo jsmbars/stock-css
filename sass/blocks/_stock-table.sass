@@ -814,15 +814,26 @@ $block: ".stock-table"
         #{$block}_page_oh-details &
           font-size: 10px
 
+    // $Common table cell MOD: role header
     &_role_header
       border-top: 1px solid #eee
 
+    // $Common table cell MOD: role footer
     &_role_footer
       border-bottom: 1px solid #eee
 
+    // $Common table cell MOD: no border
     &_no-border
       &:not(:last-child)
         border: none
+
+    // $Common table cell MOD: state success
+    &_state_success
+      background-color: #aafab5
+
+    // $Common table cell MOD: state alert
+    &_state_alert
+      background-color: #ffc8cb
 
 
   // $Common table info
