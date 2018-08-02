@@ -45,6 +45,10 @@ $block: ".stock-activity-card"
   &_state_warning
     background-color: #ffe3bd
 
+  // $Activity card MOD: state picked
+  &_state_picked
+    background-color: #d8e8fe
+
 
   // $Activity card header
   &__header
@@ -52,14 +56,18 @@ $block: ".stock-activity-card"
     text-align: center
     border-bottom: 1px solid #ebebeb
 
+    #{$block}_state_success &,
+    #{$block}_state_alert &,
+    #{$block}_state_warning &,
+    #{$block}_state_picked &
+      background-color: transparent
+
     #{$block}_state_success &
       border-bottom-color: #e0e0e0
 
-    #{$block}_state_alert &
-      border-bottom-color: #f0f0f0
-
-    #{$block}_state_warning &
-      background-color: #ffe3bd
+    #{$block}_state_alert &,
+    #{$block}_state_warning &,
+    #{$block}_state_picked &
       border-bottom-color: #f0f0f0
 
     // $Activity card header MOD: adjust translated label button
@@ -72,21 +80,29 @@ $block: ".stock-activity-card"
     background-color: #f8f8f8
     border-bottom: 1px solid #ebebeb
 
+    #{$block}_state_success &,
+    #{$block}_state_alert &,
+    #{$block}_state_warning &,
+    #{$block}_state_picked &
+      background-color: rgba(0,0,0,.03)
+
     #{$block}_state_success &
-      background-color: #dafddf
       border-bottom-color: #e0e0e0
 
-    #{$block}_state_alert &
-      background-color: #ffe1e3
-      border-bottom-color: #f0f0f0
-
-    #{$block}_state_warning &
-      background-color: #ffe3bd
+    #{$block}_state_alert &,
+    #{$block}_state_warning &,
+    #{$block}_state_picked &
       border-bottom-color: #f0f0f0
 
     // $Activity card accordion
     &_type_light
       background-color: transparent
+
+      #{$block}_state_success &,
+      #{$block}_state_alert &,
+      #{$block}_state_warning &,
+      #{$block}_state_picked &
+        background-color: transparent
 
     &_adjust_label-before
       padding-top: 20px
@@ -95,27 +111,35 @@ $block: ".stock-activity-card"
   // $Activity card dropdown
   &__dropdown
     background-color: #f8f8f8
-    border-bottom: 1px solid #eee
+    border-bottom: 1px solid #ebebeb
+
+    #{$block}_state_success &,
+    #{$block}_state_alert &,
+    #{$block}_state_warning &,
+    #{$block}_state_picked &
+      background-color: rgba(0,0,0,.03)
 
     #{$block}_state_success &
-      background-color: #dafddf
       border-bottom-color: #e0e0e0
 
-    #{$block}_state_alert &
-      background-color: #ffe1e3
+    #{$block}_state_alert &,
+    #{$block}_state_warning &,
+    #{$block}_state_picked &
       border-bottom-color: #f0f0f0
-
-    #{$block}_state_warning &
-      background-color: #ffe3bd
-      border-bottom-color: #f0f0f0
-
-    // $Activity card dropdown MOD: state hidden
-    &_state_hidden
-      display: none
 
     // $Activity card dropdown MOD: type light
     &_type_light
       background-color: transparent
+
+      #{$block}_state_success &,
+      #{$block}_state_alert &,
+      #{$block}_state_warning &,
+      #{$block}_state_picked &
+        background-color: transparent
+
+    // $Activity card dropdown MOD: state hidden
+    &_state_hidden
+      display: none
 
 
   // $Activity card dropdown content
@@ -172,10 +196,32 @@ $block: ".stock-activity-card"
       background-color: #f8f8f8
       border-bottom: 1px solid #ebebeb
 
+      #{$block}_state_success &,
+      #{$block}_state_alert &,
+      #{$block}_state_warning &,
+      #{$block}_state_picked &
+        background-color: rgba(0,0,0,.03)
+
+      #{$block}_state_success &
+        border-bottom-color: #e0e0e0
+
+      #{$block}_state_alert &,
+      #{$block}_state_warning &,
+      #{$block}_state_picked &
+        border-bottom-color: #f0f0f0
+
 
   // $Activity card group
   &__group
-    border-bottom: 1px solid #eee
+    border-bottom: 1px solid #ebebeb
+
+    #{$block}_state_success &
+      border-bottom-color: #e0e0e0
+
+    #{$block}_state_alert &,
+    #{$block}_state_warning &,
+    #{$block}_state_picked &
+      border-bottom-color: #f0f0f0
 
     // $Activity card cell MOD: no border
     &_no-border,
@@ -189,23 +235,31 @@ $block: ".stock-activity-card"
     flex-direction: row
     justify-content: center
     align-items: stretch
-    border-bottom: 1px solid #eee
+    border-bottom: 1px solid #ebebeb
+
+    #{$block}_state_success &,
+    #{$block}_state_alert &,
+    #{$block}_state_warning &,
+    #{$block}_state_picked &
+      background-color: transparent
 
     #{$block}_state_success &
-      background-color: #dafddf
       border-bottom-color: #e0e0e0
 
-    #{$block}_state_alert &
-      background-color: #ffe1e3
-      border-bottom-color: #f0f0f0
-
-    #{$block}_state_warning &
-      background-color: #ffe3bd
+    #{$block}_state_alert &,
+    #{$block}_state_warning &,
+    #{$block}_state_picked &
       border-bottom-color: #f0f0f0
 
     // $Activity card row MOD: marked
     &_marked
       background-color: #f8f8f8
+
+      #{$block}_state_success &,
+      #{$block}_state_alert &,
+      #{$block}_state_warning &,
+      #{$block}_state_picked &
+        background-color: rgba(0,0,0,.03)
 
     // $Activity card cell MOD: no border
     &_no-border,
@@ -239,16 +293,15 @@ $block: ".stock-activity-card"
     &_size_half,
     &_size_third
       &:not(:last-child)
-        border-right: 1px solid #eee
+        border-right: 1px solid #ebebeb
 
         #{$block}_state_success &
           border-right-color: #e0e0e0
 
-        #{$block}_state_alert &
+        #{$block}_state_alert &,
+        #{$block}_state_warning &,
+        #{$block}_state_picked &
           border-right-color: #f0f0f0
-
-        #{$block}_state_warning &
-          border-bottom-color: #f0f0f0
 
     // $Activity card cell MOD: no border
     &_no-border,
@@ -306,18 +359,21 @@ $block: ".stock-activity-card"
     text-align: center
     background-color: #f8f8f8
 
-    #{$block}_state_success &
-      background-color: #dafddf
-
-    #{$block}_state_alert &
-      background-color: #ffe1e3
-
-    #{$block}_state_warning &
-      background-color: #ffe3bd
+    #{$block}_state_success &,
+    #{$block}_state_alert &,
+    #{$block}_state_warning &,
+    #{$block}_state_picked &
+      background-color: rgba(0,0,0,.03)
 
     // $Activity card footer MOD: type light
     &_type_light
       background-color: transparent
+
+      #{$block}_state_success &,
+      #{$block}_state_alert &,
+      #{$block}_state_warning &,
+      #{$block}_state_picked &
+        background-color: transparent
 
 
   // $Activity card info
