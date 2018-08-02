@@ -85,7 +85,7 @@ $block: ".stock-filter"
     border-bottom: 1px solid #f0f0f0
 
     @media screen and (max-width: 960px)
-      padding: 20px
+      padding: 10px
 
 
   // $Filter group dropdown meta
@@ -208,6 +208,26 @@ $block: ".stock-filter"
       @media screen and (max-width: 960px)
         margin-right: 0
 
+    // $Filter group MOD: visible on mobiles
+    &_state_visible-mobile
+      @media screen and (min-width: 961px)
+        display: none
+
+    // $Filter group MOD: hidden on mobiles
+    &_state_hidden-mobile
+      @media screen and (max-width: 960px)
+        display: none
+
+    // $Filter group MOD: visible on tablets
+    &_state_visible-tablet
+      @media screen and (min-width: 1121px)
+        display: none
+
+    // $Filter group MOD: hidden on tablets
+    &_state_hidden-tablet
+      @media screen and (max-width: 1120px)
+        display: none
+
 
   // $Filter row
   &__row
@@ -230,6 +250,14 @@ $block: ".stock-filter"
         #{$block}_layout_fluid &
           flex-direction: row
 
+    // $Filter row MOD: justify end
+    &_justify_end
+      justify-content: flex-end
+
+    // $Filter row MOD: justify space
+    &_justify_space
+      justify-content: space-between
+
     // $Filter row MOD: align at start
     &_align_start
       align-items: flex-start
@@ -237,6 +265,26 @@ $block: ".stock-filter"
     // $Filter row MOD: position last
     &_position_last
       margin-bottom: 0
+
+    // $Filter row MOD: visible on mobiles
+    &_state_visible-mobile
+      @media screen and (min-width: 961px)
+        display: none
+
+    // $Filter row MOD: hidden on mobiles
+    &_state_hidden-mobile
+      @media screen and (max-width: 960px)
+        display: none
+
+    // $Filter row MOD: visible on tablets
+    &_state_visible-tablet
+      @media screen and (min-width: 1121px)
+        display: none
+
+    // $Filter row MOD: hidden on tablets
+    &_state_hidden-tablet
+      @media screen and (max-width: 1120px)
+        display: none
 
 
   // $Filter field
@@ -318,6 +366,10 @@ $block: ".stock-filter"
     // $Filter field MOD: role buttons nowrap row
     &_role_buttons-row
       white-space: nowrap
+
+    // $Filter field MOD: justify end
+    &_justify_end
+      text-align: right
 
     // $Filter field MOD: visible on mobiles
     &_state_visible-mobile
