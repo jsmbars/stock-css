@@ -222,6 +222,16 @@ $block: ".stock-button"
     @media screen and (max-width: 960px)
       display: none
 
+  // $Common button MOD: visible on tablets
+  &_state_visible-tablet
+    @media screen and (min-width: 1121px)
+      display: none
+
+  // $Common button MOD: hidden on tablets
+  &_state_hidden-tablet
+    @media screen and (max-width: 1120px)
+      display: none
+
   &_type_no-behavior
     cursor: default !important
 
