@@ -367,6 +367,20 @@ $block: ".stock-filter"
     &_role_buttons-row
       white-space: nowrap
 
+    // $Filter field MOD: no label tablet
+    &_no-label-tablet
+      padding-top: 25px
+
+      @media screen and (max-width: 1120px)
+        padding-top: 0
+
+    // $Filter field MOD: no label
+    &_no-label-mobile
+      padding-top: 25px
+
+      @media screen and (max-width: 960px)
+        padding-top: 0
+
     // $Filter field MOD: justify end
     &_justify_end
       text-align: right
