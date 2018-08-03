@@ -182,8 +182,12 @@ $block: ".stock-form-field"
         background-position: center center
         background-size: contain
 
+    // $Common form field input MOD: adjust clear action
+    &_adjust_clear
+      padding-right: 22px
+
     & input
-      display: block
+      display: inline-block
       width: 100%
       padding: 14px 10px
       font-family: $f-sans
@@ -292,3 +296,29 @@ $block: ".stock-form-field"
     font-size: 14px
     line-height: 1
     color: #757a85
+
+
+  // $Common form field clear
+  &__clear
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    display: block
+    width: 22px
+    font-size: 0
+    line-height: 0
+    color: transparent
+    background-color: transparent
+    border: none
+    background-image: url('../icons/icon-close-dark-gray.svg')
+    background-repeat: no-repeat
+    background-position: 8px center
+    background-size: 10px 10px
+    cursor: pointer
+    opacity: .5
+    transition: all .3s
+
+    &:hover
+      opacity: 1
+

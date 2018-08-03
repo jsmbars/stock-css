@@ -198,6 +198,10 @@ $block: ".stock-form-select"
         height: 10px
         right: 10px
 
+    // $Common form select input MOD: adjust clear action
+    &_adjust_clear
+      padding-right: 22px
+
     & select
       display: block
       width: 100%
@@ -303,3 +307,28 @@ $block: ".stock-form-select"
     font-size: 14px
     line-height: 1
     color: #757a85
+
+
+  // $Common form select clear
+  &__clear
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    display: block
+    width: 22px
+    font-size: 0
+    line-height: 0
+    color: transparent
+    background-color: transparent
+    border: none
+    background-image: url('../icons/icon-close-dark-gray.svg')
+    background-repeat: no-repeat
+    background-position: 8px center
+    background-size: 10px 10px
+    cursor: pointer
+    opacity: .5
+    transition: all .3s
+
+    &:hover
+      opacity: 1
