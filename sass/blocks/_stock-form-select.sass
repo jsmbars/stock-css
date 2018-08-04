@@ -61,6 +61,12 @@ $block: ".stock-form-select"
     font-weight: 600
     line-height: 1
 
+    #{$block}_size_s &,
+    #{$block}_size_xs &,
+    #{$block}_size_narrow &
+      margin-bottom: 8px
+      font-size: 12px
+
     // $Common form select label text CONTEXT: $Common form select MOD: role control
     #{$block}_role_control &,
     #{$block}_role_control-reverse &

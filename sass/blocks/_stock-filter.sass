@@ -21,7 +21,7 @@ $block: ".stock-filter"
   &__header
     position: relative
     display: block
-    padding: 10px 15px
+    padding: 15px
 
     @media screen and (max-width: 1120px)
       padding: 10px
@@ -106,12 +106,53 @@ $block: ".stock-filter"
     margin-bottom: 20px
 
     // $Filter group MOD: size half
+    &_size_half
+      flex-grow: 0
+      flex-shrink: 1
+      width: calc(50% - 10px)
+
     // $Filter group MOD: size third
+    &_size_third
+      flex-grow: 0
+      flex-shrink: 1
+      width: calc(33.3% - 13px)
+
     // $Filter group MOD: size fourth
+    &_size_fourth
+      flex-grow: 0
+      flex-shrink: 1
+      width: calc(25% - 15px)
+
     // $Filter group MOD: size fifth
+    &_size_fifth
+      flex-grow: 0
+      flex-shrink: 1
+      width: calc(20% - 16px)
+
     // $Filter group MOD: size sixth
+    &_size_sixth
+      flex-grow: 0
+      flex-shrink: 1
+      width: calc(16.6% - 17px)
+
     // $Filter group MOD: size max
+    &_size_max
+      flex-grow: 1
+      flex-shrink: 1
+      width: auto
+
     // $Filter group MOD: size min
+    &_size_min
+      flex-grow: 0
+      flex-shrink: 1
+      width: auto
+
+    // $Filter group MOD: size fluid
+    &_size_fluid
+      flex-grow: 0
+      flex-shrink: 0
+      width: auto
+
     &_size_half,
     &_size_third,
     &_size_fourth,
@@ -119,86 +160,16 @@ $block: ".stock-filter"
     &_size_sixth,
     &_size_max,
     &_size_min,
-    &_size_fluid,
+    &_size_fluid
       margin-right: 20px
       margin-bottom: 0
 
       @media screen and (max-width: 960px)
+        flex-shrink: 1
+        flex-grow: 1
+        width: 100%
         margin-right: 0
         margin-bottom: 20px
-
-    &_size_half
-      flex-grow: 0
-      flex-shrink: 1
-      width: 50%
-
-      @media screen and (max-width: 960px)
-        flex-grow: 1
-        width: 100%
-
-    &_size_third
-      flex-grow: 0
-      flex-shrink: 1
-      width: 33%
-
-      @media screen and (max-width: 960px)
-        flex-grow: 1
-        width: 100%
-
-    &_size_fourth
-      flex-grow: 0
-      flex-shrink: 1
-      width: 25%
-
-      @media screen and (max-width: 960px)
-        flex-grow: 1
-        width: 100%
-
-    &_size_fifth
-      flex-grow: 0
-      flex-shrink: 1
-      width: 20%
-
-      @media screen and (max-width: 960px)
-        flex-grow: 1
-        width: 100%
-
-    &_size_sixth
-      flex-grow: 0
-      flex-shrink: 1
-      width: 16.6%
-
-      @media screen and (max-width: 960px)
-        flex-grow: 1
-        width: 100%
-
-    &_size_max
-      flex-grow: 1
-      flex-shrink: 1
-      width: auto
-
-      @media screen and (max-width: 960px)
-        flex-grow: 1
-        width: 100%
-
-    &_size_min
-      flex-grow: 0
-      flex-shrink: 1
-      width: auto
-
-      @media screen and (max-width: 960px)
-        flex-grow: 1
-        width: 100%
-
-    &_size_fluid
-      flex-grow: 0
-      flex-shrink: 0
-      width: auto
-
-      @media screen and (max-width: 960px)
-        flex-grow: 1
-        flex-shrink: 1
-        width: 100%
 
     // $Filter group MOD: position last
     &_position_last
@@ -294,15 +265,58 @@ $block: ".stock-filter"
     margin-bottom: 20px
 
     // $Filter field MOD: size half
-    // $Filter field MOD: size two-fifth
+    &_size_half
+      flex-grow: 0
+      flex-shrink: 1
+      width: calc(50% - 10px)
+
     // $Filter field MOD: size third
+    &_size_third
+      flex-grow: 0
+      flex-shrink: 1
+      width: calc(33.3% - 13px)
+
+    // $Filter field MOD: size fourth
+    &_size_fourth
+      flex-grow: 0
+      flex-shrink: 1
+      width: calc(25% - 15px)
+
+    // $Filter field MOD: size fifth
+    &_size_fifth
+      flex-grow: 0
+      flex-shrink: 1
+      width: calc(20% - 16px)
+
+    // $Filter field MOD: size sixth
+    &_size_sixth
+      flex-grow: 0
+      flex-shrink: 1
+      width: calc(16.6% - 17px)
+
     // $Filter field MOD: size max
+    &_size_max
+      flex-grow: 1
+      flex-shrink: 1
+      width: auto
+
     // $Filter field MOD: size min
+    &_size_min
+      flex-grow: 0
+      flex-shrink: 1
+      width: auto
+
     // $Filter field MOD: size fluid
+    &_size_fluid
+      flex-grow: 0
+      flex-shrink: 0
+      width: auto
+
     &_size_half,
-    &_size_two-fifth,
     &_size_third,
     &_size_fourth,
+    &_size_fifth,
+    &_size_sixth,
     &_size_max,
     &_size_min
       margin-right: 20px
@@ -313,43 +327,11 @@ $block: ".stock-filter"
 
         #{$block}__dropdown &:not(#{$block}__field_adjust_nowrap),
         #{$block}_layout_fluid &:not(#{$block}__field_adjust_nowrap)
+          flex-shrink: 1
           flex-grow: 1
           width: 100%
           margin-right: 0
           margin-bottom: 20px
-
-    &_size_half
-      flex-grow: 0
-      flex-shrink: 1
-      width: calc(50% - 10px)
-
-    &_size_third
-      flex-grow: 0
-      flex-shrink: 1
-      width: 33%
-
-    &_size_fourth
-      flex-grow: 0
-      flex-shrink: 1
-      width: calc(25% - 15px)
-
-    &_size_max
-      flex-grow: 1
-      flex-shrink: 1
-      width: auto
-
-      @media screen and (max-width: 960px)
-        width: 50%
-
-    &_size_min
-      flex-grow: 0
-      flex-shrink: 1
-      width: auto
-
-    &_size_fluid
-      flex-grow: 0
-      flex-shrink: 0
-      width: auto
 
     // $Filter field MOD: position last
     &_position_last
@@ -367,6 +349,10 @@ $block: ".stock-filter"
     &_role_buttons-row
       white-space: nowrap
 
+    // $Filter field MOD: no label narrow
+    &_no-label-narrow
+      padding-top: 20px
+
     // $Filter field MOD: no label tablet
     &_no-label-tablet
       padding-top: 25px
@@ -380,6 +366,8 @@ $block: ".stock-filter"
 
       @media screen and (max-width: 960px)
         padding-top: 0
+
+
 
     // $Filter field MOD: justify end
     &_justify_end

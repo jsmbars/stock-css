@@ -33,13 +33,17 @@ $block: ".stock-form-checkbox"
     font-size: 14px
     color: #757a85
     font-weight: 600
-    line-height: 1.2
+    line-height: 1
 
     // $Common form field label-text CONTEXT: $Common form field MOD: type required field
     #{$block}_type_required &
       &:after
         content: '*'
         margin-left: 2px
+
+    // $Common form checkbox label MOD: size small
+    &_size_small
+      font-size: 12px
 
 
   // $Common form checkbox label text
