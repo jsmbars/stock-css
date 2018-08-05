@@ -59,7 +59,13 @@ $block: ".stock-form-color-picker"
     font-size: 14px
     color: #757a85
     font-weight: 600
-    line-height: 1.2
+    line-height: 1
+
+    #{$block}_size_s &,
+    #{$block}_size_xs &,
+    #{$block}_size_narrow &
+      margin-bottom: 8px
+      font-size: 12px
 
     // $Common form color-picker label text CONTEXT: $Common form MOD: role control
     #{$block}_role_control &,

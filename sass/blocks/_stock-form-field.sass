@@ -59,7 +59,13 @@ $block: ".stock-form-field"
     font-size: 14px
     color: #757a85
     font-weight: 600
-    line-height: 1.2
+    line-height: 1
+
+    #{$block}_size_s &,
+    #{$block}_size_xs &,
+    #{$block}_size_narrow &
+      margin-bottom: 8px
+      font-size: 12px
 
     // $Common form field label text CONTEXT: $Common form MOD: role control
     #{$block}_role_control &,
@@ -199,10 +205,12 @@ $block: ".stock-form-field"
       border: 1px solid #d3d3d3
       border-radius: 0
 
-      #{$block}_role_date &
+      #{$block}_role_date &,
+      #{$block}_size_narrow#{$block}_role_date &
         padding-right: 40px
 
-      #{$block}_role_search &
+      #{$block}_role_search &,
+      #{$block}_size_narrow#{$block}_role_search &
         padding-left: 40px
 
       #{$block}_size_s &

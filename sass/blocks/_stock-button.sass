@@ -397,9 +397,17 @@ $block: ".stock-button"
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
     +button-with-icon-right($icon-url: '../icons/icon-checked-light-gray.svg', $background-size: 15px, $icon-hover-url: '../icons/icon-checked-primary.svg', $icon-active-url: '../icons/icon-checked-primary.svg')
 
+  &_role_apply-narrow
+    text-transform: none
+    padding: 10px 15px
+    +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #d3d3d3)
+    +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
+    +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
+    +button-with-icon-right($icon-url: '../icons/icon-checked-light-gray.svg', $background-size: 14px, $icon-hover-url: '../icons/icon-checked-primary.svg', $icon-active-url: '../icons/icon-checked-primary.svg')
+
     @media screen and (max-width: 960px)
-      padding-right: 13px
-      padding-left: 13px
+      padding-right: 10px
+      padding-left: 10px
 
   &_role_apply-light
     text-transform: none
