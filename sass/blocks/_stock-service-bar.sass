@@ -1,0 +1,123 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Service bar
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-service-bar"
+
+#{$block}
+  display: block
+  width: 100%
+  background-color: #f8f8f8
+  padding: 0 25px
+
+  @media screen and (max-width: 1360px)
+    padding-left: 25px
+    padding-right: 25px
+
+  @media screen and (max-width: 1120px)
+    padding-left: 10px
+    padding-right: 10px
+
+  &_state_hidden
+    display: none
+
+  // $Service bar MOD: fixed top
+  &_fixed_top
+    position: fixed
+    top: 0
+    left: 270px
+    right: 0
+    z-index: 95
+    width: auto
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .2)
+
+    @media screen and (max-width: 1600px)
+      left: 250px
+
+    @media screen and (max-width: 1360px)
+      top: 60px
+      left: 0
+
+  // $Service bar MOD: fixed bottom
+  &_fixed_bottom
+    position: fixed
+    bottom: 0
+    left: 270px
+    right: 0
+    z-index: 90
+    width: auto
+    box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, .2)
+
+    @media screen and (max-width: 1600px)
+      left: 250px
+
+    @media screen and (max-width: 1360px)
+      left: 0
+
+
+  &__filter
+    display: block
+    width: 100%
+
+
+  // $Service bar form actions
+  &__form-actions
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    width: 100%
+    padding: 15px
+
+    @media screen and (max-width: 1120px)
+      padding: 10px
+
+    // $Service bar form actions MOD: justify start
+    &_justify_start
+      justify-content: flex-start
+
+    // $Service bar form actions MOD: justify start center
+    &_justify_start-center
+      justify-content: flex-start
+
+      @media screen and (max-width: 960px)
+        justify-content: center
+
+    // $Service bar form actions MOD: justify end
+    &_justify_end
+      justify-content: flex-end
+
+    // $Service bar form actions MOD: justify end center
+    &_justify_end-center
+      justify-content: flex-end
+
+      @media screen and (max-width: 960px)
+        justify-content: center
+
+    // $Service bar form actions MOD: justify space between
+    &_justify_space
+      justify-content: space-between
+
+    // $Service bar form actions MOD: justify space between center
+    &_justify_space-center
+      justify-content: space-between
+
+      @media screen and (max-width: 960px)
+        justify-content: center
+
+
+  // $Service bar form action
+  &__form-action
+    flex-grow: 0
+    flex-shrink: 0
+
