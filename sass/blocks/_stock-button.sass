@@ -288,6 +288,11 @@ $block: ".stock-button"
     +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-pink), $border-color: map-get($app-palette, accent-pink))
     +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, accent-pink), $border-color: map-get($app-palette, accent-pink))
 
+  &_border_gray-light
+    +button-bordered($color: map-get($app-palette, gray-light), $bg-color: transparent, $border-color: map-get($app-palette, gray-light))
+    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, gray-light), $border-color: map-get($app-palette, gray-light))
+    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, gray-light), $border-color: map-get($app-palette, gray-light))
+
 
 
   // Icon modifiers
