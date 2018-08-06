@@ -366,6 +366,35 @@ $block: ".stock-page-content"
         border-right: none
 
 
+  &__load
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    padding: 25px 15px 20px
+    text-align: center
+
+    @media screen and (max-width: 960px)
+      padding: 10px
+
+    &_adjust_form
+      border-top: 1px solid #eee
+
+
+  &__load-label
+    max-width: 100%
+    margin-bottom: 15px
+    font-family: $f-sans
+    font-size: 12px
+    line-height: 1
+    font-weight: 600
+    color: map-get($app-palette, text-secondary)
+
+
+  &__load-action
+
+
   // $Page content title
   &__title
     display: block
