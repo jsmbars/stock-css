@@ -173,10 +173,13 @@ $block: ".stock-accordion"
     align-items: center
     min-height: 40px
     padding: 8px
-    border-bottom: 1px solid #f0f0f0
 
-    &:last-of-type
-      border-bottom: none
+    &:not(:last-child)
+      border-bottom: 1px solid #f0f0f0
+
+    // $Accordion content line MOD: justify end
+    &_justify_end
+      justify-content: flex-end
 
 
   // $Accordion info
