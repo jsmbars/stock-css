@@ -27,6 +27,9 @@ $block: ".stock-table"
     @media screen and (max-width: 1120px)
       display: none
 
+  &_page_p-list-prices
+    max-width: 960px
+
 
   // $Common table group
   &__group
@@ -244,7 +247,7 @@ $block: ".stock-table"
 
       #{$block}_page_p-list-prices &
         flex-grow: 0
-        width: 15%
+        width: 20%
 
       #{$block}_page_p-list-itenerarys &
         flex-grow: 0
@@ -375,9 +378,7 @@ $block: ".stock-table"
         width: 9%
 
       #{$block}_page_p-list-prices &
-        flex-grow: 0
-        flex-shrink: 0
-        width: 120px
+        width: 20%
 
       #{$block}_page_ed-list &
         width: 16%
@@ -399,11 +400,6 @@ $block: ".stock-table"
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
           width: 9%
-
-        #{$block}_page_p-list-prices &
-          flex-grow: 0
-          flex-shrink: 0
-          width: 120px
 
     // $Common table cell fourth column
     &:nth-child(4)
@@ -449,6 +445,9 @@ $block: ".stock-table"
 
       #{$block}_page_po-list &
         width: 13%
+
+      #{$block}_page_p-list-prices &
+        width: 15%
 
       #{$block}_page_ed-list &
         justify-content: center
@@ -517,6 +516,9 @@ $block: ".stock-table"
       #{$block}_page_po-list &
         width: 9%
 
+      #{$block}_page_p-list-prices &
+        width: 15%
+
       #{$block}_page_ed-list &
         justify-content: center
         width: 12%
@@ -583,6 +585,9 @@ $block: ".stock-table"
       #{$block}_page_po-list &
         width: 9%
 
+      #{$block}_page_p-list-prices &
+        width: 8%
+
       #{$block}_page_ed-list &
         flex-grow: 0
         flex-shrink: 0
@@ -643,6 +648,11 @@ $block: ".stock-table"
 
       #{$block}_page_po-list &
         width: 9%
+
+      #{$block}_page_p-list-prices &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 120px
 
       #{$block}_page_ed-list &
         flex-grow: 0
