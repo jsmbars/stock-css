@@ -160,7 +160,8 @@ $block: ".stock-table"
     #{$block}_page_p-list &,
     #{$block}_page_po-list &,
     #{$block}_page_oh-details &,
-    #{$block}_page_od-details &
+    #{$block}_page_od-details &,
+    #{$block}_page_cgpc-list &
       padding-left: 10px
       padding-right: 10px
 
@@ -268,7 +269,8 @@ $block: ".stock-table"
         width: 21%
 
       #{$block}_page_cgpc-list &
-        width: 15%
+        width: 14%
+        padding-left: 15px
 
     // $Common table cell second column
     &:nth-child(2)
@@ -334,7 +336,7 @@ $block: ".stock-table"
         width: 27%
 
       #{$block}_page_cgpc-list &
-        width: 22%
+        width: 20%
 
     // $Common table cell third column
     &:nth-child(3)
@@ -395,7 +397,7 @@ $block: ".stock-table"
         width: 27%
 
       #{$block}_page_cgpc-list &
-        width: 22%
+        width: 10%
 
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
@@ -469,7 +471,7 @@ $block: ".stock-table"
         width: 15%
 
       #{$block}_page_cgpc-list &
-        width: 15%
+        width: 10%
 
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
@@ -533,9 +535,7 @@ $block: ".stock-table"
         width: 150px
 
       #{$block}_page_cgpc-list &
-        flex-grow: 0
-        flex-shrink: 0
-        width: 110px
+        width: 10%
 
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
@@ -599,9 +599,7 @@ $block: ".stock-table"
         background-color: #daeafd
 
       #{$block}_page_cgpc-list &
-        flex-grow: 0
-        flex-shrink: 0
-        width: 150px
+        width: 10%
 
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
@@ -663,6 +661,9 @@ $block: ".stock-table"
         width: 14%
         min-width: 210px
 
+      #{$block}_page_cgpc-list &
+        width: 10%
+
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
           width: 95px
@@ -705,6 +706,9 @@ $block: ".stock-table"
         width: 7%
         min-width: 70px
 
+      #{$block}_page_cgpc-list &
+        width: 10%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 5%
@@ -741,6 +745,11 @@ $block: ".stock-table"
         width: 8%
         min-width: 90px
 
+      #{$block}_page_cgpc-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 110px
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 7%
@@ -771,6 +780,11 @@ $block: ".stock-table"
         flex-grow: 0
         flex-shrink: 0
         width: 115px
+
+      #{$block}_page_cgpc-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 150px
 
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
