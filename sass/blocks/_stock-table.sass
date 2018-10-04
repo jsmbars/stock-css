@@ -157,7 +157,6 @@ $block: ".stock-table"
     padding: 10px 15px
 
     #{$block}_page_st &,
-    #{$block}_page_p-list &,
     #{$block}_page_po-list &,
     #{$block}_page_oh-details &,
     #{$block}_page_od-details &,
@@ -165,13 +164,15 @@ $block: ".stock-table"
       padding-left: 10px
       padding-right: 10px
 
-    #{$block}_page_ed-form &
+    #{$block}_page_ed-form &,
+    #{$block}_page_p-list &
       padding-left: 8px
       padding-right: 8px
 
     @media screen and (max-width: 1600px)
       #{$block}_page_ed-form &,
-      #{$block}_page_od-details &
+      #{$block}_page_od-details &,
+      #{$block}_page_p-list &
         padding-left: 5px
         padding-left: 5px
 
@@ -181,7 +182,8 @@ $block: ".stock-table"
 
     @media screen and (max-width: 1360px)
       #{$block}_page_oh-details &,
-      #{$block}_page_od-details &
+      #{$block}_page_od-details &,
+      #{$block}_page_p-list &
         padding-left: 8px
         padding-right: 8px
 
@@ -189,6 +191,10 @@ $block: ".stock-table"
       #{$block}_page_oh-details &
         padding-left: 3px
         padding-right: 3px
+
+      #{$block}_page_p-list &
+        padding-left: 5px
+        padding-right: 5px
 
     @media screen and (max-width: 1120px)
       padding: 10px
@@ -242,7 +248,9 @@ $block: ".stock-table"
       #{$block}_page_od-details &
         width: 9%
 
-      #{$block}_page_p-list &,
+      #{$block}_page_p-list &
+        width: 12%
+
       #{$block}_page_po-list &
         width: 13%
 
@@ -307,7 +315,9 @@ $block: ".stock-table"
       #{$block}_page_od-details &
         width: 10%
 
-      #{$block}_page_p-list &,
+      #{$block}_page_p-list &
+        width: 10%
+
       #{$block}_page_po-list &
         width: 13%
 
@@ -374,7 +384,7 @@ $block: ".stock-table"
         width: 10%
 
       #{$block}_page_p-list &
-        width: 10%
+        width: 8%
 
       #{$block}_page_po-list &
         width: 9%
@@ -443,7 +453,7 @@ $block: ".stock-table"
 
       #{$block}_page_p-list &
         justify-content: center
-        width: 9%
+        width: 8%
 
       #{$block}_page_po-list &
         width: 13%
@@ -514,7 +524,9 @@ $block: ".stock-table"
       #{$block}_page_od-details &
         width: 7%
 
-      #{$block}_page_p-list &,
+      #{$block}_page_p-list &
+        width: 8%
+
       #{$block}_page_po-list &
         width: 9%
 
@@ -578,9 +590,7 @@ $block: ".stock-table"
         width: 8%
 
       #{$block}_page_p-list &
-        flex-grow: 0
-        flex-shrink: 0
-        width: 120px
+        width: 9%
 
       #{$block}_page_po-list &
         width: 9%
@@ -642,7 +652,7 @@ $block: ".stock-table"
       #{$block}_page_p-list &
         flex-grow: 0
         flex-shrink: 0
-        width: 95px
+        width: 120px
 
       #{$block}_page_po-list &
         width: 9%
@@ -664,9 +674,13 @@ $block: ".stock-table"
       #{$block}_page_cgpc-list &
         width: 10%
 
-      @media screen and (max-width: 1120px)
+      @media screen and (max-width: 1600px)
         #{$block}_page_p-list &
-          width: 95px
+          width: 110px
+
+      @media screen and (max-width: 1360px)
+        #{$block}_page_p-list &
+          width: 115px
 
     // $Common table cell eighth column
     &:nth-child(8)
@@ -695,7 +709,7 @@ $block: ".stock-table"
       #{$block}_page_p-list &
         flex-grow: 0
         flex-shrink: 0
-        width: 125px
+        width: 95px
 
       #{$block}_page_po-list &
         flex-grow: 0
@@ -714,9 +728,12 @@ $block: ".stock-table"
           width: 5%
           min-width: 60px
 
-      @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
-          width: 125px
+          width: 90px
+
+      @media screen and (max-width: 1360px)
+        #{$block}_page_p-list &
+          width: 95px
 
     // $Common table cell ninth column
     &:nth-child(9)
@@ -734,7 +751,7 @@ $block: ".stock-table"
       #{$block}_page_p-list &
         flex-grow: 0
         flex-shrink: 0
-        width: 100px
+        width: 125px
 
       #{$block}_page_po-list &
         flex-grow: 0
@@ -755,13 +772,12 @@ $block: ".stock-table"
           width: 7%
           min-width: 90px
 
-      @media screen and (max-width: 1600px)
-        #{$block}_page_ed-form &
-
-
-      @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
-          width: 100px
+          width: 120px
+
+      @media screen and (max-width: 1360px)
+        #{$block}_page_p-list &
+          width: 125px
 
     // $Common table cell tenth column
     &:nth-child(10)
@@ -774,7 +790,7 @@ $block: ".stock-table"
       #{$block}_page_p-list &
         flex-grow: 0
         flex-shrink: 0
-        width: 120px
+        width: 95px
 
       #{$block}_page_ed-form &
         flex-grow: 0
@@ -790,9 +806,12 @@ $block: ".stock-table"
         #{$block}_page_ed-form &
           width: 110px
 
-      @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
-          width: 120px
+          width: 90px
+
+      @media screen and (max-width: 1360px)
+        #{$block}_page_p-list &
+          width: 95px
 
     // $Common table cell eleventh column
     &:nth-child(11)
@@ -802,6 +821,11 @@ $block: ".stock-table"
       #{$block}_page_od-details &
         width: 7%
 
+      #{$block}_page_p-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 110px
+
       #{$block}_page_ed-form &
         flex-grow: 0
         flex-shrink: 0
@@ -810,6 +834,13 @@ $block: ".stock-table"
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 100px
+
+        #{$block}_page_p-list &
+          width: 105px
+
+      @media screen and (max-width: 1360px)
+        #{$block}_page_p-list &
+          width: 110px
 
     // $Common table cell twelfth column
     &:nth-child(12)
@@ -916,6 +947,11 @@ $block: ".stock-table"
   // $Common table text marked
   &__text-marked
     font-weight: 600
+
+
+  // $Common table text line
+  &__text-line
+    display: block
 
 
   // $Common table actions
