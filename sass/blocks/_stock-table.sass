@@ -112,7 +112,8 @@ $block: ".stock-table"
         #{$block}_page_sl-list &,
         #{$block}_page_sl-form &,
         #{$block}_page_sr &,
-        #{$block}_page_st &
+        #{$block}_page_st &,
+        #{$block}_page_po-form &
           position: sticky
           z-index: 80
 
@@ -125,7 +126,8 @@ $block: ".stock-table"
         #{$block}_page_sl-list &,
         #{$block}_page_sl-form &,
         #{$block}_page_sr &,
-        #{$block}_page_st &
+        #{$block}_page_st &,
+        #{$block}_page_po-form &
           top: 127px
 
       @media screen and (min-width: 1121px) and (max-width: 1360px)
@@ -140,6 +142,9 @@ $block: ".stock-table"
         #{$block}_page_sl-list &
           top: 137px
 
+        #{$block}_page_po-form &
+          top: 138px
+
       @media screen and (min-width: 1361px)
         #{$block}_page_p-list &
           top: 85px
@@ -152,13 +157,17 @@ $block: ".stock-table"
         #{$block}_page_sl-list &
           top: 77px
 
+        #{$block}_page_po-form &
+          top: 78px
+
     // Set default position in Edge
     @supports (-ms-ime-align: auto)
       #{$block}_page_p-list &,
       #{$block}_page_sl-list &,
       #{$block}_page_sl-form &,
       #{$block}_page_sr &,
-      #{$block}_page_st &
+      #{$block}_page_st &,
+      #{$block}_page_po-form &
         position: static
         z-index: auto
         top: auto
@@ -169,7 +178,8 @@ $block: ".stock-table"
       #{$block}_page_sl-list &,
       #{$block}_page_sl-form &,
       #{$block}_page_sr &,
-      #{$block}_page_st &
+      #{$block}_page_st &,
+      #{$block}_page_po-form &
         position: static
         z-index: auto
         top: auto
