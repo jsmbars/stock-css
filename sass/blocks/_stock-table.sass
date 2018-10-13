@@ -104,6 +104,36 @@ $block: ".stock-table"
 
     // $Common table row MOD: role header
     &_role_header
+      &:nth-child(odd)
+        background-color: #f6f6f6
+        border-bottom: 1px solid #d6d6d6
+
+      @media screen and (min-width: 1121px)
+        #{$block}_page_p-list &
+          position: sticky
+          z-index: 80
+
+      @media screen and (min-width: 1121px) and (max-width: 1360px)
+        #{$block}_page_p-list &
+          top: 145px
+
+      @media screen and (min-width: 1361px)
+        #{$block}_page_p-list &
+          top: 85px
+
+    // Set default position in Edge
+    @supports (-ms-ime-align: auto)
+      #{$block}_page_p-list &
+        position: static
+        z-index: auto
+        top: auto
+
+    // Set default position in IE11
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+      #{$block}_page_p-list &
+        position: static
+        z-index: auto
+        top: auto
 
     // $Common table row MOD: adjust group
     &_adjust_group

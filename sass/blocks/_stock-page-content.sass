@@ -246,6 +246,40 @@ $block: ".stock-page-content"
   // $Page content filter area
   &__filter
 
+    @media screen and (min-width: 1121px)
+      #{$block}__data_role_sym-p-list &,
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &
+        position: sticky
+        z-index: 90
+        background-color: #fff
+
+    @media screen and (min-width: 1121px) and (max-width: 1360px)
+      #{$block}__data_role_sym-p-list &,
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &
+        top: 60px
+
+    @media screen and (min-width: 1361px)
+      #{$block}__data_role_sym-p-list &,
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &
+        top: 0
+
+    // Set default position in Edge
+    @supports (-ms-ime-align: auto)
+      #{$block}__data_role_sym-p-list &,
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &
+        position: static
+        z-index: auto
+        top: auto
+
+    // Set default position in IE11
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+      #{$block}__data_role_sym-p-list &,
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &
+        position: static
+        z-index: auto
+        top: auto
+
+
     // $Page content filter area MOD: board style on mobiles
     &_state_board-mobile
       @media screen and (max-width: 960px)
