@@ -108,29 +108,56 @@ $block: ".stock-table"
         background-color: #f6f6f6
         border-bottom: 1px solid #d6d6d6
 
+      @media screen and (min-width: 961px)
+        #{$block}_page_sl-list &,
+        #{$block}_page_sl-form &
+          position: sticky
+          z-index: 80
+
       @media screen and (min-width: 1121px)
         #{$block}_page_p-list &
           position: sticky
           z-index: 80
 
+      @media screen and (min-width: 961px) and (max-width: 1120px)
+        #{$block}_page_sl-list &,
+        #{$block}_page_sl-form &
+          top: 127px
+
       @media screen and (min-width: 1121px) and (max-width: 1360px)
         #{$block}_page_p-list &
           top: 145px
+
+        #{$block}_page_sl-form &
+          top: 146px
+
+        #{$block}_page_sl-list &
+          top: 137px
 
       @media screen and (min-width: 1361px)
         #{$block}_page_p-list &
           top: 85px
 
+        #{$block}_page_sl-form &
+          top: 86px
+
+        #{$block}_page_sl-list &
+          top: 77px
+
     // Set default position in Edge
     @supports (-ms-ime-align: auto)
-      #{$block}_page_p-list &
+      #{$block}_page_p-list &,
+      #{$block}_page_sl-list &,
+      #{$block}_page_sl-form &
         position: static
         z-index: auto
         top: auto
 
     // Set default position in IE11
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
-      #{$block}_page_p-list &
+      #{$block}_page_p-list &,
+      #{$block}_page_sl-list &,
+      #{$block}_page_sl-form &
         position: static
         z-index: auto
         top: auto

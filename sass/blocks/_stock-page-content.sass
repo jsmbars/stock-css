@@ -246,12 +246,32 @@ $block: ".stock-page-content"
   // $Page content filter area
   &__filter
 
+    @media screen and (min-width: 961px)
+      #{$block}__data_role_stm-sl-list &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-form &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="form-view"] &,
+      #{$block}__data_role_stm-sl-details &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="details-view"] &
+        position: sticky
+        z-index: 90
+        background-color: #fff
+
     @media screen and (min-width: 1121px)
       #{$block}__data_role_sym-p-list &,
       #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &
         position: sticky
         z-index: 90
         background-color: #fff
+
+    @media screen and (min-width: 961px) and (max-width: 1360px)
+      #{$block}__data_role_stm-sl-list &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-form &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="form-view"] &,
+      #{$block}__data_role_stm-sl-details &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="details-view"] &
+        top: 60px
 
     @media screen and (min-width: 1121px) and (max-width: 1360px)
       #{$block}__data_role_sym-p-list &,
@@ -260,13 +280,25 @@ $block: ".stock-page-content"
 
     @media screen and (min-width: 1361px)
       #{$block}__data_role_sym-p-list &,
-      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-list &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-form &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="form-view"] &,
+      #{$block}__data_role_stm-sl-details &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="details-view"] &
         top: 0
 
     // Set default position in Edge
     @supports (-ms-ime-align: auto)
       #{$block}__data_role_sym-p-list &,
-      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-list &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-form &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="form-view"] &,
+      #{$block}__data_role_stm-sl-details &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="details-view"] &
         position: static
         z-index: auto
         top: auto
@@ -274,7 +306,13 @@ $block: ".stock-page-content"
     // Set default position in IE11
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
       #{$block}__data_role_sym-p-list &,
-      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-list &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-form &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="form-view"] &,
+      #{$block}__data_role_stm-sl-details &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="details-view"] &
         position: static
         z-index: auto
         top: auto
