@@ -110,7 +110,9 @@ $block: ".stock-table"
 
       @media screen and (min-width: 961px)
         #{$block}_page_sl-list &,
-        #{$block}_page_sl-form &
+        #{$block}_page_sl-form &,
+        #{$block}_page_sr &,
+        #{$block}_page_st &
           position: sticky
           z-index: 80
 
@@ -121,14 +123,18 @@ $block: ".stock-table"
 
       @media screen and (min-width: 961px) and (max-width: 1120px)
         #{$block}_page_sl-list &,
-        #{$block}_page_sl-form &
+        #{$block}_page_sl-form &,
+        #{$block}_page_sr &,
+        #{$block}_page_st &
           top: 127px
 
       @media screen and (min-width: 1121px) and (max-width: 1360px)
         #{$block}_page_p-list &
           top: 145px
 
-        #{$block}_page_sl-form &
+        #{$block}_page_sl-form &,
+        #{$block}_page_sr &,
+        #{$block}_page_st &
           top: 146px
 
         #{$block}_page_sl-list &
@@ -138,7 +144,9 @@ $block: ".stock-table"
         #{$block}_page_p-list &
           top: 85px
 
-        #{$block}_page_sl-form &
+        #{$block}_page_sl-form &,
+        #{$block}_page_sr &,
+        #{$block}_page_st &
           top: 86px
 
         #{$block}_page_sl-list &
@@ -148,7 +156,9 @@ $block: ".stock-table"
     @supports (-ms-ime-align: auto)
       #{$block}_page_p-list &,
       #{$block}_page_sl-list &,
-      #{$block}_page_sl-form &
+      #{$block}_page_sl-form &,
+      #{$block}_page_sr &,
+      #{$block}_page_st &
         position: static
         z-index: auto
         top: auto
@@ -157,7 +167,9 @@ $block: ".stock-table"
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
       #{$block}_page_p-list &,
       #{$block}_page_sl-list &,
-      #{$block}_page_sl-form &
+      #{$block}_page_sl-form &,
+      #{$block}_page_sr &,
+      #{$block}_page_st &
         position: static
         z-index: auto
         top: auto
