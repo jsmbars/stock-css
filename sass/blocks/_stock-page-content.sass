@@ -262,14 +262,20 @@ $block: ".stock-page-content"
       #{$block}__data_role_orm-pfo-form &,
       #{$block}__tab[data-tab="place-food-order"] #{$block}__data[data-view="food-order-form-view"] &,
       #{$block}__data_role_orm-si-form &,
-      #{$block}__tab[data-tab="site-inventory"] #{$block}__data &
+      #{$block}__tab[data-tab="site-inventory"] #{$block}__data &,
+      #{$block}__data_role_orm-oh-list &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="list-view"] &
         position: sticky
         z-index: 90
         background-color: #fff
 
     @media screen and (min-width: 1121px)
       #{$block}__data_role_sym-p-list &,
-      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_orm-oh-details &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="details-view"] &,
+      #{$block}__data_role_orm-oh-delivery &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &
         position: sticky
         z-index: 90
         background-color: #fff
@@ -290,12 +296,18 @@ $block: ".stock-page-content"
       #{$block}__data_role_orm-pfo-form &,
       #{$block}__tab[data-tab="place-food-order"] #{$block}__data[data-view="food-order-form-view"] &,
       #{$block}__data_role_orm-si-form &,
-      #{$block}__tab[data-tab="site-inventory"] #{$block}__data &
+      #{$block}__tab[data-tab="site-inventory"] #{$block}__data &,
+      #{$block}__data_role_orm-oh-list &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="list-view"] &
         top: 60px
 
     @media screen and (min-width: 1121px) and (max-width: 1360px)
       #{$block}__data_role_sym-p-list &,
-      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_orm-oh-details &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="details-view"] &,
+      #{$block}__data_role_orm-oh-delivery &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &
         top: 60px
 
     @media screen and (min-width: 1361px)
@@ -316,7 +328,13 @@ $block: ".stock-page-content"
       #{$block}__data_role_orm-pfo-form &,
       #{$block}__tab[data-tab="place-food-order"] #{$block}__data[data-view="food-order-form-view"] &,
       #{$block}__data_role_orm-si-form &,
-      #{$block}__tab[data-tab="site-inventory"] #{$block}__data &
+      #{$block}__tab[data-tab="site-inventory"] #{$block}__data &,
+      #{$block}__data_role_orm-oh-list &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_orm-oh-details &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="details-view"] &,
+      #{$block}__data_role_orm-oh-delivery &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &
         top: 0
 
     // Set default position in Edge
@@ -338,7 +356,13 @@ $block: ".stock-page-content"
       #{$block}__data_role_orm-pfo-form &,
       #{$block}__tab[data-tab="place-food-order"] #{$block}__data[data-view="food-order-form-view"] &,
       #{$block}__data_role_orm-si-form &,
-      #{$block}__tab[data-tab="site-inventory"] #{$block}__data &
+      #{$block}__tab[data-tab="site-inventory"] #{$block}__data &,
+      #{$block}__data_role_orm-oh-list &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_orm-oh-details &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="details-view"] &,
+      #{$block}__data_role_orm-oh-delivery &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &
         position: static
         z-index: auto
         top: auto
@@ -362,7 +386,13 @@ $block: ".stock-page-content"
       #{$block}__data_role_orm-pfo-form &,
       #{$block}__tab[data-tab="place-food-order"] #{$block}__data[data-view="food-order-form-view"] &,
       #{$block}__data_role_orm-si-form &,
-      #{$block}__tab[data-tab="site-inventory"] #{$block}__data &
+      #{$block}__tab[data-tab="site-inventory"] #{$block}__data &,
+      #{$block}__data_role_orm-oh-list &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_orm-oh-details &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="details-view"] &,
+      #{$block}__data_role_orm-oh-delivery &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &
         position: static
         z-index: auto
         top: auto
