@@ -104,6 +104,122 @@ $block: ".stock-table"
 
     // $Common table row MOD: role header
     &_role_header
+      &:nth-child(odd)
+        background-color: #f6f6f6
+        border-bottom: 1px solid #d6d6d6
+
+      @media screen and (min-width: 961px)
+        #{$block}_page_sl-list &,
+        #{$block}_page_sl-form &,
+        #{$block}_page_sr &,
+        #{$block}_page_st &,
+        #{$block}_page_po-form &,
+        #{$block}_page_pfo-form &,
+        #{$block}_page_pfo-details &,
+        #{$block}_page_si-form &,
+        #{$block}_page_oh-list &
+          position: sticky
+          z-index: 80
+
+        #{$block}_page_pfo-details &
+          top: 60px
+
+      @media screen and (min-width: 1121px)
+        #{$block}_page_p-list &,
+        #{$block}_page_oh-details &,
+        #{$block}_page_od-details &
+          position: sticky
+          z-index: 80
+
+      @media screen and (min-width: 961px) and (max-width: 1120px)
+        #{$block}_page_sl-list &,
+        #{$block}_page_sl-form &,
+        #{$block}_page_sr &,
+        #{$block}_page_st &,
+        #{$block}_page_po-form &,
+        #{$block}_page_pfo-form &,
+        #{$block}_page_si-form &,
+        #{$block}_page_oh-list &
+          top: 127px
+
+      @media screen and (min-width: 1121px) and (max-width: 1360px)
+        #{$block}_page_p-list &
+          top: 145px
+
+        #{$block}_page_sl-form &,
+        #{$block}_page_sr &,
+        #{$block}_page_st &,
+        #{$block}_page_oh-list &
+          top: 146px
+
+        #{$block}_page_sl-list &
+          top: 137px
+
+        #{$block}_page_po-form &,
+        #{$block}_page_pfo-form &,
+        #{$block}_page_si-form &,
+        #{$block}_page_oh-details &,
+        #{$block}_page_od-details &
+          top: 138px
+
+      @media screen and (min-width: 1361px)
+        #{$block}_page_p-list &
+          top: 85px
+
+        #{$block}_page_sl-form &,
+        #{$block}_page_sr &,
+        #{$block}_page_st &,
+        #{$block}_page_oh-list &
+          top: 86px
+
+        #{$block}_page_sl-list &
+          top: 77px
+
+        #{$block}_page_po-form &,
+        #{$block}_page_pfo-form &,
+        #{$block}_page_si-form &,
+        #{$block}_page_oh-details &,
+        #{$block}_page_od-details &
+          top: 78px
+
+        #{$block}_page_pfo-details &
+          top: 0
+
+    // Set default position in Edge
+    @supports (-ms-ime-align: auto)
+      #{$block}_page_p-list &,
+      #{$block}_page_sl-list &,
+      #{$block}_page_sl-form &,
+      #{$block}_page_sr &,
+      #{$block}_page_st &,
+      #{$block}_page_po-form &,
+      #{$block}_page_pfo-form &,
+      #{$block}_page_pfo-details &,
+      #{$block}_page_si-form &,
+      #{$block}_page_oh-list &,
+      #{$block}_page_oh-details &,
+      #{$block}_page_od-details &
+        position: static
+        z-index: auto
+        top: auto
+
+    // Set default position in IE11
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+      #{$block}_page_p-list &,
+      #{$block}_page_sl-list &,
+      #{$block}_page_sl-form &,
+      #{$block}_page_sr &,
+      #{$block}_page_st &,
+      #{$block}_page_po-form &,
+      #{$block}_page_pfo-form &,
+      #{$block}_page_pfo-details &,
+      #{$block}_page_si-form &,
+      #{$block}_page_oh-list &,
+      #{$block}_page_oh-details &,
+      #{$block}_page_od-details &
+        position: static
+        z-index: auto
+        top: auto
 
     // $Common table row MOD: adjust group
     &_adjust_group

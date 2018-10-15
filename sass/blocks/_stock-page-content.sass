@@ -157,6 +157,40 @@ $block: ".stock-page-content"
     // $Page content data area MOD: role view
     &_role_view
 
+    // System management
+    &_role_sym-p-list
+    &_role_sym-p-form-add
+    &_role_sym-p-form-edit
+    &_role_sym-p-o-list
+    &_role_sym-p-o-form-add
+    &_role_sym-p-o-form-edit
+    &_role_sym-cu-form
+    &_role_sym-s-form
+
+    // Order processing
+    &_role_orp-ed-list
+    &_role_orp-ed-form
+    &_role_orp-em-form
+
+    // Stock Management
+    &_role_stm-sl-list
+    &_role_stm-sl-form
+    &_role_stm-sl-details
+    &_role_stm-ti-form
+    &_role_stm-to-form
+    &_role_stm-cgpc-list
+    &_role_stm-cgpc-form
+    &_role_stm-cgpc-details
+
+    // Order Management
+    &_role_orm-po-form
+    &_role_orm-pfo-form
+    &_role_orm-pfo-details
+    &_role_orm-si-form
+    &_role_orm-oh-list
+    &_role_orm-oh-details
+    &_role_orm-oh-delivery
+
     // $Page content data area MOD: state visible
     &_state_visible
       display: block
@@ -211,6 +245,158 @@ $block: ".stock-page-content"
 
   // $Page content filter area
   &__filter
+
+    @media screen and (min-width: 961px)
+      #{$block}__data_role_stm-sl-list &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-form &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="form-view"] &,
+      #{$block}__data_role_stm-sl-details &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="details-view"] &,
+      #{$block}__data_role_stm-ti-form &,
+      #{$block}__tab[data-tab="stock-requests"] #{$block}__data &,
+      #{$block}__data_role_stm-to-form &,
+      #{$block}__tab[data-tab="stock-transfers"] #{$block}__data &,
+      #{$block}__data_role_orm-po-form &,
+      #{$block}__tab[data-tab="place-order"] #{$block}__data &,
+      #{$block}__data_role_orm-pfo-form &,
+      #{$block}__tab[data-tab="place-food-order"] #{$block}__data[data-view="food-order-form-view"] &,
+      #{$block}__data_role_orm-si-form &,
+      #{$block}__tab[data-tab="site-inventory"] #{$block}__data &,
+      #{$block}__data_role_orm-oh-list &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="list-view"] &
+        position: sticky
+        z-index: 90
+        background-color: #fff
+
+    @media screen and (min-width: 1121px)
+      #{$block}__data_role_sym-p-list &,
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_orm-oh-details &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="details-view"] &,
+      #{$block}__data_role_orm-oh-delivery &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &
+        position: sticky
+        z-index: 90
+        background-color: #fff
+
+    @media screen and (min-width: 961px) and (max-width: 1360px)
+      #{$block}__data_role_stm-sl-list &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-form &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="form-view"] &,
+      #{$block}__data_role_stm-sl-details &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="details-view"] &,
+      #{$block}__data_role_stm-ti-form &,
+      #{$block}__tab[data-tab="stock-requests"] #{$block}__data &,
+      #{$block}__data_role_stm-to-form &,
+      #{$block}__tab[data-tab="stock-transfers"] #{$block}__data &,
+      #{$block}__data_role_orm-po-form &,
+      #{$block}__tab[data-tab="place-order"] #{$block}__data &,
+      #{$block}__data_role_orm-pfo-form &,
+      #{$block}__tab[data-tab="place-food-order"] #{$block}__data[data-view="food-order-form-view"] &,
+      #{$block}__data_role_orm-si-form &,
+      #{$block}__tab[data-tab="site-inventory"] #{$block}__data &,
+      #{$block}__data_role_orm-oh-list &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="list-view"] &
+        top: 60px
+
+    @media screen and (min-width: 1121px) and (max-width: 1360px)
+      #{$block}__data_role_sym-p-list &,
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_orm-oh-details &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="details-view"] &,
+      #{$block}__data_role_orm-oh-delivery &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &
+        top: 60px
+
+    @media screen and (min-width: 1361px)
+      #{$block}__data_role_sym-p-list &,
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-list &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-form &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="form-view"] &,
+      #{$block}__data_role_stm-sl-details &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="details-view"] &,
+      #{$block}__data_role_stm-ti-form &,
+      #{$block}__tab[data-tab="stock-requests"] #{$block}__data &,
+      #{$block}__data_role_stm-to-form &,
+      #{$block}__tab[data-tab="stock-transfers"] #{$block}__data &,
+      #{$block}__data_role_orm-po-form &,
+      #{$block}__tab[data-tab="place-order"] #{$block}__data &,
+      #{$block}__data_role_orm-pfo-form &,
+      #{$block}__tab[data-tab="place-food-order"] #{$block}__data[data-view="food-order-form-view"] &,
+      #{$block}__data_role_orm-si-form &,
+      #{$block}__tab[data-tab="site-inventory"] #{$block}__data &,
+      #{$block}__data_role_orm-oh-list &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_orm-oh-details &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="details-view"] &,
+      #{$block}__data_role_orm-oh-delivery &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &
+        top: 0
+
+    // Set default position in Edge
+    @supports (-ms-ime-align: auto)
+      #{$block}__data_role_sym-p-list &,
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-list &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-form &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="form-view"] &,
+      #{$block}__data_role_stm-sl-details &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="details-view"] &,
+      #{$block}__data_role_stm-ti-form &,
+      #{$block}__tab[data-tab="stock-requests"] #{$block}__data &,
+      #{$block}__data_role_stm-to-form &,
+      #{$block}__tab[data-tab="stock-transfers"] #{$block}__data &,
+      #{$block}__data_role_orm-po-form &,
+      #{$block}__tab[data-tab="place-order"] #{$block}__data &,
+      #{$block}__data_role_orm-pfo-form &,
+      #{$block}__tab[data-tab="place-food-order"] #{$block}__data[data-view="food-order-form-view"] &,
+      #{$block}__data_role_orm-si-form &,
+      #{$block}__tab[data-tab="site-inventory"] #{$block}__data &,
+      #{$block}__data_role_orm-oh-list &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_orm-oh-details &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="details-view"] &,
+      #{$block}__data_role_orm-oh-delivery &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &
+        position: static
+        z-index: auto
+        top: auto
+
+    // Set default position in IE11
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+      #{$block}__data_role_sym-p-list &,
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-list &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-sl-form &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="form-view"] &,
+      #{$block}__data_role_stm-sl-details &,
+      #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="details-view"] &,
+      #{$block}__data_role_stm-ti-form &,
+      #{$block}__tab[data-tab="stock-requests"] #{$block}__data &,
+      #{$block}__data_role_stm-to-form &,
+      #{$block}__tab[data-tab="stock-transfers"] #{$block}__data &,
+      #{$block}__data_role_orm-po-form &,
+      #{$block}__tab[data-tab="place-order"] #{$block}__data &,
+      #{$block}__data_role_orm-pfo-form &,
+      #{$block}__tab[data-tab="place-food-order"] #{$block}__data[data-view="food-order-form-view"] &,
+      #{$block}__data_role_orm-si-form &,
+      #{$block}__tab[data-tab="site-inventory"] #{$block}__data &,
+      #{$block}__data_role_orm-oh-list &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_orm-oh-details &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="details-view"] &,
+      #{$block}__data_role_orm-oh-delivery &,
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &
+        position: static
+        z-index: auto
+        top: auto
+
 
     // $Page content filter area MOD: board style on mobiles
     &_state_board-mobile
