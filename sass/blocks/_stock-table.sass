@@ -40,6 +40,30 @@ $block: ".stock-table"
     &:nth-child(odd)
       background-color: #f8f8f8
 
+    // $Common table group MOD: state success
+    &_state_success,
+    &_state_success:nth-child(odd),
+    &_state_success:nth-child(even)
+      background-color: #dafddf
+
+    // $Common table group MOD: state alert
+    &_state_alert,
+    &_state_alert:nth-child(odd),
+    &_state_alert:nth-child(even)
+      background-color: #ffe1e3
+
+    // $Common table group MOD: state warning
+    &_state_warning,
+    &_state_warning:nth-child(odd),
+    &_state_warning:nth-child(even)
+      background-color: #ffe3bd
+
+    // $Common table group MOD: state picked
+    &_state_picked,
+    &_state_picked:nth-child(odd),
+    &_state_picked:nth-child(even)
+      background-color: #d8e8fe
+
 
   // $Common table dropdown
   &__dropdown

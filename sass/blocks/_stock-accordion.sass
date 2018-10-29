@@ -33,13 +33,6 @@ $block: ".stock-accordion"
 
   // $Accordion dropdown
   &__dropdown
-    border-bottom: 1px solid #f0f0f0
-
-    &:nth-of-type(even)
-      background-color: #F8F8F8
-
-    &:last-of-type
-      border-bottom: none
 
 
   // $Accordion dropdown header
@@ -160,6 +153,9 @@ $block: ".stock-accordion"
   &__dropdown-content
     padding-left: 30px
 
+    #{$block}__dropdown:not(:last-child) &
+      border-bottom: 1px solid #f0f0f0
+
     // $Accordion dropdown content MOD: state closed
     &_state_closed
       display: none
@@ -175,7 +171,7 @@ $block: ".stock-accordion"
     padding: 8px
 
     &:not(:last-child)
-      border-bottom: 1px solid #f0f0f0
+      border-bottom: 1px solid transparentize(#f0f0f0,.75)
 
     // $Accordion content line MOD: justify end
     &_justify_end
