@@ -224,6 +224,13 @@ $block: ".stock-form-field"
       #{$block}_size_narrow &
         padding: 8px 10px
 
+      #{$block}_adjust_manager &
+        padding-top: 20px
+        padding-bottom: 20px
+        border-top: none
+        border-bottom: none
+        border-left: none
+
       #{$block}_context_table &
         padding: 8px 10px
         font-size: 12px
@@ -238,10 +245,18 @@ $block: ".stock-form-field"
         border-color: #ed7f7e
         color: #ed7f7e
 
+      #{$block}_adjust_manager#{$block}_state_error &
+        border: 1px solid #ed7f7e
+        outline: 1px solid #ed7f7e
+
       @media screen and (max-width: 960px)
         #{$block}_size_s &,
         #{$block}_size_xs &
           width: 100%
+
+        #{$block}_adjust_manager &
+          border-right: none
+          border-bottom: 1px solid #d3d3d3
 
       &:focus
         outline: none
