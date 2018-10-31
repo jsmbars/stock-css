@@ -165,7 +165,7 @@ $block: ".stock-form-select"
         position: absolute
         top: 50%
         margin-top: -7px
-        left: 15px
+        left: 10px
         display: block
         width: 14px
         height: 14px
@@ -176,10 +176,6 @@ $block: ".stock-form-select"
 
       #{$block}_role_search#{$block}_state_error &
         background-image: url(../icons/icon-lens-error.svg)
-
-      @media screen and (max-width: 960px)
-        #{$block}_role_search &
-          left: 25px
 
     &:after
       content: ''
@@ -232,7 +228,7 @@ $block: ".stock-form-select"
         color: #ed7f7e
 
       #{$block}_size_s &
-        min-width: 150px
+        min-width: 125px
         padding: 8px 40px 8px 8px
 
       #{$block}_size_xs &
@@ -243,7 +239,7 @@ $block: ".stock-form-select"
         padding: 8px 40px 8px 8px
 
       #{$block}_role_search &
-        padding-left: 40px
+        padding-left: 30px
 
       #{$block}_adjust_manager &
         padding-top: 20px
@@ -267,9 +263,6 @@ $block: ".stock-form-select"
         outline: 1px solid #ed7f7e
 
       @media screen and (max-width: 960px)
-        #{$block}_role_search &
-          padding-left: 55px
-
         #{$block}_adjust_manager &
           border-right: none
           border-bottom: 1px solid #d3d3d3
