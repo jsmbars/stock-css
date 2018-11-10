@@ -300,7 +300,9 @@ $block: ".stock-table"
     #{$block}_page_po-list &,
     #{$block}_page_oh-details &,
     #{$block}_page_od-details &,
-    #{$block}_page_cgpc-list &
+    #{$block}_page_cgpc-list &,
+    #{$block}_page_prep-list &,
+    #{$block}_page_meals-list &
       padding-left: 10px
       padding-right: 10px
 
@@ -422,6 +424,11 @@ $block: ".stock-table"
 
       #{$block}_page_prep-list &
         width: 20%
+        padding-left: 15px
+
+      #{$block}_page_meals-list &
+        width: 14%
+        padding-left: 15px
 
     // $Common table cell second column
     &:nth-child(2)
@@ -494,6 +501,9 @@ $block: ".stock-table"
       #{$block}_page_prep-list &
         width: 8%
 
+      #{$block}_page_meals-list &
+        width: 20%
+
     // $Common table cell third column
     &:nth-child(3)
       #{$block}_page_sl-list &
@@ -557,6 +567,9 @@ $block: ".stock-table"
 
       #{$block}_page_prep-list &
         width: 12%
+
+      #{$block}_page_meals-list &
+        width: 10%
 
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
@@ -635,6 +648,9 @@ $block: ".stock-table"
       #{$block}_page_prep-list &
         width: 12%
 
+      #{$block}_page_meals-list &
+        width: 10%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 7%
@@ -704,6 +720,9 @@ $block: ".stock-table"
       #{$block}_page_prep-list &
         width: 12%
 
+      #{$block}_page_meals-list &
+        width: 10%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 5%
@@ -771,6 +790,9 @@ $block: ".stock-table"
         flex-shrink: 0
         width: 110px
 
+      #{$block}_page_meals-list &
+        width: 10%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 6%
@@ -837,6 +859,9 @@ $block: ".stock-table"
         flex-shrink: 0
         width: 150px
 
+      #{$block}_page_meals-list &
+        width: 10%
+
     // $Common table cell eighth column
     &:nth-child(8)
 
@@ -876,6 +901,9 @@ $block: ".stock-table"
         min-width: 70px
 
       #{$block}_page_cgpc-list &
+        width: 10%
+
+      #{$block}_page_meals-list &
         width: 10%
 
       @media screen and (max-width: 1600px)
@@ -922,6 +950,11 @@ $block: ".stock-table"
         flex-shrink: 0
         width: 110px
 
+      #{$block}_page_meals-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 110px
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 7%
@@ -953,6 +986,11 @@ $block: ".stock-table"
         width: 115px
 
       #{$block}_page_cgpc-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 150px
+
+      #{$block}_page_meals-list &
         flex-grow: 0
         flex-shrink: 0
         width: 150px
