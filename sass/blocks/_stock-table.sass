@@ -30,6 +30,13 @@ $block: ".stock-table"
   &_page_p-list-prices
     max-width: 960px
 
+  &_page_oh-report
+    padding: 10px 25px
+
+    @media screen and (max-width: 1120px)
+      padding-left: 20px
+      padding-right: 20px
+
 
   // $Common table group
   &__group
@@ -37,8 +44,25 @@ $block: ".stock-table"
     width: 100%
     background-color: #FFF
 
+    #{$block}_page_oh-report &
+      padding-top: 10px
+      padding-bottom: 10px
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,.2)
+
+    @media screen and (max-width: 640px)
+      #{$block}_page_oh-report &
+        padding-top: 0
+        padding-bottom: 0
+
     &:nth-child(odd)
       background-color: #f8f8f8
+
+      #{$block}_page_oh-report &
+        background-color: #FFF
+
+    &:not(:last-child)
+      #{$block}_page_oh-report &
+        margin-bottom: 30px
 
     // $Common table group MOD: state success
     &_state_success,
@@ -120,11 +144,24 @@ $block: ".stock-table"
     border-bottom: 1px solid #eee
     background-color: #FFF
 
+    #{$block}_page_oh-report &
+      border-bottom: none
+
+    @media screen and (max-width: 640px)
+      #{$block}_page_oh-report &
+        flex-direction: column
+
     &:nth-child(odd)
       background-color: #f8f8f8
 
+      #{$block}_page_oh-report &
+        background-color: #fff
+
     &:not(:last-child)
       border-bottom: 1px solid #eee
+
+      #{$block}_page_oh-report &
+        border-bottom: none
 
     // $Common table row MOD: role header
     &_role_header
@@ -296,6 +333,13 @@ $block: ".stock-table"
     color: #6c6c6c
     padding: 10px 15px
 
+    #{$block}_page_sl-list &
+      justify-content: center
+
+    #{$block}_page_oh-report &
+      font-size: 18px
+      justify-content: center
+
     #{$block}_page_st &,
     #{$block}_page_po-list &,
     #{$block}_page_oh-details &,
@@ -346,9 +390,13 @@ $block: ".stock-table"
         padding-left: 8px
         padding-right: 8px
 
-    // $Common table cell CONTEXT: $Common table MOD: page stock levels list
-    #{$block}_page_sl-list &
-      justify-content: center
+    @media screen and (max-width: 960px)
+      #{$block}_page_oh-report &
+        font-size: 16px
+
+    @media screen and (max-width: 640px)
+      #{$block}_page_oh-report &
+        font-size: 16px
 
     &:not(:last-child)
       border-right: 1px solid #ebebeb
@@ -430,6 +478,17 @@ $block: ".stock-table"
         width: 14%
         padding-left: 15px
 
+      #{$block}_page_oh-report &
+        width: 33.3%
+
+      @media screen and (max-width: 640px)
+        #{$block}_page_oh-report &
+          width: 100%
+          min-height: 70px
+          padding-right: 35px
+          padding-left: 35px
+          background-color: #f8f8f8
+
     // $Common table cell second column
     &:nth-child(2)
       #{$block}_page_sl-list &
@@ -504,6 +563,13 @@ $block: ".stock-table"
       #{$block}_page_meals-list &
         width: 20%
 
+      #{$block}_page_oh-report &
+        width: 33.3%
+
+      @media screen and (max-width: 640px)
+        #{$block}_page_oh-report &
+          width: 100%
+
     // $Common table cell third column
     &:nth-child(3)
       #{$block}_page_sl-list &
@@ -571,9 +637,18 @@ $block: ".stock-table"
       #{$block}_page_meals-list &
         width: 10%
 
+      #{$block}_page_oh-report &
+        width: 33.3%
+        padding-right: 35px
+
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
           width: 9%
+
+      @media screen and (max-width: 640px)
+        #{$block}_page_oh-report &
+          width: 100%
+          padding-right: 10px
 
     // $Common table cell fourth column
     &:nth-child(4)
@@ -1139,7 +1214,8 @@ $block: ".stock-table"
     #{$block}_page_oh-list #{$block}__cell:nth-child(7) &,
     #{$block}_page_sr #{$block}__cell:nth-child(8) &,
     #{$block}_page_st #{$block}__cell:nth-child(8) &,
-    #{$block}_page_po-form #{$block}__cell:nth-child(8) &
+    #{$block}_page_po-form #{$block}__cell:nth-child(8) &,
+    #{$block}_page_oh-report #{$block}__cell &
       text-align: center
 
   // $Common table text
@@ -1148,6 +1224,26 @@ $block: ".stock-table"
     font-size: 12px
     font-weight: 400
     color: #6c6c6c
+
+    #{$block}_page_oh-report &
+      font-size: 18px
+
+    @media screen and (max-width: 960px)
+      #{$block}_page_oh-report &
+        font-size: 16px
+
+    @media screen and (max-width: 640px)
+      #{$block}_page_oh-report #{$block}__cell:nth-child(1) &
+        color: #1c2841
+        font-weight: 600
+
+    // $Common table text MOD: color red
+    &_color_accent-red
+      color: map-get($app-palette, accent-red)
+
+    // $Common table text MOD: color green
+    &_color_accent-green
+      color: map-get($app-palette, accent-green)
 
 
   // $Common table text marked
@@ -1184,4 +1280,33 @@ $block: ".stock-table"
     // $Common table icon MOD: role drink
     &_role_drink
       background-image: url("../icons/icon-drink-medium-gray.svg")
+
+    // $Common table icon MOD: role gift-white
+    &_role_gift-white
+      background-image: url("../icons/icon-gift-white.svg")
+
+
+  // $Common table corner
+  &__corner
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 1
+    display: block
+    width: 70px
+    height: 70px
+    padding: 5px
+    text-align: right
+    background-image: -ms-linear-gradient(45deg, transparent 0%, transparent 50%, #efefef 50%, #efefef 100%)
+    background-image: -moz-linear-gradient(45deg, transparent 0%, transparent 50%, #efefef 50%, #efefef 100%)
+    background-image: -o-linear-gradient(45deg, transparent 0%, transparent 50%, #efefef 50%, #efefef 100%)
+    background-image: -webkit-linear-gradient(45deg, transparent 0%, transparent 50%, #efefef 50%, #efefef 100%)
+    background-image: linear-gradient(45deg, transparent 0%, transparent 50%, #efefef 50%, #efefef 100%)
+
+    &_color_accent-blue
+      background-image: -ms-linear-gradient(45deg, transparent 0%, transparent 50%, map-get($app-palette, accent-blue) 50%, map-get($app-palette, accent-blue) 100%)
+      background-image: -moz-linear-gradient(45deg, transparent 0%, transparent 50%, map-get($app-palette, accent-blue) 50%, map-get($app-palette, accent-blue) 100%)
+      background-image: -o-linear-gradient(45deg, transparent 0%, transparent 50%, map-get($app-palette, accent-blue) 50%, map-get($app-palette, accent-blue) 100%)
+      background-image: -webkit-linear-gradient(45deg, transparent 0%, transparent 50%, map-get($app-palette, accent-blue) 50%, map-get($app-palette, accent-blue) 100%)
+      background-image: linear-gradient(45deg, transparent 0%, transparent 50%, map-get($app-palette, accent-blue) 50%, map-get($app-palette, accent-blue) 100%)
 
