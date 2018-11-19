@@ -30,7 +30,7 @@ $block: ".stock-table"
   &_page_p-list-prices
     max-width: 960px
 
-  &_page_oh-report
+  &_page_oh-reports
     padding: 10px 25px
 
     @media screen and (max-width: 1120px)
@@ -44,24 +44,24 @@ $block: ".stock-table"
     width: 100%
     background-color: #FFF
 
-    #{$block}_page_oh-report &
+    #{$block}_page_oh-reports &
       padding-top: 10px
       padding-bottom: 10px
       box-shadow: 0 2px 8px 0 rgba(0,0,0,.2)
 
     @media screen and (max-width: 640px)
-      #{$block}_page_oh-report &
+      #{$block}_page_oh-reports &
         padding-top: 0
         padding-bottom: 0
 
     &:nth-child(odd)
       background-color: #f8f8f8
 
-      #{$block}_page_oh-report &
+      #{$block}_page_oh-reports &
         background-color: #FFF
 
     &:not(:last-child)
-      #{$block}_page_oh-report &
+      #{$block}_page_oh-reports &
         margin-bottom: 30px
 
     // $Common table group MOD: state success
@@ -144,23 +144,23 @@ $block: ".stock-table"
     border-bottom: 1px solid #eee
     background-color: #FFF
 
-    #{$block}_page_oh-report &
+    #{$block}_page_oh-reports &
       border-bottom: none
 
     @media screen and (max-width: 640px)
-      #{$block}_page_oh-report &
+      #{$block}_page_oh-reports &
         flex-direction: column
 
     &:nth-child(odd)
       background-color: #f8f8f8
 
-      #{$block}_page_oh-report &
+      #{$block}_page_oh-reports &
         background-color: #fff
 
     &:not(:last-child)
       border-bottom: 1px solid #eee
 
-      #{$block}_page_oh-report &
+      #{$block}_page_oh-reports &
         border-bottom: none
 
     // $Common table row MOD: role header
@@ -336,7 +336,7 @@ $block: ".stock-table"
     #{$block}_page_sl-list &
       justify-content: center
 
-    #{$block}_page_oh-report &
+    #{$block}_page_oh-reports &
       font-size: 18px
       justify-content: center
 
@@ -391,11 +391,11 @@ $block: ".stock-table"
         padding-right: 8px
 
     @media screen and (max-width: 960px)
-      #{$block}_page_oh-report &
+      #{$block}_page_oh-reports &
         font-size: 16px
 
     @media screen and (max-width: 640px)
-      #{$block}_page_oh-report &
+      #{$block}_page_oh-reports &
         font-size: 16px
 
     &:not(:last-child)
@@ -478,11 +478,11 @@ $block: ".stock-table"
         width: 14%
         padding-left: 15px
 
-      #{$block}_page_oh-report &
+      #{$block}_page_oh-reports &
         width: 33.3%
 
       @media screen and (max-width: 640px)
-        #{$block}_page_oh-report &
+        #{$block}_page_oh-reports &
           width: 100%
           min-height: 70px
           padding-right: 35px
@@ -563,11 +563,11 @@ $block: ".stock-table"
       #{$block}_page_meals-list &
         width: 20%
 
-      #{$block}_page_oh-report &
+      #{$block}_page_oh-reports &
         width: 33.3%
 
       @media screen and (max-width: 640px)
-        #{$block}_page_oh-report &
+        #{$block}_page_oh-reports &
           width: 100%
 
     // $Common table cell third column
@@ -637,7 +637,7 @@ $block: ".stock-table"
       #{$block}_page_meals-list &
         width: 10%
 
-      #{$block}_page_oh-report &
+      #{$block}_page_oh-reports &
         width: 33.3%
         padding-right: 35px
 
@@ -646,7 +646,7 @@ $block: ".stock-table"
           width: 9%
 
       @media screen and (max-width: 640px)
-        #{$block}_page_oh-report &
+        #{$block}_page_oh-reports &
           width: 100%
           padding-right: 10px
 
@@ -1215,7 +1215,7 @@ $block: ".stock-table"
     #{$block}_page_sr #{$block}__cell:nth-child(8) &,
     #{$block}_page_st #{$block}__cell:nth-child(8) &,
     #{$block}_page_po-form #{$block}__cell:nth-child(8) &,
-    #{$block}_page_oh-report #{$block}__cell &
+    #{$block}_page_oh-reports #{$block}__cell &
       text-align: center
 
   // $Common table text
@@ -1225,15 +1225,15 @@ $block: ".stock-table"
     font-weight: 400
     color: #6c6c6c
 
-    #{$block}_page_oh-report &
+    #{$block}_page_oh-reports &
       font-size: 18px
 
     @media screen and (max-width: 960px)
-      #{$block}_page_oh-report &
+      #{$block}_page_oh-reports &
         font-size: 16px
 
     @media screen and (max-width: 640px)
-      #{$block}_page_oh-report #{$block}__cell:nth-child(1) &
+      #{$block}_page_oh-reports #{$block}__cell:nth-child(1) &
         color: #1c2841
         font-weight: 600
 
