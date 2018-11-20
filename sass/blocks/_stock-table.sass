@@ -526,7 +526,7 @@ $block: ".stock-table"
         width: 9%
 
       #{$block}_page_od-details &
-        width: 10%
+        width: 9%
 
       #{$block}_page_p-list &
         width: 8%
@@ -607,7 +607,7 @@ $block: ".stock-table"
         width: 6%
 
       #{$block}_page_od-details &
-        width: 10%
+        width: 9%
 
       #{$block}_page_p-list &
         width: 7%
@@ -1063,6 +1063,7 @@ $block: ".stock-table"
         flex-grow: 0
         flex-shrink: 0
         width: 115px
+        justify-content: center
 
       #{$block}_page_cgpc-list &
         flex-grow: 0
@@ -1123,7 +1124,7 @@ $block: ".stock-table"
         justify-content: center
         flex-grow: 0
         flex-shrink: 0
-        width: 140px
+        width: 160px
 
       #{$block}_page_p-list &
         flex-grow: 0
@@ -1132,7 +1133,7 @@ $block: ".stock-table"
 
       @media screen and (max-width: 1600px)
         #{$block}_page_od-details &
-          width: 130px
+          width: 160px
 
         #{$block}_page_p-list &
           width: 105px
@@ -1212,6 +1213,7 @@ $block: ".stock-table"
     #{$block}_page_ed-list #{$block}__cell:nth-child(4) &,
     #{$block}_page_ed-list #{$block}__cell:nth-child(5) &,
     #{$block}_page_ed-form #{$block}__cell:nth-child(4) &,
+    #{$block}_page_ed-form #{$block}__cell:nth-child(10) &,
     #{$block}_page_em-form #{$block}__cell:nth-child(4) &,
     #{$block}_page_si-form #{$block}__cell:nth-child(6) &,
     #{$block}_page_si-form #{$block}__cell:nth-child(7) &,
@@ -1284,6 +1286,10 @@ $block: ".stock-table"
     // $Common table icon MOD: role drink
     &_role_drink
       background-image: url("../icons/icon-drink-medium-gray.svg")
+
+    // $Common table icon MOD: role gift
+    &_role_gift
+      background-image: url("../icons/icon-gift-medium-gray.svg")
 
     // $Common table icon MOD: role gift-white
     &_role_gift-white

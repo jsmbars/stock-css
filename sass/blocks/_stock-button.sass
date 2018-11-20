@@ -325,6 +325,13 @@ $block: ".stock-button"
   &_icon_pencil#{&}_border_accent-green
     +button-with-icon-left($icon-url: '../icons/icon-pencil-green.svg', $icon-hover-url: '../icons/icon-pencil-white.svg')
 
+  // $Common button MOD: icon gift
+  &_icon_gift-reversed
+    +button-with-icon-right($icon-url: '../icons/icon-gift-white.svg', $background-size: 13px)
+
+  &_icon_gift-reversed#{&}_border_accent-blue
+    +button-with-icon-right($icon-url: '../icons/icon-gift-primary.svg', $icon-hover-url: '../icons/icon-gift-white.svg', $background-size: 13px)
+
 
   // Specific buttons
 
