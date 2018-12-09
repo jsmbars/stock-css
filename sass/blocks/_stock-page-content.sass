@@ -189,6 +189,8 @@ $block: ".stock-page-content"
     &_role_stm-m-list
     &_role_stm-m-form
     &_role_stm-m-details
+    &_role_stm-w-list
+    &_role_stm-w-form-add
 
     // Order Management
     &_role_orm-po-form
@@ -273,7 +275,9 @@ $block: ".stock-page-content"
       #{$block}__data_role_orm-si-form &,
       #{$block}__tab[data-tab="site-inventory"] #{$block}__data &,
       #{$block}__data_role_orm-oh-list &,
-      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="list-view"] &
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-w-list &,
+      #{$block}__tab[data-tab="waste"] #{$block}__data[data-view="list-view"] &
         position: sticky
         z-index: 60
         background-color: #fff
@@ -307,7 +311,9 @@ $block: ".stock-page-content"
       #{$block}__data_role_orm-si-form &,
       #{$block}__tab[data-tab="site-inventory"] #{$block}__data &,
       #{$block}__data_role_orm-oh-list &,
-      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="list-view"] &
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_stm-w-list &,
+      #{$block}__tab[data-tab="waste"] #{$block}__data[data-view="list-view"] &
         top: 60px
 
     @media screen and (min-width: 1121px) and (max-width: 1360px)
@@ -343,7 +349,9 @@ $block: ".stock-page-content"
       #{$block}__data_role_orm-oh-details &,
       #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="details-view"] &,
       #{$block}__data_role_orm-oh-delivery &,
-      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &,
+      #{$block}__data_role_stm-w-list &,
+      #{$block}__tab[data-tab="waste"] #{$block}__data[data-view="list-view"] &
         top: 0
 
     // Set default position in Edge
@@ -371,7 +379,9 @@ $block: ".stock-page-content"
       #{$block}__data_role_orm-oh-details &,
       #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="details-view"] &,
       #{$block}__data_role_orm-oh-delivery &,
-      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &,
+      #{$block}__data_role_stm-w-list &,
+      #{$block}__tab[data-tab="waste"] #{$block}__data[data-view="list-view"] &
         position: static
         z-index: auto
         top: auto
@@ -401,7 +411,9 @@ $block: ".stock-page-content"
       #{$block}__data_role_orm-oh-details &,
       #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="details-view"] &,
       #{$block}__data_role_orm-oh-delivery &,
-      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &
+      #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="delivery-view"] &,
+      #{$block}__data_role_stm-w-list &,
+      #{$block}__tab[data-tab="waste"] #{$block}__data[data-view="list-view"] &
         position: static
         z-index: auto
         top: auto

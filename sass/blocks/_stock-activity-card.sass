@@ -353,6 +353,17 @@ $block: ".stock-activity-card"
       background-color: #ffcd8a
 
 
+  // $Activity card cell box
+  &__cell-box
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100%
+    padding: 10px
+    border: 2px solid #ebebeb
+
+
   // $Activity card footer
   &__footer
     padding: 35px 10px 15px
@@ -433,25 +444,24 @@ $block: ".stock-activity-card"
 
   // $Activity card text
   &__text
+    width: auto
     max-width: 100%
     flex-grow: 0
     flex-shrink: 1
-    width: min-content
     font-family: $f-sans
-    font-size: 16px
+    font-size: 14px
     line-height: 1.2
-    font-weight: 600
+    font-weight: 400
     color: #1c2841
+
+    #{$block}__info &
+      width: min-content
+      font-size: 16px
+      font-weight: 600
 
     // $Activity card text MOD: align right
     &_align_right
       text-align: right
-
-    // $Activity card text MOD: type regular text
-    &_type_regular
-      width: auto
-      font-size: 14px
-      font-weight: 400
 
     // $Activity card text MOD: role date
     &_role_date
