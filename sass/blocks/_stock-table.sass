@@ -193,7 +193,8 @@ $block: ".stock-table"
         #{$block}_page_p-list &,
         #{$block}_page_oh-details &,
         #{$block}_page_od-details &,
-        #{$block}_page_w-list &
+        #{$block}_page_w-list &,
+        #{$block}_page_r-list &
           position: sticky
           z-index: 50
 
@@ -216,7 +217,8 @@ $block: ".stock-table"
         #{$block}_page_sr &,
         #{$block}_page_st &,
         #{$block}_page_oh-list &,
-        #{$block}_page_w-list &
+        #{$block}_page_w-list &,
+        #{$block}_page_r-list &
           top: 146px
 
         #{$block}_page_sl-list &
@@ -237,7 +239,8 @@ $block: ".stock-table"
         #{$block}_page_sr &,
         #{$block}_page_st &,
         #{$block}_page_oh-list &,
-        #{$block}_page_w-list &
+        #{$block}_page_w-list &,
+        #{$block}_page_r-list &
           top: 86px
 
         #{$block}_page_sl-list &
@@ -267,7 +270,8 @@ $block: ".stock-table"
       #{$block}_page_oh-list &,
       #{$block}_page_oh-details &,
       #{$block}_page_od-details &,
-      #{$block}_page_w-list &
+      #{$block}_page_w-list &,
+      #{$block}_page_r-list &
         position: static
         z-index: auto
         top: auto
@@ -286,7 +290,8 @@ $block: ".stock-table"
       #{$block}_page_oh-list &,
       #{$block}_page_oh-details &,
       #{$block}_page_od-details &,
-      #{$block}_page_w-list &
+      #{$block}_page_w-list &,
+      #{$block}_page_r-list &
         position: static
         z-index: auto
         top: auto
@@ -361,7 +366,8 @@ $block: ".stock-table"
 
     #{$block}_page_ed-form &,
     #{$block}_page_p-list &,
-    #{$block}_page_w-list &
+    #{$block}_page_w-list &,
+    #{$block}_page_r-list &
       padding-left: 8px
       padding-right: 8px
 
@@ -369,7 +375,8 @@ $block: ".stock-table"
       #{$block}_page_ed-form &,
       #{$block}_page_od-details &,
       #{$block}_page_p-list &,
-      #{$block}_page_w-list &
+      #{$block}_page_w-list &,
+      #{$block}_page_r-list &
         padding-left: 5px
         padding-left: 5px
 
@@ -495,6 +502,9 @@ $block: ".stock-table"
       #{$block}_page_w-list &
         width: 16%
 
+      #{$block}_page_r-list &
+        width: 14%
+
       @media screen and (max-width: 640px)
         #{$block}_page_oh-reports &
           width: 100%
@@ -583,6 +593,9 @@ $block: ".stock-table"
       #{$block}_page_w-list &
         width: 6%
 
+      #{$block}_page_r-list &
+        width: 6%
+
       @media screen and (max-width: 640px)
         #{$block}_page_oh-reports &
           width: 100%
@@ -659,6 +672,9 @@ $block: ".stock-table"
         padding-right: 35px
 
       #{$block}_page_w-list &
+        width: 6%
+
+      #{$block}_page_r-list &
         width: 6%
 
       @media screen and (max-width: 1120px)
@@ -749,6 +765,9 @@ $block: ".stock-table"
       #{$block}_page_w-list &
         width: 10%
 
+      #{$block}_page_r-list &
+        width: 9%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 7%
@@ -824,6 +843,9 @@ $block: ".stock-table"
       #{$block}_page_w-list &
         width: 24%
 
+      #{$block}_page_r-list &
+        width: 9%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 5%
@@ -897,6 +919,9 @@ $block: ".stock-table"
       #{$block}_page_w-list &
         width: 12%
 
+      #{$block}_page_r-list &
+        width: 20%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 6%
@@ -969,6 +994,9 @@ $block: ".stock-table"
       #{$block}_page_w-list &
         width: 10%
 
+      #{$block}_page_r-list &
+        width: 11%
+
     // $Common table cell eighth column
     &:nth-child(8)
 
@@ -1018,6 +1046,9 @@ $block: ".stock-table"
         flex-shrink: 0
         width: 110px
 
+      #{$block}_page_r-list &
+        width: 9%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 5%
@@ -1063,6 +1094,11 @@ $block: ".stock-table"
         width: 110px
 
       #{$block}_page_meals-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 110px
+
+      #{$block}_page_r-list &
         flex-grow: 0
         flex-shrink: 0
         width: 110px
