@@ -42,6 +42,53 @@ $block: ".stock-table"
       padding-right: 0
 
 
+  // $Common table service switch
+  &__service-switch
+    position: absolute
+    left: 100%
+    top: 10px
+    z-index: 60
+    display: block
+    width: 20px
+    height: 40px
+    background-color: #37547c
+    background-image: url(../icons/icon-dots-three-vertical-white.svg)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
+    cursor: pointer
+
+    @media screen and (max-width: 1280px)
+      width: 15px
+
+    // $Common table service content MOD: state active
+    &_state_active
+      background-image: url(../icons/icon-close-white.svg)
+      background-size: 10px 10px
+
+      @media screen and (max-width: 1280px)
+        background-size: 8px 8px
+
+
+  // $Common table service content
+  &__service-content
+    position: absolute
+    top: 1px
+    left: 0
+    right: 0
+    z-index: 60
+    display: none
+    width: 100%
+    min-height: 60px
+    padding: 10px 15px 10px
+    background-color: #fff
+    border-bottom: 1px solid #d6d6d6
+
+    // $Common table service content MOD: state active
+    &_state_active
+      display: block
+
+
   // $Common table group
   &__group
     position: relative
@@ -68,6 +115,132 @@ $block: ".stock-table"
       #{$block}_page_oh-reports &
         margin-bottom: 30px
 
+    // $Common table group MOD: role header
+    &_role_header
+
+      @media screen and (min-width: 961px)
+        #{$block}_page_sl-list &,
+        #{$block}_page_sl-form &,
+        #{$block}_page_sr &,
+        #{$block}_page_st &,
+        #{$block}_page_po-form &,
+        #{$block}_page_pfo-form &,
+        #{$block}_page_pfo-details &,
+        #{$block}_page_si-form &,
+        #{$block}_page_oh-list &
+          position: sticky
+          z-index: 50
+
+        #{$block}_page_pfo-details &
+          top: 60px
+
+      @media screen and (min-width: 1121px)
+        #{$block}_page_p-list &,
+        #{$block}_page_oh-details &,
+        #{$block}_page_od-details &,
+        #{$block}_page_w-list &,
+        #{$block}_page_r-list &
+          position: sticky
+          z-index: 50
+
+      @media screen and (min-width: 961px) and (max-width: 1120px)
+        #{$block}_page_sl-list &,
+        #{$block}_page_sl-form &,
+        #{$block}_page_sr &,
+        #{$block}_page_st &,
+        #{$block}_page_po-form &,
+        #{$block}_page_pfo-form &,
+        #{$block}_page_si-form &,
+        #{$block}_page_oh-list &
+          top: 127px
+
+      @media screen and (min-width: 1121px) and (max-width: 1360px)
+        #{$block}_page_p-list &
+          top: 145px
+
+        #{$block}_page_sl-form &,
+        #{$block}_page_sr &,
+        #{$block}_page_st &,
+        #{$block}_page_oh-list &,
+        #{$block}_page_w-list &,
+        #{$block}_page_r-list &
+          top: 146px
+
+        #{$block}_page_sl-list &
+          top: 137px
+
+        #{$block}_page_po-form &,
+        #{$block}_page_pfo-form &,
+        #{$block}_page_si-form &,
+        #{$block}_page_oh-details &,
+        #{$block}_page_od-details &
+          top: 138px
+
+      @media screen and (min-width: 1361px)
+        #{$block}_page_p-list &
+          top: 85px
+
+        #{$block}_page_sl-form &,
+        #{$block}_page_sr &,
+        #{$block}_page_st &,
+        #{$block}_page_oh-list &,
+        #{$block}_page_w-list &,
+        #{$block}_page_r-list &
+          top: 86px
+
+        #{$block}_page_sl-list &
+          top: 77px
+
+        #{$block}_page_po-form &,
+        #{$block}_page_pfo-form &,
+        #{$block}_page_si-form &,
+        #{$block}_page_oh-details &,
+        #{$block}_page_od-details &
+          top: 78px
+
+        #{$block}_page_pfo-details &
+          top: 0
+
+    // Set default position in Edge
+    @supports (-ms-ime-align: auto)
+      #{$block}_page_p-list &,
+      #{$block}_page_sl-list &,
+      #{$block}_page_sl-form &,
+      #{$block}_page_sr &,
+      #{$block}_page_st &,
+      #{$block}_page_po-form &,
+      #{$block}_page_pfo-form &,
+      #{$block}_page_pfo-details &,
+      #{$block}_page_si-form &,
+      #{$block}_page_oh-list &,
+      #{$block}_page_oh-details &,
+      #{$block}_page_od-details &,
+      #{$block}_page_w-list &,
+      #{$block}_page_r-list &
+        position: relative
+        z-index: auto
+        top: auto
+
+    // Set default position in IE11
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+      #{$block}_page_p-list &,
+      #{$block}_page_sl-list &,
+      #{$block}_page_sl-form &,
+      #{$block}_page_sr &,
+      #{$block}_page_st &,
+      #{$block}_page_po-form &,
+      #{$block}_page_pfo-form &,
+      #{$block}_page_pfo-details &,
+      #{$block}_page_si-form &,
+      #{$block}_page_oh-list &,
+      #{$block}_page_oh-details &,
+      #{$block}_page_od-details &,
+      #{$block}_page_w-list &,
+      #{$block}_page_r-list &
+        position: relative
+        z-index: auto
+        top: auto
+
     // $Common table group MOD: state success
     &_state_success,
     &_state_success:nth-child(odd),
@@ -85,6 +258,12 @@ $block: ".stock-table"
     &_state_warning:nth-child(odd),
     &_state_warning:nth-child(even)
       background-color: #ffe3bd
+
+    // $Common table group MOD: state caution
+    &_state_caution,
+    &_state_caution:nth-child(odd),
+    &_state_caution:nth-child(even)
+      background-color: #feffe1
 
     // $Common table group MOD: state picked
     &_state_picked,
@@ -189,6 +368,11 @@ $block: ".stock-table"
         #{$block}_page_pfo-details &
           top: 60px
 
+        #{$block}__group_role_header &
+          position: static
+          z-index: auto
+          top: auto
+
       @media screen and (min-width: 1121px)
         #{$block}_page_p-list &,
         #{$block}_page_oh-details &,
@@ -197,6 +381,11 @@ $block: ".stock-table"
         #{$block}_page_r-list &
           position: sticky
           z-index: 50
+
+        #{$block}__group_role_header &
+          position: static
+          z-index: auto
+          top: auto
 
       @media screen and (min-width: 961px) and (max-width: 1120px)
         #{$block}_page_sl-list &,
@@ -208,6 +397,11 @@ $block: ".stock-table"
         #{$block}_page_si-form &,
         #{$block}_page_oh-list &
           top: 127px
+
+        #{$block}__group_role_header &
+          position: static
+          z-index: auto
+          top: auto
 
       @media screen and (min-width: 1121px) and (max-width: 1360px)
         #{$block}_page_p-list &
@@ -230,6 +424,11 @@ $block: ".stock-table"
         #{$block}_page_oh-details &,
         #{$block}_page_od-details &
           top: 138px
+
+        #{$block}__group_role_header &
+          position: static
+          z-index: auto
+          top: auto
 
       @media screen and (min-width: 1361px)
         #{$block}_page_p-list &
@@ -255,6 +454,11 @@ $block: ".stock-table"
 
         #{$block}_page_pfo-details &
           top: 0
+
+        #{$block}__group_role_header &
+          position: static
+          z-index: auto
+          top: auto
 
     // Set default position in Edge
     @supports (-ms-ime-align: auto)
@@ -325,6 +529,12 @@ $block: ".stock-table"
     &_state_warning:nth-child(odd),
     &_state_warning:nth-child(even)
       background-color: #ffe3bd
+
+    // $Common table row MOD: state caution
+    &_state_caution,
+    &_state_caution:nth-child(odd),
+    &_state_caution:nth-child(even)
+      background-color: #feffe1
 
     // $Common table row MOD: state picked
     &_state_picked,
@@ -1264,6 +1474,10 @@ $block: ".stock-table"
     // $Common table cell MOD: state warning
     &_state_warning
       background-color: #ffcd8a
+
+    // $Common table cell MOD: state caution
+    &_state_caution
+      background-color: #fcffae
 
 
   // $Common table info
