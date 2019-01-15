@@ -76,6 +76,10 @@ $block: ".stock-form-textarea"
         outline: none
         box-shadow: 0 0 1px 0 map-get($app-palette, accent-blue)
 
+      &:disabled
+        background-color: #f0f0f0
+        cursor: not-allowed
+
       &::-webkit-input-placeholder
         color: #c5c5c5 !important
         opacity:  1 !important
@@ -124,6 +128,30 @@ $block: ".stock-form-textarea"
 
         #{$block}_state_error &
           color: #ed7f7e !important
+
+
+  // $Common form textarea box
+  &__box
+    width: 100%
+    min-height: 80px
+    padding: 14px 10px
+    font-family: $f-sans
+    font-size: 12px
+    color: #757a85
+    font-weight: 400
+    line-height: 1.5
+    background-color: #FFF
+    border: 1px solid #d3d3d3
+    border-radius: 0
+    cursor: default
+
+    #{$block}_highlight_gray-light &
+      background-color: #f0f0f0
+      border-color: #d3d3d3
+
+    #{$block}_state_error &
+      border-color: map-get($app-palette, accent-red)
+      color: map-get($app-palette, accent-red)
 
 
   // $Common form textarea note
