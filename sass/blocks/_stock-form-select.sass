@@ -46,6 +46,9 @@ $block: ".stock-form-select"
   // $Common form select MOD: size extra small
   &_size_xs
 
+  // $Common form select MOD: size extra small
+  &_size_xxs
+
   // $Common form select MOD: size narrow
   &_size_narrow
 
@@ -63,6 +66,7 @@ $block: ".stock-form-select"
 
     #{$block}_size_s &,
     #{$block}_size_xs &,
+    #{$block}_size_xxs &,
     #{$block}_size_narrow &
       margin-bottom: 8px
       font-size: 12px
@@ -235,6 +239,10 @@ $block: ".stock-form-select"
         min-width: 100px
         padding: 8px 40px 8px 8px
 
+      #{$block}_size_xxs &
+        min-width: 75px
+        padding: 8px 40px 8px 8px
+
       #{$block}_size_narrow &
         padding: 8px 40px 8px 8px
 
@@ -268,7 +276,8 @@ $block: ".stock-form-select"
           border-bottom: 1px solid #d3d3d3
 
         #{$block}_size_s &,
-        #{$block}_size_xs &
+        #{$block}_size_xs &,
+        #{$block}_size_xxs &
           min-width: 0
 
       &:focus
@@ -321,10 +330,20 @@ $block: ".stock-form-select"
 
     #{$block}_size_s &,
     #{$block}_size_xs &,
+    #{$block}_size_xxs &,
     #{$block}_size_narrow &,
     #{$block}_context_table &
       height: 38px
       padding: 8px 10px
+
+    #{$block}_size_s &
+      width: 125px
+
+    #{$block}_size_xs &
+      width: 100px
+
+    #{$block}_size_xxs &
+      width: 75px
 
     #{$block}_adjust_manager &
       height: 60px
