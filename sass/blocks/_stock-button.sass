@@ -311,6 +311,9 @@ $block: ".stock-button"
   &_icon_checked
     +button-with-icon-left($icon-url: '../icons/icon-checked-white.svg')
 
+  &_icon_checked#{&}_border_accent-blue
+    +button-with-icon-left($icon-url: '../icons/icon-checked-primary.svg', $icon-hover-url: '../icons/icon-checked-white.svg')
+
   // $Common button MOD: icon close
   &_icon_close
     +button-with-icon-left($icon-url: '../icons/icon-close-white.svg', $background-size: 10px)
