@@ -170,6 +170,7 @@ $block: ".stock-page-content"
     &_role_sym-p-o-form-edit
     &_role_sym-cu-form
     &_role_sym-s-form
+    &_role_sym-pr-list
 
     // Order processing
     &_role_orp-ed-list
@@ -260,6 +261,8 @@ $block: ".stock-page-content"
   &__filter
 
     @media screen and (min-width: 961px)
+      #{$block}__data_role_sym-pr-list &,
+      #{$block}__tab[data-tab="product-requests"] #{$block}__data[data-view="list-view"] &,
       #{$block}__data_role_stm-sl-list &,
       #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="list-view"] &,
       #{$block}__data_role_stm-sl-form &,
@@ -298,6 +301,8 @@ $block: ".stock-page-content"
         background-color: #fff
 
     @media screen and (min-width: 961px) and (max-width: 1360px)
+      #{$block}__data_role_sym-pr-list &,
+      #{$block}__tab[data-tab="product-requests"] #{$block}__data[data-view="list-view"] &,
       #{$block}__data_role_stm-sl-list &,
       #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="list-view"] &,
       #{$block}__data_role_stm-sl-form &,
@@ -334,6 +339,8 @@ $block: ".stock-page-content"
     @media screen and (min-width: 1361px)
       #{$block}__data_role_sym-p-list &,
       #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_sym-pr-list &,
+      #{$block}__tab[data-tab="product-requests"] #{$block}__data[data-view="list-view"] &,
       #{$block}__data_role_stm-sl-list &,
       #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="list-view"] &,
       #{$block}__data_role_stm-sl-form &,
@@ -366,6 +373,8 @@ $block: ".stock-page-content"
     @supports (-ms-ime-align: auto)
       #{$block}__data_role_sym-p-list &,
       #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_sym-pr-list &,
+      #{$block}__tab[data-tab="product-requests"] #{$block}__data[data-view="list-view"] &,
       #{$block}__data_role_stm-sl-list &,
       #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="list-view"] &,
       #{$block}__data_role_stm-sl-form &,
@@ -400,6 +409,8 @@ $block: ".stock-page-content"
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
       #{$block}__data_role_sym-p-list &,
       #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__data_role_sym-pr-list &,
+      #{$block}__tab[data-tab="product-requests"] #{$block}__data[data-view="list-view"] &,
       #{$block}__data_role_stm-sl-list &,
       #{$block}__tab[data-tab="stock-levels"] #{$block}__data[data-view="list-view"] &,
       #{$block}__data_role_stm-sl-form &,
