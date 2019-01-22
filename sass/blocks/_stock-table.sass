@@ -41,6 +41,9 @@ $block: ".stock-table"
       padding-left: 0
       padding-right: 0
 
+  &_page_oh-reports-details
+    border: 1px solid #eee
+
 
   // $Common table service switch
   &__service-switch
@@ -96,14 +99,7 @@ $block: ".stock-table"
     background-color: #FFF
 
     #{$block}_page_oh-reports &
-      padding-top: 10px
-      padding-bottom: 10px
       box-shadow: 0 2px 8px 0 rgba(0,0,0,.2)
-
-    @media screen and (max-width: 640px)
-      #{$block}_page_oh-reports &
-        padding-top: 0
-        padding-bottom: 0
 
     &:nth-child(odd)
       background-color: #f8f8f8
@@ -285,13 +281,22 @@ $block: ".stock-table"
     position: relative
     border-bottom: 1px solid #eee
 
+    #{$block}_page_oh-reports &
+      border-bottom: none
+
     // $Common table dropdown MOD: state hidden
     &_state_hidden
       display: none
 
     // $Common table dropdown MOD: space regular
     &_space_regular
-      padding: 20px 45px 45px
+      padding: 20px 45px 55px
+
+      #{$block}_page_oh-reports &
+        background-color: #f6f6f6
+
+      @media screen and (max-width: 960px)
+        padding: 20px 10px 45px
 
 
   // $Common table dropdown close
@@ -317,6 +322,10 @@ $block: ".stock-table"
     cursor: pointer
     transform: rotate(180deg)
 
+    @media screen and (max-width: 960px)
+      left: 50%
+      margin-left: -10px
+
     &:hover
       opacity: .8
 
@@ -335,9 +344,6 @@ $block: ".stock-table"
     border-bottom: 1px solid #eee
     background-color: #FFF
 
-    #{$block}_page_oh-reports &
-      border-bottom: none
-
     @media screen and (max-width: 640px)
       #{$block}_page_oh-reports &
         flex-direction: column
@@ -345,20 +351,22 @@ $block: ".stock-table"
     &:nth-child(odd)
       background-color: #f8f8f8
 
-      #{$block}_page_oh-reports &
+      #{$block}_page_oh-reports &,
+      #{$block}_page_oh-reports-details &
         background-color: #fff
 
     &:not(:last-child)
       border-bottom: 1px solid #eee
-
-      #{$block}_page_oh-reports &
-        border-bottom: none
 
     // $Common table row MOD: role header
     &_role_header
       &:nth-child(odd)
         background-color: #f6f6f6
         border-bottom: 1px solid #d6d6d6
+
+        #{$block}_page_oh-reports-details &
+          background-color: #fff
+          border-bottom: 1px solid #eee
 
       @media screen and (min-width: 961px)
         #{$block}_page_sl-list &,
@@ -577,8 +585,18 @@ $block: ".stock-table"
       justify-content: center
 
     #{$block}_page_oh-reports &
-      font-size: 18px
       justify-content: center
+      min-height: 70px
+      padding-top: 20px
+      padding-bottom: 20px
+      font-size: 18px
+
+    #{$block}_page_oh-reports-details &
+      justify-content: flex-start
+      min-height: 50px
+      padding-top: 10px
+      padding-bottom: 10px
+      font-size: 12px
 
     #{$block}_page_st &,
     #{$block}_page_po-list &,
@@ -636,11 +654,23 @@ $block: ".stock-table"
 
     @media screen and (max-width: 960px)
       #{$block}_page_oh-reports &
+        min-height: 50px
+        padding-top: 10px
+        padding-bottom: 10px
         font-size: 16px
+
+      #{$block}_page_oh-reports-details &
+        min-height: 50px
+        padding-top: 10px
+        padding-bottom: 10px
+        font-size: 12px
 
     @media screen and (max-width: 640px)
       #{$block}_page_oh-reports &
         font-size: 16px
+
+      #{$block}_page_oh-reports-details &
+        font-size: 12px
 
     &:not(:last-child)
       border-right: 1px solid #ebebeb
@@ -732,6 +762,9 @@ $block: ".stock-table"
         width: 14%
 
       #{$block}_page_pr-list &
+        width: 20%
+
+      #{$block}_page_oh-reports-details &
         width: 20%
 
       @media screen and (max-width: 640px)
@@ -828,6 +861,9 @@ $block: ".stock-table"
       #{$block}_page_pr-list &
         width: 20%
 
+      #{$block}_page_oh-reports-details &
+        width: 14%
+
       @media screen and (max-width: 640px)
         #{$block}_page_oh-reports &
           width: 100%
@@ -911,6 +947,9 @@ $block: ".stock-table"
 
       #{$block}_page_pr-list &
         width: 10%
+
+      #{$block}_page_oh-reports-details &
+        width: 11%
 
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
@@ -1006,6 +1045,9 @@ $block: ".stock-table"
       #{$block}_page_pr-list &
         width: 15%
 
+      #{$block}_page_oh-reports-details &
+        width: 11%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 7%
@@ -1086,6 +1128,9 @@ $block: ".stock-table"
 
       #{$block}_page_pr-list &
         width: 15%
+
+      #{$block}_page_oh-reports-details &
+        width: 11%
 
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
@@ -1169,6 +1214,9 @@ $block: ".stock-table"
         justify-content: center
         width: 240px
 
+      #{$block}_page_oh-reports-details &
+        width: 11%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 6%
@@ -1244,6 +1292,9 @@ $block: ".stock-table"
       #{$block}_page_r-list &
         width: 11%
 
+      #{$block}_page_oh-reports-details &
+        width: 11%
+
     // $Common table cell eighth column
     &:nth-child(8)
 
@@ -1295,6 +1346,9 @@ $block: ".stock-table"
 
       #{$block}_page_r-list &
         width: 9%
+
+      #{$block}_page_oh-reports-details &
+        width: 11%
 
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
@@ -1479,6 +1533,9 @@ $block: ".stock-table"
       color: #1c2841
       text-transform: uppercase
 
+      #{$block}_page_oh-reports-details &
+        font-size: 11px
+
       @media screen and (max-width: 1600px)
         #{$block}_page_oh-details &
           font-size: 10px
@@ -1486,6 +1543,9 @@ $block: ".stock-table"
     // $Common table cell MOD: role header
     &_role_header
       border-top: 1px solid #eee
+
+      #{$block}_page_oh-reports-details &
+        border-top: none
 
     // $Common table cell MOD: role footer
     &_role_footer
@@ -1544,6 +1604,9 @@ $block: ".stock-table"
     #{$block}_page_oh-reports #{$block}__cell &
       text-align: center
 
+    #{$block}_page_oh-reports-details #{$block}__cell &
+      text-align: left
+
   // $Common table text
   &__text
     font-family: $f-sans
@@ -1552,11 +1615,33 @@ $block: ".stock-table"
     color: #6c6c6c
 
     #{$block}_page_oh-reports &
+      display: inline-block
       font-size: 18px
 
-    @media screen and (max-width: 960px)
+    #{$block}_page_oh-reports-details &
+      display: block
+      font-size: 12px
+
+    @media screen and (max-width: 1120px)
       #{$block}_page_oh-reports &
+        display: block
+
+    @media screen and (max-width: 640px)
+      #{$block}_page_oh-reports &
+        display: inline-block
         font-size: 16px
+
+      #{$block}_page_oh-reports-details &
+        display: block
+        font-size: 12px
+
+    @media screen and (max-width: 400px)
+      #{$block}_page_oh-reports &
+        display: block
+
+      #{$block}_page_oh-reports-details &
+        display: block
+        font-size: 12px
 
     @media screen and (max-width: 640px)
       #{$block}_page_oh-reports #{$block}__cell:nth-child(1) &
@@ -1589,6 +1674,29 @@ $block: ".stock-table"
 
   // $Common table action
   &__action
+    #{$block}_page_oh-reports &
+      margin-top: 5px
+      margin-bottom: 5px
+      margin-left: 20px
+
+    @media screen and (max-width: 1120px)
+      #{$block}_page_oh-reports &
+        margin-top: 10px
+        margin-bottom: 0
+        margin-left: 0
+
+    @media screen and (max-width: 640px)
+      #{$block}_page_oh-reports &
+        margin-top: 5px
+        margin-bottom: 5px
+        margin-left: 20px
+
+    @media screen and (max-width: 400px)
+      #{$block}_page_oh-reports &
+        margin-top: 10px
+        margin-bottom: 0
+        margin-left: 0
+
     &:not(:last-child)
       #{$block}_page_pr-list &
         margin-right: 15px
