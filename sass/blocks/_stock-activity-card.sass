@@ -16,11 +16,13 @@ $block: ".stock-activity-card"
 
 #{$block}
   position: relative
+  background-color: #FFF
+
+  &:not(:last-child)
+    margin-bottom: 20px
 
   // $Activity card MOD: role board
   &_role_board
-    margin-bottom: 20px
-    background-color: #FFF
     box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
 
   // $Activity card MOD: visible on mobiles
