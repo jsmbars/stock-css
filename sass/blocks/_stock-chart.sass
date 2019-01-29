@@ -24,6 +24,9 @@ $block: ".stock-chart"
   // $Chart role meal
   &_role_meal
 
+  // $Chart role trends
+  &_role_trends
+
 
   // $Chart header
   &__header
@@ -32,7 +35,7 @@ $block: ".stock-chart"
     justify-content: flex-start
     align-items: center
     width: 100%
-    padding-bottom: 25px
+    padding-bottom: 20px
 
 
   // $Chart legend
@@ -87,12 +90,19 @@ $block: ".stock-chart"
     width: 100%
     margin: 0 auto
 
+    #{$block}__scroll_type_horizontal &
+      margin-bottom: 10px
+
     #{$block}_role_prep &
       max-width: 400px
 
     #{$block}_role_meal &
       max-width: 400px
       padding-top: 120px
+
+    #{$block}_role_trends &
+      margin-left: 0
+      margin-right: 0
 
 
   // $Chart placeholder image
