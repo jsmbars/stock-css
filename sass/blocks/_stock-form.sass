@@ -337,7 +337,8 @@ $block: ".stock-form"
     // $Common form actions MOD: email orders form
     &_adjust_c-u-forms,
     &_adjust_em-form,
-    &_adjust_m-form
+    &_adjust_m-form,
+    &_adjust_t-form
       justify-content: flex-end
 
       @media screen and (max-width: 960px)
@@ -356,12 +357,18 @@ $block: ".stock-form"
     flex-grow: 0
     flex-shrink: 1
 
-    #{$block}__actions_adjust_c-u-forms &,
-    #{$block}__actions_adjust_em-form &,
-    #{$block}__actions_adjust_m-form &,
-    #{$block}__actions_adjust_ohd-form &
-      @media screen and (max-width: 960px)
+    @media screen and (max-width: 960px)
+      #{$block}__actions_adjust_c-u-forms &,
+      #{$block}__actions_adjust_em-form &,
+      #{$block}__actions_adjust_m-form &,
+      #{$block}__actions_adjust_ohd-form &,
+      #{$block}__actions_adjust_t-form &
         flex-grow: 1
+
+    @media screen and (max-width: 400px)
+      #{$block}__actions_adjust_t-form &
+        padding-left: 10px
+        padding-right: 10px
 
     &:not(#{&}_single):not(:first-child)
       #{$block}__actions_adjust_c-u-forms &,
@@ -370,7 +377,8 @@ $block: ".stock-form"
       #{$block}__actions_adjust_cgpc-form &,
       #{$block}__actions_adjust_pr-form &,
       #{$block}__actions_adjust_me-form &,
-      #{$block}__actions_adjust_ohd-form &
+      #{$block}__actions_adjust_ohd-form &,
+      #{$block}__actions_adjust_t-form &
         margin-left: 20px
 
     // $Common form action MOD: state hidden

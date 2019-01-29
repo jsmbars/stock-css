@@ -23,6 +23,8 @@ $block: ".stock-form-checkbox"
   // $Common form checkbox MOD: role control reversed
   &_role_control-reverse
 
+  &_context_label-group
+
 
   // $Common form checkbox label
   &__label
@@ -73,8 +75,16 @@ $block: ".stock-form-checkbox"
     line-height: 20px
     padding-left: 30px
 
+    #{$block}_context_label-group &
+      top: -4px
+      min-height: 14px
+      padding-left: 24px
+      font-size: 12px
+      line-height: 14px
+
     &:before
       content: ""
+      box-sizing: border-box
       position: absolute
       top: 0
       left: 0
@@ -89,12 +99,16 @@ $block: ".stock-form-checkbox"
         background-color: #7ba5fa
         border-color: #7ba5fa
 
+      #{$block}_context_label-group &
+        width: 14px
+        height: 14px
+
     &:after
       content: ""
       box-sizing: border-box
       position: absolute
-      top: 5px
-      left: 5px
+      top: 4px
+      left: 4px
       display: block
       width: 12px
       height: 12px
@@ -107,6 +121,13 @@ $block: ".stock-form-checkbox"
       #{$block}__input:checked ~ &
         visibility: visible
 
+      #{$block}_context_label-group &
+        top: 0
+        left: 0
+        width: 14px
+        height: 14px
+        background-size: 10px 10px
+
     // $Common form checkbox input label text MOD: marked
     &_marked
       font-weight: 600
@@ -116,10 +137,17 @@ $block: ".stock-form-checkbox"
     &_type_no-label
       padding-left: 20px
 
+      #{$block}_context_label-group &
+        padding-left: 14px
+
     // $Common form checkbox input label text MOD: type reversed label text
     &_type_reversed
       padding-left: 0
       padding-right: 30px
+
+      #{$block}_context_label-group &
+        padding-left: 0
+        padding-right: 24px
 
       &:before
         left: auto
@@ -134,17 +162,34 @@ $block: ".stock-form-checkbox"
       padding-left: 0
       padding-right: 20px
 
+      #{$block}_context_label-group &
+        padding-left: 0
+        padding-right: 14px
+
     // $Common form checkbox input label text MOD: small text
     &_size_small
       font-size: 12px
+
+    // $Common form checkbox input label text MOD: no-wrap text
+    &_adjust_no-wrap
+      white-space: nowrap
 
     // $Common form checkbox input label text MOD: adjust field
     &_adjust_field
       min-height: 45px
 
+      #{$block}_context_label-group &
+        min-height: 45px
+
     // $Common form checkbox input label text MOD: adjust fluid field
     &_adjust_field-fluid
       min-height: 45px
 
+      #{$block}_context_label-group &
+        min-height: 45px
+
       @media screen and (max-width: 960px)
         min-height: 20px
+
+        #{$block}_context_label-group &
+          min-height: 25px

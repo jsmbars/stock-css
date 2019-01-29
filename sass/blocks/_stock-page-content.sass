@@ -119,6 +119,55 @@ $block: ".stock-page-content"
         box-shadow: none
 
 
+  &__board-header
+    display: flex
+    flex-direction:
+    justify-content: space-between
+    align-items: center
+    padding: 15px
+    border-bottom: 1px solid #eee
+
+    @media screen and (max-width: 1120px)
+      padding: 15px 10px
+
+    @media screen and (max-width: 960px)
+      flex-direction: column
+
+
+  &__board-toggle
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 20px
+    height: 20px
+    font-size: 0
+    line-height: 0
+    color: transparent
+    outline: none
+    background-color: #454d5e
+    background-image: url(../icons/icon-arrow-down-white.svg)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 9px 9px
+    border-radius: 50%
+    transition: all .4s
+    cursor: pointer
+    transform: rotate(180deg)
+
+    &_state_closed
+      transform: rotate(0)
+
+
+  &__board-content
+    padding: 15px
+
+    @media screen and (max-width: 1120px)
+      padding: 15px 10px
+
+    &_state_closed
+      display: none
+
+
   &__split
     display: flex
     flex-direction: row
@@ -441,6 +490,11 @@ $block: ".stock-page-content"
         z-index: auto
         top: auto
 
+    // $Page content filter area MOD: board style
+    &_state_board
+      margin-bottom: 20px
+      background-color: #FFF
+      box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
 
     // $Page content filter area MOD: board style on mobiles
     &_state_board-mobile
@@ -735,3 +789,48 @@ $block: ".stock-page-content"
       @media screen and (min-width: 961px)
         display: none
 
+
+  // $Page content text placeholder
+  &__text-placeholder
+    max-width: 100%
+    font-family: $f-sans
+    font-size: 16px
+    line-height: 1
+    color: #757a85
+
+    #{$block}__table &
+      padding: 15px
+
+    #{$block}__table_space-desktop &
+      padding: 15px 15px 0
+
+    #{$block}__form &
+      padding: 15px 15px 0
+
+    #{$block}__form_space_empty &
+      padding: 15px
+
+    #{$block}__form_space-desktop &
+      padding: 15px 15px 0
+
+    #{$block}__form_space_regular &
+      padding: 0
+
+    @media screen and (max-width: 1120px)
+      #{$block}__table &
+        padding: 15px 10px
+
+      #{$block}__form &
+        padding: 15px 10px 0
+
+    @media screen and (max-width: 960px)
+      #{$block}__form &
+        padding: 15px 10px 0
+
+      #{$block}__table_space-desktop &,
+      #{$block}__form_space-empty &,
+      #{$block}__form_space-desktop &
+        padding: 15px 10px
+
+      #{$block}__form_space_regular &
+        padding: 0

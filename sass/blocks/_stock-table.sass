@@ -672,6 +672,11 @@ $block: ".stock-table"
       #{$block}_page_oh-reports-details &
         font-size: 12px
 
+    @media screen and (max-width: 400px)
+      #{$block}_page_t-list &
+        padding-left: 5px
+        padding-right: 5px
+
     &:not(:last-child)
       border-right: 1px solid #ebebeb
 
@@ -766,6 +771,9 @@ $block: ".stock-table"
 
       #{$block}_page_oh-reports-details &
         width: 20%
+
+      #{$block}_page_t-list &
+        width: 35%
 
       @media screen and (max-width: 640px)
         #{$block}_page_oh-reports &
@@ -864,6 +872,9 @@ $block: ".stock-table"
       #{$block}_page_oh-reports-details &
         width: 14%
 
+      #{$block}_page_t-list &
+        width: 25%
+
       @media screen and (max-width: 640px)
         #{$block}_page_oh-reports &
           width: 100%
@@ -950,6 +961,9 @@ $block: ".stock-table"
 
       #{$block}_page_oh-reports-details &
         width: 11%
+
+      #{$block}_page_t-list &
+        width: 20%
 
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
@@ -1047,6 +1061,9 @@ $block: ".stock-table"
 
       #{$block}_page_oh-reports-details &
         width: 11%
+
+      #{$block}_page_t-list &
+        width: 20%
 
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
@@ -1544,7 +1561,8 @@ $block: ".stock-table"
     &_role_header
       border-top: 1px solid #eee
 
-      #{$block}_page_oh-reports-details &
+      #{$block}_page_oh-reports-details &,
+      #{$block}_page_t-list &
         border-top: none
 
     // $Common table cell MOD: role footer
@@ -1655,6 +1673,17 @@ $block: ".stock-table"
     // $Common table text MOD: color green
     &_color_accent-green
       color: map-get($app-palette, accent-green)
+
+    // $Common table text MOD: adjust no wrap
+    &_adjust_no-wrap
+      white-space: nowrap
+
+    // $Common table text MOD: adjust wrap
+    &_adjust_wrap
+      overflow-wrap: break-word
+      word-wrap: break-word
+      word-break: break-word
+      hyphens: auto
 
 
   // $Common table text marked
