@@ -789,3 +789,48 @@ $block: ".stock-page-content"
       @media screen and (min-width: 961px)
         display: none
 
+
+  // $Page content text placeholder
+  &__text-placeholder
+    max-width: 100%
+    font-family: $f-sans
+    font-size: 16px
+    line-height: 1
+    color: #757a85
+
+    #{$block}__table &
+      padding: 15px
+
+    #{$block}__table_space-desktop &
+      padding: 15px 15px 0
+
+    #{$block}__form &
+      padding: 15px 15px 0
+
+    #{$block}__form_space_empty &
+      padding: 15px
+
+    #{$block}__form_space-desktop &
+      padding: 15px 15px 0
+
+    #{$block}__form_space_regular &
+      padding: 0
+
+    @media screen and (max-width: 1120px)
+      #{$block}__table &
+        padding: 15px 10px
+
+      #{$block}__form &
+        padding: 15px 10px 0
+
+    @media screen and (max-width: 960px)
+      #{$block}__form &
+        padding: 15px 10px 0
+
+      #{$block}__table_space-desktop &,
+      #{$block}__form_space-empty &,
+      #{$block}__form_space-desktop &
+        padding: 15px 10px
+
+      #{$block}__form_space_regular &
+        padding: 0
