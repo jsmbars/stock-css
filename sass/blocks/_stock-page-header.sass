@@ -201,12 +201,13 @@ $block: ".stock-page-header"
       background-position: center center
       vertical-align: middle
 
-    // $Page navigation link MOD: role user
+    // $Page header meta control text MOD: role user
     &_role_user
       &:before
         background-image: url(../icons/icon-user-white.svg)
 
 
+  // $Page header meta details
   &__meta-details
     position: absolute
     top: 100%
@@ -239,11 +240,12 @@ $block: ".stock-page-header"
         border-right-width: 10px
         border-left-width: 10px
 
-    // $Page navigation submenu MOD: state visible
+    // $Page header meta details MOD: state visible
     &_state_visible
       display: block
 
 
+  // $Page header meta details action
   &__meta-details-action
     position: relative
     display: block
@@ -286,12 +288,11 @@ $block: ".stock-page-header"
       @media screen and (max-width: 1360px)
         left: 20px
 
-    &:hover,
-    &_state_active
+    &:hover
       background-color: #f3f3f3
       border-left-color: #FFF
 
-    // $Page navigation submenu link MOD: role logout
+    // $Page header meta details action MOD: role logout
     &_role_logout
       &:before
         background-image: url(../icons/icon-power-dark-gray.svg)
@@ -304,6 +305,8 @@ $block: ".stock-page-header"
     height: 80px
     padding: 15px 10px
 
+
+  // $Page header select area CONTEXT: top meta area
   &__meta ~ &__select
     height: 75px
     padding: 10px 10px 15px
@@ -317,6 +320,8 @@ $block: ".stock-page-header"
     background-color: #64a5fd
     overflow: auto
 
+
+  // $Page header navigation area CONTEXT: top meta area
   &__meta ~ &__nav
     height: calc(100% - 150px)
 
