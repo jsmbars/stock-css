@@ -101,12 +101,215 @@ $block: ".stock-page-header"
     background-color: #243C5C
 
 
+  // $Page header meta area
+  &__meta
+    position: relative
+    display: block
+    width: 100%
+    height: 75px
+    padding: 15px 10px 10px
+
+
+  // $Page header meta control
+  &__meta-control
+    position: relative
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+    height: 50px
+    padding: 10px 70px 10px 20px
+    background-color: transparent
+    border: 2px solid #37547c
+    border-radius: 35px
+    transition: all .5s
+    cursor: pointer
+
+    @media screen and (max-width: 1600px)
+      padding-right: 60px
+      padding-left: 15px
+
+    @media screen and (max-width: 1360px)
+      padding-right: 70px
+      padding-left: 20px
+
+    &:after
+      content: ""
+      position: absolute
+      right: 25px
+      top: 50%
+      z-index: 10
+      display: block
+      width: 15px
+      height: 15px
+      margin-top: -7px
+      background-image: url(../icons/icon-arrow-down-white.svg)
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center center
+      transform-origin: center center
+      transition: all .5s
+
+      @media screen and (max-width: 1600px)
+        right: 20px
+
+      @media screen and (max-width: 1360px)
+        right: 25px
+
+    &:hover,
+    &_state_active
+      background-color: rgba(0,0,0,.1)
+
+    &_state_active
+      &:after
+        transform: rotate(180deg)
+
+
+  // $Page header meta control text
+  &__meta-control-text
+    position: relative
+    display: block
+    padding-left: 30px
+    width: 100%
+    color: #fff
+    font-size: 14px
+    line-height: 1
+    font-family: $f-sans
+    text-decoration: none
+    outline: none
+    background-color: transparent
+    transition: all .5s
+
+    @media screen and (max-width: 1600px)
+      padding-left: 25px
+
+    @media screen and (max-width: 1360px)
+      padding-left: 30px
+
+    &:before
+      content: ""
+      position: absolute
+      top: 50%
+      left: 0
+      display: block
+      width: 16px
+      height: 16px
+      margin-top: -8px
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center center
+      vertical-align: middle
+
+    // $Page header meta control text MOD: role user
+    &_role_user
+      &:before
+        background-image: url(../icons/icon-user-white.svg)
+
+
+  // $Page header meta details
+  &__meta-details
+    position: absolute
+    top: 100%
+    right: 10px
+    left: 10px
+    z-index: 20
+    display: none
+    padding: 10px 0
+    background-color: #FFF
+    border-radius: 10px
+
+    &:before
+      content: ""
+      position: absolute
+      bottom: 100%
+      right: 25px
+      border-bottom: 10px solid #fff
+      border-right: 10px solid transparent
+      border-left: 10px solid transparent
+
+      @media screen and (max-width: 1600px)
+        right: 20px
+        border-bottom-width: 8px
+        border-right-width: 8px
+        border-left-width: 8px
+
+      @media screen and (max-width: 1360px)
+        right: 25px
+        border-bottom-width: 10px
+        border-right-width: 10px
+        border-left-width: 10px
+
+    // $Page header meta details MOD: state visible
+    &_state_visible
+      display: block
+
+
+  // $Page header meta details action
+  &__meta-details-action
+    position: relative
+    display: block
+    width: 100%
+    padding: 15px 20px 15px 50px
+    color: #4c4c4c
+    font-size: 14px
+    line-height: 1
+    font-family: $f-sans
+    text-decoration: none
+    outline: none
+    background-color: transparent
+    transition: all .5s
+    cursor: pointer
+
+    @media screen and (max-width: 1600px)
+      padding-left: 40px
+      padding-right: 10px
+
+    @media screen and (max-width: 1360px)
+      padding-left: 55px
+      padding-right: 20px
+
+    &:before
+      content: ""
+      position: absolute
+      left: 20px
+      top: 50%
+      display: block
+      width: 16px
+      height: 16px
+      margin-top: -8px
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center center
+
+      @media screen and (max-width: 1600px)
+        left: 15px
+
+      @media screen and (max-width: 1360px)
+        left: 20px
+
+    &:hover
+      background-color: #f3f3f3
+      border-left-color: #FFF
+
+    // $Page header meta details action MOD: role logout
+    &_role_logout
+      &:before
+        background-image: url(../icons/icon-power-dark-gray.svg)
+
+
   // $Page header select area
   &__select
     display: block
     width: 100%
     height: 80px
     padding: 15px 10px
+
+
+  // $Page header select area CONTEXT: top meta area
+  &__meta ~ &__select
+    height: 75px
+    padding: 10px 10px 15px
 
 
   // $Page header navigation area
@@ -116,4 +319,9 @@ $block: ".stock-page-header"
     height: calc(100% - 80px)
     background-color: #64a5fd
     overflow: auto
+
+
+  // $Page header navigation area CONTEXT: top meta area
+  &__meta ~ &__nav
+    height: calc(100% - 150px)
 
