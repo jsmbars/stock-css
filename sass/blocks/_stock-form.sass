@@ -128,20 +128,43 @@ $block: ".stock-form"
 
   // $Common form board header
   &__board-header
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
       padding: 15px 25px
       background-color: #f0f0f0
 
       @media screen and (max-width: 960px)
         padding: 15px 10px
 
+      @media screen and (max-width: 480px)
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+
 
   // $Common form board title
   &__board-title
+    max-width: 100%
     font-size: 18px
     line-height: 1
     font-family: $f-sans
     font-weight: 400
     color: #1c2841
+
+    &:not(:only-child)
+      @media screen and (max-width: 480px)
+        align-self: center
+
+
+  &__board-actions
+    @media screen and (max-width: 480px)
+      margin-top: 15px
+      align-self: center
+
+
+  &__board-action
 
 
   // $Common form board content
@@ -337,8 +360,7 @@ $block: ".stock-form"
     // $Common form actions MOD: email orders form
     &_adjust_c-u-forms,
     &_adjust_em-form,
-    &_adjust_m-form,
-    &_adjust_t-form
+    &_adjust_m-form
       justify-content: flex-end
 
       @media screen and (max-width: 960px)
@@ -347,7 +369,8 @@ $block: ".stock-form"
     &_adjust_cgpc-form,
     &_adjust_pr-form,
     &_adjust_me-form,
-    &_adjust_ohd-form
+    &_adjust_ohd-form,
+    &_adjust_t-form
       justify-content: center
 
 
@@ -396,10 +419,3 @@ $block: ".stock-form"
 
     @media screen and (max-width: 960px)
       text-align: center
-
-
-
-
-
-
-
