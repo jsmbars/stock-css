@@ -405,3 +405,18 @@ $block: ".stock-form-field"
     &:hover
       opacity: 1
 
+    // Context modifier to fix date input size on the extra small screens
+    @at-root
+      .stock-form-interval .stock-form-field input[type="date"]
+        @media screen and (max-width: 360px)
+          max-width: 100%
+          padding-left: 5px
+          padding-right: 5px
+
+        @supports (-ms-ime-align: auto)
+          @media screen and (max-width: 480px)
+            max-width: calc(50vw - 45px)
+
+          @media screen and (max-width: 360px)
+            max-width: calc(50vw - 40px)
+
