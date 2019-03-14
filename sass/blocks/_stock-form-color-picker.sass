@@ -26,6 +26,14 @@ $block: ".stock-form-color-picker"
     justify-content: flex-start
     align-items: center
 
+  // $Common form color picker MOD: role control mobile
+  &_role_control-mobile
+    @media screen and (max-width: 960px)
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      align-items: center
+
   // $Common form color-picker MOD: role control reversed
   &_role_control-reverse
     display: flex
@@ -100,6 +108,14 @@ $block: ".stock-form-color-picker"
       #{$block}_role_control-reverse &
         width: 90px
 
+      #{$block}_role_control-mobile &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 90px
+        margin-bottom: 0
+        margin-right: 10px
+        font-weight: 400
+
     // $Common form color-picker label MOD: adjust control fluid
     &_adjust_control-fluid
 
@@ -157,6 +173,11 @@ $block: ".stock-form-color-picker"
     #{$block}_role_control-reverse#{$block}_context_table &
       flex-grow: 0
       flex-shrink: 0
+
+    @media screen and (max-width: 960px)
+      #{$block}_role_control-mobile &
+        flex-grow: 1
+        flex-shrink: 1
 
     & input
       display: block
@@ -272,8 +293,9 @@ $block: ".stock-form-color-picker"
   @at-root
     .stock-form-color-picker-sp-replacer
       &.sp-replacer
+        min-width: 60px
         height: 50px
-        padding: 14px 10px
+        padding: 14px 8px 14px 10px
         border: solid 1px #d3d3d3
         background: #fff
         color: #757a85
@@ -284,7 +306,7 @@ $block: ".stock-form-color-picker"
         #{$block}_size_narrow &,
         #{$block}_context_table &
           height: 35px
-          padding: 8px 10px
+          padding: 8px 8px 8px 10px
 
       &.sp-replacer:hover,
       &.sp-replacer.sp-active
