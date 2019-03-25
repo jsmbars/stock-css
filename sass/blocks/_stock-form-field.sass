@@ -26,6 +26,14 @@ $block: ".stock-form-field"
     justify-content: flex-start
     align-items: center
 
+  // $Common form field MOD: role control mobile
+  &_role_control-mobile
+    @media screen and (max-width: 960px)
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      align-items: center
+
   // $Common form field MOD: role control reversed
   &_role_control-reverse
     display: flex
@@ -104,6 +112,14 @@ $block: ".stock-form-field"
       #{$block}_role_control-reverse &
         width: 90px
 
+      #{$block}_role_control-mobile &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 90px
+        margin-bottom: 0
+        margin-right: 10px
+        font-weight: 400
+
     // $Common form field label MOD: adjust control fluid
     &_adjust_control-fluid
 
@@ -161,6 +177,11 @@ $block: ".stock-form-field"
     #{$block}_role_control-reverse#{$block}_context_table &
       flex-grow: 0
       flex-shrink: 0
+
+    @media screen and (max-width: 960px)
+      #{$block}_role_control-mobile &
+        flex-grow: 1
+        flex-shrink: 1
 
     &:after
       #{$block}_role_date &
@@ -256,6 +277,11 @@ $block: ".stock-form-field"
       #{$block}_adjust_manager#{$block}_state_error &
         border: 1px solid #ed7f7e
         outline: 1px solid #ed7f7e
+
+      @media screen and (min-width: 961px)
+        #{$block}_adjust_manager#{$block}_space_extra &
+          padding-top: 30px
+          padding-bottom: 30px
 
       @media screen and (max-width: 960px)
         #{$block}_size_s &,
@@ -370,6 +396,12 @@ $block: ".stock-form-field"
     #{$block}_state_error &
       border-color: map-get($app-palette, accent-red)
       color: map-get($app-palette, accent-red)
+
+    @media screen and (min-width: 961px)
+      #{$block}_adjust_manager#{$block}_space_extra &
+        height: 80px
+        padding-top: 30px
+        padding-bottom: 30px
 
 
   // $Common form field note

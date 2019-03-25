@@ -26,6 +26,14 @@ $block: ".stock-form-select"
     justify-content: flex-start
     align-items: center
 
+  // $Common form select MOD: role control mobile
+  &_role_control-mobile
+    @media screen and (max-width: 960px)
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      align-items: center
+
   // $Common form select MOD: role control reverse
   &_role_control-reverse
     display: flex
@@ -105,6 +113,14 @@ $block: ".stock-form-select"
         width: 90px
         white-space: normal
 
+      #{$block}_role_control-mobile &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 90px
+        margin-bottom: 0
+        margin-right: 10px
+        font-weight: 400
+
     // $Common form select label MOD: adjust control fluid
     &_adjust_control-fluid
 
@@ -162,6 +178,11 @@ $block: ".stock-form-select"
     #{$block}_role_control-reverse#{$block}_context_table &
       flex-grow: 0
       flex-shrink: 0
+
+    @media screen and (max-width: 960px)
+      #{$block}_role_control-mobile &
+        flex-grow: 1
+        flex-shrink: 1
 
     &:before
       #{$block}_role_search &
@@ -233,18 +254,18 @@ $block: ".stock-form-select"
 
       #{$block}_size_s &
         min-width: 125px
-        padding: 8px 40px 8px 8px
+        padding: 7px 40px 7px 8px
 
       #{$block}_size_xs &
         min-width: 100px
-        padding: 8px 40px 8px 8px
+        padding: 7px 40px 7px 8px
 
       #{$block}_size_xxs &
         min-width: 75px
-        padding: 8px 40px 8px 8px
+        padding: 7px 40px 7px 8px
 
       #{$block}_size_narrow &
-        padding: 8px 40px 8px 8px
+        padding: 7px 40px 7px 8px
 
       #{$block}_role_search &
         padding-left: 30px
@@ -269,6 +290,11 @@ $block: ".stock-form-select"
       #{$block}_adjust_manager#{$block}_state_error &
         border: 1px solid #ed7f7e
         outline: 1px solid #ed7f7e
+
+      @media screen and (min-width: 961px)
+        #{$block}_adjust_manager#{$block}_space_extra &
+          padding-top: 30px
+          padding-bottom: 30px
 
       @media screen and (max-width: 960px)
         #{$block}_adjust_manager &
@@ -357,6 +383,12 @@ $block: ".stock-form-select"
     #{$block}_state_error &
       border-color: map-get($app-palette, accent-red)
       color: map-get($app-palette, accent-red)
+
+    @media screen and (min-width: 961px)
+      #{$block}_adjust_manager#{$block}_space_extra &
+        height: 80px
+        padding-top: 30px
+        padding-bottom: 30px
 
 
   // $Common form select note
