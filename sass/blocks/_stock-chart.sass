@@ -19,7 +19,9 @@ $block: ".stock-chart"
   width: 100%
 
   // $Chart role prep
-  &_role_prep
+  // $Chart role batch
+  &_role_prep,
+  &_role_batch
 
   // $Chart role meal
   &_role_meal
@@ -93,7 +95,8 @@ $block: ".stock-chart"
     #{$block}__scroll_type_horizontal &
       margin-bottom: 10px
 
-    #{$block}_role_prep &
+    #{$block}_role_prep &,
+    #{$block}_role_batch &
       max-width: 400px
 
     #{$block}_role_meal &
