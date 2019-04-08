@@ -187,6 +187,7 @@ $block: ".stock-page-content"
 
     &_role_cocktail-gp-calculator,
     &_role_prep,
+    &_role_batch,
     &_role_meals
       margin-bottom: 20px
       background-color: #FFF
@@ -624,10 +625,10 @@ $block: ".stock-page-content"
 
     // $Page content meta area MOD: adkust for details view top area
     &_adjust_details-view-bottom
-      padding: 25px 15px 40px
+      padding: 25px 15px 25px
 
       @media screen and (max-width: 1120px)
-        padding: 25px 10px 40px
+        padding: 25px 10px 25px
 
 
   // $Page content meta area group
@@ -769,8 +770,11 @@ $block: ".stock-page-content"
     font-weight: 600
     color: #787878
 
-    &:not(:only-child)
+    &:not(:last-child)
+      margin-right: 40px
+
       @media screen and (max-width: 960px)
+        margin-right: 0
         margin-bottom: 15px
 
     // $Page content text MOD: extra text
