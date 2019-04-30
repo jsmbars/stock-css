@@ -238,52 +238,52 @@ $block: ".stock-button"
   // Color modifiers
   &_role_primary
   &_color_accent-blue
-    $background-color: map-get($app-palette, accent-blue)
+    $background-color: #64a5fd
     +button-common($background-color: $background-color)
     +button-common-hover-behavior($background-color: $background-color)
 
   &_role_accent,
   &_color_accent-pink
-    $background-color: map-get($app-palette, accent-pink)
+    $background-color: #fd649a
     +button-common($background-color: $background-color)
     +button-common-hover-behavior($background-color: $background-color)
 
   &_color_accent-red
-    $background-color: map-get($app-palette, accent-red)
+    $background-color: #fd6464
     +button-common($background-color: $background-color)
     +button-common-hover-behavior($background-color: $background-color)
 
   &_color_accent-green
-    $background-color: map-get($app-palette, accent-green)
+    $background-color: #2ed573
     +button-common($background-color: $background-color)
     +button-common-hover-behavior($background-color: $background-color)
 
 
   // Border modifiers
   &_border_accent-blue
-    +button-bordered($color: map-get($app-palette, accent-blue), $bg-color: transparent, $border-color: map-get($app-palette, accent-blue))
-    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-blue), $border-color: map-get($app-palette, accent-blue))
-    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, accent-blue), $border-color: map-get($app-palette, accent-blue))
+    +button-bordered($color: #64a5fd, $bg-color: transparent, $border-color: #64a5fd)
+    +button-bordered-hover-behavior($color: #fff, $bg-color: #64a5fd, $border-color: #64a5fd)
+    +button-bordered-active-behavior($color: #fff, $bg-color: #64a5fd, $border-color: #64a5fd)
 
   &_border_accent-green
-    +button-bordered($color: map-get($app-palette, accent-green), $bg-color: transparent, $border-color: map-get($app-palette, accent-green))
-    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-green), $border-color: map-get($app-palette, accent-green))
-    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, accent-green), $border-color: map-get($app-palette, accent-green))
+    +button-bordered($color: #2ed573, $bg-color: transparent, $border-color: #2ed573)
+    +button-bordered-hover-behavior($color: #fff, $bg-color: #2ed573, $border-color: #2ed573)
+    +button-bordered-active-behavior($color: #fff, $bg-color: #2ed573, $border-color: #2ed573)
 
   &_border_accent-red
-    +button-bordered($color: map-get($app-palette, accent-red), $bg-color: transparent, $border-color: map-get($app-palette, accent-red))
-    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-red), $border-color: map-get($app-palette, accent-red))
-    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, accent-red), $border-color: map-get($app-palette, accent-red))
+    +button-bordered($color: #fd6464, $bg-color: transparent, $border-color: #fd6464)
+    +button-bordered-hover-behavior($color: #fff, $bg-color: #fd6464, $border-color: #fd6464)
+    +button-bordered-active-behavior($color: #fff, $bg-color: #fd6464, $border-color: #fd6464)
 
   &_border_accent-pink
-    +button-bordered($color: map-get($app-palette, accent-pink), $bg-color: transparent, $border-color: map-get($app-palette, accent-pink))
-    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-pink), $border-color: map-get($app-palette, accent-pink))
-    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, accent-pink), $border-color: map-get($app-palette, accent-pink))
+    +button-bordered($color: #fd649a, $bg-color: transparent, $border-color: #fd649a)
+    +button-bordered-hover-behavior($color: #fff, $bg-color: #fd649a, $border-color: #fd649a)
+    +button-bordered-active-behavior($color: #fff, $bg-color: #fd649a, $border-color: #fd649a)
 
   &_border_gray-light
-    +button-bordered($color: map-get($app-palette, gray-light), $bg-color: transparent, $border-color: map-get($app-palette, gray-light))
-    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, gray-light), $border-color: map-get($app-palette, gray-light))
-    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, gray-light), $border-color: map-get($app-palette, gray-light))
+    +button-bordered($color: #9c9c9c, $bg-color: transparent, $border-color: #9c9c9c)
+    +button-bordered-hover-behavior($color: #fff, $bg-color: #9c9c9c, $border-color: #9c9c9c)
+    +button-bordered-active-behavior($color: #fff, $bg-color: #9c9c9c, $border-color: #9c9c9c)
 
 
 
@@ -324,9 +324,9 @@ $block: ".stock-button"
   // Specific buttons
 
   &_role_create-email
-    +button-bordered($color: map-get($app-palette, accent-blue), $bg-color: #fff, $border-color: map-get($app-palette, accent-blue))
-    +button-bordered-hover-behavior($color: #fff, $bg-color: map-get($app-palette, accent-blue), $border-color: map-get($app-palette, accent-blue))
-    +button-bordered-active-behavior($color: #fff, $bg-color: map-get($app-palette, accent-blue), $border-color: map-get($app-palette, accent-blue))
+    +button-bordered($color: #64a5fd, $bg-color: #fff, $border-color: #64a5fd)
+    +button-bordered-hover-behavior($color: #fff, $bg-color: #64a5fd, $border-color: #64a5fd)
+    +button-bordered-active-behavior($color: #fff, $bg-color: #64a5fd, $border-color: #64a5fd)
 
   &_role_filter-label
     text-transform: none
