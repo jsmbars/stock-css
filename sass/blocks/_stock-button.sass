@@ -43,56 +43,48 @@
     background-color: $bg-color
 
 
-=button-with-icon-left($icon-url: '', $background-size: 12px, $icon-hover-url: null, $icon-active-url: null)
+=button-with-icon-left($icon: '', $icon-color: inherit, $icon-hover-color: inherit, $icon-active-color: inherit, $icon-size: 12px)
 
   &:before
-    content: ""
+    content: '#{$icon}'
     display: inline-block
-    width: $background-size
-    height: $background-size
     margin-right: 8px
-    line-height: 100%
+    font-family: icons
+    font-size: $icon-size
+    line-height: 1
+    font-weight: 400
+    color: $icon-color
     vertical-align: middle
-    background-image: url($icon-url)
-    background-repeat: no-repeat
-    background-position: center center
-    background-size: contain
 
-  @if $icon-hover-url != null
-    &:hover
-      &:before
-        background-image: url($icon-hover-url)
+  &:hover
+    &:before
+      color: $icon-hover-color
 
-  @if $icon-active-url != null
-    &#{$block}_state_active
-      &:before
-        background-image: url($icon-active-url)
+  &#{$block}_state_active
+    &:before
+      color: $icon-active-color
 
 
-=button-with-icon-right($icon-url: '', $background-size: 12px, $icon-hover-url: null, $icon-active-url: null)
+=button-with-icon-right($icon: '', $icon-color: inherit, $icon-hover-color: inherit, $icon-active-color: inherit, $icon-size: 12px)
 
   &:after
-    content: ""
+    content: '#{$icon}'
     display: inline-block
-    width: $background-size
-    height: $background-size
     margin-left: 10px
-    line-height: 100%
+    font-family: icons
+    font-size: $icon-size
+    line-height: 1
+    font-weight: 400
+    color: $icon-color
     vertical-align: middle
-    background-image: url($icon-url)
-    background-repeat: no-repeat
-    background-position: center center
-    background-size: auto $background-size
 
-  @if $icon-hover-url != null
-    &:hover
-      &:after
-        background-image: url($icon-hover-url)
+  &:hover
+    &:after
+      color: $icon-hover-color
 
-  @if $icon-active-url != null
-    &#{$block}_state_active
-      &:after
-        background-image: url($icon-active-url)
+  &#{$block}_state_active
+    &:after
+      color: $icon-active-color
 
 
 //////////////////////////////////////// Block styles
@@ -298,50 +290,35 @@ $block: ".stock-button"
   // Icon modifiers
   // $Common button MOD: icon plus
   &_icon_plus
-    +button-with-icon-left($icon-url: '../icons/icon-plus-white.svg')
-
-  &_icon_plus#{&}_border_accent-blue
-    +button-with-icon-left($icon-url: '../icons/icon-plus-primary.svg', $icon-hover-url: '../icons/icon-plus-white.svg')
+    +button-with-icon-left($icon: '\e910')
 
   // $Common button MOD: icon plus reversed
   &_icon_plus-reversed
-    +button-with-icon-right($icon-url: '../icons/icon-plus-white.svg')
+    +button-with-icon-right($icon: '\e910')
 
   // $Common button MOD: icon checked
   &_icon_checked
-    +button-with-icon-left($icon-url: '../icons/icon-checked-white.svg')
-
-  &_icon_checked#{&}_border_accent-blue
-    +button-with-icon-left($icon-url: '../icons/icon-checked-primary.svg', $icon-hover-url: '../icons/icon-checked-white.svg')
+    +button-with-icon-left($icon: '\e903')
 
   // $Common button MOD: icon close
   &_icon_close
-    +button-with-icon-left($icon-url: '../icons/icon-close-white.svg', $background-size: 10px)
-
-  &_icon_close#{&}_border_accent-red
-    +button-with-icon-left($icon-url: '../icons/icon-close-red.svg', $background-size: 10px, $icon-hover-url: '../icons/icon-close-white.svg')
+    +button-with-icon-left($icon: '\e904', $icon-size: 10px)
 
   // $Common button MOD: icon pencil
   &_icon_pencil
-    +button-with-icon-left($icon-url: '../icons/icon-pencil-white.svg')
-
-  &_icon_pencil#{&}_border_accent-green
-    +button-with-icon-left($icon-url: '../icons/icon-pencil-green.svg', $icon-hover-url: '../icons/icon-pencil-white.svg')
+    +button-with-icon-left($icon: '\e90f')
 
   // $Common button MOD: icon gift
   &_icon_gift-reversed
-    +button-with-icon-right($icon-url: '../icons/icon-gift-white.svg', $background-size: 13px)
-
-  &_icon_gift-reversed#{&}_border_accent-blue
-    +button-with-icon-right($icon-url: '../icons/icon-gift-primary.svg', $icon-hover-url: '../icons/icon-gift-white.svg', $background-size: 13px)
+    +button-with-icon-right($icon: '\e90a', $icon-size: 13px)
 
   // $Common button MOD: icon chart
   &_icon_chart
-    +button-with-icon-left($icon-url: '../icons/icon-chart-white.svg')
+    +button-with-icon-left($icon: '\e902')
 
   // $Common button MOD: icon table
   &_icon_table
-    +button-with-icon-left($icon-url: '../icons/icon-table-white.svg')
+    +button-with-icon-left($icon: '\e913')
 
 
   // Specific buttons
@@ -358,7 +335,7 @@ $block: ".stock-button"
     font-size: 14px
     +button-bordered($color: #757a85, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #fff)
     +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff)
-    +button-with-icon-left($icon-url: '../icons/icon-options-dark-gray.svg', $background-size: 17px, $icon-hover-url: '../icons/icon-options-dark-gray.svg')
+    +button-with-icon-left($icon: '\e90e', $icon-hover-color: #64a5fd, $icon-active-color: #64a5fd, $icon-size: 17px)
 
   &_role_filter
     text-transform: none
@@ -366,7 +343,7 @@ $block: ".stock-button"
     +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #d3d3d3)
     +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
-    +button-with-icon-right($icon-url: '../icons/icon-options-light-gray.svg', $background-size: 15px, $icon-hover-url: '../icons/icon-options-primary.svg', $icon-active-url: '../icons/icon-options-primary.svg')
+    +button-with-icon-right($icon: '\e90e', $icon-hover-color: #64a5fd, $icon-active-color: #64a5fd, $icon-size: 15px)
 
     @media screen and (max-width: 960px)
       padding-right: 13px
@@ -379,7 +356,7 @@ $block: ".stock-button"
     +button-bordered($color: #757a85, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #fff)
     +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff)
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff)
-    +button-with-icon-left($icon-url: '../icons/icon-options-dark-gray.svg', $background-size: 17px, $icon-hover-url: '../icons/icon-options-dark-gray.svg', $icon-active-url: '../icons/icon-options-primary.svg')
+    +button-with-icon-left($icon: '\e90e', $icon-hover-color: #64a5fd, $icon-active-color: #64a5fd, $icon-size: 17px)
 
   &_role_filter-fluid
     text-transform: none
@@ -387,7 +364,7 @@ $block: ".stock-button"
     +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #d3d3d3)
     +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
-    +button-with-icon-right($icon-url: '../icons/icon-options-light-gray.svg', $background-size: 15px, $icon-hover-url: '../icons/icon-options-primary.svg', $icon-active-url: '../icons/icon-options-primary.svg')
+    +button-with-icon-right($icon: '\e90e', $icon-hover-color: #64a5fd, $icon-active-color: #64a5fd, $icon-size: 15px)
 
     @media screen and (max-width: 960px)
       padding-right: 13px
@@ -410,7 +387,7 @@ $block: ".stock-button"
     font-size: 14px
     +button-bordered($color: #757a85, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #fff)
     +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff)
-    +button-with-icon-left($icon-url: '../icons/icon-checked-dark-gray.svg', $background-size: 17px, $icon-hover-url: '../icons/icon-checked-dark-gray.svg')
+    +button-with-icon-left($icon: '\e903', $icon-hover-color: #64a5fd, $icon-active-color: #64a5fd, $icon-size: 17px)
 
   &_role_apply
     text-transform: none
@@ -418,7 +395,7 @@ $block: ".stock-button"
     +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #d3d3d3)
     +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
-    +button-with-icon-right($icon-url: '../icons/icon-checked-light-gray.svg', $background-size: 15px, $icon-hover-url: '../icons/icon-checked-primary.svg', $icon-active-url: '../icons/icon-checked-primary.svg')
+    +button-with-icon-right($icon: '\e903', $icon-hover-color: #64a5fd, $icon-active-color: #64a5fd, $icon-size: 15px)
 
   &_role_apply-narrow
     text-transform: none
@@ -426,7 +403,7 @@ $block: ".stock-button"
     +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #d3d3d3)
     +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
-    +button-with-icon-right($icon-url: '../icons/icon-checked-light-gray.svg', $background-size: 14px, $icon-hover-url: '../icons/icon-checked-primary.svg', $icon-active-url: '../icons/icon-checked-primary.svg')
+    +button-with-icon-right($icon: '\e903', $icon-hover-color: #64a5fd, $icon-active-color: #64a5fd, $icon-size: 14px)
 
     @media screen and (max-width: 960px)
       padding-right: 10px
@@ -439,7 +416,7 @@ $block: ".stock-button"
     +button-bordered($color: #757a85, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #fff)
     +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #fff)
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
-    +button-with-icon-left($icon-url: '../icons/icon-checked-dark-gray.svg', $background-size: 17px, $icon-hover-url: '../icons/icon-checked-dark-gray.svg', $icon-active-url: '../icons/icon-checked-primary.svg')
+    +button-with-icon-left($icon: '\e903', $icon-hover-color: #64a5fd, $icon-active-color: #64a5fd, $icon-size: 17px)
 
   &_role_apply-fluid
     text-transform: none
@@ -447,7 +424,7 @@ $block: ".stock-button"
     +button-bordered($color: #d3d3d3, $bg-color: #fff, $border-width: 1px, $border-radius: 0, $border-color: #d3d3d3)
     +button-bordered-hover-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
     +button-bordered-active-behavior($color: #757a85, $bg-color: #fff, $border-color: #d3d3d3)
-    +button-with-icon-right($icon-url: '../icons/icon-checked-light-gray.svg', $background-size: 15px, $icon-hover-url: '../icons/icon-checked-primary.svg', $icon-active-url: '../icons/icon-checked-primary.svg')
+    +button-with-icon-right($icon: '\e903', $icon-hover-color: #64a5fd, $icon-active-color: #64a5fd, $icon-size: 15px)
 
     @media screen and (max-width: 960px)
       padding-right: 13px

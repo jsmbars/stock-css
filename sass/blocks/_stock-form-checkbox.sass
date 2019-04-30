@@ -104,29 +104,29 @@ $block: ".stock-form-checkbox"
         height: 14px
 
     &:after
-      content: ""
+      content: '\e903'
       box-sizing: border-box
       position: absolute
-      top: 4px
-      left: 4px
+      top: 0
+      left: 0
       display: block
-      width: 12px
-      height: 12px
-      background-image: url('../icons/icon-checked-white.svg')
-      background-repeat: no-repeat
-      background-position: center center
-      background-size: contain
+      width: 20px
+      height: 20px
+      font-family: icons
+      font-size: 12px
+      line-height: 20px
+      color: #fff
+      text-align: center
       visibility: hidden
 
       #{$block}__input:checked ~ &
         visibility: visible
 
       #{$block}_context_label-group &
-        top: 0
-        left: 0
         width: 14px
         height: 14px
-        background-size: 10px 10px
+        font-size: 9px
+        line-height: 14px
 
     // $Common form checkbox input label text MOD: marked
     &_marked
@@ -155,7 +155,7 @@ $block: ".stock-form-checkbox"
 
       &:after
         left: auto
-        right: 5px
+        right: 0
 
     // $Common form checkbox input label text MOD: type reversed label text MOD: no-label text
     &_type_reversed#{&}_type_no-label

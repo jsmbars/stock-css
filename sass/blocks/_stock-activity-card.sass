@@ -175,14 +175,18 @@ $block: ".stock-activity-card"
     color: transparent
     outline: none
     background-color: #454d5e
-    background-image: url(../icons/icon-arrow-down-white.svg)
-    background-repeat: no-repeat
-    background-position: center center
-    background-size: 9px 9px
     border-radius: 50%
     transition: all .4s
     cursor: pointer
-    transform: rotate(180deg)
+
+    &:before
+      content: '\e921'
+      display: block
+      font-family: icons
+      font-size: 15px
+      line-height: 18px
+      color: #fff
+      text-align: center
 
     &:hover
       opacity: .8
@@ -500,17 +504,13 @@ $block: ".stock-activity-card"
     // $Activity card text MOD: role date
     &_role_date
       &:before
-        content: ""
+        content: '\e916'
         display: inline-block
-        width: 16px
-        height: 16px
         margin-right: 10px
-        margin-top: -3px
-        background-image: url('../icons/icon-calendar-dark.svg')
-        background-repeat: no-repeat
-        background-position: center center
-        background-size: contain
-        vertical-align: middle
+        font-family: icons
+        font-size: 16px
+        line-height: 1
+        color: inherit
 
 
   // $Activity card text line
@@ -598,17 +598,13 @@ $block: ".stock-activity-card"
     transform: translateY(50%)
 
     &:before
-      content: ""
+      content: '\e916'
       display: inline-block
-      width: 16px
-      height: 16px
       margin-right: 10px
-      margin-top: -3px
-      background-image: url('../icons/icon-calendar-white.svg')
-      background-repeat: no-repeat
-      background-position: center center
-      background-size: contain
-      vertical-align: middle
+      font-family: icons
+      font-size: 16px
+      line-height: 1
+      color: inherit
 
 
   // $Activity card icon
@@ -622,17 +618,32 @@ $block: ".stock-activity-card"
     background-position: center center
     background-size: contain
 
+    &_role_food,
+    &_role_drink,
+    &_role_gift
+      &:before
+        content: ''
+        display: block
+        font-family: icons
+        font-size: 30px
+        line-height: 30px
+        color: #757a85
+        text-align: center
+
     // $Activity card icon MOD: role food
     &_role_food
-      background-image: url("../icons/icon-food-medium-gray.svg")
+      &:before
+        content: '\e908'
 
     // $Activity card icon MOD: role drink
     &_role_drink
-      background-image: url("../icons/icon-drink-medium-gray.svg")
+      &:before
+        content: '\e906'
 
     // $Common table icon MOD: role gift
     &_role_gift
-      background-image: url("../icons/icon-gift-medium-gray.svg")
+      &:before
+        content: '\e90a'
 
     // $Activity card icon MOD: role user
     &_role_user

@@ -185,33 +185,29 @@ $block: ".stock-form-field"
 
     &:after
       #{$block}_role_date &
-        content: ""
+        content: '\e916'
         position: absolute
         top: 50%
         margin-top: -9px
         right: 10px
         display: block
-        width: 18px
-        height: 18px
-        background-image: url('../icons/icon-calendar-light-gray.svg')
-        background-repeat: no-repeat
-        background-position: center center
-        background-size: contain
+        font-family: icons
+        font-size: 18px
+        line-height: 1
+        color: #bbbbbb
 
     &:before
       #{$block}_role_search &
-        content: ""
+        content: '\e90b'
         position: absolute
         top: 50%
         margin-top: -7px
         left: 10px
         display: block
-        width: 14px
-        height: 14px
-        background-image: url('../icons/icon-lens-light-gray.svg')
-        background-repeat: no-repeat
-        background-position: center center
-        background-size: contain
+        font-family: icons
+        font-size: 14px
+        line-height: 1
+        color: #bbbbbb
 
     // $Common form field input MOD: adjust clear action
     &_adjust_clear
@@ -419,20 +415,27 @@ $block: ".stock-form-field"
     top: 0
     right: 0
     bottom: 0
-    display: block
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
     width: 22px
     font-size: 0
     line-height: 0
     color: transparent
     background-color: transparent
     border: none
-    background-image: url('../icons/icon-close-dark-gray.svg')
-    background-repeat: no-repeat
-    background-position: 8px center
-    background-size: 10px 10px
     cursor: pointer
     opacity: .5
     transition: all .3s
+
+    &:before
+      content: '\e904'
+      display: block
+      font-family: icons
+      font-size: 10px
+      line-height: 10px
+      color: #1c2841
 
     &:hover
       opacity: 1

@@ -58,17 +58,16 @@ $block: ".stock-page-nav"
       padding-right: 30px
 
     &:before
-      content: ""
+      content: ''
       position: absolute
       left: 30px
       top: 50%
       display: block
-      width: 20px
-      height: 20px
       margin-top: -10px
-      background-repeat: no-repeat
-      background-size: contain
-      background-position: center center
+      font-family: icons
+      font-size: 20px
+      line-height: 20px
+      color: #fff
 
       @media screen and (max-width: 1600px)
         left: 20px
@@ -84,33 +83,34 @@ $block: ".stock-page-nav"
     // $Page navigation link MOD: role project management
     &_role_pm
       &:before
-        background-image: url(../icons/icon-box-white.svg)
+        content: '\e917'
 
     // $Page navigation link MOD: role order processing
     &_role_op
       &:before
-        background-image: url(../icons/icon-shopping-cart-white.svg)
+        content: '\e912'
 
     // $Page navigation link MOD: role stock management
     &_role_sm
       &:before
-        background-image: url(../icons/icon-box-docs-white.svg)
+        content: '\e918'
 
     // $Page navigation link MOD: role order management
     &_role_om
       &:before
-        background-image: url(../icons/icon-left-right-arrows-white.png)
+        content: '\e924'
+        font-size: 15px
 
     // $Page navigation link MOD: role reporting
     &_role_r
       &:before
-        background-image: url(../icons/icon-text-paper-white.svg)
+        content: '\e914'
 
     // $Page navigation link MOD: role user
     &_role_user
       &:before
-        background-image: url(../icons/icon-user-white.svg)
-        background-size: 16px 16px
+        content: '\e915'
+        font-size: 15px
 
     // $Page navigation link MOD: role submenu
     &_role_sub
@@ -123,18 +123,16 @@ $block: ".stock-page-nav"
         padding-right: 45px
 
       &:after
-        content: ""
+        content: '\e920'
         position: absolute
         right: 30px
         top: 20px
         z-index: 10
         display: block
-        width: 15px
-        height: 15px
-        background-image: url(../icons/icon-arrow-down-white.svg)
-        background-repeat: no-repeat
-        background-size: contain
-        background-position: center center
+        font-family: icons
+        font-size: 25px
+        line-height: 15px
+        color: #fff
         transform-origin: center center
         transition: all .5s
 
@@ -215,17 +213,16 @@ $block: ".stock-page-nav"
       padding-right: 20px
 
     &:before
-      content: ""
+      content: ''
       position: absolute
       left: 25px
       top: 50%
       display: block
-      width: 16px
-      height: 16px
       margin-top: -8px
-      background-repeat: no-repeat
-      background-size: contain
-      background-position: center center
+      font-family: icons
+      font-size: 16px
+      line-height: 1
+      color: #4c4c4c
 
       @media screen and (max-width: 1600px)
         left: 15px
@@ -241,6 +238,6 @@ $block: ".stock-page-nav"
     // $Page navigation submenu link MOD: role logout
     &_role_logout
       &:before
-        background-image: url(../icons/icon-power-dark-gray.svg)
+        content: '\e911'
 
 

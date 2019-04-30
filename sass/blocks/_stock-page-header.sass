@@ -64,11 +64,7 @@ $block: ".stock-page-header"
     left: 10px
     display: none
     width: 30px
-    height: 25px
-    background-image: url(../icons/icon-menu-white.svg)
-    background-position: center center
-    background-repeat: no-repeat
-    background-size: contain
+    text-decoration: none
     font-size: 0
     opacity: 1
     transition: all .5s
@@ -77,13 +73,21 @@ $block: ".stock-page-header"
       display: block
       top: 15px
 
+    &:before
+      content: '\e90d'
+      display: block
+      font-family: icons
+      font-size: 25px
+      line-height: 25px
+      color: #fff
+      text-align: center
+
+      #{$block}_state_opened &
+        content: '\e90c'
+        font-size: 20px
+
     &:hover
      opacity: 0.8
-
-    // $Page header menu icon CONTEXT: $Page header MOD: state opened
-    #{$block}_state_opened &
-      background-image: url(../icons/icon-menu-close-white.svg)
-      background-size: 20px 20px
 
 
   // $Page header logo area
@@ -135,19 +139,17 @@ $block: ".stock-page-header"
       padding-left: 20px
 
     &:after
-      content: ""
+      content: '\e920'
       position: absolute
       right: 25px
       top: 50%
       z-index: 10
       display: block
-      width: 15px
-      height: 15px
       margin-top: -7px
-      background-image: url(../icons/icon-arrow-down-white.svg)
-      background-repeat: no-repeat
-      background-size: contain
-      background-position: center center
+      font-family: icons
+      font-size: 25px
+      line-height: 15px
+      color: #fff
       transform-origin: center center
       transition: all .5s
 
@@ -188,23 +190,22 @@ $block: ".stock-page-header"
       padding-left: 30px
 
     &:before
-      content: ""
+      content: ''
       position: absolute
       top: 50%
       left: 0
       display: block
-      width: 16px
-      height: 16px
       margin-top: -8px
-      background-repeat: no-repeat
-      background-size: contain
-      background-position: center center
+      font-family: icons
+      font-size: 16px
+      line-height: 1
+      color: #fff
       vertical-align: middle
 
     // $Page header meta control text MOD: role user
     &_role_user
       &:before
-        background-image: url(../icons/icon-user-white.svg)
+        content: '\e915'
 
 
   // $Page header meta details
@@ -270,17 +271,16 @@ $block: ".stock-page-header"
       padding-right: 20px
 
     &:before
-      content: ""
+      content: ''
       position: absolute
       left: 20px
       top: 50%
       display: block
-      width: 16px
-      height: 16px
       margin-top: -8px
-      background-repeat: no-repeat
-      background-size: contain
-      background-position: center center
+      font-family: icons
+      font-size: 16px
+      line-height: 1
+      color: #4c4c4c
 
       @media screen and (max-width: 1600px)
         left: 15px
@@ -295,7 +295,7 @@ $block: ".stock-page-header"
     // $Page header meta details action MOD: role logout
     &_role_logout
       &:before
-        background-image: url(../icons/icon-power-dark-gray.svg)
+        content: '\e911'
 
 
   // $Page header select area
