@@ -55,22 +55,29 @@ $block: ".stock-table"
     width: 20px
     height: 40px
     background-color: #37547c
-    background-image: url(../icons/icon-dots-three-vertical-white.svg)
-    background-repeat: no-repeat
-    background-position: center center
-    background-size: contain
     cursor: pointer
 
-    @media screen and (max-width: 1280px)
-      width: 15px
+    &:before
+      content: '\e900'
+      display: block
+      font-family: icons
+      font-size: 20px
+      line-height: 40px
+      font-weight: 400
+      color: #fff
+      text-align: center
+
+      @media screen and (max-width: 1280px)
+        font-size: 15px
 
     // $Common table service content MOD: state active
     &_state_active
-      background-image: url(../icons/icon-close-white.svg)
-      background-size: 10px 10px
+      &:before
+        content: '\e904'
+        font-size: 10px
 
-      @media screen and (max-width: 1280px)
-        background-size: 8px 8px
+        @media screen and (max-width: 1280px)
+          font-size: 8px
 
 
   // $Common table service content
@@ -313,14 +320,19 @@ $block: ".stock-table"
     color: transparent
     outline: none
     background-color: #454d5e
-    background-image: url(../icons/icon-arrow-down-white.svg)
-    background-repeat: no-repeat
-    background-position: center center
-    background-size: 9px 9px
     border-radius: 50%
     transition: all .4s
     cursor: pointer
-    transform: rotate(180deg)
+
+    &:before
+      content: '\e921'
+      display: block
+      font-family: icons
+      font-size: 15px
+      line-height: 18px
+      font-weight: 400
+      color: #fff
+      text-align: center
 
     @media screen and (max-width: 960px)
       left: 50%
@@ -1733,11 +1745,11 @@ $block: ".stock-table"
 
     // $Common table text MOD: color red
     &_color_accent-red
-      color: map-get($app-palette, accent-red)
+      color: #fd6464
 
     // $Common table text MOD: color green
     &_color_accent-green
-      color: map-get($app-palette, accent-green)
+      color: #2ed573
 
     // $Common table text MOD: adjust no wrap
     &_adjust_no-wrap
@@ -1810,21 +1822,35 @@ $block: ".stock-table"
     background-position: center center
     background-size: contain
 
+    &:before
+      content: ''
+      display: block
+      font-family: icons
+      font-size: 30px
+      line-height: 30px
+      font-weight: 400
+      color: #757a85
+
     // $Common table icon MOD: role food
     &_role_food
-      background-image: url("../icons/icon-food-medium-gray.svg")
+      &:before
+        content: '\e908'
 
     // $Common table icon MOD: role drink
     &_role_drink
-      background-image: url("../icons/icon-drink-medium-gray.svg")
+      &:before
+        content: '\e906'
 
     // $Common table icon MOD: role gift
     &_role_gift
-      background-image: url("../icons/icon-gift-medium-gray.svg")
+      &:before
+        content: '\e90a'
 
     // $Common table icon MOD: role gift-white
     &_role_gift-white
-      background-image: url("../icons/icon-gift-white.svg")
+      &:before
+        content: '\e90a'
+        color: #fff
 
 
   // $Common table corner
@@ -1845,9 +1871,9 @@ $block: ".stock-table"
     background-image: linear-gradient(45deg, transparent 0%, transparent 50%, #efefef 50%, #efefef 100%)
 
     &_color_accent-blue
-      background-image: -ms-linear-gradient(45deg, transparent 0%, transparent 50%, map-get($app-palette, accent-blue) 50%, map-get($app-palette, accent-blue) 100%)
-      background-image: -moz-linear-gradient(45deg, transparent 0%, transparent 50%, map-get($app-palette, accent-blue) 50%, map-get($app-palette, accent-blue) 100%)
-      background-image: -o-linear-gradient(45deg, transparent 0%, transparent 50%, map-get($app-palette, accent-blue) 50%, map-get($app-palette, accent-blue) 100%)
-      background-image: -webkit-linear-gradient(45deg, transparent 0%, transparent 50%, map-get($app-palette, accent-blue) 50%, map-get($app-palette, accent-blue) 100%)
-      background-image: linear-gradient(45deg, transparent 0%, transparent 50%, map-get($app-palette, accent-blue) 50%, map-get($app-palette, accent-blue) 100%)
+      background-image: -ms-linear-gradient(45deg, transparent 0%, transparent 50%, #64a5fd 50%, #64a5fd 100%)
+      background-image: -moz-linear-gradient(45deg, transparent 0%, transparent 50%, #64a5fd 50%, #64a5fd 100%)
+      background-image: -o-linear-gradient(45deg, transparent 0%, transparent 50%, #64a5fd 50%, #64a5fd 100%)
+      background-image: -webkit-linear-gradient(45deg, transparent 0%, transparent 50%, #64a5fd 50%, #64a5fd 100%)
+      background-image: linear-gradient(45deg, transparent 0%, transparent 50%, #64a5fd 50%, #64a5fd 100%)
 

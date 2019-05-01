@@ -27,34 +27,43 @@ $block: ".stock-navbar"
   // $Navigation bar control
   &__control
     position: absolute
-    bottom: 16px
+    bottom: 18px
     display: none
-    width: 16px
-    height: 16px
     font-size: 0
     line-height: 0
     color: transparent
-    background-image: url(../icons/icon-arrow-left-light-gray.svg)
-    background-repeat: no-repeat
-    background-size: contain
-    background-position: center center
-    transform-origin: center center
-    transition: all .5s
+    text-decoration: none
 
     @media screen and (max-width: 1360px)
       display: block
 
+    &:before
+      content: ''
+      display: block
+      font-family: icons
+      font-size: 30px
+      line-height: 18px
+      font-weight: 400
+      color: #bbbbbb
+      transition: all .5s
+
     &:hover
-      background-image: url(../icons/icon-arrow-left-dark-gray.svg)
+      &:before
+        color: #4c4c4c
 
     // $Navigation bar control MOD: role previous
     &_role_prev
       left: 0
 
+      &:before
+        content: '\e923'
+
     // $Navigation bar control MOD: role next
     &_role_next
       right: 0
-      transform: rotate(180deg)
+
+      &:before
+        content: '\e922'
 
 
   // $Navigation bar scroll area

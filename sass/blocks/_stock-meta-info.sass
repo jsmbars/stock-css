@@ -24,16 +24,16 @@ $block: ".stock-meta-info"
     padding-left: 32px
 
     &:before
-      content: ""
+      content: ''
       position: absolute
       left: 0
       top: 10px
       display: block
-      width: 18px
-      height: 18px
-      background-repeat: no-repeat
-      background-position: center center
-      background-size: contain
+      font-family: icons
+      font-size: 18px
+      line-height: 1
+      font-weight: 400
+      color: #757a85
       transform: translateY(-50%)
 
   // $Meta information MOD: icon user
@@ -41,19 +41,18 @@ $block: ".stock-meta-info"
     padding-left: 28px
 
     &:before
-      width: 15px
-      height: 15px
-      background-image: url('../icons/icon-user-medium-gray.svg')
+      content: '\e915'
+      font-size: 15px
 
   // $Meta information MOD: icon date
   &_icon_date
     &:before
-      background-image: url('../icons/icon-calendar-medium-gray.svg')
+      content: '\e916'
 
   // $Meta information MOD: icon note
   &_icon_note
     &:before
-      background-image: url('../icons/icon-text-paper-medium-gray.svg')
+      content: '\e914'
 
 
   // $Meta information text

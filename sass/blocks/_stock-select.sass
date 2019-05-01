@@ -77,20 +77,24 @@ $block: ".stock-select"
   // $Select arrow action
   &__arrow
     display: block
-    width: 15px
-    height: 15px
-    background-image: url(../icons/icon-arrow-down-dark-gray.svg)
-    background-repeat: no-repeat
-    background-size: contain
-    background-position: center center
     outline: none
+    text-decoration: none
     opacity: 1
     transform-origin: center center
     transition: all .5s
 
-    // $Select arrow action CONTEXT: $Select MOD: role site
-    #{$block}_role_site &
-      background-image: url(../icons/icon-arrow-down-white.svg)
+    &:before
+      content: '\e920'
+      display: block
+      font-family: icons
+      font-size: 25px
+      line-height: 15px
+      font-weight: 400
+      color: #4c4c4c
+
+      // $Select arrow action CONTEXT: $Select MOD: role site
+      #{$block}_role_site &
+        color: #fff
 
     // $Select arrow action CONTEXT: $Select MOD: state opened
     #{$block}_state_opened &

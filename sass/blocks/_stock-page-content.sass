@@ -145,14 +145,20 @@ $block: ".stock-page-content"
     color: transparent
     outline: none
     background-color: #454d5e
-    background-image: url(../icons/icon-arrow-down-white.svg)
-    background-repeat: no-repeat
-    background-position: center center
-    background-size: 9px 9px
     border-radius: 50%
     transition: all .4s
     cursor: pointer
     transform: rotate(180deg)
+
+    &:before
+      content: '\e920'
+      display: block
+      font-family: icons
+      font-size: 15px
+      line-height: 20px
+      font-weight: 400
+      color: #fff
+      text-align: center
 
     &_state_closed
       transform: rotate(0)
@@ -712,7 +718,7 @@ $block: ".stock-page-content"
     font-size: 12px
     line-height: 1
     font-weight: 600
-    color: map-get($app-palette, text-secondary)
+    color: #757a85
 
 
   &__load-action

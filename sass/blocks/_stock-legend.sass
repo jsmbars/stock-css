@@ -96,10 +96,15 @@ $block: ".stock-legend"
     &_icon_gift
       margin-top: -2px
       border: none
-      background-repeat: no-repeat
-      background-position: center center
-      background-size: contain
-      background-image: url("../icons/icon-gift-dark-gray.svg")
+
+      &:before
+        content: '\e90a'
+        display: block
+        font-family: icons
+        font-size: 14px
+        line-height: 1
+        font-weight: 400
+        color: #1c2841
 
 
   // $Legend text
