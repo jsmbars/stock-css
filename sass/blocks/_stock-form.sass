@@ -406,6 +406,10 @@ $block: ".stock-form"
       #{$block}__actions_adjust_t-form &
         margin-left: 20px
 
+      @media screen and (max-width: 400px)
+        #{$block}__actions_adjust_em-form &
+          margin-left: 10px
+
     // $Common form action MOD: state hidden
     &_state_hidden
       display: none
