@@ -36,6 +36,10 @@ $block: ".stock-meta-info"
       color: #757a85
       transform: translateY(-50%)
 
+  &_icon#{&}_role_warning
+    &:before
+      color: #1c2841
+
   // $Meta information MOD: icon user
   &_icon_user
     padding-left: 28px
@@ -54,6 +58,11 @@ $block: ".stock-meta-info"
     &:before
       content: '\e914'
 
+  // $Meta information MOD: icon alert
+  &_icon_alert
+    &:before
+      content: '\e905'
+
 
   // $Meta information text
   &__text
@@ -63,10 +72,16 @@ $block: ".stock-meta-info"
     line-height: 1.5
     color: #757a85
 
+    #{$block}_role_warning &
+      color: #6c6c6c
+
 
   // $Meta information label
   &__label
     font-weight: 600
+
+    #{$block}_role_warning &
+      color: #1c2841
 
 
   // $Meta information value
