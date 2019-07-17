@@ -53,6 +53,10 @@ $block: ".stock-activity-card"
   &_state_picked
     background-color: #d8e8fe
 
+  // $Activity card MOD: state zero-cost
+  &_state_zero-cost
+    background-color: #d8e8fe
+
 
   // $Activity card header
   &__header
@@ -64,7 +68,8 @@ $block: ".stock-activity-card"
     #{$block}_state_alert &,
     #{$block}_state_warning &,
     #{$block}_state_caution &,
-    #{$block}_state_picked &
+    #{$block}_state_picked &,
+    #{$block}_state_zero-cost &
       background-color: transparent
 
     #{$block}_state_success &,
@@ -73,7 +78,8 @@ $block: ".stock-activity-card"
 
     #{$block}_state_alert &,
     #{$block}_state_warning &,
-    #{$block}_state_picked &
+    #{$block}_state_picked &,
+    #{$block}_state_zero-cost &
       border-bottom-color: #f0f0f0
 
     // $Activity card header MOD: adjust translated label button
@@ -90,7 +96,8 @@ $block: ".stock-activity-card"
     #{$block}_state_alert &,
     #{$block}_state_warning &,
     #{$block}_state_caution &,
-    #{$block}_state_picked &
+    #{$block}_state_picked &,
+    #{$block}_state_zero-cost &
       background-color: rgba(0,0,0,.03)
 
     #{$block}_state_success &,
@@ -99,7 +106,8 @@ $block: ".stock-activity-card"
 
     #{$block}_state_alert &,
     #{$block}_state_warning &,
-    #{$block}_state_picked &
+    #{$block}_state_picked &,
+    #{$block}_state_zero-cost &
       border-bottom-color: #f0f0f0
 
     // $Activity card accordion
@@ -110,7 +118,8 @@ $block: ".stock-activity-card"
       #{$block}_state_alert &,
       #{$block}_state_warning &,
       #{$block}_state_caution &,
-      #{$block}_state_picked &
+      #{$block}_state_picked &,
+      #{$block}_state_zero-cost &
         background-color: transparent
 
     &_adjust_label-before
@@ -126,7 +135,8 @@ $block: ".stock-activity-card"
     #{$block}_state_alert &,
     #{$block}_state_warning &,
     #{$block}_state_caution &,
-    #{$block}_state_picked &
+    #{$block}_state_picked &,
+    #{$block}_state_zero-cost &
       background-color: rgba(0,0,0,.03)
 
     #{$block}_state_success &,
@@ -135,7 +145,8 @@ $block: ".stock-activity-card"
 
     #{$block}_state_alert &,
     #{$block}_state_warning &,
-    #{$block}_state_picked &
+    #{$block}_state_picked &,
+    #{$block}_state_zero-cost &
       border-bottom-color: #f0f0f0
 
     // $Activity card dropdown MOD: type light
@@ -146,7 +157,8 @@ $block: ".stock-activity-card"
       #{$block}_state_alert &,
       #{$block}_state_warning &,
       #{$block}_state_caution &,
-      #{$block}_state_picked &
+      #{$block}_state_picked &,
+      #{$block}_state_zero-cost &
         background-color: transparent
 
     // $Activity card dropdown MOD: state hidden
@@ -217,7 +229,8 @@ $block: ".stock-activity-card"
       #{$block}_state_alert &,
       #{$block}_state_warning &,
       #{$block}_state_caution &,
-      #{$block}_state_picked &
+      #{$block}_state_picked &,
+      #{$block}_state_zero-cost &
         background-color: rgba(0,0,0,.03)
 
       #{$block}_state_success &,
@@ -226,7 +239,8 @@ $block: ".stock-activity-card"
 
       #{$block}_state_alert &,
       #{$block}_state_warning &,
-      #{$block}_state_picked &
+      #{$block}_state_picked &,
+      #{$block}_state_zero-cost &
         border-bottom-color: #f0f0f0
 
 
@@ -240,7 +254,8 @@ $block: ".stock-activity-card"
 
     #{$block}_state_alert &,
     #{$block}_state_warning &,
-    #{$block}_state_picked &
+    #{$block}_state_picked &,
+    #{$block}_state_zero-cost &
       border-bottom-color: #f0f0f0
 
     // $Activity card cell MOD: no border
@@ -261,7 +276,8 @@ $block: ".stock-activity-card"
     #{$block}_state_alert &,
     #{$block}_state_warning &,
     #{$block}_state_caution &,
-    #{$block}_state_picked &
+    #{$block}_state_picked &,
+    #{$block}_state_zero-cost &
       background-color: transparent
 
     #{$block}_state_success &,
@@ -270,7 +286,8 @@ $block: ".stock-activity-card"
 
     #{$block}_state_alert &,
     #{$block}_state_warning &,
-    #{$block}_state_picked &
+    #{$block}_state_picked &,
+    #{$block}_state_zero-cost &
       border-bottom-color: #f0f0f0
 
     // $Activity card row MOD: marked
@@ -281,7 +298,8 @@ $block: ".stock-activity-card"
       #{$block}_state_alert &,
       #{$block}_state_warning &,
       #{$block}_state_caution &,
-      #{$block}_state_picked &
+      #{$block}_state_picked &,
+      #{$block}_state_zero-cost &
         background-color: rgba(0,0,0,.03)
 
     // $Activity card cell MOD: no border
@@ -324,7 +342,8 @@ $block: ".stock-activity-card"
 
         #{$block}_state_alert &,
         #{$block}_state_warning &,
-        #{$block}_state_picked &
+        #{$block}_state_picked &,
+        #{$block}_state_zero-cost &
           border-right-color: #f0f0f0
 
     // $Activity card cell MOD: no border
@@ -400,7 +419,8 @@ $block: ".stock-activity-card"
     #{$block}_state_alert &,
     #{$block}_state_warning &,
     #{$block}_state_caution &,
-    #{$block}_state_picked &
+    #{$block}_state_picked &,
+    #{$block}_state_zero-cost &
       background-color: rgba(0,0,0,.03)
 
     // $Activity card footer MOD: type light
@@ -411,7 +431,8 @@ $block: ".stock-activity-card"
       #{$block}_state_alert &,
       #{$block}_state_warning &,
       #{$block}_state_caution &,
-      #{$block}_state_picked &
+      #{$block}_state_picked &,
+      #{$block}_state_zero-cost &
         background-color: transparent
 
 
