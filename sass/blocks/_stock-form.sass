@@ -19,106 +19,6 @@ $block: ".stock-form"
   width: 100%
 
 
-  // $Common form group
-  &__group
-    position: relative
-    display: block
-    width: 100%
-    margin-bottom: 20px
-
-    // $Common form group MOD: size half
-    &_size_half
-      flex-grow: 0
-      flex-shrink: 1
-      width: calc(50% - 10px)
-
-    // $Common form group MOD: size third
-    &_size_third
-      flex-grow: 0
-      flex-shrink: 1
-      width: calc(33.3% - 13px)
-
-    // $Common form group MOD: size fourth
-    &_size_fourth
-      flex-grow: 0
-      flex-shrink: 1
-      width: calc(25% - 15px)
-
-    // $Common form group MOD: size fifth
-    &_size_fifth
-      flex-grow: 0
-      flex-shrink: 1
-      width: calc(20% - 16px)
-
-    // $Common form group MOD: size sixth
-    &_size_sixth
-      flex-grow: 0
-      flex-shrink: 1
-      width: calc(16.6% - 17px)
-
-    // $Common form group MOD: size max
-    &_size_max
-      flex-grow: 1
-      flex-shrink: 1
-      width: auto
-
-    // $Common form group MOD: size min
-    &_size_min
-      flex-grow: 0
-      flex-shrink: 1
-      width: auto
-
-    // $Common form group MOD: size fluid
-    &_size_fluid
-      flex-grow: 0
-      flex-shrink: 0
-      width: auto
-
-    &_size_half,
-    &_size_third,
-    &_size_fourth,
-    &_size_fifth,
-    &_size_sixth,
-    &_size_max,
-    &_size_min,
-    &_size_fluid
-      margin-right: 20px
-      margin-bottom: 0
-
-      @media screen and (max-width: 960px)
-        flex-shrink: 1
-        flex-grow: 1
-        width: 100%
-        margin-right: 0
-        margin-bottom: 20px
-
-    // $Common form group MOD: position last
-    &_position_last
-      margin-right: 0
-      margin-bottom: 0
-
-      @media screen and (max-width: 960px)
-        margin-right: 0
-        margin-bottom: 0
-
-    // $Common form group MOD: adjust for manager area
-    &_adjust_manager
-      padding: 10px 15px
-
-      @media screen and (max-width: 1120px)
-        padding: 10px
-
-      @media screen and (max-width: 960px)
-        padding: 15px 20px 20px
-
-    // $Common form group MOD: adjust for table area
-    &_adjust_table
-      padding: 0 20px
-
-      @media screen and (max-width: 1120px)
-        padding: 0 10px
-
-
   // $Common form board
   &__board
     display: block
@@ -226,60 +126,98 @@ $block: ".stock-form"
         flex-direction: row
 
 
+  // $Common form group
   // $Common form field
+  &__group,
   &__field
     position: relative
     display: block
     width: 100%
     margin-bottom: 20px
 
+    // $Common form group MOD: size half
     // $Common form field MOD: size half
     &_size_half
       flex-grow: 0
       flex-shrink: 1
       width: calc(50% - 10px)
 
+    // $Common form group MOD: size third
     // $Common form field MOD: size third
     &_size_third
       flex-grow: 0
       flex-shrink: 1
       width: calc(33.3% - 13px)
 
+    // $Common form group MOD: size fourth
     // $Common form field MOD: size fourth
     &_size_fourth
       flex-grow: 0
       flex-shrink: 1
       width: calc(25% - 15px)
 
+    // $Common form group MOD: size fifth
     // $Common form field MOD: size fifth
     &_size_fifth
       flex-grow: 0
       flex-shrink: 1
       width: calc(20% - 16px)
 
+    // $Common form group MOD: size sixth
     // $Common form field MOD: size sixth
     &_size_sixth
       flex-grow: 0
       flex-shrink: 1
       width: calc(16.6% - 17px)
 
+    // $Common form group MOD: size max
     // $Common form field MOD: size max
     &_size_max
       flex-grow: 1
       flex-shrink: 1
       width: auto
 
+    // $Common form group MOD: size min
     // $Common form field MOD: size min
     &_size_min
       flex-grow: 0
       flex-shrink: 1
       width: auto
 
+    // $Common form group MOD: size fluid
     // $Common form field MOD: size fluid
     &_size_fluid
       flex-grow: 0
       flex-shrink: 0
       width: auto
+
+    // $Common form group MOD: size fixed m
+    // $Common form field MOD: size fixed m
+    &_size_m
+      flex-grow: 0
+      flex-shrink: 0
+      width: 150px
+
+    // $Common form group MOD: size fixed s
+    // $Common form field MOD: size fixed s
+    &_size_s
+      flex-grow: 0
+      flex-shrink: 0
+      width: 125px
+
+    // $Common form group MOD: size fixed xs
+    // $Common form field MOD: size fixed xs
+    &_size_xs
+      flex-grow: 0
+      flex-shrink: 0
+      width: 100px
+
+    // $Common form group MOD: size fixed xxs
+    // $Common form field MOD: size fixed xxs
+    &_size_xxs
+      flex-grow: 0
+      flex-shrink: 0
+      width: 75px
 
     &_size_half,
     &_size_third,
@@ -288,7 +226,11 @@ $block: ".stock-form"
     &_size_sixth,
     &_size_max,
     &_size_min,
-    &_size_fluid
+    &_size_fluid,
+    &_size_m,
+    &_size_s,
+    &_size_xs,
+    &_size_xxs
       margin-right: 20px
       margin-bottom: 0
 
@@ -300,6 +242,7 @@ $block: ".stock-form"
           margin-right: 0
           margin-bottom: 20px
 
+    // $Common form group: MOD: position last
     // $Common form field: MOD: position last
     &_position_last
       margin-right: 0
@@ -310,6 +253,48 @@ $block: ".stock-form"
           margin-right: 0
           margin-bottom: 0
 
+    // $Common form group MOD: visible on mobiles
+    // $Common form field MOD: visible on mobiles
+    &_state_visible-mobile
+      @media screen and (min-width: 961px)
+        display: none
+
+    // $Common form group MOD: hidden on mobiles
+    // $Common form field MOD: hidden on mobiles
+    &_state_hidden-mobile
+      @media screen and (max-width: 960px)
+        display: none
+
+    // $Common form group MOD: state hidden
+    // $Common form field MOD: state hidden
+    &_state_hidden
+      display: none
+
+
+  // $Common form group
+  &__group
+
+    // $Common form group MOD: adjust for manager area
+    &_adjust_manager
+      padding: 10px 15px
+
+      @media screen and (max-width: 1120px)
+        padding: 10px
+
+      @media screen and (max-width: 960px)
+        padding: 15px 20px 20px
+
+    // $Common form group MOD: adjust for table area
+    &_adjust_table
+      padding: 0 20px
+
+      @media screen and (max-width: 1120px)
+        padding: 0 10px
+
+
+  // $Common form field
+  &__field
+
     // $Common form field MOD: justify center
     &_justify_center
       text-align: center
@@ -317,16 +302,6 @@ $block: ".stock-form"
     // $Common form field MOD: justify end
     &_justify_end
       text-align: right
-
-    // $Common form field MOD: visible on mobiles
-    &_state_visible-mobile
-      @media screen and (min-width: 961px)
-        display: none
-
-    // $Common form field MOD: hidden on mobiles
-    &_state_hidden-mobile
-      @media screen and (max-width: 960px)
-        display: none
 
     // $Common form field MOD: no label tablet
     &_no-label-tablet
@@ -345,10 +320,6 @@ $block: ".stock-form"
     // $Common form field MOD: role buttons nowrap row
     &_role_buttons-row
       white-space: nowrap
-
-    // $Common form field MOD: state hidden
-    &_state_hidden
-      display: none
 
 
   // $Common form actions
