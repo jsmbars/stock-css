@@ -278,7 +278,7 @@ $block: ".stock-page-content"
   &__manager
     display: flex
     flex-direction: row
-    justify-content: space-between
+    justify-content: flex-end
     align-items: center
     padding: 15px
     margin-bottom: 5px
@@ -316,6 +316,25 @@ $block: ".stock-page-content"
       flex-shrink: 1
       justify-content: center
       width: 100%
+
+    & + &
+      margin-left: 20px
+
+      @media screen and (max-width: 960px)
+        margin-left: 0
+        margin-top: 20px
+
+    &_position_last-mobile
+      @media screen and (max-width: 960px)
+        order: 99
+
+    &_position_last-mobile + &
+      margin-left: 20px
+
+      @media screen and (max-width: 960px)
+        margin-left: 0
+        margin-top: 0
+        margin-bottom: 20px
 
 
   // $Page content filter area
@@ -756,6 +775,10 @@ $block: ".stock-page-content"
     font-family: $f-sans
     font-weight: 400
     color: #1c2841
+
+    #{$block}__manager &
+      flex-grow: 1
+      flex-shrink: 1
 
     @media screen and (max-width: 960px)
       margin-bottom: 15px
