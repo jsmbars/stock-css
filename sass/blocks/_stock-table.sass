@@ -621,8 +621,7 @@ $block: ".stock-table"
     #{$block}_page_oh-details &,
     #{$block}_page_od-details &,
     #{$block}_page_prep-list &,
-    #{$block}_page_batch-list &,
-    #{$block}_page_meals-list &
+    #{$block}_page_batch-list &
       padding-left: 10px
       padding-right: 10px
 
@@ -630,7 +629,8 @@ $block: ".stock-table"
     #{$block}_page_p-list &,
     #{$block}_page_w-list &,
     #{$block}_page_r-list &,
-    #{$block}_page_cgpc-list &
+    #{$block}_page_cgpc-list &,
+    #{$block}_page_meals-list &
       padding-left: 8px
       padding-right: 8px
 
@@ -640,7 +640,8 @@ $block: ".stock-table"
       #{$block}_page_p-list &,
       #{$block}_page_w-list &,
       #{$block}_page_r-list &,
-      #{$block}_page_cgpc-list &
+      #{$block}_page_cgpc-list &,
+      #{$block}_page_meals-list &
         padding-left: 5px
         padding-left: 5px
 
@@ -776,8 +777,7 @@ $block: ".stock-table"
         width: 40%
 
       #{$block}_page_meals-list &
-        width: 14%
-        padding-left: 15px
+        width: 5.5%
 
       #{$block}_page_meals-details &
         width: 40%
@@ -885,7 +885,7 @@ $block: ".stock-table"
         width: 15%
 
       #{$block}_page_meals-list &
-        width: 20%
+        width: 9.5%
 
       #{$block}_page_meals-details &
         width: 15%
@@ -982,7 +982,7 @@ $block: ".stock-table"
         width: 15%
 
       #{$block}_page_meals-list &
-        width: 10%
+        width: 5.5%
 
       #{$block}_page_meals-details &
         width: 15%
@@ -1097,7 +1097,7 @@ $block: ".stock-table"
         width: 15%
 
       #{$block}_page_meals-list &
-        width: 10%
+        width: 5.5%
 
       #{$block}_page_meals-details &
         width: 15%
@@ -1208,7 +1208,7 @@ $block: ".stock-table"
         width: 15%
 
       #{$block}_page_meals-list &
-        width: 10%
+        width: 5.5%
 
       #{$block}_page_meals-details &
         width: 15%
@@ -1298,7 +1298,7 @@ $block: ".stock-table"
         width: 15%
 
       #{$block}_page_meals-list &
-        width: 10%
+        width: 5.5%
 
       #{$block}_page_meals-details &
         width: 15%
@@ -1386,7 +1386,7 @@ $block: ".stock-table"
         width: 150px
 
       #{$block}_page_meals-list &
-        width: 10%
+        width: 5.5%
 
       #{$block}_page_w-list &
         width: 10%
@@ -1439,7 +1439,7 @@ $block: ".stock-table"
         width: 5.5%
 
       #{$block}_page_meals-list &
-        width: 10%
+        width: 5.5%
 
       #{$block}_page_w-list &
         flex-grow: 0
@@ -1495,9 +1495,7 @@ $block: ".stock-table"
         width: 5.5%
 
       #{$block}_page_meals-list &
-        flex-grow: 0
-        flex-shrink: 0
-        width: 110px
+        width: 5.5%
 
       #{$block}_page_r-list &
         flex-grow: 0
@@ -1539,9 +1537,7 @@ $block: ".stock-table"
         width: 5.5%
 
       #{$block}_page_meals-list &
-        flex-grow: 0
-        flex-shrink: 0
-        width: 150px
+        width: 5.5%
 
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
@@ -1568,6 +1564,9 @@ $block: ".stock-table"
         width: 95px
 
       #{$block}_page_cgpc-list &
+        width: 5.5%
+
+      #{$block}_page_meals-list &
         width: 5.5%
 
       #{$block}_page_ed-form &
@@ -1605,6 +1604,9 @@ $block: ".stock-table"
       #{$block}_page_cgpc-list &
         width: 5.5%
 
+      #{$block}_page_meals-list &
+        width: 5.5%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_od-details &
           width: 160px
@@ -1624,12 +1626,18 @@ $block: ".stock-table"
       #{$block}_page_cgpc-list &
         width: 5.5%
 
+      #{$block}_page_meals-list &
+        width: 5.5%
+
     // $Common table cell fourteenth column
     &:nth-child(14)
       #{$block}_page_oh-details &
         width: 9%
 
       #{$block}_page_cgpc-list &
+        width: 5.5%
+
+      #{$block}_page_meals-list &
         width: 5.5%
 
     // $Common table cell fifteenth column
@@ -1640,10 +1648,20 @@ $block: ".stock-table"
         flex-shrink: 0
         width: 80px
 
+      #{$block}_page_meals-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 80px
+
     // $Common table cell sixteenth column
     &:nth-child(16)
 
       #{$block}_page_cgpc-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 110px
+
+      #{$block}_page_meals-list &
         flex-grow: 0
         flex-shrink: 0
         width: 110px
