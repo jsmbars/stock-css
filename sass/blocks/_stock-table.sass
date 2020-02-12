@@ -742,8 +742,9 @@ $block: ".stock-table"
 
       #{$block}_page_oh-list &
         justify-content: center
-        width: 6%
-        min-width: 60px
+        flex-grow: 0
+        flex-shrink: 0
+        width: 80px
 
       #{$block}_page_oh-details &
         width: 9%
@@ -853,7 +854,7 @@ $block: ".stock-table"
         width: 20%
 
       #{$block}_page_oh-list &
-        width: 17%
+        width: 16%
 
       #{$block}_page_oh-details &
         width: 9%
@@ -960,7 +961,7 @@ $block: ".stock-table"
         width: 12%
 
       #{$block}_page_oh-list &
-        width: 17%
+        width: 16%
 
       #{$block}_page_oh-details &
         width: 6%
@@ -1072,7 +1073,7 @@ $block: ".stock-table"
         width: 9%
 
       #{$block}_page_oh-list &
-        width: 17%
+        width: 16%
 
       #{$block}_page_oh-details &
         width: 6%
@@ -1193,7 +1194,7 @@ $block: ".stock-table"
         width: 14%
 
       #{$block}_page_oh-list &
-        width: 17%
+        width: 16%
 
       #{$block}_page_oh-details &
         width: 6%
@@ -1798,6 +1799,9 @@ $block: ".stock-table"
     #{$block}_page_oh-reports-details &
       display: block
       font-size: 12px
+
+    #{$block}_page_oh-list #{$block}__cell:nth-child(1) &
+      margin-top: 5px
 
     @media screen and (max-width: 1120px)
       #{$block}_page_oh-reports &
