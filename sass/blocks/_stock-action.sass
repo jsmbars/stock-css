@@ -1,0 +1,104 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Common action
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-action"
+
+#{$block}
+  display: inline-block
+  white-space: nowrap
+  font-size: inherit
+  color: inherit
+  cursor: pointer
+  text-decoration: none
+
+  &:before
+    content: ''
+    display: inline-block
+    font-family: icons
+    font-size: inherit
+    line-height: 1
+    font-weight: 400
+    color: inherit
+    vertical-align: middle
+
+  &:not(:empty):before
+    margin-right: 5px
+
+  &:hover
+    text-decoration: none
+    opacity: .8
+
+  // $Common action MOD: size xs
+  &_size_xs
+    font-size: 10px
+
+    &:before
+      font-size: 8px
+
+  // $Common action MOD: size s
+  &_size_s
+    font-size: 12px
+
+    &:before
+      font-size: 10px
+
+  // $Common action MOD: size m
+  &_size_m
+    font-size: 14px
+
+    &:before
+      font-size: 12px
+
+  // $Common action MOD: size l
+  &_size_l
+    font-size: 16px
+
+    &:before
+      font-size: 14px
+
+  // $Common action MOD: size xl
+  &_size_xl
+    font-size: 18px
+
+    &:before
+      font-size: 16px
+
+  // $Common action MOD: color accent red
+  &_color_accent-red
+    color: #fd6464
+
+  // $Common action MOD: color accent green
+  &_color_accent-green
+    color: #2ed573
+
+  // $Common action MOD: color accent blue
+  &_color_accent-blue
+    color: #64a5fd
+
+  // $Common action MOD: icon pencil
+  &_icon_pencil
+    &:before
+      content: '\e90f'
+
+
+  // $Common action text
+  &__text
+    display: inline-block
+    white-space: normal
+    vertical-align: middle
+
+
+  // $Common action text marked
+  &__text-marked
+    font-weight: 600
