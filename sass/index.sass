@@ -5,7 +5,8 @@
 // CONTENTS.............................Here we are!
 //
 // VENDOR...............................
-//  $Spectrum color picker..............Color picker styles
+//  $jQuery UI lib......................
+//  $Spectrum color picker..............
 //
 // HELPERS..............................Variables, mixins, elements
 //  $Fonts..............................Offline and online fonts
@@ -44,13 +45,21 @@
 // $Chart...............................
 // $Modal window........................
 
+// $Vendor Date Picker (jquery-ui datepicker)
+
 
 ////////////////////////////////////////
 /// $VENDOR
 ////////////////////////////////////////
 
+// $jQuery UI lib
+@import ./vendor/jquery-ui/jquery-ui.scss
+
 //  $Spectrum color picker
 @import './vendor/spectrum.scss'
+
+// $Swiper
+@import ./vendor/swiper/swiper.scss
 
 
 ////////////////////////////////////////
@@ -172,3 +181,8 @@
 
 // $Popover
 @import './blocks/stock-popover'
+
+// Restyled existing vendor modules
+
+// $Vendor Date Picker (jquery-ui datepicker)
+@import './blocks/vendor-datepicker'
