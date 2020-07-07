@@ -28,7 +28,7 @@ $block: ".stock-table"
       display: none
 
   &_page_p-list-prices
-    max-width: 960px
+    max-width: 1680px
 
   &_page_oh-reports
     padding: 10px 25px
@@ -952,7 +952,7 @@ $block: ".stock-table"
 
       #{$block}_page_p-list-prices &
         flex-grow: 0
-        width: 20%
+        width: 12%
 
       #{$block}_page_p-list-itenerarys &
         flex-grow: 0
@@ -1168,7 +1168,7 @@ $block: ".stock-table"
         width: 9%
 
       #{$block}_page_p-list-prices &
-        width: 20%
+        width: 13%
 
       #{$block}_page_ed-list &
         width: 16%
@@ -1281,7 +1281,7 @@ $block: ".stock-table"
         width: 13%
 
       #{$block}_page_p-list-prices &
-        width: 15%
+        width: 11%
 
       #{$block}_page_ed-list &
         justify-content: center
@@ -1401,7 +1401,7 @@ $block: ".stock-table"
         width: 9%
 
       #{$block}_page_p-list-prices &
-        width: 15%
+        width: 11%
 
       #{$block}_page_ed-list &
         justify-content: center
@@ -1585,7 +1585,7 @@ $block: ".stock-table"
       #{$block}_page_p-list-prices &
         flex-grow: 0
         flex-shrink: 0
-        width: 120px
+        width: 110px
 
       #{$block}_page_ed-list &
         flex-grow: 0
@@ -1655,6 +1655,9 @@ $block: ".stock-table"
         width: 7%
         min-width: 70px
 
+      #{$block}_page_p-list-prices &
+        width: 26%
+
       #{$block}_page_cgpc-list &
         width: 5.5%
 
@@ -1680,9 +1683,15 @@ $block: ".stock-table"
         #{$block}_page_p-list &
           width: 110px
 
+        #{$block}_page_p-list-prices &
+          width: 26%
+
       @media screen and (max-width: 1360px)
         #{$block}_page_p-list &
           width: 115px
+
+        #{$block}_page_p-list-prices &
+          width: 26%
 
     // $Common table cell ninth column
     &:nth-child(9)
