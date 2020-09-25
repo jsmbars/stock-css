@@ -477,6 +477,23 @@ $block: ".stock-activity-card"
       background-position: center center
       background-size: contain
 
+    // $Activity card icon MOD: role area
+    &_role_area
+      flex-grow: 1
+      width: 100%
+      height: 60px
+      border-bottom: 1px solid #ebebeb
+
+      #{$block}_state_success &,
+      #{$block}_state_caution &
+        border-bottom-color: #e0e0e0
+
+      #{$block}_state_alert &,
+      #{$block}_state_warning &,
+      #{$block}_state_picked &,
+      #{$block}_state_zero-cost &
+        border-bottom-color: #f0f0f0
+
 
   // $Activity card title
   &__title
