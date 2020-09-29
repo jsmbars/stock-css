@@ -1,0 +1,207 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Upload
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-upload"
+
+#{$block}
+  display: block
+  width: 100%
+
+  // $Upload MOD: state error
+  &_state_error
+
+  // $Upload MOD: page oh-reports-details
+  &_page_oh-reports-details
+    max-width: 640px
+
+    @media screen and (max-width: 960px)
+      max-width: 100%
+
+
+  // $Upload list
+  &__list
+    display: block
+    width: 100%
+    margin: 0
+    padding: 0
+    list-style: none
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+
+  // $Upload item
+  &__item
+    display: block
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 20px
+      padding-bottom: 20px
+      border-bottom: 1px solid #eeeeee
+
+
+  &__item-header
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    width: 100%
+
+    @media screen and (max-width: 480px)
+      flex-direction: column
+      align-items: center
+
+      #{$block}_page_oh-reports-details &
+        align-items: flex-start
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
+
+  // $Upload item info
+  &__item-info
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    max-width: 100%
+    padding-right: 20px
+
+    @media screen and (max-width: 480px)
+      padding-right: 0
+      margin-bottom: 10px
+      text-align: center
+
+      #{$block}_page_oh-reports-details &
+        text-align: left
+
+
+  // $Upload item title
+  &__item-title
+    display: block
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 1.2
+    font-weight: 400
+    color: #1c2841
+    word-wrap: break-word
+    hyphens: auto
+
+
+  // $Upload item actions
+  &__item-actions
+    flex-grow: 0
+    flex-shrink: 0
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+
+
+  // $Upload item action
+  &__item-action
+    display: inline-block
+    margin: 0
+    padding: 0
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 1
+    font-weight: 400
+    color: #1c2841
+    text-decoration: none
+    opacity: 1
+    background-color: transparent
+    border: none
+    transition: all .3s
+
+    &:hover
+      opacity: 0.8
+
+    &:not(:last-child)
+      margin-right: 20px
+
+    // $Upload item action MOD: role download
+    &_role_download,
+    &_role_delete,
+    &_role_preview
+      cursor: pointer
+      white-space: nowrap
+
+      &:before
+        content: ''
+        display: inline-block
+        margin-top: -4px
+        margin-right: 5px
+        font-family: icons
+        font-size: 14px
+        line-height: 14px
+        color: inherit
+        font-weight: 400
+        vertical-align: middle
+        transition: all .4s
+
+    // $Upload item action MOD: role preview
+    &_role_preview
+      color: #64a5fd
+
+      &:before
+        content: '\e90b'
+        font-size: 11px
+
+    // $Upload item action MOD: role download
+    &_role_download
+      color: #64a5fd
+
+      &:before
+        content: '\e925'
+        font-size: 12px
+
+    // $Upload item action MOD: role delete
+    &_role_delete
+      color: #fd6464
+
+      &:before
+        content: '\e904'
+        font-size: 10px
+
+    // $Upload item action MOD: role uploading
+    &_role_uploading
+      color: #9c9c9c
+      cursor: default
+
+      &:hover
+        opacity: 1
+
+      &:before
+        content: ''
+        display: inline-block
+        margin-top: -4px
+        margin-right: 5px
+        width: 18px
+        height: 18px
+        vertical-align: middle
+        background-image: url(../icons/spinner.svg)
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: contain
+
+
+  // $Upload text placeholder
+  &__text-placeholder
+    display: block
+    width: 100%
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 1.2
+    color: #757a85

@@ -49,6 +49,10 @@ $block: ".stock-table"
   &_page_st-summary-details
     border: 1px solid #eee
 
+  &_page_oh-reports-details
+    &:not(:last-child)
+      margin-bottom: 20px
+
 
   // $Common table service switch
   &__service-switch
@@ -2216,9 +2220,7 @@ $block: ".stock-table"
 
     // $Common table text MOD: adjust wrap
     &_adjust_wrap
-      overflow-wrap: break-word
       word-wrap: break-word
-      word-break: break-word
       hyphens: auto
 
 
