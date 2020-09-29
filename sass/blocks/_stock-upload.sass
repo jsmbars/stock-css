@@ -21,6 +21,13 @@ $block: ".stock-upload"
   // $Upload MOD: state error
   &_state_error
 
+  // $Upload MOD: page oh-reports-details
+  &_page_oh-reports-details
+    max-width: 640px
+
+    @media screen and (max-width: 960px)
+      max-width: 100%
+
 
   // $Upload list
   &__list
@@ -56,6 +63,9 @@ $block: ".stock-upload"
       flex-direction: column
       align-items: center
 
+      #{$block}_page_oh-reports-details &
+        align-items: flex-start
+
     &:not(:last-child)
       margin-bottom: 20px
 
@@ -72,6 +82,9 @@ $block: ".stock-upload"
       padding-right: 0
       margin-bottom: 10px
       text-align: center
+
+      #{$block}_page_oh-reports-details &
+        text-align: left
 
 
   // $Upload item title
