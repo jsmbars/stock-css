@@ -349,6 +349,43 @@ $block: ".stock-form-field"
           color: #ed7f7e !important
 
 
+  // $Form field input clear
+  &__input-clear
+    position: absolute
+    top: 1px
+    right: 1px
+    bottom: 1px
+    z-index: 10
+    display: block
+    width: 27px
+    margin: 0
+    padding: 0 0 0 5px
+    background-color: #fff
+    border: none
+    transition: all .3s
+    cursor: pointer
+    color: #fd6464
+    text-align: left
+    opacity: .8
+
+    &:before
+      content: unquote("\'\\e904\'")
+      display: inline-block
+      font-family: icons
+      font-size: 10px
+      line-height: 1
+      font-weight: 400
+      color: inherit
+      vertical-align: middle
+
+    &:hover
+      text-decoration: none
+      opacity: 1
+
+    &:focus
+      outline: none
+
+
   // $Common form field box
   &__box
     width: 100%
