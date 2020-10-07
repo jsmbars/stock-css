@@ -82,6 +82,9 @@ $block: ".stock-form-checkbox"
       font-size: 12px
       line-height: 14px
 
+    #{$block}__input:disabled ~ &
+      cursor: not-allowed
+
     &:before
       content: ""
       box-sizing: border-box
@@ -98,6 +101,10 @@ $block: ".stock-form-checkbox"
       #{$block}__input:checked ~ &
         background-color: #7ba5fa
         border-color: #7ba5fa
+
+      #{$block}__input:disabled ~ &
+        background-color: #f6f6f6
+        border-color: #cccccc
 
       #{$block}_context_label-group &
         width: 14px
@@ -122,6 +129,9 @@ $block: ".stock-form-checkbox"
 
       #{$block}__input:checked ~ &
         visibility: visible
+
+      #{$block}__input:disabled ~ &
+        color: #757a85
 
       #{$block}_context_label-group &
         width: 14px

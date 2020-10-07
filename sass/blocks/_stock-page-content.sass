@@ -224,6 +224,7 @@ $block: ".stock-page-content"
 
     // System management
     &_role_sym-p-list
+    &_role_sym-p-merge
     &_role_sym-p-form-add
     &_role_sym-p-form-edit
     &_role_sym-p-o-list
@@ -378,7 +379,9 @@ $block: ".stock-page-content"
 
     @media screen and (min-width: 1121px)
       #{$block}__data_role_sym-p-list &,
+      #{$block}__data_role_sym-p-merge &,
       #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="merge-view"] &,
       #{$block}__data_role_orm-oh-details &,
       #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="details-view"] &,
       #{$block}__data_role_orm-oh-delivery &,
@@ -416,7 +419,9 @@ $block: ".stock-page-content"
 
     @media screen and (min-width: 1121px) and (max-width: 1360px)
       #{$block}__data_role_sym-p-list &,
+      #{$block}__data_role_sym-p-merge &,
       #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="merge-view"] &,
       #{$block}__data_role_orm-oh-details &,
       #{$block}__tab[data-tab="order-history"] #{$block}__data[data-view="details-view"] &,
       #{$block}__data_role_orm-oh-delivery &,
@@ -425,7 +430,9 @@ $block: ".stock-page-content"
 
     @media screen and (min-width: 1361px)
       #{$block}__data_role_sym-p-list &,
+      #{$block}__data_role_sym-p-merge &,
       #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="merge-view"] &,
       #{$block}__data_role_sym-pr-list &,
       #{$block}__tab[data-tab="product-requests"] #{$block}__data[data-view="list-view"] &,
       #{$block}__data_role_stm-sl-list &,
@@ -459,7 +466,9 @@ $block: ".stock-page-content"
     // Set default position in Edge
     @supports (-ms-ime-align: auto)
       #{$block}__data_role_sym-p-list &,
+      #{$block}__data_role_sym-p-merge &,
       #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="merge-view"] &,
       #{$block}__data_role_sym-pr-list &,
       #{$block}__tab[data-tab="product-requests"] #{$block}__data[data-view="list-view"] &,
       #{$block}__data_role_stm-sl-list &,
@@ -495,7 +504,9 @@ $block: ".stock-page-content"
     // Set default position in IE11
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
       #{$block}__data_role_sym-p-list &,
+      #{$block}__data_role_sym-p-merge &,
       #{$block}__tab[data-tab="products"] #{$block}__data[data-view="list-view"] &,
+      #{$block}__tab[data-tab="products"] #{$block}__data[data-view="merge-view"] &,
       #{$block}__data_role_sym-pr-list &,
       #{$block}__tab[data-tab="product-requests"] #{$block}__data[data-view="list-view"] &,
       #{$block}__data_role_stm-sl-list &,
@@ -584,6 +595,12 @@ $block: ".stock-page-content"
         margin-bottom: 20px
         background-color: #FFF
         box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+    &_space_bottom
+      padding: 0 0 10px
+
+      @media screen and (max-width: 1120px)
+        padding: 0 0 10px
 
 
 

@@ -164,6 +164,7 @@ $block: ".stock-table"
 
       @media screen and (min-width: 1121px)
         #{$block}_page_p-list &,
+        #{$block}_page_p-merge-list &,
         #{$block}_page_oh-details &,
         #{$block}_page_od-details &,
         #{$block}_page_w-list &,
@@ -188,7 +189,8 @@ $block: ".stock-table"
           top: 128px
 
       @media screen and (min-width: 1121px) and (max-width: 1360px)
-        #{$block}_page_p-list &
+        #{$block}_page_p-list &,
+        #{$block}_page_p-merge-list &
           top: 145px
 
         #{$block}_page_sl-form &,
@@ -212,7 +214,8 @@ $block: ".stock-table"
           top: 138px
 
       @media screen and (min-width: 1361px)
-        #{$block}_page_p-list &
+        #{$block}_page_p-list &,
+        #{$block}_page_p-merge-list &
           top: 85px
 
         #{$block}_page_sl-form &,
@@ -242,6 +245,7 @@ $block: ".stock-table"
       // Set default position in Edge
       @supports (-ms-ime-align: auto)
         #{$block}_page_p-list &,
+        #{$block}_page_p-merge-list &,
         #{$block}_page_sl-list &,
         #{$block}_page_sl-form &,
         #{$block}_page_sl-batches-form &,
@@ -265,6 +269,7 @@ $block: ".stock-table"
       // Set default position in IE11
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
         #{$block}_page_p-list &,
+        #{$block}_page_p-merge-list &,
         #{$block}_page_sl-list &,
         #{$block}_page_sl-form &,
         #{$block}_page_sl-batches-form &,
@@ -500,6 +505,7 @@ $block: ".stock-table"
 
       @media screen and (min-width: 1121px)
         #{$block}_page_p-list &,
+        #{$block}_page_p-merge-list &,
         #{$block}_page_oh-details &,
         #{$block}_page_od-details &,
         #{$block}_page_w-list &,
@@ -533,7 +539,8 @@ $block: ".stock-table"
           top: auto
 
       @media screen and (min-width: 1121px) and (max-width: 1360px)
-        #{$block}_page_p-list &
+        #{$block}_page_p-list &,
+        #{$block}_page_p-merge-list &
           top: 145px
 
         #{$block}_page_sl-form &,
@@ -562,7 +569,8 @@ $block: ".stock-table"
           top: auto
 
       @media screen and (min-width: 1361px)
-        #{$block}_page_p-list &
+        #{$block}_page_p-list &,
+        #{$block}_page_p-merge-list &
           top: 85px
 
         #{$block}_page_sl-form &,
@@ -596,6 +604,7 @@ $block: ".stock-table"
       // Set default position in Edge
       @supports (-ms-ime-align: auto)
         #{$block}_page_p-list &,
+        #{$block}_page_p-merge-list &,
         #{$block}_page_sl-list &,
         #{$block}_page_sl-form &,
         #{$block}_page_sl-batches-form &,
@@ -618,6 +627,7 @@ $block: ".stock-table"
       // Set default position in IE11
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
         #{$block}_page_p-list &,
+        #{$block}_page_p-merge-list &,
         #{$block}_page_sl-list &,
         #{$block}_page_sl-form &,
         #{$block}_page_sl-batches-form &,
@@ -844,6 +854,8 @@ $block: ".stock-table"
 
     #{$block}_page_ed-form &,
     #{$block}_page_p-list &,
+    #{$block}_page_p-merge-list &,
+    #{$block}_page_p-merge-selection &,
     #{$block}_page_w-list &,
     #{$block}_page_r-list &,
     #{$block}_page_cgpc-list &,
@@ -856,6 +868,8 @@ $block: ".stock-table"
       #{$block}_page_ed-form &,
       #{$block}_page_od-details &,
       #{$block}_page_p-list &,
+      #{$block}_page_p-merge-list &,
+      #{$block}_page_p-merge-selection &,
       #{$block}_page_w-list &,
       #{$block}_page_r-list &,
       #{$block}_page_cgpc-list &,
@@ -871,7 +885,9 @@ $block: ".stock-table"
     @media screen and (max-width: 1360px)
       #{$block}_page_oh-details &,
       #{$block}_page_od-details &,
-      #{$block}_page_p-list &
+      #{$block}_page_p-list &,
+      #{$block}_page_p-merge-list &,
+      #{$block}_page_p-merge-selection &
         padding-left: 8px
         padding-right: 8px
 
@@ -880,7 +896,9 @@ $block: ".stock-table"
         padding-left: 3px
         padding-right: 3px
 
-      #{$block}_page_p-list &
+      #{$block}_page_p-list &,
+      #{$block}_page_p-merge-list &,
+      #{$block}_page_p-merge-selection &
         padding-left: 5px
         padding-right: 5px
 
@@ -888,6 +906,8 @@ $block: ".stock-table"
       padding: 10px
 
       #{$block}_page_p-list &,
+      #{$block}_page_p-merge-list &,
+      #{$block}_page_p-merge-selection &,
       #{$block}_page_po-list &
         padding-left: 8px
         padding-right: 8px
@@ -967,6 +987,10 @@ $block: ".stock-table"
 
       #{$block}_page_p-list &
         width: 10%
+
+      #{$block}_page_p-merge-list &,
+      #{$block}_page_p-merge-selection &
+        width: 13%
 
       #{$block}_page_po-list &
         width: 13%
@@ -1087,6 +1111,10 @@ $block: ".stock-table"
       #{$block}_page_p-list &
         width: 8%
 
+      #{$block}_page_p-merge-list &,
+      #{$block}_page_p-merge-selection &
+        width: 13%
+
       #{$block}_page_po-list &
         width: 13%
 
@@ -1204,6 +1232,10 @@ $block: ".stock-table"
 
       #{$block}_page_p-list &
         width: 7%
+
+      #{$block}_page_p-merge-list &,
+      #{$block}_page_p-merge-selection &
+        width: 10%
 
       #{$block}_page_po-list &
         width: 9%
@@ -1323,6 +1355,11 @@ $block: ".stock-table"
       #{$block}_page_p-list &
         justify-content: center
         width: 8%
+
+      #{$block}_page_p-merge-list &,
+      #{$block}_page_p-merge-selection &
+        justify-content: center
+        width: 10%
 
       #{$block}_page_po-list &
         width: 13%
@@ -1450,6 +1487,10 @@ $block: ".stock-table"
       #{$block}_page_p-list &
         width: 7%
 
+      #{$block}_page_p-merge-list &,
+      #{$block}_page_p-merge-selection &
+        width: 13%
+
       #{$block}_page_po-list &
         width: 9%
 
@@ -1544,6 +1585,10 @@ $block: ".stock-table"
 
       #{$block}_page_p-list &
         width: 8%
+
+      #{$block}_page_p-merge-list &,
+      #{$block}_page_p-merge-selection &
+        width: 12%
 
       #{$block}_page_po-list &
         width: 9%
@@ -1644,6 +1689,10 @@ $block: ".stock-table"
       #{$block}_page_p-list &
         width: 7%
 
+      #{$block}_page_p-merge-list &,
+      #{$block}_page_p-merge-selection &
+        width: 10%
+
       #{$block}_page_po-list &
         width: 9%
 
@@ -1718,6 +1767,13 @@ $block: ".stock-table"
         flex-grow: 0
         flex-shrink: 0
         width: 120px
+
+      #{$block}_page_p-merge-list &,
+      #{$block}_page_p-merge-selection &
+        justify-content: center
+        flex-grow: 0
+        flex-shrink: 0
+        width: 80px
 
       #{$block}_page_po-list &
         flex-grow: 0
@@ -1796,6 +1852,13 @@ $block: ".stock-table"
         flex-grow: 0
         flex-shrink: 0
         width: 95px
+
+      #{$block}_page_p-merge-list &,
+      #{$block}_page_p-merge-selection &
+        justify-content: center
+        flex-grow: 0
+        flex-shrink: 0
+        width: 80px
 
       #{$block}_page_po-list &
         flex-grow: 0
@@ -2159,6 +2222,12 @@ $block: ".stock-table"
     #{$block}_page_od-details #{$block}__cell:nth-child(5) &,
     #{$block}_page_od-details #{$block}__cell:nth-child(9) &,
     #{$block}_page_p-list #{$block}__cell:nth-child(4) &,
+    #{$block}_page_p-merge-list #{$block}__cell:nth-child(4) &,
+    #{$block}_page_p-merge-list #{$block}__cell:nth-child(8) &,
+    #{$block}_page_p-merge-list #{$block}__cell:nth-child(9) &,
+    #{$block}_page_p-merge-selection #{$block}__cell:nth-child(4) &,
+    #{$block}_page_p-merge-selection #{$block}__cell:nth-child(8) &,
+    #{$block}_page_p-merge-selection #{$block}__cell:nth-child(9) &,
     #{$block}_page_ed-list #{$block}__cell:nth-child(4) &,
     #{$block}_page_ed-list #{$block}__cell:nth-child(5) &,
     #{$block}_page_ed-form #{$block}__cell:nth-child(4) &,
