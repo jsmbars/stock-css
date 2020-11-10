@@ -862,7 +862,8 @@ $block: ".stock-table"
     #{$block}_page_cgpc-list &,
     #{$block}_page_meals-list &,
     #{$block}_page_d-list &,
-    #{$block}_page_pt-list &
+    #{$block}_page_pt-list &,
+    #{$block}_page_pc-list &
       padding-left: 8px
       padding-right: 8px
 
@@ -1070,6 +1071,11 @@ $block: ".stock-table"
       #{$block}_page_pm-list &
         width: 12%
 
+      #{$block}_page_pc-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 50px
+
       @media screen and (max-width: 960px)
         #{$block}_page_oh-reports &,
         #{$block}_page_st-summary &
@@ -1202,6 +1208,9 @@ $block: ".stock-table"
       #{$block}_page_pm-list &
         width: 12%
 
+      #{$block}_page_pc-list &
+        width: 11%
+
       @media screen and (max-width: 960px)
         #{$block}_page_oh-reports &,
         #{$block}_page_st-summary &
@@ -1317,6 +1326,9 @@ $block: ".stock-table"
 
       #{$block}_page_pm-list &
         width: 12%
+
+      #{$block}_page_pc-list &
+        width: 10%
 
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
@@ -1454,6 +1466,9 @@ $block: ".stock-table"
       #{$block}_page_pm-list &
         width: 12%
 
+      #{$block}_page_pc-list &
+        width: 13%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 7%
@@ -1576,6 +1591,9 @@ $block: ".stock-table"
       #{$block}_page_pm-list &
         width: 12%
 
+      #{$block}_page_pc-list &
+        width: 11%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 5%
@@ -1684,6 +1702,10 @@ $block: ".stock-table"
         width: 10%
         justify-content: center
 
+      #{$block}_page_pc-list &
+        width: 10%
+        justify-content: center
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 6%
@@ -1782,6 +1804,10 @@ $block: ".stock-table"
         width: 10%
         justify-content: center
 
+      #{$block}_page_pc-list &
+        width: 11%
+        justify-content: center
+
       @media screen and (max-width: 1120px)
         #{$block}_page_ed-list &
           width: 120px
@@ -1868,6 +1894,11 @@ $block: ".stock-table"
         flex-shrink: 0
         width: 100px
 
+      #{$block}_page_pc-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 100px
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 5%
@@ -1942,6 +1973,11 @@ $block: ".stock-table"
         width: 9%
 
       #{$block}_page_pm-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 115px
+
+      #{$block}_page_pc-list &
         flex-grow: 0
         flex-shrink: 0
         width: 115px
@@ -2321,7 +2357,10 @@ $block: ".stock-table"
     #{$block}_page_oh-reports #{$block}__cell &,
     #{$block}_page_st-summary #{$block}__cell &,
     #{$block}_page_pm-list #{$block}__cell:nth-child(6) &,
-    #{$block}_page_pm-list #{$block}__cell:nth-child(7) &
+    #{$block}_page_pm-list #{$block}__cell:nth-child(7) &,
+    #{$block}_page_pc-list #{$block}__cell:nth-child(1) &,
+    #{$block}_page_pc-list #{$block}__cell:nth-child(6) &,
+    #{$block}_page_pc-list #{$block}__cell:nth-child(7) &
       text-align: center
 
     #{$block}_page_oh-reports-details #{$block}__cell &,
@@ -2514,6 +2553,18 @@ $block: ".stock-table"
       &:before
         content: '\e90a'
         color: #fff
+
+    // $Common table icon MOD: role menu category
+    &_role_menu-category
+      &:before
+        content: '\e926'
+
+    // $Common table icon MOD: role pos category
+    &_role_pos-category
+      &:before
+        content: '\e927'
+        font-size: 25px
+        line-height: 25px
 
 
   // $Common table corner
