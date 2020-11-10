@@ -661,7 +661,9 @@ $block: ".stock-activity-card"
 
     &_role_food,
     &_role_drink,
-    &_role_gift
+    &_role_gift,
+    &_role_menu-category,
+    &_role_pos-category
       &:before
         content: ''
         display: block
@@ -682,10 +684,22 @@ $block: ".stock-activity-card"
       &:before
         content: '\e906'
 
-    // $Common table icon MOD: role gift
+    // $Activity card icon MOD: role gift
     &_role_gift
       &:before
         content: '\e90a'
+
+    // $Activity card icon MOD: role menu category
+    &_role_menu-category
+      &:before
+        content: '\e926'
+
+    // $Activity card icon MOD: role pos category
+    &_role_pos-category
+      &:before
+        content: '\e927'
+        font-size: 25px
+        line-height: 25px
 
     // $Activity card icon MOD: role user
     &_role_user
