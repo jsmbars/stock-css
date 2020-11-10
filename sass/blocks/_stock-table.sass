@@ -848,7 +848,8 @@ $block: ".stock-table"
     #{$block}_page_oh-details &,
     #{$block}_page_od-details &,
     #{$block}_page_prep-list &,
-    #{$block}_page_batch-list &
+    #{$block}_page_batch-list &,
+    #{$block}_page_pm-list &
       padding-left: 10px
       padding-right: 10px
 
@@ -1066,6 +1067,9 @@ $block: ".stock-table"
       #{$block}_page_pt-list &
         width: 7%
 
+      #{$block}_page_pm-list &
+        width: 12%
+
       @media screen and (max-width: 960px)
         #{$block}_page_oh-reports &,
         #{$block}_page_st-summary &
@@ -1195,6 +1199,9 @@ $block: ".stock-table"
       #{$block}_page_pt-list &
         width: 9%
 
+      #{$block}_page_pm-list &
+        width: 12%
+
       @media screen and (max-width: 960px)
         #{$block}_page_oh-reports &,
         #{$block}_page_st-summary &
@@ -1307,6 +1314,9 @@ $block: ".stock-table"
 
       #{$block}_page_pt-list &
         width: 9%
+
+      #{$block}_page_pm-list &
+        width: 12%
 
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
@@ -1441,6 +1451,9 @@ $block: ".stock-table"
       #{$block}_page_pt-list &
         width: 9%
 
+      #{$block}_page_pm-list &
+        width: 12%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 7%
@@ -1560,6 +1573,9 @@ $block: ".stock-table"
       #{$block}_page_pt-list &
         width: 9%
 
+      #{$block}_page_pm-list &
+        width: 12%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 5%
@@ -1664,6 +1680,10 @@ $block: ".stock-table"
       #{$block}_page_pt-list &
         width: 9%
 
+      #{$block}_page_pm-list &
+        width: 10%
+        justify-content: center
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 6%
@@ -1758,6 +1778,10 @@ $block: ".stock-table"
       #{$block}_page_pt-list &
         width: 9%
 
+      #{$block}_page_pm-list &
+        width: 10%
+        justify-content: center
+
       @media screen and (max-width: 1120px)
         #{$block}_page_ed-list &
           width: 120px
@@ -1839,6 +1863,11 @@ $block: ".stock-table"
       #{$block}_page_pt-list &
         width: 9%
 
+      #{$block}_page_pm-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 100px
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 5%
@@ -1911,6 +1940,11 @@ $block: ".stock-table"
 
       #{$block}_page_pt-list &
         width: 9%
+
+      #{$block}_page_pm-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 115px
 
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
@@ -2285,7 +2319,9 @@ $block: ".stock-table"
     #{$block}_page_st #{$block}__cell:nth-child(8) &,
     #{$block}_page_po-form #{$block}__cell:nth-child(8) &,
     #{$block}_page_oh-reports #{$block}__cell &,
-    #{$block}_page_st-summary #{$block}__cell &
+    #{$block}_page_st-summary #{$block}__cell &,
+    #{$block}_page_pm-list #{$block}__cell:nth-child(6) &,
+    #{$block}_page_pm-list #{$block}__cell:nth-child(7) &
       text-align: center
 
     #{$block}_page_oh-reports-details #{$block}__cell &,
