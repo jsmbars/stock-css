@@ -31,6 +31,8 @@ $block: ".stock-tag"
 
   &_type_sortable
 
+  &_type_collapsible
+
 
   // $Tag content
   &__content
@@ -41,6 +43,7 @@ $block: ".stock-tag"
     flex-direction: row
     justify-content: space-between
     align-items: center
+    width: 100%
     padding: 10px 15px
     background-color: #f0f0f0
     border-radius: 4px
@@ -48,12 +51,77 @@ $block: ".stock-tag"
     #{$block}_type_sortable &
       padding-left: 20px
 
+    #{$block}_type_collapsible &
+      display: block
+
     @media screen and (max-width: 960px)
       padding-right: 10px
       padding-left: 10px
 
       #{$block}_type_sortable &
         padding-left: 20px
+
+
+  // $Tag group
+  &__group
+    position: relative
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    width: 100%
+
+
+  // $Tag dropdown
+  &__dropdown
+    display: block
+    width: 100%
+
+    // $Tag dropdown MOD: state closed
+    &_state_closed
+      display: none
+
+
+  // $Tag dropdown content
+  &__dropdown-content
+    display: block
+    width: 100%
+    margin-top: 10px
+    padding-top: 10px
+    border-top: 1px solid #d3d3d3
+
+
+  // $Tag dropdown switch
+  &__dropdown-switch
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    width: 20px
+    height: 20px
+    font-size: 0
+    line-height: 0
+    color: transparent
+    outline: none
+    background-color: #454d5e
+    border-radius: 50%
+    transition: all .4s
+    cursor: pointer
+    transform: rotate(180deg)
+
+    &:before
+      content: '\e920'
+      display: block
+      font-family: icons
+      font-size: 15px
+      line-height: 20px
+      font-weight: 400
+      color: #fff
+      text-align: center
+
+    &_state_closed
+      transform: rotate(0)
 
 
   // $Tag handle
@@ -89,6 +157,11 @@ $block: ".stock-tag"
 
   // $Tag info
   &__info
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: calc(100% - 240px)
+    padding-right: 5px
 
 
   // $Tag title
@@ -101,6 +174,78 @@ $block: ".stock-tag"
     color: #1c2841
     font-weight: 400
 
+    // $Tag title MOD: adjust no wrap
+    &_adjust_no-wrap
+      white-space: nowrap
+
+    // $Tag title MOD: adjust wrap
+    &_adjust_wrap
+      word-wrap: break-word
+      hyphens: auto
+
+
+  // $Tag text
+  &__text
+    width: 100%
+    max-width: 100%
+    flex-grow: 0
+    flex-shrink: 1
+    font-family: $f-sans
+    font-size: 12px
+    line-height: 1.2
+    font-weight: 400
+    color: #333
+
+    // $Tag text MOD: size small
+    &_size_s
+      font-size: 12px
+
+    // $Tag text MOD: adjust no wrap
+    &_adjust_no-wrap
+      white-space: nowrap
+
+    // $Tag text MOD: adjust wrap
+    &_adjust_wrap
+      word-wrap: break-word
+      hyphens: auto
+
+
+  // $Tag text marked
+  &__text-marked
+    font-weight: 600
+
+
+  // $Tag link
+  &__link
+    font-size: inherit
+    line-height: inherit
+    color: darken(#64a5fd, 10%)
+    text-decoration: underline
+
+    &:hover
+      text-decoration: none
+
+    &:focus
+      outline: none
+
+
+  // $Tag number
+  &__number
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 1
+    color: #1c2841
+    font-weight: 600
+
+    &:not(:last-child)
+      margin-right: 20px
+
+      @media screen and (max-width: 400px)
+        margin-right: 15px
+
 
   // $Tag field
   &__field
@@ -108,6 +253,29 @@ $block: ".stock-tag"
     flex-shrink: 0
     display: block
 
+    &:not(:last-child)
+      margin-right: 20px
+
+      @media screen and (max-width: 400px)
+        margin-right: 15px
+
+
+  // $Tag list
+  &__list
+    display: block
+    width: 100%
+    margin: 0
+    padding: 0
+    list-style: none
+
+
+  // $Tag list item
+  &__list-item
+    display: block
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 10px
 
   // $Tag actions
   &__actions
