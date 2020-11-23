@@ -428,3 +428,110 @@ $block: ".stock-form-select"
 
     &:hover
       opacity: 1
+
+
+  // $Form select third-party component wrap
+  &__component
+    display: block
+    width: 100%
+
+    // Select2 custom styles
+    & .select2-container *:focus
+      outline: none
+
+    & .select2-container .select2-selection--single
+      height: 50px
+
+    & .select2-container--default .select2-selection--single
+      border-radius: 2px
+      background-color: #fff
+      border: 1px solid #d3d3d3
+
+      #{$block}_state_error &
+        border-color: #ed7f7e
+
+    & .select2-container--default.select2-container--disabled .select2-selection--single
+      background-color: #f0f0f0
+      cursor: not-allowed
+
+    & .select2-container--default .select2-selection--single .select2-selection__placeholder
+      color: #757a85
+
+      #{$block}_state_error &
+        color: #ed7f7e
+
+    & .select2-container .select2-selection--single .select2-selection__rendered
+      padding: 0 40px 0 10px
+      font-family: $f-sans
+      font-size: 12px
+      line-height: 48px
+      color: #757a85
+      font-weight: 400
+
+      #{$block}_state_error &
+        color: #ed7f7e
+
+    & .select2-container--default .select2-selection--single .select2-selection__arrow
+      width: 30px
+      height: auto
+      bottom: 1px
+
+      &:after
+        content: '\e920'
+        position: absolute
+        top: 50%
+        right: 13px
+        z-index: 10
+        display: block
+        font-family: icons
+        font-size: 22px
+        line-height: 14px
+        font-weight: 400
+        color: #bbbbbb
+        transform: translateY(-50%)
+
+        #{$block}_state_error &
+          color: #ed7f7e
+
+      & b
+        display: none
+
+    @at-root
+      .select2-search--dropdown
+        padding: 5px 10px
+
+      .select2-search--dropdown .select2-search__field
+        display: block
+        height: 30px
+        min-height: 30px
+        padding: 0 10px
+        font-family: $f-sans
+        font-size: 14px
+        color: #757a85
+        font-weight: 400
+        line-height: 1.25
+        border-radius: 2px
+        background-color: #fff
+
+        &:focus
+          outline: none
+          box-shadow: 0 0 1px 0 #64a5fd
+
+      .select2-container--default .select2-search--dropdown .select2-search__field
+        border: 1px solid #d3d3d3
+
+      .select2-results__option
+        padding: 5px 10px
+        font-family: $f-sans
+        font-size: 12px
+        color: #757a85
+        font-weight: 400
+        line-height: 1.25
+
+      .select2-container--default .select2-results__option[aria-selected="true"]
+        background-color: #f0f0f0
+        color: #757a85
+
+      .select2-container--default .select2-results__option--highlighted[aria-selected]
+        background-color: #f6f6f6
+        color: #757a85

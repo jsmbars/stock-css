@@ -370,7 +370,8 @@ $block: ".stock-table"
       padding: 20px 45px 55px
 
       #{$block}_page_oh-reports &,
-      #{$block}_page_st-summary &
+      #{$block}_page_st-summary &,
+      #{$block}_page_pd-list &
         background-color: #f6f6f6
 
       @media screen and (max-width: 960px)
@@ -431,7 +432,8 @@ $block: ".stock-table"
       position: relative
       overflow-x: auto
 
-    #{$block}_page_st-list #{$block}__group_role_header &
+    #{$block}_page_st-list #{$block}__group_role_header &,
+    #{$block}_page_pd-list-details &
       border-bottom: none
 
     #{$block}_page_st-list #{$block}__group_role_header &,
@@ -479,6 +481,10 @@ $block: ".stock-table"
         #{$block}_page_st-summary-details &
           background-color: #fff
           border-bottom: 1px solid #eee
+
+        #{$block}_page_pd-list-details &
+          background-color: transparent
+          border-bottom: none
 
       @media screen and (min-width: 961px)
         #{$block}_page_sl-list &,
@@ -708,6 +714,12 @@ $block: ".stock-table"
       min-width: 160px
       border-right: 1px solid #d6d6d6
 
+    #{$block}_page_pd-list-details &
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+
     @media screen and (max-width: 480px)
       #{$block}_page_st-list &
         width: calc((100% - 210px) / 20)
@@ -787,9 +799,25 @@ $block: ".stock-table"
         padding-right: 20px
         border-right: 1px solid #eee
 
+      #{$block}_page_pd-list-details &
+        width: 33.3%
+        padding-right: 20px
+        border-right: 1px solid #eee
+
     &:nth-child(2)
       #{$block}_page_ed-list &
         width: 50%
+        padding-left: 20px
+
+      #{$block}_page_pd-list-details &
+        width: 33.3%
+        padding-right: 20px
+        padding-left: 20px
+        border-right: 1px solid #eee
+
+    &:nth-child(3)
+      #{$block}_page_pd-list-details &
+        width: 33.3%
         padding-left: 20px
 
 
@@ -863,9 +891,16 @@ $block: ".stock-table"
     #{$block}_page_meals-list &,
     #{$block}_page_d-list &,
     #{$block}_page_pt-list &,
-    #{$block}_page_pc-list &
+    #{$block}_page_pc-list &,
+    #{$block}_page_pd-list &
       padding-left: 8px
       padding-right: 8px
+
+    #{$block}_page_pd-list-details &
+      flex-grow: 0
+      flex-shrink: 0
+      min-height: 0
+      padding: 0
 
     @media screen and (max-width: 1600px)
       #{$block}_page_ed-form &,
@@ -878,7 +913,8 @@ $block: ".stock-table"
       #{$block}_page_cgpc-list &,
       #{$block}_page_meals-list &,
       #{$block}_page_d-list &,
-      #{$block}_page_pt-list &
+      #{$block}_page_pt-list &,
+      #{$block}_page_pd-list &
         padding-left: 5px
         padding-left: 5px
 
@@ -946,6 +982,10 @@ $block: ".stock-table"
 
       #{$block}_page_st-list &
         border-bottom: 1px solid #d6d6d6
+
+      #{$block}_page_pd-list-details &
+        padding-bottom: 10px
+        border-right: none
 
     // $Common table cell first column
     &:nth-child(1)
@@ -1075,6 +1115,12 @@ $block: ".stock-table"
         flex-grow: 0
         flex-shrink: 0
         width: 50px
+
+      #{$block}_page_pd-list &
+        width: 9%
+
+      #{$block}_page_pd-list-details &
+        width: 100%
 
       @media screen and (max-width: 960px)
         #{$block}_page_oh-reports &,
@@ -1211,6 +1257,12 @@ $block: ".stock-table"
       #{$block}_page_pc-list &
         width: 11%
 
+      #{$block}_page_pd-list &
+        width: 9%
+
+      #{$block}_page_pd-list-details &
+        width: 100%
+
       @media screen and (max-width: 960px)
         #{$block}_page_oh-reports &,
         #{$block}_page_st-summary &
@@ -1329,6 +1381,12 @@ $block: ".stock-table"
 
       #{$block}_page_pc-list &
         width: 10%
+
+      #{$block}_page_pd-list &
+        width: 11%
+
+      #{$block}_page_pd-list-details &
+        width: 100%
 
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
@@ -1469,6 +1527,12 @@ $block: ".stock-table"
       #{$block}_page_pc-list &
         width: 13%
 
+      #{$block}_page_pd-list &
+        width: 9%
+
+      #{$block}_page_pd-list-details &
+        width: 100%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 7%
@@ -1594,6 +1658,9 @@ $block: ".stock-table"
       #{$block}_page_pc-list &
         width: 11%
 
+      #{$block}_page_pd-list &
+        width: 8%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 5%
@@ -1706,6 +1773,9 @@ $block: ".stock-table"
         width: 10%
         justify-content: center
 
+      #{$block}_page_pd-list &
+        width: 8%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 6%
@@ -1808,6 +1878,10 @@ $block: ".stock-table"
         width: 11%
         justify-content: center
 
+      #{$block}_page_pd-list &
+        width: 9%
+        justify-content: center
+
       @media screen and (max-width: 1120px)
         #{$block}_page_ed-list &
           width: 120px
@@ -1899,6 +1973,10 @@ $block: ".stock-table"
         flex-shrink: 0
         width: 100px
 
+      #{$block}_page_pd-list &
+        width: 9%
+        justify-content: center
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 5%
@@ -1982,12 +2060,20 @@ $block: ".stock-table"
         flex-shrink: 0
         width: 115px
 
+      #{$block}_page_pd-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 95px
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 7%
           min-width: 90px
 
         #{$block}_page_p-list &
+          width: 90px
+
+        #{$block}_page_pd-list &
           width: 90px
 
       @media screen and (max-width: 1360px)
@@ -2027,6 +2113,11 @@ $block: ".stock-table"
         flex-shrink: 0
         width: 95px
 
+      #{$block}_page_pd-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 100px
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 110px
@@ -2036,6 +2127,9 @@ $block: ".stock-table"
 
         #{$block}_page_pt-list &
           width: 90px
+
+        #{$block}_page_pd-list &
+          width: 95px
 
       @media screen and (max-width: 1360px)
         #{$block}_page_p-list &
@@ -2075,6 +2169,11 @@ $block: ".stock-table"
         flex-shrink: 0
         width: 110px
 
+      #{$block}_page_pd-list &
+        flex-grow: 0
+        flex-shrink: 0
+        width: 110px
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 100px
@@ -2086,6 +2185,9 @@ $block: ".stock-table"
           width: 90px
 
         #{$block}_page_pt-list &
+          width: 105px
+
+        #{$block}_page_pd-list &
           width: 105px
 
       @media screen and (max-width: 1360px)
@@ -2206,8 +2308,12 @@ $block: ".stock-table"
 
       #{$block}_page_oh-reports-details &,
       #{$block}_page_st-summary-details &,
-      #{$block}_page_t-list &
+      #{$block}_page_t-list &,
+      #{$block}_page_pd-list-details &
         border-top: none
+
+      #{$block}_page_pd-list-details &
+        min-height: 0
 
     // $Common table cell MOD: role footer
     &_role_footer
@@ -2220,6 +2326,13 @@ $block: ".stock-table"
     // $Common table cell MOD: role details
     &_role_details
       position: relative
+
+    // $Common table cell MOD: role tags
+    &_role_tags
+      #{$block}_page_pd-list-details &
+        flex-grow: 1
+        flex-shrink: 1
+        align-items: flex-end
 
     // $Common table cell MOD: no border
     &_no-border
@@ -2360,7 +2473,9 @@ $block: ".stock-table"
     #{$block}_page_pm-list #{$block}__cell:nth-child(7) &,
     #{$block}_page_pc-list #{$block}__cell:nth-child(1) &,
     #{$block}_page_pc-list #{$block}__cell:nth-child(6) &,
-    #{$block}_page_pc-list #{$block}__cell:nth-child(7) &
+    #{$block}_page_pc-list #{$block}__cell:nth-child(7) &,
+    #{$block}_page_pd-list #{$block}__cell:nth-child(7) &,
+    #{$block}_page_pd-list #{$block}__cell:nth-child(8) &
       text-align: center
 
     #{$block}_page_oh-reports-details #{$block}__cell &,
@@ -2474,6 +2589,25 @@ $block: ".stock-table"
   // $Common table text line
   &__text-line
     display: block
+
+
+  // $Common table tags
+  &__tags
+    display: block
+    width: 100%
+    padding: 15px 10px
+    background-color: #FFF
+    border: 1px solid #eeeeee
+    border-radius: 0
+
+
+  // $Common table tags content
+  &__tags-content
+    display: block
+    width: 100%
+    height: 240px
+    padding-right: 10px
+    overflow: auto
 
 
   // $Common table actions

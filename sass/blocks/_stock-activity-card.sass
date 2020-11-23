@@ -409,6 +409,14 @@ $block: ".stock-activity-card"
     border: 2px solid #ebebeb
 
 
+  // $Activity card cell area
+  &__cell-area
+    display: block
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 20px
+
   // $Activity card footer
   &__footer
     padding: 35px 10px 15px
@@ -434,6 +442,25 @@ $block: ".stock-activity-card"
       #{$block}_state_picked &,
       #{$block}_state_zero-cost &
         background-color: transparent
+
+
+  // $Activity card tags
+  &__tags
+    display: block
+    width: 100%
+    padding: 15px 10px
+    background-color: #FFF
+    border: 1px solid #eeeeee
+    border-radius: 0
+
+
+  // $Activity card tags content
+  &__tags-content
+    display: block
+    width: 100%
+    max-height: 240px
+    padding-right: 10px
+    overflow: auto
 
 
   // $Activity card actions
