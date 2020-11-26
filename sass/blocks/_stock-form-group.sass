@@ -57,6 +57,17 @@ $block: ".stock-form-group"
   &__label-text
 
 
+  // $Common form group label action
+  &__label-action
+    margin-top: -2px
+    padding: 4px 8px
+    font-size: 11px
+
+    &:before,
+    &:after
+      font-size: 10px
+
+
   // $Common form group content
   &__content
     position: relative
@@ -76,6 +87,9 @@ $block: ".stock-form-group"
 
     &_adjust_tag-list
       padding-right: 0
+
+    &_adjust_label-list
+      min-height: 100px
 
 
   // $Common form group tags
