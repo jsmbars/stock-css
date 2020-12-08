@@ -32,6 +32,7 @@ $block: ".stock-tag"
   &_type_sortable
 
   &_type_collapsible
+    align-items: flex-start
 
 
   // $Tag content
@@ -43,7 +44,7 @@ $block: ".stock-tag"
     flex-direction: row
     justify-content: space-between
     align-items: center
-    width: 100%
+    width: calc(100% - 60px)
     padding: 10px 15px
     background-color: #f0f0f0
     border-radius: 4px
@@ -277,12 +278,95 @@ $block: ".stock-tag"
     &:not(:last-child)
       margin-bottom: 10px
 
+
+  // $Tag options
+  &__options
+    display: block
+    width: 100%
+
+
+  // $Tag option
+  &__option
+    position: relative
+    flex-grow: 1
+    flex-shrink: 1
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    width: 100%
+
+    &:not(:last-child)
+      margin-bottom: 10px
+      padding-bottom: 10px
+      border-bottom: 1px solid #ddd
+
+
+  // $Tag option info
+  &__option-info
+    flex-grow: 1
+    flex-shrink: 1
+    display: block
+    width: calc(100% - 240px)
+    padding-right: 5px
+
+
+  // $Tag option title
+  &__option-title
+    display: block
+    width: 100%
+    font-family: $f-sans
+    font-size: 13px
+    line-height: 1
+    color: #1c2841
+    font-weight: 400
+
+    // $Tag option title MOD: adjust no wrap
+    &_adjust_no-wrap
+      white-space: nowrap
+
+    // $Tag option title MOD: adjust wrap
+    &_adjust_wrap
+      word-wrap: break-word
+      hyphens: auto
+
+
+  // $Tag option link
+  &__option-link
+    font-size: inherit
+    line-height: inherit
+    color: darken(#64a5fd, 10%)
+    text-decoration: underline
+
+    &:hover
+      text-decoration: none
+
+    &:focus
+      outline: none
+
+
+  // $Tag option field
+  &__option-field
+    flex-grow: 0
+    flex-shrink: 0
+    display: block
+
+    &:not(:last-child)
+      margin-right: 20px
+
+      @media screen and (max-width: 400px)
+        margin-right: 15px
+
+
   // $Tag actions
   &__actions
     flex-grow: 0
     flex-shrink: 0
     display: block
     white-space: nowrap
+
+    #{$block}_type_collapsible &
+      padding-top: 10px
 
 
   // $Tag action
@@ -316,3 +400,13 @@ $block: ".stock-tag"
         font-weight: 400
         color: #fd6464
         vertical-align: middle
+
+
+  // $Tag text  placeholder
+  &__text-placeholder
+    display: block
+    width: 100%
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 1.2
+    color: #757a85

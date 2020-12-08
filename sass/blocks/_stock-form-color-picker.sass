@@ -308,6 +308,13 @@ $block: ".stock-form-color-picker"
           height: 35px
           padding: 8px 8px 8px 10px
 
+        #{$block}_size_s#{$block}_adjust_tag &,
+        #{$block}_size_xs#{$block}_adjust_tag &,
+        #{$block}_size_xxs#{$block}_adjust_tag &
+          min-width: 55px
+          height: 25px
+          padding: 4px 10px
+
       &.sp-replacer:hover,
       &.sp-replacer.sp-active
         border-color: #d3d3d3
@@ -318,9 +325,37 @@ $block: ".stock-form-color-picker"
         color: #d8d8d8
 
       & .sp-preview
-        height: 18px
+        height: 20px
         border: solid 1px #9c9c9c
 
+        #{$block}_size_s &,
+        #{$block}_size_xs &,
+        #{$block}_size_narrow &,
+        #{$block}_context_table &
+          height: 18px
+
+        #{$block}_size_s#{$block}_adjust_tag &,
+        #{$block}_size_xs#{$block}_adjust_tag &,
+        #{$block}_size_xxs#{$block}_adjust_tag &
+          height: 15px
+
+      & .sp-dd
+        height: 20px
+        line-height: 20px
+        padding: 0
+
+        #{$block}_size_s &,
+        #{$block}_size_xs &,
+        #{$block}_size_narrow &,
+        #{$block}_context_table &
+          height: 18px
+          line-height: 18px
+
+        #{$block}_size_s#{$block}_adjust_tag &,
+        #{$block}_size_xs#{$block}_adjust_tag &,
+        #{$block}_size_xxs#{$block}_adjust_tag &
+          height: 15px
+          line-height: 15px
 
     .stock-form-color-picker-sp-container
       &.sp-container

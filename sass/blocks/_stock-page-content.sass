@@ -214,6 +214,48 @@ $block: ".stock-page-content"
         @media screen and (max-width: 960px)
           order: -99
 
+  &__split-area
+    margin-bottom: 20px
+    background-color: #FFF
+    box-shadow: 2px 2px 8px 0 rgba(0,0,0,.2)
+
+    &:not(:last-child)
+      margin-right: 20px
+
+      @media screen and (max-width: 960px)
+        margin-right: 0
+
+    &:nth-child(1)
+      #{$block}__data_role_p-si-form &,
+      #{$block}__tab[data-tab="saleable-items"] #{$block}__data[data-view="add-form-view"] &
+        width: 55%
+
+      @media screen and (max-width: 1600px)
+        #{$block}__data_role_p-si-form &,
+        #{$block}__tab[data-tab="saleable-items"] #{$block}__data[data-view="add-form-view"] &
+          width: 50%
+
+      @media screen and (max-width: 960px)
+        #{$block}__data_role_p-si-form &,
+        #{$block}__tab[data-tab="saleable-items"] #{$block}__data[data-view="add-form-view"] &
+          width: 100%
+
+    &:nth-child(2)
+      #{$block}__data_role_p-si-form &,
+      #{$block}__tab[data-tab="saleable-items"] #{$block}__data[data-view="add-form-view"] &
+        width: 45%
+
+      @media screen and (max-width: 1600px)
+        #{$block}__data_role_p-si-form &,
+        #{$block}__tab[data-tab="saleable-items"] #{$block}__data[data-view="add-form-view"] &
+          width: 50%
+
+      @media screen and (max-width: 960px)
+        #{$block}__data_role_p-si-form &,
+        #{$block}__tab[data-tab="saleable-items"] #{$block}__data[data-view="add-form-view"] &
+          order: -99
+          width: 100%
+
 
   // $Page content data area
   &__data
@@ -256,6 +298,8 @@ $block: ".stock-page-content"
     &_role_stm-m-details
     &_role_stm-w-list
     &_role_stm-w-form-add
+    &_role_stm-r-list
+    &_role_stm-r-form-add
 
     // Order Management
     &_role_orm-po-form
@@ -266,6 +310,24 @@ $block: ".stock-page-content"
     &_role_orm-oh-details
     &_role_orm-oh-delivery
     &_role_orm-oh-reports
+
+    // Reporting
+    &_role_r-t-chart
+    &_role_r-t-table
+    &_role_r-st-list
+    &_role_r-st-summary
+
+    // POS
+    &_role_p-pt-list
+    &_role_p-pt-form
+    &_role_p-m-list
+    &_role_p-m-form
+    &_role_p-c-list
+    &_role_p-c-form
+    &_role_p-d-list
+    &_role_p-d-form
+    &_role_p-si-list
+    &_role_p-si-form
 
     // $Page content data area MOD: state visible
     &_state_visible
