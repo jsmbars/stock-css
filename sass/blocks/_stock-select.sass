@@ -146,8 +146,8 @@ $block: ".stock-select"
       border-radius: 10px
 
     @media screen and (max-width: 1360px)
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
+      overflow-y: scroll
+      -webkit-overflow-scrolling: touch
 
     @media screen and (max-height: 480px)
       #{$block}_role_site &
@@ -156,47 +156,52 @@ $block: ".stock-select"
 
   // $Select options content
   &__options-content
-    display: inline-block
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
     width: 100%
-    padding: 15px 0 10px
+    padding: 15px 25px 10px
+
+    @media screen and (max-width: 1600px)
+      padding: 15px 20px 10px
+
+    @media screen and (max-width: 1360px)
+      padding: 15px 25px 10px
 
 
   // $Select option
   &__option
+    flex-grow: 0
+    flex-shrink: 0
     position: relative
     display: block
-    width: 100%
-    padding: 20px 25px
+    width: auto
+    padding: 15px 0
+    font-family: $f-sans
     font-size: 16px
+    font-weight: 600
     line-height: 1
     color: #4c4c4c
-    font-family: $f-sans
-    font-weight: 600
     text-transform: uppercase
+    text-decoration: none
     transition: all .5s
     cursor: pointer
     outline: none
 
     @media screen and (max-width: 1600px)
-      padding: 15px 20px
       font-size: 14px
 
     @media screen and (max-width: 1360px)
-      padding: 20px 25px
       font-size: 16px
 
     // $Select option CONTEXT: $Select MOD: role site
     #{$block}_role_site &
       color: #243C5C
 
-    @media screen and (max-height: 480px)
-      #{$block}_role_site &
-        padding-top: 15px
-        padding-bottom: 15px
-
     &:hover,
     &_state_selected
-      background-color: #f3f3f3
+      text-decoration: underline
 
     &:focus
       outline: none
