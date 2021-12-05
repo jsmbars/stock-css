@@ -1,0 +1,196 @@
+@import '../helpers/settings'
+@import '../helpers/mixins'
+
+////////////////////////////////////////
+// $Steps
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+
+//////////////////////////////////////// Block styles
+$block: ".stock-steps"
+
+#{$block}
+  display: block
+  width: 100%
+
+  &_role_saleable-item
+
+
+  // $Steps list
+  &__list
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-start
+    width: 100%
+
+    @media screen and (max-width: 480px)
+      flex-direction: column
+
+
+  // $Steps item
+  &__item
+    flex-grow: 1
+    flex-shrink: 1
+    position: relative
+    display: block
+
+    #{$block}_role_saleable-item &
+      width: 16.667%
+
+    @media screen and (max-width: 480px)
+      display: flex
+      flex-direction: row
+      justify-content: flex-start
+      align-items: center
+      height: 50px
+
+      #{$block}_role_saleable-item &
+        width: 100%
+
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      top: 13px
+      right: 0
+      display: block
+      height: 4px
+      background-color: #ccc
+
+      @media screen and (max-width: 960px)
+        top: 11px
+        height: 3px
+
+      @media screen and (max-width: 480px)
+        left: 11px
+        top: 0
+        bottom: 0
+        right: auto
+        width: 3px
+        height: auto
+
+    &:before
+      right: 50%
+
+      @media screen and (max-width: 480px)
+        right: auto
+        bottom: 50%
+
+    &:after
+      left: 50%
+      right: -1px
+
+      @media screen and (max-width: 480px)
+        left: 11px
+        right: auto
+        top: 50%
+        bottom: -1px
+
+    &:first-child:before,
+    &:last-child:after
+      display: none
+
+    // $Steps item MOD: state completed
+    &_state_completed:before,
+    &_state_completed:after
+      background-color: #64a5fd
+
+    // $Steps item MOD: state error
+    &_state_error:before,
+    &_state_error:after
+      background-color: #ed7f7e
+
+
+  // $Steps info
+  &__info
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+
+    @media screen and (max-width: 480px)
+      flex-direction: row
+      justify-content: flex-start
+
+
+  // $Steps number
+  &__number
+    position: relative
+    z-index: 1
+    display: block
+    width: 30px
+    height: 30px
+    margin-bottom: 5px
+    border-radius: 50%
+    font-family: $f-sans
+    font-size: 14px
+    line-height: 26px
+    text-align: center
+    color: #fff
+    background-color: #ccc
+    border: 2px solid transparent
+
+    // $Steps number CONTEXT: $Steps item MOD: state completed
+    #{$block}__item_state_completed &
+      background-color: #64a5fd
+
+    // $Steps number CONTEXT: $Steps item MOD: state error
+    #{$block}__item_state_error &
+      background-color: #ed7f7e
+
+    // $Steps number CONTEXT: $Steps item MOD: state active
+    #{$block}__item_state_active &
+      color: #1c2841
+      border-color: #1c2841
+      background-color: #fff
+
+    @media screen and (max-width: 960px)
+      width: 25px
+      height: 25px
+      line-height: 21px
+
+    @media screen and (max-width: 480px)
+      margin-bottom: 0
+
+
+  // $Steps label
+  &__label
+    display: block
+    max-width: 100%
+    padding: 0 2px
+    font-family: $f-sans
+    font-size: 14px
+    color: #9c9c9c
+    text-align: center
+    overflow-wrap: break-word
+    word-wrap: break-word
+    word-break: break-word
+    hyphens: auto
+
+    // $Steps label CONTEXT: $Steps item MOD: state completed
+    #{$block}__item_state_completed &
+      color: #64a5fd
+
+    // $Steps label CONTEXT: $Steps item MOD: state error
+    #{$block}__item_state_error &
+      color: #ed7f7e
+
+    // $Steps label CONTEXT: $Steps item MOD: state active
+    #{$block}__item_state_active &
+      color: #1c2841
+
+    @media screen and (max-width: 960px)
+      font-size: 12px
+
+    @media screen and (max-width: 480px)
+      padding: 0 0 0 10px
+      font-size: 14px
+      text-align: left
