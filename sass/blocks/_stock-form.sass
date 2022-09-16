@@ -61,12 +61,33 @@ $block: ".stock-form"
 
 
   &__board-actions
+    margin-left: 15px
+
     @media screen and (max-width: 480px)
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      align-items: center
+      width: 100%
+      margin-left: 0
       margin-top: 15px
-      align-self: center
 
 
   &__board-action
+    &:not(:only-child)
+      margin-top: 5px
+      margin-bottom: 5px
+
+      @media screen and (max-width: 480px)
+        margin-top: 0
+        margin-bottom: 0
+
+    &:not(:last-child)
+      margin-right: 10px
+
+      @media screen and (max-width: 480px)
+        margin-right: 0
+        margin-bottom: 10px
 
 
   // $Common form board content
@@ -376,12 +397,20 @@ $block: ".stock-form"
       @media screen and (max-width: 960px)
         justify-content: center
 
+    &_adjust_di-form
+      flex-wrap: wrap
+
+    &_adjust_di-form
+      @media screen and (max-width: 640px)
+        flex-direction: column
+
     &_adjust_cgpc-form,
     &_adjust_pr-form,
     &_adjust_me-form,
     &_adjust_ohd-form,
     &_adjust_t-form,
-    &_adjust_si-form
+    &_adjust_si-form,
+    &_adjust_d-form,
       justify-content: center
 
 
@@ -391,6 +420,10 @@ $block: ".stock-form"
     flex-grow: 0
     flex-shrink: 1
 
+    #{$block}__actions_adjust_di-form &
+      margin-top: 5px
+      margin-bottom: 5px
+
     @media screen and (max-width: 960px)
       #{$block}__actions_adjust_c-u-forms &,
       #{$block}__actions_adjust_em-form &,
@@ -398,6 +431,15 @@ $block: ".stock-form"
       #{$block}__actions_adjust_ohd-form &,
       #{$block}__actions_adjust_t-form &
         flex-grow: 1
+
+    @media screen and (max-width: 640px)
+      #{$block}__actions_adjust_di-form &
+        flex-grow: 1
+        width: 100%
+
+      #{$block}__actions_adjust_di-form &
+        margin-top: 0
+        margin-bottom: 0
 
     @media screen and (max-width: 400px)
       #{$block}__actions_adjust_t-form &
@@ -413,12 +455,22 @@ $block: ".stock-form"
       #{$block}__actions_adjust_me-form &,
       #{$block}__actions_adjust_ohd-form &,
       #{$block}__actions_adjust_t-form &,
-      #{$block}__actions_adjust_si-form &
+      #{$block}__actions_adjust_si-form &,
+      #{$block}__actions_adjust_d-form &
         margin-left: 20px
 
       @media screen and (max-width: 400px)
         #{$block}__actions_adjust_em-form &
           margin-left: 10px
+
+    &:not(#{&}_single):not(:last-child)
+      #{$block}__actions_adjust_di-form &
+        margin-right: 15px
+
+      @media screen and (max-width: 640px)
+        #{$block}__actions_adjust_di-form &
+          margin-right: 0
+          margin-bottom: 10px
 
     // $Common form action MOD: state hidden
     &_state_hidden
