@@ -105,20 +105,28 @@ $block: ".stock-modal"
       #{$block}_role_confirm &
         flex-direction: column
 
+    // $Modal window actions MOD: adjust wrap mobile
+    &_adjust_wrap-mobile
+      @media screen and (max-width: 480px)
+        flex-wrap: wrap
+
 
   // $Modal window action
   &__action
 
     @media screen and (max-width: 480px)
       // $Modal window action CONTEXT: $Modal window MOD: confirm dialog
-      #{$block}_role_confirm &
+      // $Modal window action CONTEXT: $Modal window actions MOD: adjust wrap mobile
+      #{$block}_role_confirm &,
+      #{$block}__actions_adjust_wrap-mobile &
         width: 100%
 
     &:not(:last-child)
       margin-right: 20px
 
       @media screen and (max-width: 480px)
-        #{$block}_role_confirm &
+        #{$block}_role_confirm &,
+        #{$block}__actions_adjust_wrap-mobile &
           margin-right: 0
           margin-bottom: 20px
 
