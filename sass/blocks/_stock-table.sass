@@ -1160,6 +1160,12 @@ $block: ".stock-table"
       #{$block}_page_ps-list-details &
         width: 100%
 
+      #{$block}_page_ae-list &
+        justify-content: center
+        flex-grow: 0
+        flex-shrink: 0
+        width: 80px
+
       @media screen and (max-width: 960px)
         #{$block}_page_oh-reports &,
         #{$block}_page_st-summary &
@@ -1307,6 +1313,9 @@ $block: ".stock-table"
       #{$block}_page_ps-list-details &
         width: 100%
 
+      #{$block}_page_ae-list &
+        width: 16%
+
       @media screen and (max-width: 960px)
         #{$block}_page_oh-reports &,
         #{$block}_page_st-summary &
@@ -1437,6 +1446,9 @@ $block: ".stock-table"
 
       #{$block}_page_ps-list-details &
         width: 100%
+
+      #{$block}_page_ae-list &
+        width: 19%
 
       @media screen and (max-width: 1120px)
         #{$block}_page_p-list &
@@ -1589,6 +1601,9 @@ $block: ".stock-table"
       #{$block}_page_ps-list-details &
         width: 100%
 
+      #{$block}_page_ae-list &
+        width: 19%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 7%
@@ -1720,6 +1735,9 @@ $block: ".stock-table"
       #{$block}_page_ps-list &
         width: 8%
 
+      #{$block}_page_ae-list &
+        width: 19%
+
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
           width: 5%
@@ -1837,6 +1855,10 @@ $block: ".stock-table"
 
       #{$block}_page_ps-list &
         width: 9%
+
+      #{$block}_page_ae-list &
+        justify-content: center
+        width: 19%
 
       @media screen and (max-width: 1600px)
         #{$block}_page_ed-form &
@@ -2414,6 +2436,10 @@ $block: ".stock-table"
       #{$block}_page_ps-list-details &
         min-height: 0
 
+      &:nth-child(6)
+        #{$block}_page_ae-list &
+          flex-direction: column
+
     // $Common table cell MOD: role footer
     &_role_footer
       border-bottom: 1px solid #eee
@@ -2577,7 +2603,9 @@ $block: ".stock-table"
     #{$block}_page_pd-list #{$block}__cell:nth-child(7) &,
     #{$block}_page_pd-list #{$block}__cell:nth-child(8) &,
     #{$block}_page_ps-list #{$block}__cell:nth-child(8) &,
-    #{$block}_page_ps-list #{$block}__cell:nth-child(9) &
+    #{$block}_page_ps-list #{$block}__cell:nth-child(9) &,
+    #{$block}_page_ae-list #{$block}__cell:nth-child(1) &,
+    #{$block}_page_ae-list #{$block}__cell:nth-child(6) &
       text-align: center
 
     #{$block}_page_oh-reports-details #{$block}__cell &,

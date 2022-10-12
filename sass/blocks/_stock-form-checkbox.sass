@@ -25,6 +25,9 @@ $block: ".stock-form-checkbox"
 
   &_context_label-group
 
+  &_context_table-header
+    margin-top: 5px
+
 
   // $Common form checkbox label
   &__label
@@ -61,6 +64,7 @@ $block: ".stock-form-checkbox"
   &__input-label
     display: inline-block
     cursor: pointer
+    user-select: none
 
 
   // $Common form checkbox input label text
@@ -77,6 +81,12 @@ $block: ".stock-form-checkbox"
 
     #{$block}_context_label-group &
       top: -4px
+      min-height: 14px
+      padding-left: 24px
+      font-size: 12px
+      line-height: 14px
+
+    #{$block}_context_table-header &
       min-height: 14px
       padding-left: 24px
       font-size: 12px
@@ -106,7 +116,8 @@ $block: ".stock-form-checkbox"
         background-color: #f6f6f6
         border-color: #cccccc
 
-      #{$block}_context_label-group &
+      #{$block}_context_label-group &,
+      #{$block}_context_table-header &
         width: 14px
         height: 14px
 
@@ -133,7 +144,8 @@ $block: ".stock-form-checkbox"
       #{$block}__input:disabled ~ &
         color: #757a85
 
-      #{$block}_context_label-group &
+      #{$block}_context_label-group &,
+      #{$block}_context_table-header &
         width: 14px
         height: 14px
         font-size: 9px
@@ -148,7 +160,8 @@ $block: ".stock-form-checkbox"
     &_type_no-label
       padding-left: 20px
 
-      #{$block}_context_label-group &
+      #{$block}_context_label-group &,
+      #{$block}_context_table-header &
         padding-left: 14px
 
     // $Common form checkbox input label text MOD: type reversed label text
@@ -156,7 +169,8 @@ $block: ".stock-form-checkbox"
       padding-left: 0
       padding-right: 30px
 
-      #{$block}_context_label-group &
+      #{$block}_context_label-group &,
+      #{$block}_context_table-header &
         padding-left: 0
         padding-right: 24px
 
@@ -173,7 +187,8 @@ $block: ".stock-form-checkbox"
       padding-left: 0
       padding-right: 20px
 
-      #{$block}_context_label-group &
+      #{$block}_context_label-group &,
+      #{$block}_context_table-header &
         padding-left: 0
         padding-right: 14px
 
